@@ -1,0 +1,19 @@
+RUBRIC for 2bb45199 (dispute rulings memo), 18 criteria. Weight in the numeric field only. No trailing space.
+1 | 5 | The memo denies Teresa Lindqvist's d-133 claim and states that d-133 pays $9,900.00 at 11 percent, not the $12,600.00 she asked for.
+2 | 4 | The memo states that Lindqvist's attainment stood at $300,000.00 when d-133 credited on 22 August, after the d-132 cancellation took her down from $480,000.00.
+3 | 4 | The memo shows d-132 earning $17,600.00 on $160,000.00 at 11 percent and $2,800.00 on $20,000.00 at 14 percent, and keeps the $20,400.00 clawback.
+4 | 3 | The memo correctly explains, from the bookings, why the $20,400.00 d-132 clawback and d-133's $9,900.00 payout are separate consequences under the plan and not a double charge on Lindqvist.
+5 | 5 | The memo denies Marisol Ortega's request and keeps her d-134 clawback at $10,080.00, her $72,000.00 share earned at 14 percent.
+6 | 3 | The memo explains that each rep's d-134 clawback is what that rep earned on their own share, not 40 percent of a pooled clawback.
+7 | 4 | The memo rules that d-129 names no partner rep, so the 25 in the share field has no effect, Grant Halvorsen keeps the full $40,000.00 credit, and Owen Abernathy gets no credit on it in August.
+8 | 4 | The memo rules that d-142, with a close date of 1 September 2026, belongs on the September statement and not on August, whatever the DocuSign timestamp shows.
+9 | 5 | The August table gives net commission of $139,921.30 for Ortega, $28,450.00 for Halvorsen, $20,719.56 for Ramaswamy, $74,989.78 for Kowalczyk, $38,700.00 for Lindqvist and $43,433.06 for Abernathy.
+10 | 4 | The August table gives gross commission of $150,001.30 for Ortega, $28,450.00 for Halvorsen, $29,359.56 for Ramaswamy, $74,989.78 for Kowalczyk, $59,100.00 for Lindqvist and $43,433.06 for Abernathy.
+11 | 3 | The August table gives quarter-to-date attainment of $1,192,295.00 for Ortega, $320,000.00 for Halvorsen, $258,994.50 for Ramaswamy, $696,355.50 for Kowalczyk, $390,000.00 for Lindqvist and $469,846.00 for Abernathy.
+12 | 3 | The August table totals $385,333.70 gross, $39,120.00 clawed back and $346,213.70 net.
+13 | 3 | The memo ends with a separate reply to each of Lindqvist, Ortega and Abernathy giving that rep's own August gross, any clawback, and net.
+14 | 2 | For each ruling, the memo names the comp plan rule it applies, either quoting it or stating plainly what the rule requires.
+15 | 1 | The Word document august_commission_dispute_rulings.docx is addressed to Renee Whitford and the Compensation Committee.
+16 | -5 | A reply addressed to one rep states another rep's commission, clawback, quota or attainment figure.
+17 | -4 | The memo directs that a clawback be recovered from a rep's base salary or draw.
+18 | 1 | The deliverable is a single Word document named august_commission_dispute_rulings.docx.
