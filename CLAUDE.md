@@ -20,7 +20,7 @@ Each task = (1) prompt + input files, (2) golden solution file, (3) rubric. US-b
 All Geranium task work goes in /Users/hussain/Desktop/laraib/snorkel/geranium/, one subfolder per task. Each task folder holds ONLY inputs.zip and the golden zip. Do scratch work in the session scratchpad and overwrite those two zips; never add extra folders, copies or txt files there.
 
 ## GitHub
-The laraib folder is the git repo for github.com/laraib-anwar/crossingHurdles (private, branch main). After every task fix or new task, run git add -A, commit with the task ID in the message, and push. Do not ask first.
+The laraib folder is the git repo for github.com/laraib-anwar/crossingHurdles (private, branch main). After every task fix or new task, run git add -A, commit with the task ID in the message, and push. Do not ask first. Keep each task's current prompt, O*NET picks and rubric in rubrics/<taskid8>-<slug>.md (outside the task folders) and update it whenever they change.
 
 ## Working style
 Do not ask for permission or confirmation. Proceed with the task end to end and report at the end.
