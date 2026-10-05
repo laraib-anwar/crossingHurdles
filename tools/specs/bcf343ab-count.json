@@ -1,0 +1,20 @@
+{
+  "task": "bcf343ab-count",
+  "criteria_edit": {
+    "3": {"text": "The ballot accounting gives 593 ballots received: 249 mail, 270 online and 74 in person.", "weight": 2},
+    "13": {"text": "The Word document is named WBTC_2026_Director_Election_Certification.docx.", "weight": 1},
+    "16": {"text": "The certification includes a short reply addressed to Luis Banuelos that answers both of his points, the exchange-area challenge and the blank-position ballots, and can be sent as written.", "weight": 2},
+    "17": {"text": "The certification includes a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.", "weight": 2},
+    "18": {"text": "Stage 2 of the stage table transfers Ostrander's 4.0000 surplus, leaving Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095 and non-transferable 0.5329.", "weight": 2},
+    "19": {"text": "Stages 3 and 4 of the stage table exclude Pyle on 10.0000 and then Tremblay on 15.0000, leaving Szabo, Wendling and Brandt on 28.0000 each, Hargrove on 65.0000 and non-transferable on 1.5329.", "weight": 2}
+  },
+  "criteria_add": [
+    {"text": "The certification is addressed to the Board of Directors from the Election Committee.", "weight": 1},
+    {"text": "The ballot accounting gives 5 void ballots and 21 rejected ballots, 8 of the rejections being duplicates: 3 mail ballots replaced by the same member's in-person ballot and 5 later ballots from members whose first valid ballot counts.", "weight": 2},
+    {"text": "Stages 5 to 7 of the stage table exclude Brandt, Wendling and Szabo in turn, leaving Kessler on 124.2386, Banuelos on 105.8190, Hargrove on 98.0000, Okafor on 92.4095 and non-transferable on 4.5329.", "weight": 2}
+  ],
+  "uploads": {
+    "input": "snorkel/geranium/bcf343ab-count/inputs.zip",
+    "golden": "snorkel/geranium/bcf343ab-count/WBTC_2026_Director_Election_Certification.zip"
+  }
+}

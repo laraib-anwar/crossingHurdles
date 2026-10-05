@@ -13,7 +13,7 @@ election_export_0922.xlsx is the ballot system export from yesterday afternoon, 
 
 Please prepare the certification as one Word document, WBTC_2026_Director_Election_Certification.docx, addressed to the Board from the Election Committee. It needs everything Policy 4.3 Rule 12 asks for, with the ballot accounting traced to ballot IDs so the Board can check any rejection, a written ruling on each challenge, and a short reply to each of the two people that I can send as is. Keep the replies to what each of them is entitled to see.
 
-## Rubric (27 criteria, weight | text)
+## Rubric (22 criteria, weight | text)
 
 1 | 5 | WBTC_2026_Director_Election_Certification.docx certifies Dale Ostrander, Marjorie Kessler and Tamsin Hargrove as elected, in that order of election.
 2 | 4 | The certification states 567 valid ballots and a quota of 142.
@@ -33,15 +33,10 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 16 | 2 | The certification includes a short reply addressed to Luis Banuelos that answers both of his points, the exchange-area challenge and the blank-position ballots, and can be sent as written.
 17 | 2 | The certification includes a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.
 18 | 2 | Stage 2 of the stage table transfers Ostrander's 4.0000 surplus, leaving Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095 and non-transferable 0.5329.
-19 | 1 | Stage 3 of the stage table excludes Pyle on 10.0000 and shows Szabo 26.0000, Wendling 23.0000 and Brandt 23.0000.
-20 | 1 | The ballot accounting gives 5 void ballots and 21 rejected ballots.
-21 | 1 | The ballot accounting rejects 5 mail ballots received late, 2 ballots cast in person after the polls closed, 4 ballots from memberships not in good standing on the record date, 1 ballot from a membership not on the roster and 1 ballot rejected at inspection.
-22 | 1 | The ballot accounting rejects 3 mail ballots replaced by the same member's in-person ballot and 5 later ballots from members whose first valid ballot counts.
-23 | 1 | Stage 4 of the stage table excludes Tremblay on 15.0000 and shows Hargrove 65.0000, Szabo, Wendling and Brandt 28.0000 each, and non-transferable 1.5329.
-24 | 1 | Stage 5 of the stage table excludes Brandt and shows Kessler 124.2386 and Hargrove 81.0000.
-25 | 1 | Stage 6 of the stage table excludes Wendling and shows Banuelos 105.8190, Okafor 83.4095 and non-transferable 2.5329.
-26 | 1 | Stage 7 of the stage table excludes Szabo on 28.0000 and shows Hargrove 98.0000, Okafor 92.4095 and non-transferable 4.5329.
-27 | 1 | The certification is addressed to the Board of Directors from the Election Committee.
+19 | 2 | Stages 3 and 4 of the stage table exclude Pyle on 10.0000 and then Tremblay on 15.0000, leaving Szabo, Wendling and Brandt on 28.0000 each, Hargrove on 65.0000 and non-transferable on 1.5329.
+20 | 1 | The certification is addressed to the Board of Directors from the Election Committee.
+21 | 2 | The ballot accounting gives 5 void ballots and 21 rejected ballots, 8 of the rejections being duplicates: 3 mail ballots replaced by the same member's in-person ballot and 5 later ballots from members whose first valid ballot counts.
+22 | 2 | Stages 5 to 7 of the stage table exclude Brandt, Wendling and Szabo in turn, leaving Kessler on 124.2386, Banuelos on 105.8190, Hargrove on 98.0000, Okafor on 92.4095 and non-transferable on 4.5329.
 
 ## Status
 
@@ -49,3 +44,4 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 2026-10-04 (later): Quality Judge raised 1 major, that the stage table was only partly bound. Fixed by completing #5, #8 and #9 and adding #18 (stages 2 and 3) and #19 (stages 4 to 7). Golden unchanged.
 2026-10-05: Quality Judge raised 2 majors (no per-method received counts; Ostrander missing at stage 8, because the #8 edit was not applied on the platform) and 1 minor (no stage 2 action). Fixed in #3, #8 and #18; still 19 criteria. Golden unchanged.
 2026-10-05 (reviewer): count verified. Fixed four items: email_moore_0922.txt lengthened to 228 body words (15 September mailing date kept); close of nominations corrected from 24 July to 31 July (the last Friday of July) in the minutes and in two places in the golden, edited through LibreOffice; "ends with" dropped from #16 and #17; #13 split (file name, plus addressee as #27); #3 split into #3, #20, #21 and #22; #18 and #19 split per stage into #18, #19 and #23 to #26. Bylaws, workbook and Banuelos email byte-identical.
+2026-10-05 (later): user capped new criteria at 3. #19 now binds stages 3 and 4; #20 addressee, #21 void/rejected plus duplicate rejections, #22 stages 5 to 7. 22 criteria. Chrome console autofill: tools/specs/bcf343ab-count.json -> fill/bcf343ab-count.js.
