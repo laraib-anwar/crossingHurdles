@@ -35,4 +35,4 @@ Edit as little as possible. The user sends the current rubric; output a keep / e
 All SwarmBench notes live in "/Users/hussain/Desktop/laraib/swarmbench turing project/": README.md (rules, gap method, lessons, meeting updates, status), handbook.md (trainer handbook), rca/ (shipped-task RCAs). Read README.md first for any SwarmBench work and keep its status section current.
 
 ## Console autofill
-For each fix, write tools/specs/<task>.json (prompt edits, criteria edits/adds/deletes, zip uploads) and run python3 tools/make_fill.py on it. That writes fill/<task>.js and copies it to the clipboard for the user to paste into the Chrome console on the task page.
+For each fix, write tools/specs/<task>.json (prompt edits, criteria edits/adds/deletes, zip uploads) and run python3 tools/make_fill.py on it. That writes fill/<task>.js (add --copy to put it on the clipboard). Each script stops unless the page shows that task's UID, because several sessions share the clipboard. Before editing any task zip, unzip the current one from the task folder; other sessions edit the same files.

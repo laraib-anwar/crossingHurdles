@@ -1,7 +1,8 @@
 """Build a Chrome-console script that fills a Snorkel Geranium task page.
 
-Usage: python3 tools/make_fill.py tools/specs/<task>.json
-Writes fill/<task>.js and copies it to the clipboard (macOS).
+Usage: python3 tools/make_fill.py tools/specs/<task>.json [--copy]
+Writes fill/<task>.js; --copy also puts it on the macOS clipboard.
+The script refuses to run unless the page shows 'UID: <first 8 chars of task>'.
 
 Spec keys (all optional except task):
   task            name used for the output file
@@ -24,6 +25,11 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const log = (...a) => console.log('%c[fill]', 'color:#4f6228;font-weight:bold', ...a);
 const warn = (...a) => console.warn('[fill] CHECK BY HAND:', ...a);
 const txt = el => (el.innerText || el.textContent || '').trim();
+if (SPEC.uid && !document.body.innerText.includes('UID: ' + SPEC.uid)) {
+  console.error('[fill] STOP: this page is not task ' + SPEC.uid + '. This script is for ' + SPEC.task + ' only. Nothing was changed.');
+  return;
+}
+log('page matches task', SPEC.uid);
 const leafWith = re => [...document.querySelectorAll('body *')].filter(e => re.test(txt(e)) && ![...e.children].some(c => re.test(txt(c))));
 
 function setVal(el, v) {
@@ -108,43 +114,53 @@ function fileFrom(f) {
   for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
   return new File([u], f.name, { type: 'application/zip', lastModified: Date.now() });
 }
-function uploaderBox(re) {
-  for (const lab of leafWith(re)) {
-    let el = lab;
-    for (let i = 0; el && i < 7; i++, el = el.parentElement) {
-      if (el.querySelector('input[type=file]') || [...el.querySelectorAll('*')].some(x => /\.zip$/i.test(txt(x)) && !x.children.length)) return el;
-    }
-  }
-  return null;
+const FOLLOW = Node.DOCUMENT_POSITION_FOLLOWING;
+function region(re) {
+  const lab = leafWith(re)[0]; if (!lab) return null;
+  const ends = leafWith(/Quality Check|How many input files|^Input File Uploader|^Golden Solution File Uploader/i)
+    .filter(e => e !== lab && !re.test(txt(e)) && (lab.compareDocumentPosition(e) & FOLLOW));
+  const end = ends[0] || null;
+  return el => (lab.compareDocumentPosition(el) & FOLLOW) && (!end || (el.compareDocumentPosition(end) & FOLLOW));
+}
+function clickEl(el) {
+  for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'click'])
+    el.dispatchEvent(new MouseEvent(t, { bubbles: true, cancelable: true, view: window }));
 }
 async function upload(kind, re) {
   const f = FILES[kind]; if (!f) return;
-  let box = uploaderBox(re);
-  if (!box) { warn(kind, 'uploader not found'); return; }
-  const chips = [...box.querySelectorAll('*')].filter(x => /\.zip$/i.test(txt(x)) && !x.children.length);
-  for (const chip of chips) {
-    let row = chip, btns = [];
-    for (let i = 0; row && i < 4 && !btns.length; i++, row = row.parentElement)
-      btns = [...row.querySelectorAll('button,[role=button]')];
-    const rm = btns.find(b => /remove|delete|clear|close/i.test((b.getAttribute('aria-label') || '') + (b.title || '') + txt(b))) || btns[btns.length - 1];
-    if (rm) { rm.click(); await sleep(600); log(kind, ': removed', txt(chip)); } else warn(kind, ': no remove button next to', txt(chip));
+  const inR = region(re);
+  if (!inR) { warn(kind, 'uploader label not found'); return; }
+  const chips = () => [...document.querySelectorAll('body *')].filter(x => !x.children.length && /\.zip$/i.test(txt(x)) && inR(x));
+  for (const chip of chips()) {
+    if (txt(chip) === f.name) continue;
+    let row = chip, cands = [];
+    for (let i = 0; row && i < 5 && cands.length < 2; i++, row = row.parentElement)
+      cands = [...row.querySelectorAll('button,[role=button],svg')];
+    const label = e => [e.getAttribute('aria-label'), e.getAttribute('title'), e.getAttribute('data-testid'), e.getAttribute('class'), txt(e)].join(' ');
+    let rm = cands.find(e => /remove|delete|close|clear|trash|lucide-x|\bx\b/i.test(label(e)));
+    if (!rm) rm = cands[cands.length - 1];
+    if (rm) { clickEl(rm.closest('button,[role=button]') || rm); await sleep(800); }
+    if (chips().some(c => c === chip && document.contains(c))) warn(kind, ': could not remove', txt(chip), '- remove it by hand');
+    else log(kind, ': removed', txt(chip));
   }
-  box = uploaderBox(re) || box;
-  const inp = box.querySelector('input[type=file]') || [...document.querySelectorAll('input[type=file]')].find(i => box.contains(i) || box.parentElement.contains(i));
+  await sleep(500);
   const dt = new DataTransfer(); dt.items.add(fileFrom(f));
+  const inp = [...document.querySelectorAll('input[type=file]')].find(inR);
   if (inp) {
     inp.files = dt.files;
     inp.dispatchEvent(new Event('input', { bubbles: true }));
     inp.dispatchEvent(new Event('change', { bubbles: true }));
-    log(kind, ': uploaded', f.name, '(' + f.size + ' bytes)');
   } else {
-    const zone = box.querySelector('[class*=drop],[class*=Drop]') || box;
-    for (const t of ['dragenter', 'dragover', 'drop']) zone.dispatchEvent(new DragEvent(t, { bubbles: true, cancelable: true, dataTransfer: dt }));
-    log(kind, ': dropped', f.name, 'on the uploader (no file input found)');
+    const zoneText = [...document.querySelectorAll('body *')].find(x => !x.children.length && /^Upload file$/i.test(txt(x)) && inR(x));
+    const zone = zoneText && (zoneText.closest('[role=presentation],[role=button],label,div'));
+    if (zone) for (const t of ['dragenter', 'dragover', 'drop']) zone.dispatchEvent(new DragEvent(t, { bubbles: true, cancelable: true, dataTransfer: dt }));
   }
+  await sleep(2500);
+  if (chips().some(c => txt(c) === f.name)) log(kind, ': uploaded', f.name);
+  else warn(kind, ': upload of', f.name, 'did not show on the page - upload it by hand');
 }
 await upload('input', /^Input File Uploader\s*\*?$/i);
-await upload('golden', /golden.*(upload|file)|solution.*upload/i);
+await upload('golden', /^Golden Solution File Uploader\s*\*?$/i);
 
 log('done. Check every field, then click Finish update yourself. Nothing was submitted.');
 })();
@@ -154,6 +170,7 @@ log('done. Check every field, then click Finish update yourself. Nothing was sub
 def main():
     spec_path = sys.argv[1]
     spec = json.load(open(spec_path))
+    spec.setdefault("uid", spec["task"].split("-")[0])
     files = {}
     for kind, p in (spec.pop("uploads", {}) or {}).items():
         p = p if os.path.isabs(p) else os.path.join(ROOT, p)
@@ -163,11 +180,10 @@ def main():
     os.makedirs(os.path.join(ROOT, "fill"), exist_ok=True)
     out = os.path.join(ROOT, "fill", spec["task"] + ".js")
     open(out, "w").write(js)
-    try:
+    copied = ""
+    if "--copy" in sys.argv:
         subprocess.run(["pbcopy"], input=js.encode(), check=True)
         copied = " and copied to the clipboard"
-    except Exception:
-        copied = ""
     print(f"wrote {out} ({len(js)} chars){copied}")
 
 
