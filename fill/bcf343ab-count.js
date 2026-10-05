@@ -6,7 +6,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const log = (...args) => console.log('%c[fill]', 'color:#4f6228;font-weight:bold', ...args);
 const warn = (...args) => console.warn('[fill] CHECK BY HAND:', ...args);
 const txt = el => (el.innerText || el.textContent || '').trim();
-if (SPEC.uid && !document.body.innerText.includes('UID: ' + SPEC.uid)) {
+const pageText = (document.body.innerText + ' ' + document.body.textContent).replace(/\s+/g, ' ');
+if (SPEC.uid && !pageText.includes(SPEC.uid)) {
   console.error('[fill] STOP: this page is not task ' + SPEC.uid + '. This script is for ' + SPEC.task + ' only. Nothing was changed.');
   return;
 }

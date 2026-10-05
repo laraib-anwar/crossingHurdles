@@ -2,7 +2,7 @@
 
 Usage: python3 tools/make_fill.py tools/specs/<task>.json [--copy]
 Writes fill/<task>.js; --copy also puts it on the macOS clipboard.
-The script refuses to run unless the page shows 'UID: <first 8 chars of task>'.
+The script refuses to run unless the page text contains the task's 8-character UID.
 
 Spec keys (all optional except task):
   task            name used for the output file
@@ -25,7 +25,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const log = (...args) => console.log('%c[fill]', 'color:#4f6228;font-weight:bold', ...args);
 const warn = (...args) => console.warn('[fill] CHECK BY HAND:', ...args);
 const txt = el => (el.innerText || el.textContent || '').trim();
-if (SPEC.uid && !document.body.innerText.includes('UID: ' + SPEC.uid)) {
+const pageText = (document.body.innerText + ' ' + document.body.textContent).replace(/\s+/g, ' ');
+if (SPEC.uid && !pageText.includes(SPEC.uid)) {
   console.error('[fill] STOP: this page is not task ' + SPEC.uid + '. This script is for ' + SPEC.task + ' only. Nothing was changed.');
   return;
 }
