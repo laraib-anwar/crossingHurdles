@@ -1,0 +1,17 @@
+{
+  "task": "f97982ce-standings",
+  "prompt_replace": [
+    ["Two cases are still with the league's disciplinary panel", "Three cases are still with the league's disciplinary panel"]
+  ],
+  "criteria_edit": {
+    "31": {"text": "standings_2026.txt gives, with denton's appeal dismissed, the full finishing order for the appeal-only outcome as calder, granger, denton, ashford, eastvale, berwick, ironside, fairmont, jasper, holbrook, with calder promoted and jasper and holbrook relegated, and for ironside's appeal and protest both succeeding as calder, granger, ironside, denton, ashford, eastvale, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.", "weight": null},
+    "32": {"text": "With denton's appeal dismissed, the protest-only order is calder, granger, denton, ashford, eastvale, ironside, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated, and the note says ironside's secretary is wrong that beating berwick 1 to 0 puts ironside above berwick if the appeal is allowed, since fairmont is also on 12 and the three-club mini table puts berwick above on goal difference.", "weight": null}
+  },
+  "criteria_add": [
+    {"text": "With denton's appeal allowed, every order starts calder, granger, denton (calder promoted, bottom two relegated), then: denton alone eastvale, berwick, ashford, fairmont, jasper, ironside, holbrook; with the protest eastvale, ironside, berwick, ashford, jasper, fairmont, holbrook; with ironside's appeal eastvale, berwick, ashford, fairmont, ironside, jasper, holbrook; all three ironside, eastvale, berwick, ashford, jasper, fairmont, holbrook.", "weight": 4}
+  ],
+  "uploads": {
+    "input": "snorkel/geranium/f97982ce-standings/standings_inputs.zip",
+    "golden": "snorkel/geranium/f97982ce-standings/standings_golden.zip"
+  }
+}

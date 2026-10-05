@@ -6,13 +6,13 @@ The full prompt and criteria 1 to 30 are on the platform. Changes made in this r
 
 In the paragraph about the disciplinary panel, "Two cases are still with the league's disciplinary panel" becomes "Three cases are still with the league's disciplinary panel".
 
-## Criteria changed 2026-10-05 (weight | text)
+## Criteria changed 2026-10-05 (weight | text). One criterion added, total 34.
 
 31 | (weight unchanged) | standings_2026.txt gives, with denton's appeal dismissed, the full finishing order for the appeal-only outcome as calder, granger, denton, ashford, eastvale, berwick, ironside, fairmont, jasper, holbrook, with calder promoted and jasper and holbrook relegated, and for ironside's appeal and protest both succeeding as calder, granger, ironside, denton, ashford, eastvale, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.
-32 | (weight unchanged) | standings_2026.txt gives, with denton's appeal dismissed, the full finishing order for the protest-only outcome as calder, granger, denton, ashford, eastvale, ironside, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.
-34 | 3 | standings_2026.txt gives the full order if only denton's appeal is allowed as calder, granger, denton, eastvale, berwick, ashford, fairmont, jasper, ironside, holbrook, with calder promoted and ironside and holbrook relegated, and if denton's appeal and ironside's protest are upheld as calder, granger, denton, eastvale, ironside, berwick, ashford, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.
-35 | 3 | standings_2026.txt gives the full order if denton's and ironside's appeals are allowed and the protest dismissed as calder, granger, denton, eastvale, berwick, ashford, fairmont, ironside, jasper, holbrook, with calder promoted and jasper and holbrook relegated, and if all three cases succeed as calder, granger, denton, ironside, eastvale, berwick, ashford, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.
-36 | 2 | The note says ironside's secretary is wrong that the 1 to 0 win over berwick puts ironside above berwick if the appeal is allowed, because fairmont is also on 12 and the three-club mini table puts berwick above ironside on goal difference, +1 to 0.
+32 | (weight unchanged) | With denton's appeal dismissed, the protest-only order is calder, granger, denton, ashford, eastvale, ironside, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated, and the note says ironside's secretary is wrong that beating berwick 1 to 0 puts ironside above berwick if the appeal is allowed, since fairmont is also on 12 and the three-club mini table puts berwick above on goal difference.
+34 | 4 | With denton's appeal allowed, every order starts calder, granger, denton (calder promoted, bottom two relegated), then: denton alone eastvale, berwick, ashford, fairmont, jasper, ironside, holbrook; with the protest eastvale, ironside, berwick, ashford, jasper, fairmont, holbrook; with ironside's appeal eastvale, berwick, ashford, fairmont, ironside, jasper, holbrook; all three ironside, eastvale, berwick, ashford, jasper, fairmont, holbrook.
+
+Console autofill: fill/f97982ce-standings.js, built from tools/specs/f97982ce-standings.json by tools/make_fill.py.
 
 ## Status
 
