@@ -1,0 +1,8 @@
+{
+  "task": "bcf343ab-count-uploads",
+  "uid": "bcf343ab",
+  "uploads": {
+    "input": "snorkel/geranium/bcf343ab-count/inputs.zip",
+    "golden": "snorkel/geranium/bcf343ab-count/WBTC_2026_Director_Election_Certification.zip"
+  }
+}
