@@ -17,7 +17,7 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 
 1 | 5 | WBTC_2026_Director_Election_Certification.docx certifies Dale Ostrander, Marjorie Kessler and Tamsin Hargrove as elected, in that order of election.
 2 | 4 | The certification states 567 valid ballots and a quota of 142.
-3 | 3 | The ballot accounting gives 593 ballots received, 5 void and 21 rejected: 5 late mail, 2 cast after the polls closed, 4 memberships not in good standing on the record date, 1 membership not on the roster, 1 rejected at inspection, 3 replaced by an in-person ballot and 5 later ballots from a member who had already voted.
+3 | 3 | The ballot accounting gives 593 ballots received (249 mail, 270 online and 74 in person), 5 void and 21 rejected: 5 late mail, 2 cast after the polls closed, 4 memberships not in good standing on the record date, 1 membership not on the roster, 1 rejected at inspection, 3 replaced by an in-person ballot and 5 later ballots from a member who had already voted.
 4 | 4 | The certification treats Kessler's exchange area as Carlow Ridge under the Committee's 19 September finding, and excludes Banuelos at stage 9 under Section 4.3 before any surplus is transferred.
 5 | 3 | Stage 1 shows Ostrander 146.0000, Kessler 110.0000, Banuelos 95.0000, Okafor 66.0000, Hargrove 63.0000, Wendling 22.0000, Brandt 21.0000, Szabo 19.0000, Tremblay 15.0000, Pyle 10.0000 and non-transferable 0.0000.
 6 | 3 | Candidates are excluded in this order: Pyle at stage 3, Tremblay at stage 4, Brandt at stage 5, Wendling at stage 6, Szabo at stage 7, Okafor at stage 8 and Banuelos at stage 9.
@@ -32,10 +32,11 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 15 | -5 | The deliverable certifies Luis Banuelos as an elected director.
 16 | 2 | The certification ends with a short reply addressed to Luis Banuelos that answers both of his points, the exchange-area challenge and the blank-position ballots, and can be sent as written.
 17 | 2 | The certification ends with a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.
-18 | 3 | The stage table shows stage 2 as Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 63.0000, Wendling 22.0000, Brandt 21.0000, Szabo 19.0000, Tremblay 15.0000, Pyle 10.0000 and non-transferable 0.5329, and stage 3 the same except Szabo 26.0000, Wendling 23.0000, Brandt 23.0000 and Pyle excluded.
+18 | 3 | The stage table shows stage 2 as the transfer of Ostrander's 4.0000 surplus, leaving Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 63.0000, Wendling 22.0000, Brandt 21.0000, Szabo 19.0000, Tremblay 15.0000, Pyle 10.0000 and non-transferable 0.5329, and stage 3 the same except Szabo 26.0000, Wendling 23.0000, Brandt 23.0000 and Pyle excluded.
 19 | 3 | The stage table shows, with every figure not named unchanged from the stage before: stage 4 Hargrove 65.0000, Szabo, Wendling and Brandt 28.0000 each, Tremblay excluded, non-transferable 1.5329; stage 5 Kessler 124.2386, Hargrove 81.0000, Brandt excluded; stage 6 Banuelos 105.8190, Okafor 83.4095, Wendling excluded, non-transferable 2.5329; stage 7 Hargrove 98.0000, Okafor 92.4095, Szabo excluded, non-transferable 4.5329.
 
 ## Status
 
 2026-10-04: rebuilt from the script version. Difficulty, LLM files, golden and rubric quality pass. Quality Judge raised 2 majors (replies uncovered, #14 too broad); fixed with #16, #17 and the narrowed #14.
 2026-10-04 (later): Quality Judge raised 1 major, that the stage table was only partly bound. Fixed by completing #5, #8 and #9 and adding #18 (stages 2 and 3) and #19 (stages 4 to 7). Golden unchanged.
+2026-10-05: Quality Judge raised 2 majors (no per-method received counts; Ostrander missing at stage 8, because the #8 edit was not applied on the platform) and 1 minor (no stage 2 action). Fixed in #3, #8 and #18; still 19 criteria. Golden unchanged.
