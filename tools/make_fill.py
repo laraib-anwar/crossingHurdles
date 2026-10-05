@@ -22,8 +22,8 @@ JS = r"""
 const SPEC = __SPEC__;
 const FILES = __FILES__;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const log = (...a) => console.log('%c[fill]', 'color:#4f6228;font-weight:bold', ...a);
-const warn = (...a) => console.warn('[fill] CHECK BY HAND:', ...a);
+const log = (...args) => console.log('%c[fill]', 'color:#4f6228;font-weight:bold', ...args);
+const warn = (...args) => console.warn('[fill] CHECK BY HAND:', ...args);
 const txt = el => (el.innerText || el.textContent || '').trim();
 if (SPEC.uid && !document.body.innerText.includes('UID: ' + SPEC.uid)) {
   console.error('[fill] STOP: this page is not task ' + SPEC.uid + '. This script is for ' + SPEC.task + ' only. Nothing was changed.');
@@ -47,17 +47,19 @@ const promptBox = () => {
   for (let i = 0; el && i < 6; i++, el = el.parentElement) {
     const t = el.querySelector('textarea'); if (t) return t;
   }
-  return [...document.querySelectorAll('textarea')].sort((a, b) => b.value.length - a.value.length)[0];
+  return [...document.querySelectorAll('textarea')].sort((x, y) => y.value.length - x.value.length)[0];
 };
 if (SPEC.prompt_full || SPEC.prompt_replace) {
   const t = promptBox();
   if (!t) warn('prompt box not found');
   else {
     let v = SPEC.prompt_full || t.value;
-    for (const [a, b] of (SPEC.prompt_replace || [])) {
-      if (v.includes(a)) { v = v.split(a).join(b); log('prompt: replaced', JSON.stringify(a.slice(0, 50))); }
-      else if (v.includes(b)) log('prompt: already says', JSON.stringify(b.slice(0, 50)));
-      else warn('prompt text not found:', a);
+    const pairs = SPEC.prompt_replace || [];
+    for (let k = 0; k < pairs.length; k++) {
+      const oldT = pairs[k][0], newT = pairs[k][1];
+      if (v.includes(oldT)) { v = v.split(oldT).join(newT); log('prompt: replaced', JSON.stringify(oldT.slice(0, 50))); }
+      else if (v.includes(newT)) log('prompt: already says', JSON.stringify(newT.slice(0, 50)));
+      else warn('prompt text not found:', oldT);
     }
     setVal(t, v); log('prompt set,', v.length, 'chars');
   }
@@ -92,7 +94,7 @@ async function fillCrit(n, c) {
   }
   log('criterion', n, 'set', c.weight !== null && c.weight !== undefined ? '(weight ' + c.weight + ')' : '(weight kept)');
 }
-for (const n of (SPEC.criteria_delete || []).sort((a, b) => b - a)) {
+for (const n of (SPEC.criteria_delete || []).slice().sort((x, y) => y - x)) {
   const s = section(n);
   const btn = s && [...s.box.querySelectorAll('button')].find(b => /delete section/i.test(txt(b)));
   if (btn) { btn.click(); await sleep(500); log('criterion', n, 'deleted'); } else warn('could not delete criterion', n);
