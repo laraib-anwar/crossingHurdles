@@ -1,0 +1,10 @@
+{
+  "task": "bcf343ab-count-rejections",
+  "uid": "bcf343ab",
+  "criteria_edit": {
+    "21": {"text": "The certification rejects B26-0515, B26-0577, B26-0591, B26-0592 and B26-0593 as mail received after the deadline, B26-0589 and B26-0590 as cast after the polls closed, B26-0014, B26-0294, B26-0176 and B26-0248 as memberships not in good standing on the record date, B26-0240 as not on the roster, and B26-0360 for an identifying mark found at inspection.", "weight": 2}
+  },
+  "criteria_add": [
+    {"text": "The certification rejects B26-0170, B26-0398 and B26-0421 as mail ballots replaced by the same member's in-person ballot, and B26-0072, B26-0151, B26-0317, B26-0329 and B26-0459 as later ballots from members whose first valid ballot counts, giving 21 rejected and 5 void in all.", "weight": 2}
+  ]
+}
