@@ -1,22 +1,9 @@
 {
   "task": "f97982ce-standings",
-  "prompt_replace": [
-    ["Two cases are still with the league's disciplinary panel", "Three cases are still with the league's disciplinary panel"]
-  ],
-  "criteria_delete": [36, 35],
-  "criteria_edit": {
-    "3": {"text": "standings_2026.txt shows ironside with 3 points deducted, the upheld 2 point and 1 point sanctions, finishing on 10 points, and shows no deduction for fairmont because its 2 point sanction was overturned on appeal.", "weight": 2},
-    "13": {"text": "The table credits eastvale with the matches recorded under eastvale_rovers, giving eastvale p 9, w 3, d 4, l 2, gf 16, ga 15 and 13 points.", "weight": 2},
-    "16": {"text": "The table ignores the abandoned March 7 denton against ashford row and counts the April 8 replay, giving denton gf 12, ga 11 and ashford gf 10, ga 12, each with 9 matches played.", "weight": 2},
-    "17": {"text": "The table counts the April 4 calder against ironside forfeit as a 3 to 0 calder win in goals, giving calder gf 13, ga 5 and ironside ga 14.", "weight": 2},
-    "18": {"text": "The second line of standings_2026.txt's publication reads clubs 10, matches 45, goals 124, forfeits 1, sanction points 3.", "weight": 1},
-    "19": {"text": "The table, promotion line or relegation line in standings_2026.txt applies the outcome of a pending panel case instead of the records as they stand.", "weight": -4},
-    "31": {"text": "standings_2026.txt gives, with denton's appeal dismissed, the full finishing order for the appeal-only outcome as calder, granger, denton, ashford, eastvale, berwick, ironside, fairmont, jasper, holbrook, with calder promoted and jasper and holbrook relegated, and for ironside's appeal and protest both succeeding as calder, granger, ironside, denton, ashford, eastvale, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated.", "weight": null},
-    "32": {"text": "With denton's appeal dismissed, the protest-only order is calder, granger, denton, ashford, eastvale, ironside, berwick, jasper, fairmont, holbrook, with calder promoted and fairmont and holbrook relegated, and the note says ironside's secretary is wrong that beating berwick 1 to 0 puts ironside above berwick if the appeal is allowed, since fairmont is also on 12 and the three-club mini table puts berwick above on goal difference.", "weight": null},
-    "34": {"text": "With denton's appeal allowed, every order starts calder, granger, denton (calder promoted, bottom two relegated), then: denton alone eastvale, berwick, ashford, fairmont, jasper, ironside, holbrook; with the protest eastvale, ironside, berwick, ashford, jasper, fairmont, holbrook; with ironside's appeal eastvale, berwick, ashford, fairmont, ironside, jasper, holbrook; all three ironside, eastvale, berwick, ashford, jasper, fairmont, holbrook.", "weight": 4}
-  },
-  "uploads": {
-    "input": "snorkel/geranium/f97982ce-standings/standings_inputs.zip",
-    "golden": "snorkel/geranium/f97982ce-standings/standings_golden.zip"
-  }
+  "criteria_add": [
+    {
+      "text": "With denton's appeal allowed, standings_2026.txt names each deciding tiebreak step: alone, berwick, ashford and fairmont on 12 split on mini table points; with the protest, eastvale above ironside on season goals scored, 16 to 14, and berwick above ashford on their 1 to 0 meeting; with ironside's appeal, the four-club mini table splits berwick and ashford (6) from fairmont and ironside (3), each pair settled by its own meeting; all three, denton above ironside on its 3 to 0 win at ironside.",
+      "weight": 4
+    }
+  ]
 }
