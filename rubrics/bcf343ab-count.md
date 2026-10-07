@@ -20,24 +20,24 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 3 | 2 | The ballot accounting gives 593 ballots received: 249 mail, 270 online and 74 in person.
 4 | 4 | The certification treats Kessler's exchange area as Carlow Ridge under the Committee's 19 September finding, and excludes Banuelos at stage 9 under Section 4.3 before any surplus is transferred.
 5 | 3 | Stage 1 shows Ostrander 146.0000, Kessler 110.0000, Banuelos 95.0000, Okafor 66.0000, Hargrove 63.0000, Wendling 22.0000, Brandt 21.0000, Szabo 19.0000, Tremblay 15.0000, Pyle 10.0000 and non-transferable 0.0000.
-6 | 3 | Candidates are excluded in this order: Pyle at stage 3, Tremblay at stage 4, Brandt at stage 5, Wendling at stage 6, Szabo at stage 7, Okafor at stage 8 and Banuelos at stage 9.
-7 | 3 | The certification explains that the three-way tie on 28.0000 lifts Szabo clear on the stage 3 counts and then excludes Brandt on the stage 2 counts, 21.0000 against Wendling's 22.0000.
-8 | 3 | Stage 8 shows Kessler elected on 144.2386, with Ostrander on 142.0000, Banuelos on 113.8190, Hargrove on 98.4095, Okafor excluded and non-transferable 68.5329.
-9 | 2 | Stage 9 shows Ostrander 142.0000, Kessler 144.2386, Hargrove 116.4095, Banuelos excluded and non-transferable 164.3519, with Hargrove elected as the only continuing candidate and Kessler's surplus not transferred.
-10 | 2 | The certification counts mail ballot B26-0206 because in-person ballot B26-0590 from the same member was cast after the polls closed at 11:15.
-11 | 3 | The certification denies both of Banuelos's points, citing Section 4.3 with the Committee's finding for the first and Rule 5's two-skip rule for the second.
-12 | 2 | The certification denies Sarah Moore's request because B26-0591 was received on 21 September, after the 5:00 p.m. 18 September deadline, and the postmark does not count.
-13 | 1 | The Word document is named WBTC_2026_Director_Election_Certification.docx.
-14 | -5 | The reply to Sarah Moore or to Luis Banuelos discloses how an identifiable member voted, another member's membership number, or the markings on an identifiable member's ballot.
-15 | -5 | The deliverable certifies Luis Banuelos as an elected director.
-16 | 2 | The certification includes a short reply addressed to Luis Banuelos that answers both of his points, the exchange-area challenge and the blank-position ballots, and can be sent as written.
-17 | 2 | The certification includes a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.
-18 | 2 | Stage 2 of the stage table transfers Ostrander's 4.0000 surplus, leaving Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095 and non-transferable 0.5329.
-19 | 2 | Stages 3 and 4 of the stage table exclude Pyle on 10.0000 and then Tremblay on 15.0000, leaving Szabo, Wendling and Brandt on 28.0000 each, Hargrove on 65.0000 and non-transferable on 1.5329.
-20 | 1 | The certification is addressed to the Board of Directors from the Election Committee.
-21 | 2 | The certification rejects B26-0515, B26-0577, B26-0591, B26-0592 and B26-0593 as mail received after the deadline, B26-0589 and B26-0590 as cast after the polls closed, B26-0014, B26-0294, B26-0176 and B26-0248 as memberships not in good standing on the record date, B26-0240 as not on the roster, and B26-0360 for an identifying mark found at inspection.
-22 | 2 | Stages 5 to 7 of the stage table exclude Brandt, Wendling and Szabo in turn, leaving Kessler on 124.2386, Banuelos on 105.8190, Hargrove on 98.0000, Okafor on 92.4095 and non-transferable on 4.5329.
-23 | 2 | The certification rejects B26-0170, B26-0398 and B26-0421 as mail ballots replaced by the same member's in-person ballot, and B26-0072, B26-0151, B26-0317, B26-0329 and B26-0459 as later ballots from members whose first valid ballot counts, giving 21 rejected and 5 void in all.
+6 | 3 | The certification explains that the three-way tie on 28.0000 lifts Szabo clear on the stage 3 counts and then excludes Brandt on the stage 2 counts, 21.0000 against Wendling's 22.0000.
+7 | 3 | Stage 8 shows Kessler elected on 144.2386, with Ostrander on 142.0000, Banuelos on 113.8190, Hargrove on 98.4095, Okafor excluded and non-transferable 68.5329.
+8 | 2 | Stage 9 shows Ostrander 142.0000, Kessler 144.2386, Hargrove 116.4095, Banuelos excluded and non-transferable 164.3519, with Hargrove elected as the only continuing candidate and Kessler's surplus not transferred.
+9 | 2 | The certification counts mail ballot B26-0206 because in-person ballot B26-0590 from the same member was cast after the polls closed at 11:15.
+10 | 3 | The certification denies both of Banuelos's points, citing Section 4.3 with the Committee's finding for the first and Rule 5's two-skip rule for the second.
+11 | 2 | The certification denies Sarah Moore's request because B26-0591 was received on 21 September, after the 5:00 p.m. 18 September deadline, and the postmark does not count.
+12 | 1 | The Word document is named WBTC_2026_Director_Election_Certification.docx.
+13 | -5 | The reply to Sarah Moore or to Luis Banuelos discloses how an identifiable member voted, another member's membership number, or the markings on an identifiable member's ballot.
+14 | -5 | The deliverable certifies Luis Banuelos as an elected director.
+15 | 2 | The certification includes a short reply addressed to Luis Banuelos that answers both of his points, the exchange-area challenge and the blank-position ballots, and can be sent as written.
+16 | 2 | The certification includes a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.
+17 | 2 | Stage 2 of the stage table transfers Ostrander's 4.0000 surplus, leaving Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 63.0000, Wendling 22.0000, Brandt 21.0000, Szabo 19.0000, Tremblay 15.0000, Pyle 10.0000 and non-transferable 0.5329.
+18 | 2 | Stage 3 of the stage table shows Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 63.0000, Szabo 26.0000, Wendling 23.0000, Brandt 23.0000, Tremblay 15.0000, Pyle excluded and non-transferable 0.5329; stage 4 shows Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 65.0000, Szabo, Wendling and Brandt 28.0000 each, Tremblay excluded and non-transferable 1.5329.
+19 | 1 | The certification is addressed to the Board of Directors from the Election Committee.
+20 | 2 | The certification rejects B26-0515, B26-0577, B26-0591, B26-0592 and B26-0593 as mail received after the deadline, B26-0589 and B26-0590 as cast after the polls closed, B26-0014, B26-0294, B26-0176 and B26-0248 as memberships not in good standing on the record date, B26-0240 as not on the roster, and B26-0360 for an identifying mark found at inspection.
+21 | 2 | Stage 5 of the stage table shows Ostrander 142.0000, Kessler 124.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 81.0000, Szabo 28.0000, Wendling 28.0000, Brandt excluded and non-transferable 1.5329; stage 6 shows Ostrander 142.0000, Kessler 124.2386, Banuelos 105.8190, Okafor 83.4095, Hargrove 81.0000, Szabo 28.0000, Wendling excluded and non-transferable 2.5329.
+22 | 2 | The certification rejects B26-0170, B26-0398 and B26-0421 as mail ballots replaced by the same member's in-person ballot, and B26-0072, B26-0151, B26-0317, B26-0329 and B26-0459 as later ballots from members whose first valid ballot counts, giving 21 rejected and 5 void in all.
+23 | 2 | Stage 7 of the stage table shows Ostrander 142.0000, Kessler 124.2386, Banuelos 105.8190, Okafor 92.4095, Hargrove 98.0000, Szabo excluded and non-transferable 4.5329.
 
 ## Status
 
@@ -47,3 +47,4 @@ Please prepare the certification as one Word document, WBTC_2026_Director_Electi
 2026-10-05 (reviewer): count verified. Fixed four items: email_moore_0922.txt lengthened to 228 body words (15 September mailing date kept); close of nominations corrected from 24 July to 31 July (the last Friday of July) in the minutes and in two places in the golden, edited through LibreOffice; "ends with" dropped from #16 and #17; #13 split (file name, plus addressee as #27); #3 split into #3, #20, #21 and #22; #18 and #19 split per stage into #18, #19 and #23 to #26. Bylaws, workbook and Banuelos email byte-identical.
 2026-10-05 (later): user capped new criteria at 3. #19 now binds stages 3 and 4; #20 addressee, #21 void/rejected plus duplicate rejections, #22 stages 5 to 7. 22 criteria. Chrome console autofill: tools/specs/bcf343ab-count.json -> fill/bcf343ab-count.js.
 2026-10-07: Quality Judge major: rejected ballots not bound to their reasons (Rule 12). #21 now names the 13 non-duplicate rejections by ballot ID and reason; #23 added for the 8 duplicates plus the 21 rejected / 5 void totals. 23 criteria. Inputs and golden unchanged. Autofill: fill/bcf343ab-count-rejections.js.
+2026-10-07 (later): stage-table criteria added as #24/#25 failed the rubric non-overlap check (same totals already in #5, #8, #9, #18, #19, #22; #6 exclusions repeated in the stage criteria). Deleted #24, #25 and #6; completed #18 (stage 2), #19 (stages 3-4) and #22 (stages 5-6); added stage 7 at the end. Every stage cell is now bound by exactly one criterion. 23 criteria. Inputs and golden unchanged.
