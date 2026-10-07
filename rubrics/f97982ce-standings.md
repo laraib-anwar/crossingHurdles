@@ -34,3 +34,13 @@ Console autofill: fill/f97982ce-standings.js, built from tools/specs/f97982ce-st
 - league_rules.txt: removed the template intro sentence, the hint in section 3 about the old group's numbers, and every tool detail in section 4 (stdout, the stderr line, standings.py, the standings_2026.txt name). Section 4 now reads as a league office publication spec. The stderr line format moves into the prompt.
 - Golden: table regenerated from a fresh run (tie-note member order follows the new names), the note and README renamed and reflowed, and the note no longer says "the rules warn".
 - Rubric rebuild (split 31-35 per outcome and per tiebreak step, a separate secretary rebuttal criterion, split 20/30/7, a file-names criterion, every name renamed) waits on a dump of the live criteria: fill/dump-rubric.js.
+
+## 2026-10-07 reviewer round (16:31): rubric rebuild script
+
+fill/f97982ce-standings-rebuild.js:
+- Deletes the bundled panel criteria 31 to 35, checking each one's text first.
+- Renames every club in the prompt and criteria and re-sorts tie-note name runs alphabetically.
+- Spells out the stderr format in the prompt, since the rules no longer describe it.
+- Adds 16 criteria: 7 outcome orders, 7 deciding tiebreak steps, the secretary rebuttal, and file names.
+- Copies a dump of the finished rubric to the clipboard. Criteria 7, 20 and 30 (bundled club lines) get split once that dump comes back.
+Every order and step was checked against standings.py runs on the renamed data and against the golden note.
