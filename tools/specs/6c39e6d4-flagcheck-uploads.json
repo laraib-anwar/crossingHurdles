@@ -1,0 +1,8 @@
+{
+  "task": "6c39e6d4-flagcheck-uploads",
+  "uid": "6c39e6d4",
+  "uploads": {
+    "input": "snorkel/geranium/6c39e6d4-flagcheck/inputs.zip",
+    "golden": "snorkel/geranium/6c39e6d4-flagcheck/flagcheck.zip"
+  }
+}

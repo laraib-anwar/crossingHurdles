@@ -20,3 +20,9 @@ The prompt and criteria live on the platform. Only the 2026-10-07 changes are re
 - Re-dealing per date instead of holding gets 7 lines wrong (the 4 above plus the 3 new checks).
 - Golden note, README and flagcheck.py updated. Platform was likely still holding the pre-date-column inputs, so both zips must be re-uploaded.
 - Script: fill/6c39e6d4-flagcheck-heldseats.js (swaps changed lines/counts in any criterion by text, adds 2 criteria).
+
+## 2026-10-08 (difficulty run hit platform infra errors)
+
+- Panel: difficulty run incomplete (RetryError, timeouts), which the panel itself says to resubmit unchanged. Role check still flags "flag_rules.txt section 4" and Reference Soundness still says the CSVs have no dates. Both match the pre-10-07 zips, so the platform still holds the old inputs and golden.
+- Local check: flagcheck.py on the current inputs gives checks=112 yes=42 no=70 and matches flag_answers.txt line for line; the golden has no "section 4" term.
+- No file changes. Script fill/6c39e6d4-flagcheck-uploads.js uploads both current zips and then reports whether the 10-07 rubric/prompt scripts were applied.
