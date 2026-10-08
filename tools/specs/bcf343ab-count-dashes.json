@@ -1,0 +1,16 @@
+{
+  "task": "bcf343ab-count-dashes",
+  "uid": "bcf343ab",
+  "criteria_edit": {
+    "18": {"text": "Stage 3 of the stage table shows Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 63.0000, Szabo 26.0000, Wendling 23.0000, Brandt 23.0000, Tremblay 15.0000 and non-transferable 0.5329, with Pyle shown by a dash as excluded.", "weight": 2},
+    "24": {"text": "Stage 4 of the stage table shows Ostrander 142.0000, Kessler 112.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 65.0000, Szabo, Wendling and Brandt 28.0000 each and non-transferable 1.5329, with Tremblay and Pyle shown by a dash as excluded.", "weight": 2},
+    "21": {"text": "Stage 5 of the stage table shows Ostrander 142.0000, Kessler 124.2386, Banuelos 95.8190, Okafor 66.4095, Hargrove 81.0000, Szabo 28.0000, Wendling 28.0000 and non-transferable 1.5329, with Brandt, Tremblay and Pyle shown by a dash as excluded.", "weight": 2},
+    "25": {"text": "Stage 6 of the stage table shows Ostrander 142.0000, Kessler 124.2386, Banuelos 105.8190, Okafor 83.4095, Hargrove 81.0000, Szabo 28.0000 and non-transferable 2.5329, with Wendling, Brandt, Tremblay and Pyle shown by a dash as excluded.", "weight": 2},
+    "23": {"text": "Stage 7 of the stage table shows Ostrander 142.0000, Kessler 124.2386, Banuelos 105.8190, Okafor 92.4095, Hargrove 98.0000 and non-transferable 4.5329, with Szabo, Wendling, Brandt, Tremblay and Pyle shown by a dash as excluded.", "weight": 2},
+    "7": {"text": "Stage 8 shows Kessler elected on 144.2386, with Ostrander on 142.0000, Banuelos on 113.8190, Hargrove on 98.4095 and non-transferable 68.5329, and Okafor, Szabo, Wendling, Brandt, Tremblay and Pyle shown by a dash as excluded.", "weight": 3},
+    "8": {"text": "Stage 9 shows Ostrander 142.0000, Kessler 144.2386, Hargrove 116.4095 and non-transferable 164.3519, with Banuelos, Okafor, Szabo, Wendling, Brandt, Tremblay and Pyle shown by a dash as excluded, Hargrove elected as the only continuing candidate and Kessler's surplus not transferred.", "weight": 2}
+  },
+  "criteria_add": [
+    {"text": "The stage table has a total row reading 567.0000 at each of the nine stages.", "weight": 2}
+  ]
+}
