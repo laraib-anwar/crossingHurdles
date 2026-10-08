@@ -28,3 +28,32 @@ The prompt and criteria live on the platform. Only the 2026-10-07 changes are re
 - README: adds a worked account (a-4501 by hand: 172 units over 123 days, 44/42/43/43, true up 27185, due 49895). Tie, estimate-spread (+33855 cents on the batch) and current-tariff (+61900 cents on the true up) claims recomputed; the method reproduces the old README's 17285 and 26660 on the old data.
 - billing_rules.txt: section 6 is policy voice (no script name, stdout, stderr or file name), and the section 4 hint sentence about wrong methods is removed. The stderr format and file name move to the prompt.
 - Rubric rebuild waits on a dump of the live criteria: fill/dump-rubric.js. Planned: re-value every criterion for the new data, split bundled ones (the README row), replace the password and network negatives with "credit floored at zero" and "corrected months priced at the August tariff", add a worked-account criterion, and rewrite the prompt close.
+
+## 2026-10-08 full rubric rebuild for the 14-account data (fill/2774bd40-trueup-rebuild.js)
+
+The close of the prompt from "Build/Write trueup.py" onward is replaced: it states the stderr format, month names from the read dates, the hand-worked account in README.md, the single deliverable, and that the inputs stay untouched. Every number below was checked against statement_2026_09.txt and README.md.
+
+1 | 5 | Running trueup.py reads.csv tariff.csv writes this line to stderr: accounts=14 august=369115 trueup=70420 corrected=11 due=439535
+2 | 1 | statement_2026_09.txt opens its batch with a line naming September as the statement month, directly followed by the summary line of batch totals and then the first account block.
+3 | 2 | In statement_2026_09.txt, a-3117 shows August usage 53 units and charge 29910 cents, no corrected months and no true up line, and amount due 29910 cents.
+4 | 3 | In statement_2026_09.txt, a-4501 shows corrected May 44 units 21470 cents against 30 units 12300 billed, June 42 units 20160 against 28 units 11480, July 43 units 20815 against 28 units 11480, true up 27185 and amount due 49895 after an August charge of 22710.
+5 | 3 | In statement_2026_09.txt, a-2933 shows corrected May 31 units 12955 cents against 56 units 29330 billed, June 30 units 12300 against 62 units 33260, July 31 units 12955 against 66 units 35880, and a true up of -60260.
+6 | 3 | In statement_2026_09.txt, a-2933 shows an August charge of 13350 cents for 30 units and an amount due of -46910 cents, printed as a negative credit.
+7 | 3 | In statement_2026_09.txt, a-5169 corrects only July, 40 units 18850 cents against 23 units 9430 billed, with true up 9420, August 39 units 19830 and amount due 29250.
+8 | 2 | In statement_2026_09.txt, a-1846 shows corrected May 97 units 56185 cents, June 93 units 53565 and July 96 units 55530, true up 43885, August 96 units 60870 and amount due 104755.
+9 | 2 | In statement_2026_09.txt, a-6220 shows June corrected to 1 unit 410 cents against 2 units 820 billed and July corrected to 2 units 820 against 0 units 0, with true up 410 and amount due 855.
+10 | 2 | In statement_2026_09.txt, a-8814 shows corrected May 94 units 54220 cents, June 91 units 52255 and July 94 units 54220, true up 81220, August 94 units 59430 and amount due 140650.
+11 | 2 | In statement_2026_09.txt, a-2290 corrects only June and July, 53 units 27365 cents against 49 units 24745 billed and 54 units 28020 against 50 units 25400, with true up 5240 and amount due 35870.
+12 | 2 | In statement_2026_09.txt, a-6618 shows a true up of -56985 cents and an amount due of -40035 cents, printed as a negative credit.
+13 | 3 | In statement_2026_09.txt, a-9035 shows August usage 32 units and charge 14790 cents with no corrected months and no true up line, and amount due 14790 cents.
+14 | 2 | In statement_2026_09.txt, a-4127 corrects only June and July, 42 units 20160 cents against 38 units 17540 billed and 44 units 21470 against 41 units 19505, with true up 4585 and amount due 27295.
+15 | 2 | In statement_2026_09.txt, a-5583 corrects only July, 43 units 20815 cents against 47 units 23435 billed, with true up -2620 and amount due 20090.
+16 | 2 | In statement_2026_09.txt, a-3364 shows corrected May 40 units 18850 cents, June 38 units 17540 and July 40 units 18850, each against 30 units 12300 billed, with true up 18340 and amount due 38890.
+17 | 1 | In statement_2026_09.txt, a-7702 shows August usage 59 units and charge 34230 cents, no true up line, and amount due 34230 cents.
+18 | 2 | README.md works a-4501 by hand from its 1180 and 1352 actual readings: 172 units over 123 days, 2 spare units, the first to June on its .95 and the second to May on the tie.
+19 | 2 | README.md says the tie rule decides a spare unit in six of the eleven corrected spans: a-4501, a-2933, a-5169, a-1846, a-6220 and a-4127.
+20 | 2 | trueup.py takes the statement month and the August label from the read dates in reads.csv instead of printing them as fixed text.
+21 | 3 | reads.csv and tariff.csv are left byte-for-byte unchanged by running trueup.py; the script opens them read-only and writes nothing back to either file.
+22 | 1 | The delivered files are named trueup.py, statement_2026_09.txt and README.md.
+23 | -5 | statement_2026_09.txt shows a-2933 or a-6618 with an amount due of zero instead of its negative credit.
+24 | -5 | statement_2026_09.txt prices a corrected May, June or July month at the August 2026 tariff instead of the tariff in force for that month.
