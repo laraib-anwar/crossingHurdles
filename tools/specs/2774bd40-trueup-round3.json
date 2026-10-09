@@ -1,0 +1,138 @@
+{
+ "splits": [
+  [
+   "^In statement_2026_09\\.txt, a-4501 shows corrected May",
+   [
+    [
+     "In statement_2026_09.txt, a-4501's corrected usage is 44 units for May, 42 for June and 43 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-4501's corrected charges are 21470 cents for May, 20160 for June and 20815 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-4501's May, June and July were originally billed 12300, 11480 and 11480 cents.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-4501 shows a true up of 27185 cents, an August charge of 22710 cents for 43 units and an amount due of 49895 cents.",
+     2
+    ]
+   ]
+  ],
+  [
+   "^In statement_2026_09\\.txt, a-2933 shows corrected May",
+   [
+    [
+     "In statement_2026_09.txt, a-2933's corrected usage is 31 units for May, 30 for June and 31 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-2933's corrected charges are 12955 cents for May, 12300 for June and 12955 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-2933's May, June and July were originally billed 29330, 33260 and 35880 cents.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-2933 shows a true up of -60260 cents.",
+     1
+    ]
+   ]
+  ],
+  [
+   "^In statement_2026_09\\.txt, a-1846 shows corrected May",
+   [
+    [
+     "In statement_2026_09.txt, a-1846's corrected usage is 97 units for May, 93 for June and 96 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-1846's corrected charges are 56185 cents for May, 53565 for June and 55530 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-1846 shows a true up of 43885 cents, an August charge of 60870 cents for 96 units and an amount due of 104755 cents.",
+     1
+    ]
+   ]
+  ],
+  [
+   "^In statement_2026_09\\.txt, a-8814 shows corrected May",
+   [
+    [
+     "In statement_2026_09.txt, a-8814's corrected usage is 94 units for May, 91 for June and 94 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-8814's corrected charges are 54220 cents for May, 52255 for June and 54220 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-8814 shows a true up of 81220 cents, an August charge of 59430 cents for 94 units and an amount due of 140650 cents.",
+     1
+    ]
+   ]
+  ],
+  [
+   "^In statement_2026_09\\.txt, a-3364 shows corrected May",
+   [
+    [
+     "In statement_2026_09.txt, a-3364's corrected usage is 40 units for May, 38 for June and 40 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-3364's corrected charges are 18850 cents for May, 17540 for June and 18850 for July.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-3364's May, June and July were each originally billed 30 units for 12300 cents.",
+     1
+    ],
+    [
+     "In statement_2026_09.txt, a-3364 shows a true up of 18340 cents, an August charge of 20550 cents for 40 units and an amount due of 38890 cents.",
+     1
+    ]
+   ]
+  ],
+  [
+   "^README\\.md (works|walks|takes|shows|carries)",
+   [
+    [
+     "README.md works one trued-up account by hand from its two actual readings to the units in each month of its span, placing the spare units by largest fraction with ties to the earlier month.",
+     1
+    ],
+    [
+     "README.md prices that account's corrected months under each month's own rates and carries the figures through the true up to an amount due that matches the account's block in statement_2026_09.txt.",
+     1
+    ]
+   ]
+  ]
+ ],
+ "edits": [
+  [
+   "^In statement_2026_09\\.txt, a-2933 shows an August charge",
+   "In statement_2026_09.txt, a-2933 shows an August charge of 13350 cents for 30 units and an amount due of -46910 cents.",
+   null
+  ],
+  [
+   "^In statement_2026_09\\.txt, a-6618 shows a true up",
+   "In statement_2026_09.txt, a-6618 shows a true up of -56985 cents and an amount due of -40035 cents.",
+   null
+  ],
+  [
+   "^statement_2026_09\\.txt includes an account block for an account that does not appear in reads\\.csv",
+   "statement_2026_09.txt raises a credit to zero: a-2933 or a-6618 shows an amount due of 0 instead of its negative amount due.",
+   -5
+  ]
+ ],
+ "add": [
+  [
+   "trueup.py trues up an account only when its September the 1st read has read code A; an account whose closing read is an estimate gets no true up and its August month is billed as read.",
+   2
+  ]
+ ],
+ "prompt_tail": "Billing wants this as trueup.py, a script they can point at next month's export and rate schedule without editing it: reads.csv first, tariff.csv second. It should print the statement batch and send one tally line to stderr as accounts=N august=N trueup=N corrected=N due=N, where due is every account's amount due added up. The batch starts with the statement month and four figures, the number of accounts, the August charges added together in cents, the true up amounts added together in cents and how many accounts carry a true up, then gives each account a block in the order it first turns up in the export: its August usage and charge, then for an account that trued up a line for each corrected month with the corrected usage and charge beside what was billed, and the true up amount, and last the amount due. Month names on the statement should come from the read dates rather than being typed in. Save September's run as statement_2026_09.txt with a few lines of your own above it on what moved this month. In README.md, say how to run it, take one trued-up account from its two actual readings to its amount due by hand so billing can see the script lands on the same units and cents, and note where a true up goes wrong. Don't change reads.csv or tariff.csv, and the readings stay on this machine."
+}
