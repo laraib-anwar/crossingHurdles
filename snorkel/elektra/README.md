@@ -24,6 +24,8 @@ Write original SWE benchmark tasks from curated open-source repos, DeepSWE-style
 - 2026-10-05: Issues sheet row 63 (my report: no allocation, no org invite) marked Resolved. Deccan replied: "The repos chosen are out of scope, pls choose another repos". DOMPurify and enigma-bbs are rejected, so I need to pick new repos.
 - 2026-10-05: DOMPurify/enigma-bbs rows (56-57) are now removed from the Repos tab. Pick only from repos still listed there. Suggested picks: OpenHands/software-agent-sdk (Python, row 70, free col E) and swagger-api/swagger-client (JS, row 58, free col D, only 1 annotator). Backups: oceanbase/powercontext (Python, row 71), release-plz/release-plz (Rust, row 74). Avoid C#/Kotlin rows (verifier languages are python/node/typescript/go/rust).
 - 2026-10-05: re-picked. Repos tab: swagger-api/swagger-client (row 58) and OpenHands/software-agent-sdk (row 70). My Details rows are now 157 (OpenHands, F157 says "choose another repo") and 174 (swagger-client, F174 says "Pls add another repo"). Those F comments were Deccan's replies to the old DOMPurify/enigma-bbs picks; I cleared F157 and F174 on 2026-10-05. Asked Deccan to re-review. Assignment is confirmed when F gets the repo link and the row turns green.
+- 2026-10-06: raised the re-pick on Issues sheet row 64 (still no allocation, no invite) and pinged @Zaheer in #int-experts-elektra-deccan at 10:52 PM ("trying to get a task since 10 days"). He replied in the thread.
+- 2026-10-08: Zaheer listed the GitHub IDs that have tasks at draft/scope with no progress and asked them to report status, or lose access. laraib-anwar is not on the list because I have no task yet.
 - 2026-10-04: Gmail search for Deep-SWE-Tasks-Annotation finds only Slack digests, no GitHub invite. Org page github.com/Deep-SWE-Tasks-Annotation shows no repos and "must be a member", so I am not an org member yet (invite not received or not accepted). Note: Prathamesh logged "repo issue, req another repo" on enigma-bbs (Details row 129).
 
 ## To do before the first task
@@ -43,8 +45,9 @@ Write original SWE benchmark tasks from curated open-source repos, DeepSWE-style
 | 3 | `/verify-spec` | Hint triage, gate H1 (a zero-hint pass is rejected), symbol coverage, then spec-alignment, instruction-integrity, task-security judges |
 | 4 | `/gen-tests` | Hidden tests written blind (the test writer never sees the solution) |
 | 5 | `/review` | 9 programmatic gates, then 3 judge models that must all agree (tests use public APIs only) |
-| 6 | `/analyze` | About 5 runs per frontier model; if every run passes, the task is too easy and is rejected; failures must come from the model, not the task |
+| 6 | `/analyze` (shown as `/benchmark` in taskbot) | About 5 runs per frontier model; if every run passes, the task is too easy and is rejected; failures must come from the model, not the task |
 | 7 | `/submit` | Only when the pinned status comment shows it as the next action |
+| - | QC review | After submit, Deccan QC reviews. Only QC runs `/rework` to reopen a task (see Rework below) |
 
 On any failure: rework, push, rerun the failing command, then continue in order.
 
@@ -71,6 +74,7 @@ On any failure: rework, push, rerun the failing command, then continue in order.
 - Covers exactly what the tests enforce, no more and no less.
 - Leaves enough unsaid that the agent has to explore, but names enough behavior for the tests to check.
 
+- Multi-feature tasks (Deccan, 2026-10-06): build a task from several related features with one clear purpose. Describe each feature's expected behaviour and how the features work together. Vary task scope, scenarios and instruction structure from task to task.
 - Write it in plain human style. Deccan (2026-09-30) flagged submissions that read as LLM-generated: no em dashes, few colons, no heavy Markdown (headers, bullets, bold).
 
 **hint.md**
@@ -90,6 +94,21 @@ On any failure: rework, push, rerun the failing command, then continue in order.
 - No guessed metadata in diffs or task.toml.
 - No local taskbot CLI unless the official flow says so.
 - Use the full /review, not --fast, unless the platform team asks.
+- Any edit to instruction.md, even at the /review stage, means rerunning from /scope and going through every stage in order before /review or /benchmark (Deccan, 2026-10-07). Several tracker issues came from pushing changes without following this sequence.
+
+## Rework after submit (Deccan, 2026-10-09)
+
+- After /submit, wait for QC's review and comments. Don't change the task or run anything unless QC asks.
+- Annotators never run `/rework`. Only QC uses it, to reopen a task.
+- Once QC reopens the task, make the requested fixes and rerun the gates from the beginning in the normal order.
+- If QC hasn't asked for rework, leave the submitted task alone.
+
+## Repo rules (Deccan, 2026-10-05 to 10-07)
+
+- Unassigned repo: read the comment on your row in the repo request sheet (unsupported language, GitHub ID problem, etc.) and update the request.
+- Max 5 tasks per repo. After 5, request a different repo from the available list. Deccan wants repo and language diversity.
+- When you finish an assigned repo, mark your entry "Completed" on the repo completion sheet.
+- If you're inactive or leaving, say so. Deccan is pruning access for IDs with no progress.
 
 ## If a step fails, report
 
@@ -107,9 +126,14 @@ Log it in the Elektra Issues sheet, then wait for the platform team to give the 
 - The sheet is only for reporting a taskbot failure. Columns: Date, Name, CH Email, PR, Issue Summary, Error SS, Status (Pending/Picked/Resolved), Deccan Response. Leave Status at Pending; Deccan sets it.
 - Always give the full PR link. A report without one got "Need PR links to verify".
 - /analyze (/benchmark) failed with "ssm command Failed" until task.toml set cpu 1 and memory 6gb, and the Dockerfile gained `RUN apt-get update && apt-get install -y --no-install-recommends tmux asciinema && rm -rf /var/lib/apt/lists/*` before benchmarking. Deccan says this is now in the guidelines doc. It conflicts with "don't edit environment/Dockerfile", so confirm with Deccan before touching the Dockerfile.
-- /init fails on a repo whose language is outside the verifier scope (python/node/typescript/go/rust). Ask for a new repo on the sheet. Both my repos are JavaScript, so they're in scope.
+- /init fails on a repo whose language is outside the verifier scope (python/node/typescript/go/rust). Ask for a new repo on the sheet. (DOMPurify/enigma-bbs were later rejected as out of scope anyway because they were dropped from the curated Repos list.)
 - /review stuck "QUEUED" for 18h was a backend backfill bug, fixed by Deccan. Don't re-trigger; report it.
 - "no task-contract verdict recorded for artifact ..." during /review: Deccan's first answer was that edits hadn't been pushed. Push everything and check that local and remote HEAD match before reporting.
 - 2026-09-30 Slack: other annotators report /benchmark (the /analyze step) erroring 5/5 trials within minutes even after /review passes; Deccan treats it as harness-side. Gitoxide /scope passed but H1 environment validation failed on missing OpenSSL dev files, which the Dockerfile hid with `|| true`.
 - Issue reports need your registered email, task/PR link or session ID, error details and screenshots. Deccan reviews the sheet on a rolling basis, so check your rows.
 - After finishing a task, ask in the channel for the next repo assignment.
+- Issue tracker (2026-10-05): Deccan has added comments and resolutions to most rows. A row not marked "Resolved" is still under investigation. If a fix doesn't work, update your row with new details and screenshots.
+- Blockers can also go in Zaheer's channel thread: PR link, latest command/run, exact error, screenshot.
+- Open infra problems reported by others (2026-10-06 to 10-08): /benchmark "ssm command Failed" before any Luna trial ran, then a retry refused with "this task revision already has a benchmark cycle" (needs a Deccan reset). A GitHub Actions job never started because of a billing/spending-limit error on the org. Some annotators are asking for new repos because theirs keep failing on infra.
+- Open question (Naveen, 2026-10-08, no answer seen yet): which model and effort level count as the unaided first attempt for gate H1 and the /scope difficulty check. Claude Opus 5.5 at high effort with a test runner solves most features in 15-30 minutes, so no failure can be recorded. He also asked whether a real hint ladder is required, or whether a zero-hint pass is acceptable when the benchmark models (Luna and Sol) score 0/5. Check the thread before starting a task.
+- A "Project Nebula" reminder was posted in this channel on 2026-10-08 (Deccan Diff tab, env.patch/fix.patch, zero open changes before submit). It refers to a different project, so ignore it unless Elektra adopts the same flow.
