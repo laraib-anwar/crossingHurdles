@@ -1,0 +1,53 @@
+(async () => {
+const UID = "bcf343ab";
+const RUBRIC = [["WBTC_2026_Director_Election_Certification.docx certifies Dale Ostrander, Marjorie Kessler and Tamsin Hargrove as elected, in that order of election.", 5], ["The certification states 574 valid ballots and a quota of 144.", 4], ["The ballot accounting gives 606 ballots received: 265 mail, 257 online and 84 in person.", 2], ["The certification treats Kessler's exchange area as Carlow Ridge under the Committee's 19 September finding, not Oakmere.", 2], ["The certification excludes Banuelos at stage 9 under Section 4.3, as the remaining Carlow Ridge candidate once Kessler is elected, before any surplus is transferred.", 2], ["Stage 1 of the stage table shows Ostrander 151.0000, Kessler 107.0000, Banuelos 91.0000, Hargrove 71.0000, Okafor 58.0000, Brandt 27.0000, Wendling 20.0000, Szabo 19.0000, Pyle 16.0000, Tremblay 14.0000 and non-transferable 0.0000.", 3], ["Stage 2 of the stage table transfers Ostrander's 7.0000 surplus and shows Ostrander 144.0000, Kessler 108.4816, Banuelos 93.3613, Hargrove 71.6945, Okafor 58.5556, Brandt 27.2315, Wendling 20.2778, Szabo 19.2778, Pyle 16.0926, Tremblay 14.0463 and non-transferable 0.9810.", 2], ["Stage 3 of the stage table shows Ostrander 144.0000, Kessler 109.4816, Banuelos 95.3613, Hargrove 74.6945, Okafor 59.5556, Brandt 28.2315, Wendling 20.2778, Szabo 21.2778, Pyle 18.0926, Tremblay excluded and non-transferable 3.0273.", 2], ["Stage 4 of the stage table shows Ostrander 144.0000, Kessler 112.4816, Banuelos 97.4076, Hargrove 77.6945, Okafor 61.5556, Brandt 29.2315, Wendling 22.2778, Szabo 22.2778, Pyle excluded, Tremblay excluded and non-transferable 7.0736.", 2], ["Stage 5 of the stage table shows Ostrander 144.0000, Kessler 114.5279, Banuelos 98.5002, Hargrove 79.7408, Okafor 70.6482, Brandt 31.2315, Wendling excluded, Szabo 23.2778, Pyle excluded, Tremblay excluded and non-transferable 12.0736.", 2], ["Stage 6 of the stage table shows Ostrander 144.0000, Kessler 123.6205, Banuelos 98.5928, Hargrove 84.7408, Okafor 73.6945, Brandt 35.2315, Wendling excluded, Szabo excluded, Pyle excluded, Tremblay excluded and non-transferable 14.1199.", 2], ["Stage 7 of the stage table shows Ostrander 144.0000, Kessler 130.7594, Banuelos 104.6391, Hargrove 95.7408, Okafor 77.6945, Brandt excluded, Wendling excluded, Szabo excluded, Pyle excluded, Tremblay excluded and non-transferable 21.1662.", 2], ["Stage 8 of the stage table shows Ostrander 144.0000, Kessler 152.8520, Banuelos 121.7780, Hargrove 106.8334, Okafor excluded, Brandt excluded, Wendling excluded, Szabo excluded, Pyle excluded, Tremblay excluded and non-transferable 48.5366, with Kessler elected.", 3], ["Stage 9 of the stage table shows Ostrander 144.0000, Kessler 152.8520, Banuelos excluded, Hargrove 137.5279, Okafor excluded, Brandt excluded, Wendling excluded, Szabo excluded, Pyle excluded, Tremblay excluded and non-transferable 139.6201, with Hargrove elected as the only continuing candidate and Kessler's surplus not transferred.", 2], ["The certification explains that Szabo and Wendling, level on 22.2778 at the end of stage 4, are separated on the stage 3 counts, Szabo 21.2778 against Wendling 20.2778, so Wendling is excluded at stage 5.", 3], ["The certification counts the in-person ballots B26-0596 to B26-0600, cast between 11:00 and 11:15, because the polls closed at 11:15.", 2], ["The certification counts mail ballot B26-0424 because in-person ballot B26-0602 from the same member was cast after the polls closed.", 2], ["The certification counts both B26-0064 and B26-0481, which come from two different members named James Miller with different member numbers.", 2], ["The certification rejects B26-0517, B26-0577, B26-0603, B26-0604, B26-0605 and B26-0606 as mail received after the 5:00 p.m. 18 September deadline.", 1], ["The certification rejects B26-0601 and B26-0602 as cast in person after the polls closed.", 1], ["The certification rejects B26-0101, B26-0265, B26-0299, B26-0422 and B26-0461 as memberships not in good standing on the 14 August record date.", 1], ["The certification rejects B26-0043 because its membership number is not on the roster.", 1], ["The certification rejects B26-0195 for an identifying mark found at inspection.", 1], ["The certification rejects B26-0138, B26-0251, B26-0262 and B26-0301 as mail or online ballots replaced by the same member's in-person ballot.", 1], ["The certification rejects B26-0199, B26-0264, B26-0283, B26-0284, B26-0329, B26-0348 and B26-0375 as later ballots from members whose first valid ballot counts.", 1], ["The ballot accounting gives 26 rejected ballots and 6 void ballots.", 2], ["The certification counts B26-0051 under the Committee's reversal (J-09) and reads B26-0467 under the later ruling J-08.", 2], ["The certification denies Banuelos's first point, that Kessler should count as an Oakmere resident, citing Section 4.3's test of residence at the close of nominations.", 2], ["The certification denies Banuelos's second point, that ballots ranking him below blank positions should count for him, citing Rule 5's rule that two skipped positions in a row end a ballot.", 2], ["The certification denies Sarah Moore's request because B26-0604 was received on 21 September, after the 5:00 p.m. 18 September deadline, and the postmark does not count.", 2], ["The certification includes a short reply addressed to Luis Banuelos that answers his challenge on Kessler's exchange area.", 1], ["The reply to Luis Banuelos answers his point about ballots that ranked him below blank positions.", 1], ["The certification includes a short reply addressed to Sarah Moore stating that her ballot arrived after the 5:00 p.m. 18 September deadline and could not be counted, and that the postmark does not change this.", 2], ["The Word document is named WBTC_2026_Director_Election_Certification.docx.", 1], ["The certification is addressed to the Board of Directors from the Election Committee.", 1], ["The reply to Sarah Moore or to Luis Banuelos discloses how an identifiable member voted, another member's membership number, or the markings on an identifiable member's ballot.", -5], ["The deliverable certifies Luis Banuelos as an elected director.", -5], ["The deliverable accepts a mail ballot on its postmark date or grants Sarah Moore's request to count her ballot.", -4]];
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const txt = el => (el.innerText || el.textContent || '').trim();
+const set = (el, v) => { el.focus(); Object.getOwnPropertyDescriptor(el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype, 'value').set.call(el, v); el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); el.blur(); };
+const ok = (...m) => console.log('%c[bcf] OK', 'color:#2f6b2f;font-weight:bold', ...m);
+const bad = (...m) => console.log('%c[bcf] PROBLEM', 'color:#b00020;font-weight:bold', ...m);
+const click = el => { for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'click']) el.dispatchEvent(new MouseEvent(t, { bubbles: true, cancelable: true, view: window })); };
+if (!document.body.textContent.includes(UID)) { bad('not task ' + UID + '. Nothing changed.'); return; }
+const leaves = re => [...document.querySelectorAll('body *')].filter(e => re.test(txt(e)) && ![...e.children].some(c => re.test(txt(c))));
+const nums = () => leaves(/^Criterion \d+$/).map(h => +txt(h).split(' ')[1]);
+const box = n => { const h = leaves(/^Criterion \d+$/).find(e => txt(e) === 'Criterion ' + n); if (!h) return null; let el = h, best = h.parentElement; for (let i = 0; el && i < 10; i++, el = el.parentElement) { const s = new Set([...el.querySelectorAll('*')].filter(x => /^Criterion \d+$/.test(txt(x)) && !x.children.length).map(txt)); if (s.size > 1) break; best = el; } return { h, best }; };
+const open = async n => { let b = box(n); if (b && !b.best.querySelector('textarea')) { b.h.click(); await sleep(400); b = box(n); } return b && b.best.querySelector('textarea') ? b : null; };
+const weightBox = b => [...b.best.querySelectorAll('input')].find(i => !['checkbox', 'radio', 'hidden', 'file'].includes(i.type));
+ok('criteria on page before: ' + nums().length + ', new rubric: ' + RUBRIC.length);
+const have = nums();
+for (let k = 0; k < RUBRIC.length; k++) {
+  const [text, w] = RUBRIC[k];
+  let b = have.includes(k + 1) ? await open(k + 1) : null;
+  if (!b) {
+    const top = Math.max(0, ...nums());
+    const add = [...document.querySelectorAll('button')].find(x => /add criterion/i.test(txt(x)));
+    if (!add) { bad('Add criterion button not found at #' + (k + 1)); break; }
+    add.click(); await sleep(900);
+    const n = Math.max(...nums()); b = n > top ? await open(n) : null;
+    if (!b) { bad('could not add #' + (k + 1)); continue; }
+  }
+  const t = b.best.querySelector('textarea');
+  if (t.value.trim() !== text) set(t, text);
+  const wb = weightBox(b); if (wb && wb.value !== String(w)) set(wb, String(w));
+}
+for (let pass = 0; pass < 3 && Math.max(0, ...nums()) > RUBRIC.length; pass++) {
+  for (const n of nums().filter(n => n > RUBRIC.length).sort((x, y) => y - x)) {
+    const b = await open(n); if (!b) continue;
+    const del = [...b.best.querySelectorAll('button')].find(x => /delete section/i.test(txt(x)));
+    if (!del) { bad('no Delete section on #' + n); continue; }
+    const before = nums().length;
+    click(del); await sleep(1000);
+    const c = [...document.querySelectorAll('[role=dialog] button, [role=alertdialog] button')].find(x => /^(delete|confirm|yes|ok|remove)/i.test(txt(x)));
+    if (c) { click(c); await sleep(1000); }
+    if (nums().length >= before) bad('#' + n + ' did not delete on pass ' + (pass + 1));
+  }
+}
+// "How many input files are tied to your prompt?" -> 5
+const lab = leaves(/How many input files are tied to your prompt/i)[0];
+let field = null;
+for (let el = lab, i = 0; el && i < 6 && !field; i++, el = el.parentElement) field = el.querySelector('input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea');
+if (field && field.value !== '5') { set(field, '5'); ok('input file count set to 5'); }
+const end = nums().length;
+if (end === RUBRIC.length) ok('rubric now has ' + end + ' criteria, all set. Upload both zips, then Clear feedback results, Check feedback, Finish update.');
+else bad('rubric has ' + end + ' criteria, expected ' + RUBRIC.length + '; delete everything after Criterion ' + RUBRIC.length + ' by hand.');
+})();
