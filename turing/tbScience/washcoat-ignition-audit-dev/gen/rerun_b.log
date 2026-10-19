@@ -1,0 +1,14 @@
+{"recipe_id": "lightoff_06", "failed": true, "label": "two folds, two Hopf points"}
+{"recipe_id": "held_10", "failed": true, "label": "two Hopf points"}
+{"recipe_id": "held_11", "failed": true, "label": "two Hopf points"}
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:48: RuntimeWarning: overflow encountered in exp
+  return np.exp(self.gamma * th / (1.0 + th))
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:169: RuntimeWarning: invalid value encountered in subtract
+  J = D2 - phi2 * np.diag(Rv - L.beta * c * dRv)
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:51: RuntimeWarning: overflow encountered in square
+  return self.R(th) * self.gamma / (1.0 + th) ** 2
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:48: RuntimeWarning: invalid value encountered in divide
+  return np.exp(self.gamma * th / (1.0 + th))
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:51: RuntimeWarning: overflow encountered in divide
+  return self.R(th) * self.gamma / (1.0 + th) ** 2
+{"recipe_id": "held_18", "failed": true, "label": "two folds, Biot extreme, Le < 1"}

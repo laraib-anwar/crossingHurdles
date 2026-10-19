@@ -36,14 +36,28 @@ def steady_folds(beta, gamma, Bim, Bih):
 
 def draw_params(rng, kind):
     """Random steady parameters inside the domain, biased towards the wanted fold structure."""
+    if kind == "hopf":
+        for _ in range(10000):
+            beta = float(round(rng.uniform(0.15, 0.5), 4))
+            gamma = float(round(rng.uniform(12.0, 30.0), 3))
+            Bim = float(round(math.exp(rng.uniform(math.log(6.0), math.log(60.0))), 3))
+            Bih = float(round(Bim / math.exp(rng.uniform(0.0, math.log(min(3.0, 1.0 / beta)))), 3))
+            if 0.5 <= Bih <= 50.0 and Bih <= Bim and beta * Bim / Bih <= 1.0:
+                return beta, gamma, Bim, Bih
     for _ in range(10000):
         beta = float(round(math.exp(rng.uniform(math.log(0.05), math.log(0.6))), 4))
         gamma = float(round(rng.uniform(8.0, 40.0), 3))
         if kind == "biot_extreme":
-            Bim = float(round(rng.uniform(150.0, 200.0), 2))
-            Bih = float(round(rng.uniform(max(0.5, beta * Bim), min(50.0, Bim)), 3)) if beta * Bim <= 50 else None
-            if Bih is None:
-                continue
+            if rng.rand() < 0.5:                       # high mass Biot number
+                Bim = float(round(rng.uniform(150.0, 200.0), 2))
+                if beta * Bim > 50:
+                    continue
+                Bih = float(round(rng.uniform(max(0.5, beta * Bim), min(50.0, Bim)), 3))
+            else:                                      # low heat Biot number
+                Bih = float(round(rng.uniform(0.5, 0.7), 3))
+                Bim = float(round(rng.uniform(Bih, Bih / beta), 3))
+                if Bim < 1.0:
+                    continue
         else:
             Bim = float(round(math.exp(rng.uniform(math.log(1.0), math.log(200.0))), 3))
             lo_h, hi_h = max(0.5, beta * Bim), min(50.0, Bim)
@@ -95,8 +109,10 @@ def screen(r):
             if abs(q - e) / e < 1e-3:
                 return False, "query near event", rep, secs
     for h in rep["hopf_points"]:
-        if h["omega"] < 0.05:
-            return False, "small omega", rep, secs
+        if h["omega"] < 0.05 or h["omega"] > 200.0:
+            return False, "omega outside [0.05, 200]", rep, secs
+    if not hopf_robust(r):
+        return False, "Hopf structure not resolution-independent", rep, secs
     # one state at each window end, every fold strictly inside
     for end in (r["phi_min"], r["phi_max"]):
         rr = dict(r, phi_query=[end])
@@ -129,6 +145,26 @@ def screen(r):
     return True, "ok", rep, secs
 
 
+def hopf_robust(r):
+    """Along the curve inside the window, the real part of the rightmost complex pair has the
+    same sign at N = 72 and N = 162 everywhere (no resolution-dependent Hopf point), and agrees
+    within 1e-4 relative wherever it is within 0.05 of zero."""
+    L = lo.Layer(r)
+    zs, ph = curve(L)
+    for z, p in zip(zs, ph):
+        if not (r["phi_min"] <= p <= r["phi_max"]):
+            continue
+        cs = lo.cs_of(z)
+        phi, thc, eta, c0 = L.state(cs)
+        a = lo.complex_lead(lo.spectrum_n(L, cs, c0, phi, 72))[0]
+        b = lo.complex_lead(lo.spectrum_n(L, cs, c0, phi, 162))[0]
+        if math.isfinite(a) != math.isfinite(b):
+            return False
+        if math.isfinite(a) and (a * b < 0.0 or (abs(b) < 0.05 and abs(a - b) > 1e-4 * max(1.0, abs(b)))):
+            return False
+    return True
+
+
 _CURVES = {}
 
 
@@ -156,8 +192,9 @@ def crossings(L, q):
 
 def window_and_queries(rng, folds, extra_events=()):
     """Window strictly around every fold (one state at both ends) and queries on every branch."""
-    if folds:
-        fmin, fmax = min(folds), max(folds)
+    bounds = list(folds) + list(extra_events)
+    if bounds:
+        fmin, fmax = min(bounds), max(bounds)
         phi_min = float(round(max(0.01, fmin / rng.uniform(2.5, 6.0)), 4))
         phi_max = float(round(min(30.0, fmax * rng.uniform(2.5, 6.0)), 3))
     else:
@@ -186,31 +223,31 @@ def ends_single(L, phi_min, phi_max):
 PLAN = [
     ("lightoff_01", True, 2, (1.0, 1.0), 0, None, "two folds, Le = 1 (base case)"),
     ("lightoff_02", True, 0, (0.5, 3.0), 0, None, "unique steady state"),
-    ("lightoff_03", True, 2, (0.05, 0.5), 1, None, "two folds, one Hopf point, Le < 1"),
+    ("lightoff_03", True, 2, (0.1, 0.5), 1, None, "two folds, one Hopf point, Le < 1"),
     ("lightoff_04", True, 4, (0.5, 3.0), 0, None, "four folds (two hysteresis loops)"),
     ("lightoff_05", True, 2, (2.0, 20.0), 0, None, "two folds, Le > 1"),
-    ("lightoff_06", True, 2, (0.05, 0.5), 2, None, "two folds, two Hopf points"),
-    ("held_01", False, 0, (0.05, 20.0), 0, None, "unique steady state"),
-    ("held_02", False, 0, (0.05, 20.0), 0, "biot_extreme", "unique, Biot numbers at the domain bounds"),
+    ("lightoff_06", True, -1, (0.1, 0.5), 2, None, "two folds, two Hopf points"),
+    ("held_01", False, 0, (0.1, 20.0), 0, None, "unique steady state"),
+    ("held_02", False, 0, (0.1, 20.0), 0, "biot_extreme", "unique, Biot numbers at the domain bounds"),
     ("held_03", False, 2, (1.0, 1.0), 0, None, "two folds, Le = 1"),
     ("held_04", False, 2, (0.8, 1.5), 0, None, "two folds"),
     ("held_05", False, 2, (2.0, 20.0), 0, None, "two folds, Le > 1"),
     ("held_06", False, 2, (5.0, 20.0), 0, None, "two folds, large Le"),
-    ("held_07", False, 2, (0.05, 0.5), 1, None, "one Hopf point, Le < 1"),
-    ("held_08", False, 2, (0.05, 0.5), 1, None, "one Hopf point, Le < 1"),
-    ("held_09", False, 2, (0.05, 0.1), 1, None, "one Hopf point, small Le"),
-    ("held_10", False, 2, (0.05, 0.5), 2, None, "two Hopf points"),
-    ("held_11", False, 2, (0.05, 0.5), 2, None, "two Hopf points"),
+    ("held_07", False, 2, (0.1, 0.5), 1, None, "one Hopf point, Le < 1"),
+    ("held_08", False, 2, (0.1, 0.5), 1, None, "one Hopf point, Le < 1"),
+    ("held_09", False, 2, (0.1, 0.15), 1, None, "one Hopf point, small Le"),
+    ("held_10", False, -1, (0.1, 0.5), 2, None, "two Hopf points"),
+    ("held_11", False, -1, (0.1, 0.5), 2, None, "two Hopf points"),
     ("held_12", False, 4, (0.5, 3.0), 0, None, "four folds"),
     ("held_13", False, 4, (0.5, 3.0), 0, None, "four folds"),
-    ("held_14", False, 4, (0.05, 0.5), -1, None, "four folds, Le < 1"),
+    ("held_14", False, 4, (0.1, 0.5), -1, None, "four folds, Le < 1"),
     ("held_15", False, 2, (0.5, 3.0), 0, "near_cusp", "two nearly coincident folds"),
-    ("held_16", False, 2, (0.05, 0.5), 1, "hopf_near_fold", "Hopf point close to a fold"),
+    ("held_16", False, 2, (0.1, 0.5), 1, "hopf_near_fold", "Hopf point close to a fold"),
     ("held_17", False, 2, (0.5, 3.0), 0, "biot_extreme", "two folds, Biot numbers at the bounds"),
-    ("held_18", False, 2, (0.05, 0.5), -1, "biot_extreme", "two folds, Biot extreme, Le < 1"),
+    ("held_18", False, 2, (0.1, 0.5), -1, "biot_extreme", "two folds, Biot extreme, Le < 1"),
     ("held_19", False, 2, (1.0, 1.0), 0, None, "two folds, Le = 1"),
     ("held_20", False, 2, (0.2, 0.8), -1, None, "two folds, Le near the Hopf onset"),
-    ("held_21", False, 0, (0.05, 0.3), -1, None, "unique, small Le"),
+    ("held_21", False, 0, (0.1, 0.3), -1, None, "unique, small Le"),
     ("held_22", False, 2, (0.5, 3.0), 0, None, "two folds"),
 ]
 
@@ -222,12 +259,12 @@ def build(index):
     for attempt in range(400):
         if time.time() - t0 > 1800:
             break
-        beta, gamma, Bim, Bih = draw_params(rng, "biot_extreme" if extra == "biot_extreme" else "any")
+        beta, gamma, Bim, Bih = draw_params(rng, "biot_extreme" if extra == "biot_extreme" else ("hopf" if nh != 0 and le1 <= 0.8 else "any"))
         try:
             folds, ph, th = steady_folds(beta, gamma, Bim, Bih)
         except Exception:
             continue
-        if len(folds) != nf:
+        if nf >= 0 and len(folds) != nf:
             continue
         if folds and (min(folds) < 0.03 or max(folds) > 8.0):
             continue
@@ -239,7 +276,10 @@ def build(index):
             continue
         Le = 1.0 if le0 == le1 else float(round(math.exp(rng.uniform(math.log(le0), math.log(le1))), 4))
         L = lo.Layer(dict(beta=beta, gamma=gamma, Bi_m=Bim, Bi_h=Bih, Le=Le))
-        phi_min, phi_max, qs = window_and_queries(rng, folds)
+        if nh != 0 and le1 <= 0.8:
+            phi_min, phi_max, qs = 0.02, 10.0, [0.03, 8.0]          # wide first look for Hopf points
+        else:
+            phi_min, phi_max, qs = window_and_queries(rng, folds)
         if not ends_single(L, phi_min, phi_max):
             continue
         r = dict(recipe_id=rid, beta=beta, gamma=gamma, Bi_m=Bim, Bi_h=Bih, Le=Le,

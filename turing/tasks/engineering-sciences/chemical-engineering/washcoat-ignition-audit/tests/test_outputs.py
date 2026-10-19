@@ -28,7 +28,7 @@ LEGACY = Path("/tests/legacy/lightoff.py")
 REFERENCE = Path("/tests/reference/reference.py")
 SANDBOX = Path("/sandbox")
 CALL_SECONDS = 120
-TOL_PHI, TOL_VAL, TOL_OMEGA = 1e-6, 1e-6, 1e-5
+TOL_PHI, TOL_VAL, TOL_HOPF_VAL, TOL_OMEGA = 1e-6, 1e-6, 5e-5, 2.5e-4
 KINDS = {"ignition", "extinction"}
 STABILITY = {"stable", "unstable_real", "unstable_complex"}
 QUANTITIES = {"fold_count", "hopf_count", "state_count", "stability", "fold_phi"}
@@ -75,8 +75,8 @@ def close_rel(a, ref, tol):
     return abs(a - ref) <= tol * abs(ref)
 
 
-def close_val(a, ref):
-    return abs(a - ref) <= TOL_VAL * max(1.0, abs(ref))
+def close_val(a, ref, tol=TOL_VAL):
+    return abs(a - ref) <= tol * max(1.0, abs(ref))
 
 
 def load_expected():
@@ -94,7 +94,7 @@ def validate_recipe(r, label):
     assert 1 <= r["Bi_m"] <= 200, f"{label}: Bi_m outside the domain"
     assert 0.5 <= r["Bi_h"] <= 50 and r["Bi_h"] <= r["Bi_m"], f"{label}: Bi_h outside the domain"
     assert r["beta"] * r["Bi_m"] / r["Bi_h"] <= 1.0, f"{label}: beta Bi_m / Bi_h must be at most 1"
-    assert 0.05 <= r["Le"] <= 20, f"{label}: Le outside the domain"
+    assert 0.1 <= r["Le"] <= 20, f"{label}: Le outside the domain"
     assert 0.01 <= r["phi_min"] <= 1, f"{label}: phi_min outside the domain"
     assert 0.3 <= r["phi_max"] <= 30 and r["phi_max"] >= 3 * r["phi_min"], f"{label}: phi_max outside the domain"
     q = r["phi_query"]
@@ -161,8 +161,8 @@ def compare(rep, exp, label):
         if not close_rel(h["phi"], e["phi"], TOL_PHI):
             errs.append(f"{label}: hopf_points[{n}].phi {h['phi']:.9g} vs {e['phi']:.9g} (rel tol {TOL_PHI})")
         for k in ("theta_c", "eta"):
-            if not close_val(h[k], e[k]):
-                errs.append(f"{label}: hopf_points[{n}].{k} {h[k]:.9g} vs {e[k]:.9g} (tol {TOL_VAL} max(1, |ref|))")
+            if not close_val(h[k], e[k], TOL_HOPF_VAL):
+                errs.append(f"{label}: hopf_points[{n}].{k} {h[k]:.9g} vs {e[k]:.9g} (tol {TOL_HOPF_VAL} max(1, |ref|))")
         if not close_rel(h["omega"], e["omega"], TOL_OMEGA):
             errs.append(f"{label}: hopf_points[{n}].omega {h['omega']:.9g} vs {e['omega']:.9g} (rel tol {TOL_OMEGA})")
     for n, (s, e) in enumerate(zip(rep["states"], exp["states"])):

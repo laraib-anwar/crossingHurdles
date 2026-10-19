@@ -1,0 +1,151 @@
+{
+ "recipe_id": "dev_03",
+ "recipe": {
+  "beta": 0.1,
+  "gamma": 15.0,
+  "Bi_m": 50.0,
+  "Bi_h": 50.0,
+  "Le": 1.0,
+  "phi_min": 0.05,
+  "phi_max": 20.0,
+  "phi_query": [
+   0.1,
+   0.5,
+   1.0,
+   5.0
+  ]
+ },
+ "cells": 200,
+ "cluster_a": 3.247514574043228,
+ "h_min": 0.0012642973240649669,
+ "integrator": {
+  "method": "BDF",
+  "rtol": 1e-07,
+  "atol": 1e-11,
+  "ss_tol": 1e-09,
+  "probe_rtol": 1e-06
+ },
+ "sweep_step_ratio": 1.0388997231053625,
+ "bisection_resolution_ln_phi": 5e-05,
+ "events": [],
+ "ignition_phi": [],
+ "extinction_phi": [],
+ "oscillation_onsets": [],
+ "n_cycle_steps_in_sweep": 0,
+ "n_unresolved_steps_in_sweep": 0,
+ "queries": [
+  {
+   "phi": 0.1,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.0005211565981109899,
+     "eta": 1.001762612076362,
+     "resid": 8.566622584915695e-11,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.0005211566176288668,
+    "eta": 1.0017626423255874
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.0005211565801097136,
+    "eta": 1.0017625845769371
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 0.5,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.013631453015385948,
+     "eta": 1.0401681698321283,
+     "resid": 1.0892281521179825e-10,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.013631453013597188,
+    "eta": 1.0401681697311176
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.013631453015363896,
+    "eta": 1.0401681698400864
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 1.0,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.05368578555961243,
+     "eta": 1.0441483292184799,
+     "resid": 9.503486886330847e-11,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.053685785558603163,
+    "eta": 1.0441483292060028
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.05368578555872668,
+    "eta": 1.0441483292080207
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 5.0,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.09998662459894006,
+     "eta": 0.2412642003025144,
+     "resid": 5.7113478226303305e-11,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.09998662520116268,
+    "eta": 0.2412642004458698
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.09998662520108074,
+    "eta": 0.24126420044507568
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  }
+ ],
+ "wall_s": {
+  "sweep": 143.98794507980347,
+  "probe": 159.09960317611694,
+  "total": 303.46612095832825
+ }
+}

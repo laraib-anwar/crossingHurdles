@@ -1,0 +1,114 @@
+{
+ "recipe_id": "lightoff_04",
+ "folds": [
+  {
+   "phi": 0.11673666976879818,
+   "theta_c": 0.2875884103057761,
+   "eta": 88.45568507800473,
+   "kind": "extinction"
+  },
+  {
+   "phi": 0.30868878672046923,
+   "theta_c": 0.04449312344247541,
+   "eta": 2.388035514157011,
+   "kind": "ignition"
+  }
+ ],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.025306,
+   "branches": []
+  },
+  {
+   "phi": 0.0682289,
+   "branches": [
+    {
+     "theta_c": 0.0007784197293749795,
+     "eta": 1.015420134089865,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.130758,
+   "branches": [
+    {
+     "theta_c": 0.003020282361707982,
+     "eta": 1.0611673666844343,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.23606927726404459,
+     "eta": 56.112999169666544,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.3179946239458592,
+     "eta": 88.15520536697058,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.171137,
+   "branches": [
+    {
+     "theta_c": 0.005495230188469424,
+     "eta": 1.1140579397285904,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.17664133207454202,
+     "eta": 24.966214276336025,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.32713442890998295,
+     "eta": 68.00312806629923,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.246026,
+   "branches": [
+    {
+     "theta_c": 0.013910080595667396,
+     "eta": 1.3142571216646488,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.10851802075785213,
+     "eta": 7.957734496088653,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.3280851302535568,
+     "eta": 47.307964912632904,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.421853,
+   "branches": [
+    {
+     "theta_c": 0.32809999916156535,
+     "eta": 27.590154932107986,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.601449,
+   "branches": [
+    {
+     "theta_c": 0.32809999999996164,
+     "eta": 19.351581947330605,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}

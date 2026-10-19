@@ -1,0 +1,16 @@
+{
+ "recipe_id": "held_04",
+ "shipped": false,
+ "label": "two folds",
+ "folds": 2,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  3,
+  1,
+  1
+ ],
+ "secs": 24.0,
+ "attempts": 1
+}

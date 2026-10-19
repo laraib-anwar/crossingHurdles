@@ -1,0 +1,45 @@
+{
+ "recipe_id": "held_17",
+ "folds": [],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.0122861,
+   "branches": []
+  },
+  {
+   "phi": 0.0209494,
+   "branches": []
+  },
+  {
+   "phi": 0.103295,
+   "branches": [
+    {
+     "theta_c": 0.0009610636895729462,
+     "eta": 1.0166911711866018,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.671614,
+   "branches": [
+    {
+     "theta_c": 0.1062975325002264,
+     "eta": 3.3685677278123363,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.860479,
+   "branches": [
+    {
+     "theta_c": 0.11918527825416109,
+     "eta": 2.767940772219996,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}

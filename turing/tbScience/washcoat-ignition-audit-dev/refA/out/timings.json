@@ -1,0 +1,38 @@
+{
+ "dev_01": {
+  "exit": 0,
+  "wall_s": 11.43,
+  "cpu_s": 8.51
+ },
+ "dev_02": {
+  "exit": 0,
+  "wall_s": 18.27,
+  "cpu_s": 14.59
+ },
+ "dev_03": {
+  "exit": 0,
+  "wall_s": 4.63,
+  "cpu_s": 3.75
+ },
+ "dev_04": {
+  "exit": 0,
+  "wall_s": 11.23,
+  "cpu_s": 8.44
+ },
+ "dev_05": {
+  "exit": 0,
+  "wall_s": 16.81,
+  "cpu_s": 10.29
+ },
+ "dev_06": {
+  "exit": 0,
+  "wall_s": 19.78,
+  "cpu_s": 14.76
+ },
+ "dev_07": {
+  "exit": 0,
+  "wall_s": 11.8,
+  "cpu_s": 7.7
+ },
+ "_note": "One process per recipe, OPENBLAS/OMP/MKL_NUM_THREADS=1, Intel i5-8210Y 1.6 GHz laptop shared with other jobs (load average > 10), so wall_s exceeds cpu_s; cpu_s is the single-core cost."
+}

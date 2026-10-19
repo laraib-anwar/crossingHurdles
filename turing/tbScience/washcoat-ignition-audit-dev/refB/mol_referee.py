@@ -26,6 +26,8 @@ Commands (all print a summary; --out FILE writes JSON)
   sweep  --recipe R [--cells N --per-decade K --resolution r --save-states NPZ]
   probe  --recipe R --phi P [P ...] [--cells N --ntheta 7 --nc 5 --extra NPZ]
   summary --recipe R --outdir DIR [--cells N]      (sweep + probe at every phi_query)
+  kick   --recipe R --base-recipe B --state NPZ --phi P   (departure from a steady state of a
+         companion recipe with another Le: growth rate / frequency of the leading mode)
 """
 import argparse
 import json
@@ -182,8 +184,9 @@ class Problem:
         return sp.csc_matrix((self._jvals(y, phi), (self.jr, self.jc)), shape=(self.n, self.n))
 
     def jac_banded(self, t, y, phi):
-        """LAPACK packed band form, lband = uband = 2: B[2 + i - j, j] = J[i, j]"""
-        B = np.zeros((5, self.n))
+        """LAPACK packed band form, lband = uband = 2: B[2 + i - j, j] = J[i, j]; LSODA wants
+        2 lband + uband + 1 = 7 rows (the last lband rows are LU fill space)"""
+        B = np.zeros((7, self.n))
         B[2 + self.jr - self.jc, self.jc] = self._jvals(y, phi)
         return B
 
@@ -213,11 +216,29 @@ class Problem:
 # ----------------------------------------------------------------------------- relaxation
 
 
-def _extrema(t, s):
+def _extrema(t, s, eps=1e-9):
+    """local maxima / minima of a sampled series, zigzag-filtered: a swing smaller than eps
+    (round-off wiggles of a settled state) does not create an extremum"""
     i = np.arange(1, len(s) - 1)
-    mx = i[(s[1:-1] > s[:-2]) & (s[1:-1] >= s[2:])]
-    mn = i[(s[1:-1] < s[:-2]) & (s[1:-1] <= s[2:])]
-    return mx, mn
+    raw = i[((s[1:-1] > s[:-2]) & (s[1:-1] >= s[2:])) | ((s[1:-1] < s[:-2]) & (s[1:-1] <= s[2:]))]
+    if raw.size == 0:
+        return raw, raw
+    ismax = s[raw] > s[raw - 1]
+    keep, kmax = [], []
+    for j, m in zip(raw.tolist(), ismax.tolist()):
+        if not keep:
+            keep.append(j)
+            kmax.append(m)
+        elif m == kmax[-1]:
+            if (s[j] > s[keep[-1]]) == m and s[j] != s[keep[-1]]:
+                keep[-1] = j
+        elif abs(s[j] - s[keep[-1]]) >= eps:
+            keep.append(j)
+            kmax.append(m)
+    keep, kmax = np.array(keep, int), np.array(kmax, bool)
+    if keep.size >= 2 and abs(s[keep[0]] - s[keep[1]]) < eps:
+        keep, kmax = keep[1:], kmax[1:]
+    return keep[kmax], keep[~kmax]
 
 
 def _parab(t, s, i):
@@ -237,10 +258,43 @@ def _parab(t, s, i):
     return tm, a * tm * tm + b * tm + c
 
 
+def _refine(prob, sol, t, s, i, sign):
+    t0, t1 = t[max(i - 1, 0)], t[min(i + 1, len(t) - 1)]
+    if t0 < sol.t[0] or t1 > sol.t[-1] or t1 <= t0:
+        return _parab(t, s, i)
+    tf = np.linspace(t0, t1, 201)
+    sf = prob.theta_c(sol.sol(tf))
+    k = int(np.argmax(sign * sf))
+    k = min(max(k, 1), 199)
+    return _parab(tf, sf, k)
+
+
+def _osc_trend(t, s, mx, mn):
+    """amplitude (peak minus following trough) of the last oscillations and its log-slope"""
+    if mx.size < 4 or mn.size < 3:
+        return None
+    amps, tim = [], []
+    for i in mx[-8:]:
+        j = mn[mn > i]
+        if j.size:
+            amps.append(s[i] - s[j[0]])
+            tim.append(t[i])
+    amps, tim = np.array(amps), np.array(tim)
+    if amps.size < 3 or np.any(amps <= 1e-12):
+        return None
+    rate = float(np.polyfit(tim, np.log(amps), 1)[0])
+    per = float(np.mean(np.diff(t[mx[-4:]])))
+    if t[-1] - max(t[mx[-1]], t[mn[-1]]) > 3.0 * per:
+        return None          # no extremum for three periods: the oscillation has died out
+    return {"amplitude": float(amps[-1]), "amp_growth_rate": rate, "period_est": per}
+
+
 def relax(prob, phi, y0, tmax=None, ss_tol=1e-9, rtol=1e-8, atol=1e-11, method="BDF",
-          sub=8, w0=None, wmax=None, verbose=False):
+          sub=8, w0=None, wmax=None, osc_tmax=None, verbose=False):
     """Integrate from y0 until (a) steady: resid < ss_tol, or (b) a settled limit cycle, or
-    (c) t = tmax.  Returns a dict; 'y' is the final state."""
+    (c) t = tmax, or (d) oscillations of theta_c (amplitude > 1e-6) are still unsettled at
+    t = osc_tmax (default 300 max(1, Le)).  In cases (c), (d) the result carries 'osc', the
+    current peak-to-trough amplitude and its exponential growth rate.  'y' is the final state."""
     Le = prob.Le
     tscale = max(1.0, Le)
     if tmax is None:
@@ -253,7 +307,9 @@ def relax(prob, phi, y0, tmax=None, ss_tol=1e-9, rtol=1e-8, atol=1e-11, method="
         kw.update(jac=prob.jac_banded, lband=2, uband=2)
     else:
         kw.update(jac=prob.jac)
-    status, nst, cyc = "unresolved", 0, None
+    status, nst, cyc, osc = "unresolved", 0, None, None
+    if osc_tmax is None:
+        osc_tmax = 300.0 * tscale
     hist_t, hist_s = np.empty(0), np.empty(0)
     t_wall = time.time()
     while t < tmax - 1e-12:
@@ -265,44 +321,58 @@ def relax(prob, phi, y0, tmax=None, ss_tol=1e-9, rtol=1e-8, atol=1e-11, method="
         nst += len(sol.t) - 1
         # sample theta_c: every integrator step subdivided `sub` times
         ts = sol.t
-        fr = np.linspace(0.0, 1.0, sub, endpoint=False)
+        # (fewer sub-samples when the steps are already dense; extrema are refined on the
+        # dense output anyway)
+        fr = np.linspace(0.0, 1.0, sub if len(ts) < 2000 else 2, endpoint=False)
         tt = np.concatenate([(ts[:-1, None] + np.diff(ts)[:, None] * fr[None, :]).ravel(), ts[-1:]])
         Y = sol.sol(tt)
         s = prob.theta_c(Y)
+        dy = float(np.max(np.abs(sol.y[:, -1] - y)))
         y = sol.y[:, -1].copy()
         t = t + W
         r = prob.resid(y, phi)
         if verbose:
-            print("   t=%9.3f res=%.2e thc=%.6f steps=%d" % (t, r, s[-1], nst), file=sys.stderr)
-        if r < ss_tol:
+            print("   t=%9.3f W=%.3g res=%.2e dy=%.2e thc=%.6f steps=%d" % (t, W, r, dy, s[-1], nst), file=sys.stderr)
+        # steady: residual below tolerance, or (residual at its round-off floor) the state did not
+        # move by more than 1e-11 over a window of at least 10 thermal/mass time constants
+        if r < ss_tol or (r < 1e3 * ss_tol and W >= 10.0 * tscale and dy < 1e-11):
             status = "steady"
             break
         # limit-cycle test on this window (concatenate with the previous one)
         hist_t = np.concatenate([hist_t, tt[1:] if hist_t.size else tt])
         hist_s = np.concatenate([hist_s, s[1:] if hist_s.size else s])
-        if hist_t.size > 400000:
-            hist_t, hist_s = hist_t[-200000:], hist_s[-200000:]
+        if hist_t.size > 1000000:
+            hist_t, hist_s = hist_t[-500000:], hist_s[-500000:]
         mx, mn = _extrema(hist_t, hist_s)
+        osc = _osc_trend(hist_t, hist_s, mx, mn)
         if mx.size >= 8 and mn.size >= 7:
-            pk = np.array([_parab(hist_t, hist_s, i) for i in mx[-7:]])
-            tr = np.array([_parab(hist_t, hist_s, i) for i in mn[-6:]])
+            # refine each extremum on the dense output of this window when it lies inside it
+            # (sharp ignition spikes are under-resolved by the step samples)
+            pk = np.array([_refine(prob, sol, hist_t, hist_s, i, +1) for i in mx[-7:]])
+            tr = np.array([_refine(prob, sol, hist_t, hist_s, i, -1) for i in mn[-6:]])
             per = np.diff(pk[:, 0])
             amp = pk[1:, 1] - tr[-per.size:, 1] if tr.shape[0] >= per.size else None
             if amp is not None and amp.size and np.all(amp > 1e-7):
                 pspread = (per.max() - per.min()) / per.mean()
                 aspread = (amp.max() - amp.min()) / amp.mean()
+                if verbose:
+                    print("     cycle test: period spread %.2e amplitude spread %.2e" % (pspread, aspread), file=sys.stderr)
                 if pspread < 2e-3 and aspread < 2e-3:
                     status = "cycle"
                     cyc = (sol, pk, per)
                     break
+        if osc is not None and osc["amplitude"] > 1e-6 and t >= osc_tmax:
+            status = "unresolved_oscillating"
+            break
         W = min(2.0 * W, Wmax)
         # if a few periods are already visible, keep windows at ~30 periods
-        if mx.size >= 3:
-            p_est = float(np.mean(np.diff(hist_t[mx[-3:]])))
-            W = min(W, max(30.0 * p_est, 1e-3))
+        if osc is not None and osc["amplitude"] > 1e-7:
+            W = min(W, max(30.0 * osc["period_est"], 1e-3))
     out = {"phi": float(phi), "status": status, "t_end": float(t), "resid": prob.resid(y, phi),
            "theta_c": float(prob.theta_c(y)), "eta": float(prob.eta(y, phi)), "n_steps": int(nst),
            "wall_s": time.time() - t_wall}
+    if status.startswith("unresolved") and osc is not None:
+        out["osc"] = osc
     if status == "cycle":
         # one more integration over 3 periods, densely sampled, for period/mean/extremes
         P = float(np.mean(cyc[2][-4:]))
@@ -329,6 +399,14 @@ def relax(prob, phi, y0, tmax=None, ss_tol=1e-9, rtol=1e-8, atol=1e-11, method="
     return out
 
 
+def attractor_type(res):
+    """steady / cycle; an unsettled oscillation counts as cycle when growing, steady when decaying"""
+    st = res["status"]
+    if st.startswith("unresolved") and res.get("osc") and res["osc"]["amplitude"] > 1e-9:
+        return "cycle" if res["osc"]["amp_growth_rate"] > 0 else "steady"
+    return st
+
+
 def attractor_key(res):
     if res["status"] == "cycle":
         return res["cycle"]["theta_c_mean"]
@@ -347,6 +425,9 @@ def _pass(prob, phis, y, kw, label, verbose, store):
         if "cycle" in res:
             row["cycle"] = res["cycle"]
         row["key"] = attractor_key(res)
+        row["type"] = attractor_type(res)
+        if "osc" in res:
+            row["osc"] = res["osc"]
         rows.append(row)
         store.append(y.copy())
         if verbose:
@@ -363,20 +444,29 @@ def _bisect(prob, row_a, y_a, row_b, kw, resolution, verbose):
     attractor type changes (steady <-> cycle) to the post-event type."""
     a, b = row_a["phi"], row_b["phi"]
     ka, kb = row_a["key"], row_b["key"]
-    sa, sb = row_a["status"], row_b["status"]
+    sa, sb = row_a["type"], row_b["type"]
     hist = []
+    if sa != sb and abs(row_a["key"] - row_b["key"]) < 0.01 * prob.theta_ad:
+        # steady <-> cycle without a jump (Hopf point): the transients near it are slow;
+        # bracket only to 1e-3 and with a shorter time budget per trial
+        resolution = max(resolution, 1e-3)
+        kw = dict(kw, tmax=400.0 * max(1.0, prob.Le))
     while abs(math.log(b / a)) > resolution:
         m = math.sqrt(a * b)
         res = relax(prob, m, y_a, **kw)
         km = attractor_key(res)
         if sa != sb:
-            jumped = (res["status"] == sb) if res["status"] in (sa, sb) else abs(km - kb) < abs(km - ka)
+            st = attractor_type(res)     # unsettled near a Hopf point: growing = cycle side
+            jumped = (st == sb) if st in (sa, sb) else abs(km - kb) < abs(km - ka)
         else:
             jumped = abs(km - kb) < abs(km - ka)
-        hist.append({"phi": m, "status": res["status"], "key": km, "jumped": bool(jumped), "t_end": res["t_end"]})
+        hist.append({"phi": m, "status": res["status"], "key": km, "jumped": bool(jumped), "t_end": res["t_end"],
+                     "osc": res.get("osc")})
         if verbose:
-            print("    bisect phi=%.8g -> %s key=%.6f %s (t=%.4g)" % (m, res["status"], km,
-                                                                    "JUMP" if jumped else "stay", res["t_end"]), file=sys.stderr)
+            print("    bisect phi=%.8g -> %s key=%.6f %s (t=%.4g)%s" % (m, res["status"], km,
+                  "JUMP" if jumped else "stay", res["t_end"],
+                  (" osc amp %.2e rate %.3g" % (res["osc"]["amplitude"], res["osc"]["amp_growth_rate"])) if "osc" in res else ""),
+                  file=sys.stderr)
         if jumped:
             b, kb = m, km
         else:
@@ -386,10 +476,12 @@ def _bisect(prob, row_a, y_a, row_b, kw, resolution, verbose):
             "key_old_side": ka, "key_new_side": kb, "gap": kb - ka, "bisection": hist}
 
 
-def run_sweep(prob, per_decade=60, resolution=2e-5, gap_min=None, kw=None, verbose=False):
+def run_sweep(prob, per_decade=None, resolution=5e-5, gap_min=None, kw=None, verbose=False):
     r = prob.r
     kw = kw or {}
     t0 = time.time()
+    if not per_decade:      # at least 60 steps per decade and 150 steps per pass
+        per_decade = max(60, int(math.ceil(150.0 / math.log10(r["phi_max"] / r["phi_min"]))))
     n = max(8, int(math.ceil(per_decade * math.log10(r["phi_max"] / r["phi_min"]))) + 1)
     grid = np.geomspace(r["phi_min"], r["phi_max"], n)
     phis = np.unique(np.concatenate([grid, np.asarray(r["phi_query"], float)]))
@@ -402,7 +494,7 @@ def run_sweep(prob, per_decade=60, resolution=2e-5, gap_min=None, kw=None, verbo
     events = []
     for label, rows, store in (("up", up, store_up), ("down", dn, store_dn)):
         dk = np.abs(np.diff([w["key"] for w in rows]))
-        typ = [w["status"] for w in rows]
+        typ = [w["type"] for w in rows]
         smooth = np.median(dk) if dk.size else 0.0
         for i in range(1, len(rows)):
             cand = (dk[i - 1] > gap_min and dk[i - 1] > 4.0 * max(dk[max(0, i - 3):i - 1].max(initial=0.0),
@@ -412,8 +504,8 @@ def run_sweep(prob, per_decade=60, resolution=2e-5, gap_min=None, kw=None, verbo
                 continue
             ev = _bisect(prob, rows[i - 1], store[i - 1], rows[i], kw, resolution, verbose)
             ev["direction"] = label
-            ev["from"] = rows[i - 1]["status"]
-            ev["to"] = rows[i]["status"]
+            ev["from"] = rows[i - 1]["type"]
+            ev["to"] = rows[i]["type"]
             ev["coarse_bracket"] = [rows[i - 1]["phi"], rows[i]["phi"]]
             ev["is_jump"] = bool(abs(ev["gap"]) > gap_min)
             if ev["from"] != ev["to"]:
@@ -573,6 +665,51 @@ def load_state(path, branch, phi, prob):
     return z["Y_" + branch][k], float(ph[k])
 
 
+def pencil(t, d, M):
+    """matrix-pencil estimate of M exponents lambda in d(t) ~ sum A_k exp(lambda_k t)"""
+    dt = t[1] - t[0]
+    n = len(d)
+    L = n // 3
+    Y = np.array([d[i:i + L + 1] for i in range(n - L)])
+    Y0, Y1 = Y[:, :-1], Y[:, 1:]
+    U, sv, Vh = np.linalg.svd(Y0, full_matrices=False)
+    M = min(M, int(np.sum(sv > 1e-10 * sv[0])))
+    A = np.diag(1.0 / sv[:M]) @ U[:, :M].T @ Y1 @ Vh[:M].T
+    z = np.linalg.eigvals(A)
+    lam = np.log(z.astype(complex)) / dt
+    V = np.exp(np.outer(t - t[0], lam))
+    amp = np.linalg.lstsq(V, d.astype(complex), rcond=None)[0]
+    return lam, amp
+
+
+def trace_departure(prob, phi, ybase, y0, T, method, rtol, atol, kick_growth=1e3, modes=3):
+    """Integrate the kicked and the un-kicked state over [0, T]; fit the exponents of the
+    difference in theta_c while it is still small (linear regime)."""
+    te = np.linspace(0.0, T, 8001)
+    kw = dict(method=method, jac=prob.jac, args=(phi,), rtol=rtol, atol=atol, t_eval=te)
+    s1 = solve_ivp(prob.rhs, (0.0, T), y0, **kw)
+    s0 = solve_ivp(prob.rhs, (0.0, T), ybase, **kw)
+    d = prob.theta_c(s1.y) - prob.theta_c(s0.y)
+    k0 = abs(prob.theta_c(y0) - prob.theta_c(ybase)) or 1e-12
+    big = np.nonzero(np.abs(d) > kick_growth * k0)[0]
+    i1 = int(big[0]) if big.size else len(te) - 1
+    i0 = max(1, i1 // 10)
+    out = {"trace": {"t": te[::20].tolist(), "dtheta_c": d[::20].tolist()},
+           "trace_window": [float(te[i0]), float(te[i1])]}
+    if i1 - i0 >= 60:
+        step = max(1, (i1 - i0) // 400)
+        tt, dd = te[i0:i1 + 1:step], d[i0:i1 + 1:step]
+        lam, amp = pencil(tt, dd, modes)
+        order = np.argsort(-lam.real)
+        modes = []
+        for k in order:
+            if lam[k].imag < -1e-9:
+                continue
+            modes.append({"re": float(lam[k].real), "im": float(abs(lam[k].imag)), "abs_amp": float(abs(amp[k]))})
+        out["trace_modes"] = modes
+    return out
+
+
 def cmd_relax(a):
     r = load_recipe(a.recipe)
     prob = Problem(r, a.cells, a.cluster)
@@ -582,6 +719,7 @@ def cmd_relax(a):
     else:
         y0 = prob.uniform(a.theta0, a.c0)
         src = "uniform theta=%g c=%g" % (a.theta0, a.c0)
+    ybase = y0.copy()
     if a.perturb:
         y0 = y0.copy()
         y0[0::2] += a.perturb
@@ -596,21 +734,51 @@ def cmd_relax(a):
         print("  limit cycle: period=%.6f omega=%.5f theta_c mean=%.6f min=%.6f max=%.6f pp=%.6f eta mean=%.6f" % (
             c["period"], c["omega"], c["theta_c_mean"], c["theta_c_min"], c["theta_c_max"], c["amplitude_pp"], c["eta_mean"]))
     if a.trace:
-        # early-time deviation record: growth rate and frequency of departure from y0
-        sol = solve_ivp(prob.rhs, (0.0, a.trace), y0, method=a.method, jac=prob.jac, args=(a.phi,),
-                        rtol=a.rtol, atol=a.atol, t_eval=np.linspace(0.0, a.trace, 4001))
-        d = prob.theta_c(sol.y) - prob.theta_c(y0)
-        res["trace"] = {"t": sol.t[::10].tolist(), "dtheta_c": d[::10].tolist()}
-        mx, mn = _extrema(sol.t, np.abs(d))
-        pk = np.array([_parab(sol.t, np.abs(d), i) for i in mx]) if mx.size else np.empty((0, 2))
-        if pk.shape[0] >= 3:
-            g = np.polyfit(pk[:, 0], np.log(pk[:, 1]), 1)[0]
-            half = np.mean(np.diff(pk[:, 0]))
-            res["trace_fit"] = {"growth_rate": float(g), "omega_from_half_periods": float(math.pi / half),
-                                "n_peaks": int(pk.shape[0])}
-            print("  early transient: |dtheta_c| peaks grow at rate %.5g, omega ~ %.5g (%d half-cycles)" % (
-                g, math.pi / half, pk.shape[0]))
+        res.update(trace_departure(prob, a.phi, ybase, y0, a.trace, a.method, a.rtol, a.atol))
+        tf = res.get("trace_modes")
+        if tf:
+            print("  early departure (base-subtracted theta_c, matrix pencil on t in [%.4g, %.4g]):" % tuple(res["trace_window"]))
+            for md in tf:
+                print("    lambda = %+.5g %+.5gi   |amplitude| %.3e" % (md["re"], md["im"], md["abs_amp"]))
     dump(a.out, res)
+
+
+def cmd_kick(a):
+    """Steady state of a companion recipe with the same steady parameters but a Lewis number at
+    which the state is an attractor (steady states do not depend on Le): relax there at the
+    exact phi from the nearest saved sweep state, then kick theta uniformly and follow the
+    departure under the target recipe's Le."""
+    r = load_recipe(a.recipe)
+    rb = load_recipe(a.base_recipe)
+    for k in ("beta", "gamma", "Bi_m", "Bi_h"):
+        if float(r[k]) != float(rb[k]):
+            raise SystemExit("base recipe differs in %s" % k)
+    pb = Problem(rb, a.cells, a.cluster)
+    prob = Problem(r, a.cells, pb.g.a)
+    y0, phs = load_state(a.state, a.branch, a.phi, pb)
+    rel = relax(pb, a.phi, y0, ss_tol=1e-10, rtol=1e-9, atol=1e-13, method=a.method)
+    if rel["status"] != "steady":
+        raise SystemExit("base relaxation did not settle: %s" % rel["status"])
+    yb = rel["y"]
+    yk = yb.copy()
+    yk[0::2] += a.kick
+    out = {"recipe_id": r["recipe_id"], "base_recipe_id": rb["recipe_id"], "phi": a.phi, "cells": prob.N,
+           "cluster_a": prob.g.a, "base_state": {"theta_c": rel["theta_c"], "eta": rel["eta"], "resid": rel["resid"],
+                                                 "Le_base": pb.Le, "from_sweep_phi": phs},
+           "kick": a.kick}
+    out.update(trace_departure(prob, a.phi, yb, yk, a.trace, a.method, a.rtol, a.atol, modes=a.modes))
+    print("kick %s phi=%.6g on steady state of %s (theta_c=%.7f eta=%.7f) kick %.1e:" % (
+        r["recipe_id"], a.phi, rb["recipe_id"], rel["theta_c"], rel["eta"], a.kick))
+    for md in out.get("trace_modes", []):
+        print("    lambda = %+.5g %+.5gi   |amplitude| %.3e" % (md["re"], md["im"], md["abs_amp"]))
+    if a.follow:
+        fin = relax(prob, a.phi, yk, method=a.method, rtol=1e-7, atol=1e-11)
+        out["fate"] = {k: fin[k] for k in ("status", "theta_c", "eta", "t_end")}
+        if "cycle" in fin:
+            out["fate"]["cycle"] = fin["cycle"]
+        print("  fate under Le=%g: %s theta_c=%.6f%s" % (prob.Le, fin["status"], fin["theta_c"],
+              (" period=%.5f omega=%.4f pp=%.5f" % (fin["cycle"]["period"], fin["cycle"]["omega"], fin["cycle"]["amplitude_pp"])) if "cycle" in fin else ""))
+    dump(a.out, out)
 
 
 def cmd_sweep(a):
@@ -658,7 +826,7 @@ def cmd_summary(a):
             ph = states["phi_" + br]
             k = int(np.argmin(np.abs(np.log(ph / phi))))
             extra.append(("sweep_%s" % br, states["Y_" + br][k]))
-        p = run_probe(prob, phi, a.ntheta, a.nc, extra, kw, a.verbose)
+        p = run_probe(prob, phi, a.ntheta, a.nc, extra, dict(kw, rtol=a.probe_rtol), a.verbose)
         print_probe(p)
         sys.stdout.flush()
         probes.append(p)
@@ -666,7 +834,7 @@ def cmd_summary(a):
     # condensed summary
     summ = {"recipe_id": r["recipe_id"], "recipe": {k: r[k] for k in r if k != "recipe_id"},
             "cells": prob.N, "cluster_a": prob.g.a, "h_min": sw["h_min"],
-            "integrator": kw, "sweep_step_ratio": sw["step_ratio"],
+            "integrator": dict(kw, probe_rtol=a.probe_rtol), "sweep_step_ratio": sw["step_ratio"],
             "bisection_resolution_ln_phi": sw["bisection_resolution_ln_phi"],
             "events": [{k: e[k] for k in ("direction", "kind", "phi_old_side", "phi_new_side", "phi_estimate",
                                            "rel_width", "key_old_side", "key_new_side", "from", "to")}
@@ -724,15 +892,29 @@ def main(argv=None):
     for name, fn in (("sweep", cmd_sweep), ("summary", cmd_summary)):
         p = sub.add_parser(name)
         common(p)
-        p.add_argument("--per-decade", type=int, default=60, dest="per_decade")
-        p.add_argument("--resolution", type=float, default=2e-5, help="bisection stop, in ln phi")
+        p.add_argument("--per-decade", type=int, default=None, dest="per_decade",
+                       help="sweep steps per decade of phi (default max(60, 150/decades))")
+        p.add_argument("--resolution", type=float, default=5e-5, help="bisection stop, in ln phi")
         if name == "sweep":
             p.add_argument("--save-states", default=None, dest="save_states")
         else:
             p.add_argument("--outdir", required=True)
             p.add_argument("--ntheta", type=int, default=7)
             p.add_argument("--nc", type=int, default=5)
+            p.add_argument("--probe-rtol", type=float, default=1e-6, dest="probe_rtol")
         p.set_defaults(fn=fn)
+
+    p = sub.add_parser("kick")
+    common(p)
+    p.add_argument("--phi", type=float, required=True)
+    p.add_argument("--base-recipe", required=True, dest="base_recipe")
+    p.add_argument("--state", required=True, help="sweep states npz of the base recipe")
+    p.add_argument("--branch", default="down", choices=["up", "down"])
+    p.add_argument("--kick", type=float, default=1e-8)
+    p.add_argument("--trace", type=float, default=1.2)
+    p.add_argument("--modes", type=int, default=3)
+    p.add_argument("--follow", action="store_true", help="also relax the kicked state to its attractor")
+    p.set_defaults(fn=cmd_kick)
 
     p = sub.add_parser("probe")
     common(p)

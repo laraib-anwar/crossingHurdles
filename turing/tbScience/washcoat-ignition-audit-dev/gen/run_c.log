@@ -1,0 +1,17 @@
+{"recipe_id": "held_14", "shipped": false, "label": "four folds, Le < 1", "folds": 4, "hopf": 0, "states": [1, 1, 3, 5, 3, 1, 1], "secs": 29.2, "attempts": 21}
+{"recipe_id": "held_15", "shipped": false, "label": "two nearly coincident folds", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 30.5, "attempts": 124}
+{"recipe_id": "held_16", "failed": true, "label": "Hopf point close to a fold"}
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:51: RuntimeWarning: overflow encountered in square
+  return self.R(th) * self.gamma / (1.0 + th) ** 2
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:48: RuntimeWarning: invalid value encountered in divide
+  return np.exp(self.gamma * th / (1.0 + th))
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:48: RuntimeWarning: overflow encountered in exp
+  return np.exp(self.gamma * th / (1.0 + th))
+{"recipe_id": "held_17", "failed": true, "label": "two folds, Biot numbers at the bounds"}
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:169: RuntimeWarning: invalid value encountered in subtract
+  J = D2 - phi2 * np.diag(Rv - L.beta * c * dRv)
+{"recipe_id": "held_18", "failed": true, "label": "two folds, Biot extreme, Le < 1"}
+{"recipe_id": "held_19", "shipped": false, "label": "two folds, Le = 1", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 13.4, "attempts": 11}
+{"recipe_id": "held_20", "shipped": false, "label": "two folds, Le near the Hopf onset", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 18.1, "attempts": 4}
+{"recipe_id": "held_21", "shipped": false, "label": "unique, small Le", "folds": 0, "hopf": 0, "states": [1, 1, 1], "secs": 9.7, "attempts": 4}
+{"recipe_id": "held_22", "shipped": false, "label": "two folds", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 12.4, "attempts": 5}

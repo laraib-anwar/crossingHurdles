@@ -1,0 +1,22 @@
+sweep dev_06 N=200 a=7.000 (h 6.38e-05..3.44e-02) steps/pass=168 ratio=1.0391  361.6s
+  up    ignition                           phi in [0.3439377, 0.3439506] (rel 3.7e-05)  key 0.06241 -> 0.35247  [steady -> steady]
+  up    ignition                           phi in [0.4854133, 0.4854298] (rel 3.4e-05)  key 0.45794 -> 0.72329  [steady -> steady]
+  down  extinction                         phi in [0.44636, 0.4463767] (rel 3.7e-05)  key 0.63149 -> 0.39368  [steady -> steady]
+  down  extinction                         phi in [0.2259168, 0.2259252] (rel 3.7e-05)  key 0.27231 -> 0.01130  [steady -> steady]
+  q=0.05     up: steady thc=0.0004539 eta=1.0072939           | down: steady thc=0.0004539 eta=1.0072939
+  q=0.2      up: steady thc=0.0084019 eta=1.1429512           | down: steady thc=0.0084019 eta=1.1429512
+  q=0.5      up: steady thc=0.7358714 eta=87.1742765          | down: steady thc=0.7358714 eta=87.1742765
+  q=1        up: steady thc=0.8424512 eta=27.1225617          | down: steady thc=0.8424512 eta=27.1225617
+  q=5        up: steady thc=0.8900527 eta=1.1801054           | down: steady thc=0.8900527 eta=1.1801054
+  unresolved steps 0, cycle steps 0
+probe phi=0.05: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (66.7s)
+    steady thc=0.0004539 eta=1.0072939  basin 37/37
+probe phi=0.2: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (68.8s)
+    steady thc=0.0084019 eta=1.1429512  basin 37/37
+probe phi=0.5: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (74.3s)
+    steady thc=0.7358714 eta=87.1742765  basin 37/37
+probe phi=1: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (79.2s)
+    steady thc=0.8424512 eta=27.1225617  basin 37/37
+probe phi=5: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (71.4s)
+    steady thc=0.8900527 eta=1.1801054  basin 37/37
+summary written, total 722.5s

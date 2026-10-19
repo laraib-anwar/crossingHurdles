@@ -1,0 +1,14 @@
+{
+ "recipe_id": "held_02",
+ "shipped": false,
+ "label": "unique, Biot numbers at the domain bounds",
+ "folds": 0,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  1
+ ],
+ "secs": 18.3,
+ "attempts": 2
+}

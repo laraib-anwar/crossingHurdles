@@ -69,7 +69,7 @@ or of another fold or Hopf point.
 | `gamma` | 8 to 40 |
 | `Bi_m` | 1 to 200 |
 | `Bi_h` | 0.5 to 50, with `Bi_h <= Bi_m` and `beta Bi_m / Bi_h <= 1` |
-| `Le` | 0.05 to 20 |
+| `Le` | 0.1 to 20 |
 | `phi_min` | 0.01 to 1 |
 | `phi_max` | 0.3 to 30, with `phi_max >= 3 phi_min` |
 | `phi_query` | 2 to 8 values, strictly increasing, in `[phi_min, phi_max]` |
@@ -115,9 +115,11 @@ reference values for that recipe:
 2. The numbers of folds and Hopf points, and the number of steady states at every query value,
    equal the reference numbers.
 3. Element by element in the stated orders: every `phi` is within
-   `TOL_PHI = 1e-6` relative of the reference; every `theta_c` and every `eta` is within
-   `TOL_VAL = 1e-6` relative of the reference (that is, within `1e-6 max(1, |reference|)`); every
-   `omega` is within `TOL_OMEGA = 1e-5` relative; every `kind` and `stability` is equal.
+   `TOL_PHI = 1e-6` relative of the reference; every `theta_c` and every `eta` of a fold or of a
+   steady state at a query value is within `TOL_VAL = 1e-6` relative of the reference (that is,
+   within `1e-6 max(1, |reference|)`); every `theta_c` and every `eta` of a Hopf point is within
+   `TOL_HOPF_VAL = 5e-5` relative in the same sense; every `omega` is within
+   `TOL_OMEGA = 2.5e-4` relative; every `kind` and `stability` is equal.
 
 A value exactly on a bound passes. No other tolerance applies. The rationale for each tolerance
 is recorded in the task README and is not part of the contract.

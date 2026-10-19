@@ -1,0 +1,18 @@
+{
+ "recipe_id": "held_14",
+ "shipped": false,
+ "label": "four folds, Le < 1",
+ "folds": 4,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  3,
+  5,
+  3,
+  1,
+  1
+ ],
+ "secs": 29.2,
+ "attempts": 21
+}

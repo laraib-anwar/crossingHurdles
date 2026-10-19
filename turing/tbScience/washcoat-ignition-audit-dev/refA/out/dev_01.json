@@ -1,0 +1,90 @@
+{
+ "recipe_id": "dev_01",
+ "folds": [
+  {
+   "phi": 0.276397020199391,
+   "theta_c": 0.309070308717345,
+   "eta": 14.849277248770667,
+   "kind": "extinction"
+  },
+  {
+   "phi": 0.36722248684716324,
+   "theta_c": 0.08286097627083909,
+   "eta": 2.5306994901218043,
+   "kind": "ignition"
+  }
+ ],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.1,
+   "branches": [
+    {
+     "theta_c": 0.002103401033970905,
+     "eta": 1.0250615061091137,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.3,
+   "branches": [
+    {
+     "theta_c": 0.026853579434338484,
+     "eta": 1.365780959856142,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.22321170885869807,
+     "eta": 9.061801624732835,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.3651635866409447,
+     "eta": 16.139174995281618,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.6,
+   "branches": [
+    {
+     "theta_c": 0.39985706318449,
+     "eta": 8.369765680094773,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 1.0,
+   "branches": [
+    {
+     "theta_c": 0.3999998741005161,
+     "eta": 5.016604130988237,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 3.0,
+   "branches": [
+    {
+     "theta_c": 0.4000000000020474,
+     "eta": 1.6592027645120824,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 10.0,
+   "branches": [
+    {
+     "theta_c": 0.39999999999806357,
+     "eta": 0.4561963297996514,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}

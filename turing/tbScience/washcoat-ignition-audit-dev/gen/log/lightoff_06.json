@@ -1,0 +1,16 @@
+{
+ "recipe_id": "lightoff_06",
+ "shipped": true,
+ "label": "two Hopf points, no fold",
+ "folds": 0,
+ "hopf": 2,
+ "states": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "secs": 9.0,
+ "attempts": 37
+}

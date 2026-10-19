@@ -1,0 +1,16 @@
+{
+ "recipe_id": "held_18",
+ "shipped": false,
+ "label": "two folds, Biot extreme, Le < 1",
+ "folds": 2,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  3,
+  1,
+  1
+ ],
+ "secs": 7.6,
+ "attempts": 9
+}

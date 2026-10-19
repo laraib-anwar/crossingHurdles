@@ -1,0 +1,37 @@
+{
+ "recipe_id": "lightoff_02",
+ "folds": [],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.021177,
+   "branches": [
+    {
+     "theta_c": 6.49677595012404e-05,
+     "eta": 1.0003276106714836,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.743292,
+   "branches": [
+    {
+     "theta_c": 0.14727812744819954,
+     "eta": 1.7014123863600519,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 1.03206,
+   "branches": [
+    {
+     "theta_c": 0.24425862834773215,
+     "eta": 1.6369905793066664,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}

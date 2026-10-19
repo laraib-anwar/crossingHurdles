@@ -1,0 +1,13 @@
+{
+ "phi": 0.367,
+ "status": "steady",
+ "t_end": 143.0,
+ "resid": 6.929230217389559e-09,
+ "theta_c": 0.07873615471850826,
+ "eta": 2.4222902520621252,
+ "n_steps": 147,
+ "wall_s": 0.5954389572143555,
+ "initial": "state of down branch at phi=0.36374647 from out/dev_05/states_N200.npz",
+ "cells": 200,
+ "cluster_a": 6.042213240409675
+}

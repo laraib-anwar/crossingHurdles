@@ -1,0 +1,10 @@
+sweep dev_07 N=400 a=4.952 (h 1.75e-04..1.23e-02) steps/pass=398 ratio=1.0058  332.0s
+  up    ignition                           phi in [0.4444233, 0.4444355] (rel 2.8e-05)  key 0.05520 -> 0.13896  [steady -> steady]
+  up    ignition                           phi in [0.4601252, 0.4601459] (rel 4.5e-05)  key 0.17743 -> 0.26475  [steady -> steady]
+  down  extinction                         phi in [0.451235, 0.4512553] (rel 4.5e-05)  key 0.23645 -> 0.14935  [steady -> steady]
+  down  extinction                         phi in [0.4311275, 0.4311469] (rel 4.5e-05)  key 0.10614 -> 0.03564  [steady -> steady]
+  q=0.43791  up: steady thc=0.0407848 eta=2.4137374           | down: steady thc=0.1286577 eta=8.2171249
+  q=0.44576  up: steady thc=0.1409218 eta=9.0589101           | down: steady thc=0.1409218 eta=9.0589101
+  q=0.45567  up: steady thc=0.1576750 eta=10.3925638          | down: steady thc=0.2569627 eta=22.5295742
+  q=1        up: steady thc=0.3500366 eta=7.0825836           | down: steady thc=0.3500366 eta=7.0825836
+  unresolved steps 0, cycle steps 0

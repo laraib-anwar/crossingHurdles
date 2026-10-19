@@ -1,0 +1,605 @@
+  up phi=0.05       steady     thc=0.000514   eta=1.006071   t=31       0.42s
+  up phi=0.051945   steady     thc=0.000555   eta=1.006558   t=31       0.59s
+  up phi=0.0539656  steady     thc=0.000599   eta=1.007084   t=31       0.30s
+  up phi=0.0560649  steady     thc=0.000647   eta=1.007654   t=31       0.30s
+  up phi=0.0582458  steady     thc=0.000699   eta=1.008269   t=31       0.27s
+  up phi=0.0605115  steady     thc=0.000755   eta=1.008935   t=31       0.27s
+  up phi=0.0628654  steady     thc=0.000816   eta=1.009655   t=31       0.28s
+  up phi=0.0653109  steady     thc=0.000882   eta=1.010435   t=31       0.27s
+  up phi=0.0678514  steady     thc=0.000953   eta=1.011278   t=31       0.26s
+  up phi=0.0704908  steady     thc=0.001029   eta=1.012191   t=31       0.27s
+  up phi=0.0732329  steady     thc=0.001112   eta=1.013180   t=31       0.25s
+  up phi=0.0760817  steady     thc=0.001202   eta=1.014251   t=31       0.27s
+  up phi=0.0790412  steady     thc=0.001299   eta=1.015411   t=31       0.26s
+  up phi=0.0821159  steady     thc=0.001404   eta=1.016668   t=31       0.33s
+  up phi=0.0853102  steady     thc=0.001518   eta=1.018031   t=31       0.26s
+  up phi=0.0886287  steady     thc=0.001642   eta=1.019509   t=31       0.34s
+  up phi=0.0920763  steady     thc=0.001775   eta=1.021112   t=31       0.28s
+  up phi=0.0956581  steady     thc=0.001920   eta=1.022852   t=31       0.47s
+  up phi=0.0993792  steady     thc=0.002077   eta=1.024742   t=31       0.27s
+  up phi=0.1        steady     thc=0.002104   eta=1.025065   t=31       0.25s
+  up phi=0.103245   steady     thc=0.002247   eta=1.026795   t=31       0.26s
+  up phi=0.107261   steady     thc=0.002432   eta=1.029026   t=31       0.32s
+  up phi=0.111434   steady     thc=0.002633   eta=1.031454   t=31       0.31s
+  up phi=0.115768   steady     thc=0.002850   eta=1.034096   t=31       0.36s
+  up phi=0.120272   steady     thc=0.003087   eta=1.036973   t=31       0.35s
+  up phi=0.12495    steady     thc=0.003344   eta=1.040110   t=31       0.35s
+  up phi=0.129811   steady     thc=0.003624   eta=1.043532   t=31       0.38s
+  up phi=0.13486    steady     thc=0.003929   eta=1.047270   t=31       0.58s
+  up phi=0.140106   steady     thc=0.004261   eta=1.051356   t=31       0.40s
+  up phi=0.145557   steady     thc=0.004623   eta=1.055828   t=31       0.37s
+  up phi=0.151219   steady     thc=0.005018   eta=1.060730   t=31       0.37s
+  up phi=0.157101   steady     thc=0.005450   eta=1.066109   t=31       0.33s
+  up phi=0.163212   steady     thc=0.005922   eta=1.072022   t=31       0.44s
+  up phi=0.169561   steady     thc=0.006440   eta=1.078534   t=31       0.28s
+  up phi=0.176157   steady     thc=0.007008   eta=1.085719   t=31       0.32s
+  up phi=0.183009   steady     thc=0.007631   eta=1.093663   t=31       0.29s
+  up phi=0.190128   steady     thc=0.008318   eta=1.102470   t=31       0.29s
+  up phi=0.197524   steady     thc=0.009076   eta=1.112260   t=31       0.36s
+  up phi=0.205208   steady     thc=0.009913   eta=1.123177   t=31       0.37s
+  up phi=0.213191   steady     thc=0.010842   eta=1.135396   t=31       0.72s
+  up phi=0.221484   steady     thc=0.011875   eta=1.149127   t=31       0.38s
+  up phi=0.230099   steady     thc=0.013029   eta=1.164633   t=31       0.32s
+  up phi=0.23905    steady     thc=0.014322   eta=1.182241   t=31       0.35s
+  up phi=0.248349   steady     thc=0.015778   eta=1.202368   t=31       0.29s
+  up phi=0.25801    steady     thc=0.017430   eta=1.225556   t=31       0.31s
+  up phi=0.268046   steady     thc=0.019316   eta=1.252527   t=31       0.31s
+  up phi=0.278473   steady     thc=0.021489   eta=1.284270   t=31       0.30s
+  up phi=0.289306   steady     thc=0.024022   eta=1.322190   t=31       0.33s
+  up phi=0.3        steady     thc=0.026862   eta=1.365886   t=31       0.28s
+  up phi=0.30056    steady     thc=0.027022   eta=1.368377   t=31       0.19s
+  up phi=0.312251   steady     thc=0.030648   eta=1.426142   t=31       0.35s
+  up phi=0.324398   steady     thc=0.035170   eta=1.501206   t=31       0.34s
+  up phi=0.337017   steady     thc=0.041095   eta=1.604878   t=31       0.32s
+  up phi=0.350127   steady     thc=0.049644   eta=1.765581   t=31       0.36s
+  up phi=0.363746   steady     thc=0.066397   eta=2.121777   t=63       0.39s
+  up phi=0.377896   cycle      thc=0.044231   eta=2.811635   t=37.76    78.84s cycle P=2.2523 pp=1.517
+  up phi=0.392596   cycle      thc=0.582283   eta=19.962816  t=20.32    47.33s cycle P=1.775 pp=1.506
+  up phi=0.407868   cycle      thc=0.090132   eta=2.715808   t=19.6     45.63s cycle P=1.5347 pp=1.441
+  up phi=0.423734   cycle      thc=0.348875   eta=11.712239  t=8.511    29.18s cycle P=0.50353 pp=0.4612
+  up phi=0.440217   cycle      thc=0.321790   eta=10.165245  t=16.18    40.20s cycle P=0.39398 pp=0.3196
+  up phi=0.457341   cycle      thc=0.317941   eta=9.027916   t=8.045    13.87s cycle P=0.3482 pp=0.2532
+  up phi=0.475132   cycle      thc=0.468583   eta=13.401508  t=3.95     4.93s cycle P=0.31675 pp=0.1844
+  up phi=0.493614   cycle      thc=0.369288   eta=9.718811   t=3.876    3.18s cycle P=0.29189 pp=0.09494
+  up phi=0.512816   steady     thc=0.399335   eta=9.793772   t=71.38    4.81s
+  up phi=0.532764   steady     thc=0.399532   eta=9.426693   t=31       1.80s
+  up phi=0.553489   steady     thc=0.399675   eta=9.073316   t=31       1.24s
+  up phi=0.575019   steady     thc=0.399777   eta=8.733146   t=31       0.94s
+  up phi=0.597387   steady     thc=0.399849   eta=8.405700   t=31       0.87s
+  up phi=0.6        steady     thc=0.399856   eta=8.369045   t=31       0.52s
+  up phi=0.620626   steady     thc=0.399900   eta=8.090507   t=31       0.86s
+  up phi=0.644768   steady     thc=0.399934   eta=7.787110   t=31       0.82s
+  up phi=0.669849   steady     thc=0.399958   eta=7.495068   t=31       0.85s
+  up phi=0.695906   steady     thc=0.399973   eta=7.213956   t=31       0.91s
+  up phi=0.722976   steady     thc=0.399983   eta=6.943366   t=31       1.01s
+  up phi=0.7511     steady     thc=0.399990   eta=6.682903   t=31       0.87s
+  up phi=0.780318   steady     thc=0.399994   eta=6.432188   t=31       0.98s
+  up phi=0.810672   steady     thc=0.399996   eta=6.190855   t=31       0.95s
+  up phi=0.842207   steady     thc=0.399998   eta=5.958554   t=31       0.94s
+  up phi=0.874968   steady     thc=0.399999   eta=5.734946   t=31       1.02s
+  up phi=0.909004   steady     thc=0.399999   eta=5.519704   t=30.23    1.05s
+  up phi=0.944364   steady     thc=0.400000   eta=5.312516   t=28.24    1.12s
+  up phi=0.9811     steady     thc=0.400000   eta=5.113080   t=26.36    1.51s
+  up phi=1          steady     thc=0.400000   eta=5.016178   t=25.35    0.96s
+  up phi=1.01926    steady     thc=0.400000   eta=4.921105   t=24.48    0.99s
+  up phi=1.05891    steady     thc=0.400000   eta=4.736311   t=22.87    1.08s
+  up phi=1.1001     steady     thc=0.400000   eta=4.558430   t=21.19    1.18s
+  up phi=1.1429     steady     thc=0.400000   eta=4.387201   t=31       1.17s
+  up phi=1.18736    steady     thc=0.400000   eta=4.222376   t=31       1.11s
+  up phi=1.23354    steady     thc=0.400000   eta=4.063715   t=31       1.08s
+  up phi=1.28153    steady     thc=0.400000   eta=3.910985   t=31       1.16s
+  up phi=1.33138    steady     thc=0.400000   eta=3.763965   t=31       1.07s
+  up phi=1.38317    steady     thc=0.400000   eta=3.622441   t=31       1.07s
+  up phi=1.43698    steady     thc=0.400000   eta=3.486205   t=31       1.08s
+  up phi=1.49287    steady     thc=0.400000   eta=3.355061   t=31       1.08s
+  up phi=1.55095    steady     thc=0.400000   eta=3.228815   t=31       1.13s
+  up phi=1.61128    steady     thc=0.400000   eta=3.107285   t=31       1.06s
+  up phi=1.67396    steady     thc=0.400000   eta=2.990293   t=31       1.08s
+  up phi=1.73907    steady     thc=0.400000   eta=2.877668   t=31       1.09s
+  up phi=1.80672    steady     thc=0.400000   eta=2.769247   t=31       1.12s
+  up phi=1.877      steady     thc=0.400000   eta=2.664870   t=31       1.06s
+  up phi=1.95002    steady     thc=0.400000   eta=2.564387   t=31       1.05s
+  up phi=2.02587    steady     thc=0.400000   eta=2.467650   t=31       1.09s
+  up phi=2.10468    steady     thc=0.400000   eta=2.374517   t=31       1.08s
+  up phi=2.18655    steady     thc=0.400000   eta=2.284854   t=31       1.09s
+  up phi=2.27161    steady     thc=0.400000   eta=2.198529   t=31       1.07s
+  up phi=2.35997    steady     thc=0.400000   eta=2.115416   t=3        1.02s
+  up phi=2.45177    steady     thc=0.400000   eta=2.035393   t=31       1.08s
+  up phi=2.54715    steady     thc=0.400000   eta=1.958344   t=31       1.08s
+  up phi=2.64623    steady     thc=0.400000   eta=1.884155   t=31       1.15s
+  up phi=2.74917    steady     thc=0.400000   eta=1.812719   t=3        1.03s
+  up phi=2.85611    steady     thc=0.400000   eta=1.743931   t=31       1.13s
+  up phi=2.96721    steady     thc=0.400000   eta=1.677689   t=15       1.32s
+  up phi=3          steady     thc=0.400000   eta=1.659071   t=7        0.78s
+  up phi=3.08263    steady     thc=0.400000   eta=1.613896   t=1        0.95s
+  up phi=3.20255    steady     thc=0.400000   eta=1.552460   t=3        1.27s
+  up phi=3.32713    steady     thc=0.400000   eta=1.493290   t=1        1.02s
+  up phi=3.45655    steady     thc=0.400000   eta=1.436298   t=3        1.43s
+  up phi=3.59101    steady     thc=0.400000   eta=1.381401   t=3        1.11s
+  up phi=3.7307     steady     thc=0.400000   eta=1.328518   t=1        1.01s
+  up phi=3.87582    steady     thc=0.400000   eta=1.277570   t=1        1.04s
+  up phi=4.02659    steady     thc=0.400000   eta=1.228484   t=1        1.03s
+  up phi=4.18322    steady     thc=0.400000   eta=1.181185   t=1        1.04s
+  up phi=4.34595    steady     thc=0.400000   eta=1.135604   t=1        1.10s
+  up phi=4.51501    steady     thc=0.400000   eta=1.091673   t=1        1.04s
+  up phi=4.69064    steady     thc=0.400000   eta=1.049326   t=1        1.08s
+  up phi=4.8731     steady     thc=0.400000   eta=1.008502   t=1        1.07s
+  up phi=5.06267    steady     thc=0.400000   eta=0.969138   t=1        1.10s
+  up phi=5.2596     steady     thc=0.400000   eta=0.931176   t=1        1.03s
+  up phi=5.4642     steady     thc=0.400000   eta=0.894559   t=1        1.03s
+  up phi=5.67676    steady     thc=0.400000   eta=0.859233   t=1        1.05s
+  up phi=5.89758    steady     thc=0.400000   eta=0.825144   t=1        1.03s
+  up phi=6.12699    steady     thc=0.400000   eta=0.792242   t=1        1.09s
+  up phi=6.36533    steady     thc=0.400000   eta=0.760477   t=1        1.02s
+  up phi=6.61294    steady     thc=0.400000   eta=0.729803   t=1        1.04s
+  up phi=6.87018    steady     thc=0.400000   eta=0.700174   t=1        1.03s
+  up phi=7.13743    steady     thc=0.400000   eta=0.671545   t=1        1.01s
+  up phi=7.41508    steady     thc=0.400000   eta=0.643877   t=1        1.06s
+  up phi=7.70352    steady     thc=0.400000   eta=0.617129   t=1        0.98s
+  up phi=8.00319    steady     thc=0.400000   eta=0.591263   t=1        1.04s
+  up phi=8.31451    steady     thc=0.400000   eta=0.566243   t=1        0.95s
+  up phi=8.63794    steady     thc=0.400000   eta=0.542037   t=1        0.92s
+  up phi=8.97395    steady     thc=0.400000   eta=0.518613   t=1        0.86s
+  up phi=9.32304    steady     thc=0.400000   eta=0.495942   t=1        0.80s
+  up phi=9.6857     steady     thc=0.400000   eta=0.473997   t=1        0.78s
+  up phi=10         steady     thc=0.400000   eta=0.456173   t=1        0.70s
+  up phi=10.0625    steady     thc=0.400000   eta=0.452753   t=1        0.48s
+  up phi=10.4539    steady     thc=0.400000   eta=0.432190   t=1        0.69s
+  up phi=10.8606    steady     thc=0.400000   eta=0.412286   t=1        0.68s
+  up phi=11.283     steady     thc=0.400000   eta=0.393026   t=1        0.58s
+  up phi=11.7219    steady     thc=0.400000   eta=0.374393   t=1        0.66s
+  up phi=12.1779    steady     thc=0.400000   eta=0.356375   t=1        0.56s
+  up phi=12.6516    steady     thc=0.400000   eta=0.338960   t=1        0.51s
+  up phi=13.1438    steady     thc=0.400000   eta=0.322140   t=1        0.48s
+  up phi=13.6551    steady     thc=0.400000   eta=0.305905   t=1        0.48s
+  up phi=14.1862    steady     thc=0.400000   eta=0.290249   t=1        0.45s
+  up phi=14.7381    steady     thc=0.400000   eta=0.275166   t=1        0.43s
+  up phi=15.3114    steady     thc=0.400000   eta=0.260648   t=1        0.40s
+  up phi=15.907     steady     thc=0.400000   eta=0.246691   t=1        0.42s
+  up phi=16.5258    steady     thc=0.400000   eta=0.233288   t=1        0.39s
+  up phi=17.1686    steady     thc=0.400000   eta=0.220433   t=1        0.39s
+  up phi=17.8365    steady     thc=0.400000   eta=0.208119   t=1        0.35s
+  up phi=18.5303    steady     thc=0.400000   eta=0.196338   t=1        0.36s
+  up phi=19.2511    steady     thc=0.400000   eta=0.185081   t=1        0.34s
+  up phi=20         steady     thc=0.400000   eta=0.174338   t=1        0.32s
+  down phi=20         steady     thc=0.400000   eta=0.174338   t=1        0.02s
+  down phi=19.2511    steady     thc=0.400000   eta=0.185081   t=1        0.36s
+  down phi=18.5303    steady     thc=0.400000   eta=0.196338   t=1        0.37s
+  down phi=17.8365    steady     thc=0.400000   eta=0.208119   t=1        0.35s
+  down phi=17.1686    steady     thc=0.400000   eta=0.220433   t=1        0.38s
+  down phi=16.5258    steady     thc=0.400000   eta=0.233288   t=1        0.39s
+  down phi=15.907     steady     thc=0.400000   eta=0.246691   t=1        0.41s
+  down phi=15.3114    steady     thc=0.400000   eta=0.260648   t=1        0.43s
+  down phi=14.7381    steady     thc=0.400000   eta=0.275166   t=1        0.46s
+  down phi=14.1862    steady     thc=0.400000   eta=0.290249   t=1        0.47s
+  down phi=13.6551    steady     thc=0.400000   eta=0.305905   t=1        0.52s
+  down phi=13.1438    steady     thc=0.400000   eta=0.322140   t=1        0.48s
+  down phi=12.6516    steady     thc=0.400000   eta=0.338960   t=1        0.50s
+  down phi=12.1779    steady     thc=0.400000   eta=0.356375   t=1        0.57s
+  down phi=11.7219    steady     thc=0.400000   eta=0.374393   t=1        0.60s
+  down phi=11.283     steady     thc=0.400000   eta=0.393026   t=1        0.68s
+  down phi=10.8606    steady     thc=0.400000   eta=0.412286   t=1        0.61s
+  down phi=10.4539    steady     thc=0.400000   eta=0.432190   t=1        0.67s
+  down phi=10.0625    steady     thc=0.400000   eta=0.452753   t=1        0.74s
+  down phi=10         steady     thc=0.400000   eta=0.456173   t=1        0.49s
+  down phi=9.6857     steady     thc=0.400000   eta=0.473997   t=1        0.71s
+  down phi=9.32304    steady     thc=0.400000   eta=0.495942   t=1        0.80s
+  down phi=8.97395    steady     thc=0.400000   eta=0.518613   t=1        0.81s
+  down phi=8.63794    steady     thc=0.400000   eta=0.542037   t=1        0.84s
+  down phi=8.31451    steady     thc=0.400000   eta=0.566243   t=1        0.84s
+  down phi=8.00319    steady     thc=0.400000   eta=0.591263   t=1        0.97s
+  down phi=7.70352    steady     thc=0.400000   eta=0.617129   t=1        0.97s
+  down phi=7.41508    steady     thc=0.400000   eta=0.643877   t=1        1.01s
+  down phi=7.13743    steady     thc=0.400000   eta=0.671545   t=1        1.02s
+  down phi=6.87018    steady     thc=0.400000   eta=0.700174   t=1        1.02s
+  down phi=6.61294    steady     thc=0.400000   eta=0.729803   t=1        1.00s
+  down phi=6.36533    steady     thc=0.400000   eta=0.760477   t=1        0.99s
+  down phi=6.12699    steady     thc=0.400000   eta=0.792242   t=1        0.99s
+  down phi=5.89758    steady     thc=0.400000   eta=0.825144   t=1        1.06s
+  down phi=5.67676    steady     thc=0.400000   eta=0.859233   t=1        1.05s
+  down phi=5.4642     steady     thc=0.400000   eta=0.894559   t=1        1.12s
+  down phi=5.2596     steady     thc=0.400000   eta=0.931176   t=1        1.00s
+  down phi=5.06267    steady     thc=0.400000   eta=0.969138   t=1        1.05s
+  down phi=4.8731     steady     thc=0.400000   eta=1.008502   t=1        1.09s
+  down phi=4.69064    steady     thc=0.400000   eta=1.049326   t=1        1.11s
+  down phi=4.51501    steady     thc=0.400000   eta=1.091673   t=1        1.03s
+  down phi=4.34595    steady     thc=0.400000   eta=1.135604   t=1        1.06s
+  down phi=4.18322    steady     thc=0.400000   eta=1.181185   t=1        1.02s
+  down phi=4.02659    steady     thc=0.400000   eta=1.228484   t=1        1.07s
+  down phi=3.87582    steady     thc=0.400000   eta=1.277570   t=1        1.09s
+  down phi=3.7307     steady     thc=0.400000   eta=1.328518   t=1        1.14s
+  down phi=3.59101    steady     thc=0.400000   eta=1.381401   t=1        1.08s
+  down phi=3.45655    steady     thc=0.400000   eta=1.436298   t=1        1.06s
+  down phi=3.32713    steady     thc=0.400000   eta=1.493290   t=3        1.08s
+  down phi=3.20255    steady     thc=0.400000   eta=1.552460   t=3        1.08s
+  down phi=3.08263    steady     thc=0.400000   eta=1.613896   t=1        1.03s
+  down phi=3          steady     thc=0.400000   eta=1.659071   t=7        0.98s
+  down phi=2.96721    steady     thc=0.400000   eta=1.677689   t=1        0.78s
+  down phi=2.85611    steady     thc=0.400000   eta=1.743931   t=31       1.16s
+  down phi=2.74917    steady     thc=0.400000   eta=1.812719   t=15       1.16s
+  down phi=2.64623    steady     thc=0.400000   eta=1.884155   t=31       1.10s
+  down phi=2.54715    steady     thc=0.400000   eta=1.958344   t=15       1.10s
+  down phi=2.45177    steady     thc=0.400000   eta=2.035393   t=31       1.09s
+  down phi=2.35997    steady     thc=0.400000   eta=2.115416   t=31       1.11s
+  down phi=2.27161    steady     thc=0.400000   eta=2.198529   t=31       1.09s
+  down phi=2.18655    steady     thc=0.400000   eta=2.284854   t=31       1.11s
+  down phi=2.10468    steady     thc=0.400000   eta=2.374517   t=31       1.09s
+  down phi=2.02587    steady     thc=0.400000   eta=2.467650   t=31       1.09s
+  down phi=1.95002    steady     thc=0.400000   eta=2.564387   t=31       1.06s
+  down phi=1.877      steady     thc=0.400000   eta=2.664870   t=31       1.13s
+  down phi=1.80672    steady     thc=0.400000   eta=2.769247   t=31       1.08s
+  down phi=1.73907    steady     thc=0.400000   eta=2.877668   t=31       1.05s
+  down phi=1.67396    steady     thc=0.400000   eta=2.990293   t=31       1.12s
+  down phi=1.61128    steady     thc=0.400000   eta=3.107285   t=31       1.12s
+  down phi=1.55095    steady     thc=0.400000   eta=3.228815   t=31       1.07s
+  down phi=1.49287    steady     thc=0.400000   eta=3.355061   t=31       1.07s
+  down phi=1.43698    steady     thc=0.400000   eta=3.486205   t=31       1.04s
+  down phi=1.38317    steady     thc=0.400000   eta=3.622441   t=31       1.06s
+  down phi=1.33138    steady     thc=0.400000   eta=3.763965   t=31       1.15s
+  down phi=1.28153    steady     thc=0.400000   eta=3.910985   t=31       1.06s
+  down phi=1.23354    steady     thc=0.400000   eta=4.063715   t=31       1.07s
+  down phi=1.18736    steady     thc=0.400000   eta=4.222376   t=31       1.15s
+  down phi=1.1429     steady     thc=0.400000   eta=4.387201   t=31       1.14s
+  down phi=1.1001     steady     thc=0.400000   eta=4.558430   t=21.26    1.10s
+  down phi=1.05891    steady     thc=0.400000   eta=4.736311   t=22.82    1.12s
+  down phi=1.01926    steady     thc=0.400000   eta=4.921105   t=24.55    1.10s
+  down phi=1          steady     thc=0.400000   eta=5.016178   t=25.4     0.93s
+  down phi=0.9811     steady     thc=0.400000   eta=5.113080   t=26.23    0.94s
+  down phi=0.944364   steady     thc=0.400000   eta=5.312516   t=28.25    1.17s
+  down phi=0.909004   steady     thc=0.399999   eta=5.519704   t=30.26    1.04s
+  down phi=0.874968   steady     thc=0.399999   eta=5.734946   t=31       1.02s
+  down phi=0.842207   steady     thc=0.399998   eta=5.958554   t=31       0.92s
+  down phi=0.810672   steady     thc=0.399996   eta=6.190855   t=31       0.88s
+  down phi=0.780318   steady     thc=0.399994   eta=6.432188   t=31       0.85s
+  down phi=0.7511     steady     thc=0.399990   eta=6.682903   t=31       0.79s
+  down phi=0.722976   steady     thc=0.399983   eta=6.943366   t=31       0.72s
+  down phi=0.695906   steady     thc=0.399973   eta=7.213956   t=31       0.67s
+  down phi=0.669849   steady     thc=0.399958   eta=7.495068   t=31       0.63s
+  down phi=0.644768   steady     thc=0.399934   eta=7.787110   t=31       0.59s
+  down phi=0.620626   steady     thc=0.399900   eta=8.090507   t=31       0.60s
+  down phi=0.6        steady     thc=0.399856   eta=8.369045   t=31       0.67s
+  down phi=0.597387   steady     thc=0.399849   eta=8.405700   t=31       0.39s
+  down phi=0.575019   steady     thc=0.399777   eta=8.733146   t=31       0.75s
+  down phi=0.553489   steady     thc=0.399675   eta=9.073316   t=31       0.89s
+  down phi=0.532764   steady     thc=0.399532   eta=9.426693   t=31       1.36s
+  down phi=0.512816   steady     thc=0.399335   eta=9.793772   t=39.12    3.38s
+  down phi=0.493614   cycle      thc=0.359932   eta=9.147065   t=15.88    11.52s cycle P=0.29189 pp=0.09496
+  down phi=0.475132   cycle      thc=0.333567   eta=9.056127   t=7.95     8.12s cycle P=0.31675 pp=0.1844
+  down phi=0.457341   cycle      thc=0.317627   eta=9.091871   t=8.045    10.85s cycle P=0.3482 pp=0.2532
+  down phi=0.440217   cycle      thc=0.302019   eta=9.289706   t=16.18    32.22s cycle P=0.39398 pp=0.3196
+  down phi=0.423734   cycle      thc=0.282948   eta=9.728362   t=8.511    21.45s cycle P=0.50353 pp=0.4612
+  down phi=0.407868   cycle      thc=0.363154   eta=12.945219  t=19.6     38.32s cycle P=1.5347 pp=1.441
+  down phi=0.392596   cycle      thc=0.048786   eta=3.073731   t=20.32    33.38s cycle P=1.775 pp=1.506
+  down phi=0.377896   cycle      thc=0.113695   eta=8.590752   t=37.76    54.22s cycle P=2.2523 pp=1.517
+  down phi=0.363746   steady     thc=0.066397   eta=2.121777   t=63       0.47s
+  down phi=0.350127   steady     thc=0.049644   eta=1.765581   t=31       0.34s
+  down phi=0.337017   steady     thc=0.041095   eta=1.604878   t=31       0.33s
+  down phi=0.324398   steady     thc=0.035170   eta=1.501206   t=31       0.31s
+  down phi=0.312251   steady     thc=0.030648   eta=1.426142   t=31       0.31s
+  down phi=0.30056    steady     thc=0.027022   eta=1.368377   t=31       0.33s
+  down phi=0.3        steady     thc=0.026862   eta=1.365886   t=31       0.26s
+  down phi=0.289306   steady     thc=0.024022   eta=1.322190   t=31       0.32s
+  down phi=0.278473   steady     thc=0.021489   eta=1.284270   t=31       0.32s
+  down phi=0.268046   steady     thc=0.019316   eta=1.252527   t=31       0.28s
+  down phi=0.25801    steady     thc=0.017430   eta=1.225556   t=31       0.29s
+  down phi=0.248349   steady     thc=0.015778   eta=1.202368   t=31       0.29s
+  down phi=0.23905    steady     thc=0.014322   eta=1.182241   t=31       0.29s
+  down phi=0.230099   steady     thc=0.013029   eta=1.164633   t=31       0.29s
+  down phi=0.221484   steady     thc=0.011875   eta=1.149127   t=31       0.28s
+  down phi=0.213191   steady     thc=0.010842   eta=1.135396   t=31       0.29s
+  down phi=0.205208   steady     thc=0.009913   eta=1.123177   t=31       0.27s
+  down phi=0.197524   steady     thc=0.009076   eta=1.112260   t=31       0.29s
+  down phi=0.190128   steady     thc=0.008318   eta=1.102470   t=31       0.30s
+  down phi=0.183009   steady     thc=0.007631   eta=1.093663   t=31       0.28s
+  down phi=0.176157   steady     thc=0.007008   eta=1.085719   t=31       0.29s
+  down phi=0.169561   steady     thc=0.006440   eta=1.078534   t=31       0.30s
+  down phi=0.163212   steady     thc=0.005922   eta=1.072022   t=31       0.29s
+  down phi=0.157101   steady     thc=0.005450   eta=1.066109   t=31       0.27s
+  down phi=0.151219   steady     thc=0.005018   eta=1.060730   t=31       0.28s
+  down phi=0.145557   steady     thc=0.004623   eta=1.055828   t=31       0.27s
+  down phi=0.140106   steady     thc=0.004261   eta=1.051356   t=31       0.28s
+  down phi=0.13486    steady     thc=0.003929   eta=1.047270   t=31       0.27s
+  down phi=0.129811   steady     thc=0.003624   eta=1.043532   t=31       0.27s
+  down phi=0.12495    steady     thc=0.003344   eta=1.040110   t=31       0.27s
+  down phi=0.120272   steady     thc=0.003087   eta=1.036973   t=31       0.26s
+  down phi=0.115768   steady     thc=0.002850   eta=1.034096   t=31       0.28s
+  down phi=0.111434   steady     thc=0.002633   eta=1.031454   t=31       0.26s
+  down phi=0.107261   steady     thc=0.002432   eta=1.029026   t=31       0.27s
+  down phi=0.103245   steady     thc=0.002247   eta=1.026795   t=31       0.27s
+  down phi=0.1        steady     thc=0.002104   eta=1.025065   t=31       0.25s
+  down phi=0.0993792  steady     thc=0.002077   eta=1.024742   t=31       0.22s
+  down phi=0.0956581  steady     thc=0.001920   eta=1.022852   t=31       0.26s
+  down phi=0.0920763  steady     thc=0.001775   eta=1.021112   t=31       0.27s
+  down phi=0.0886287  steady     thc=0.001642   eta=1.019509   t=31       0.27s
+  down phi=0.0853102  steady     thc=0.001518   eta=1.018031   t=31       0.27s
+  down phi=0.0821159  steady     thc=0.001404   eta=1.016668   t=31       0.26s
+  down phi=0.0790412  steady     thc=0.001299   eta=1.015411   t=31       0.32s
+  down phi=0.0760817  steady     thc=0.001202   eta=1.014251   t=31       0.26s
+  down phi=0.0732329  steady     thc=0.001112   eta=1.013180   t=31       0.29s
+  down phi=0.0704908  steady     thc=0.001029   eta=1.012191   t=31       0.27s
+  down phi=0.0678514  steady     thc=0.000953   eta=1.011278   t=31       0.25s
+  down phi=0.0653109  steady     thc=0.000882   eta=1.010435   t=31       0.27s
+  down phi=0.0628654  steady     thc=0.000816   eta=1.009655   t=31       0.26s
+  down phi=0.0605115  steady     thc=0.000755   eta=1.008935   t=31       0.25s
+  down phi=0.0582458  steady     thc=0.000699   eta=1.008269   t=31       0.26s
+  down phi=0.0560649  steady     thc=0.000647   eta=1.007654   t=31       0.24s
+  down phi=0.0539656  steady     thc=0.000599   eta=1.007084   t=31       0.25s
+  down phi=0.051945   steady     thc=0.000555   eta=1.006558   t=31       0.25s
+  down phi=0.05       steady     thc=0.000514   eta=1.006071   t=31       0.24s
+    bisect phi=0.3707538 -> cycle key=0.148076 JUMP (t=39.73)
+    bisect phi=0.36723342 -> cycle key=0.121686 JUMP (t=77.06)
+    bisect phi=0.36548579 -> steady key=0.070987 stay (t=63)
+    bisect phi=0.36635856 -> steady key=0.074416 stay (t=103)
+    bisect phi=0.36679573 -> steady key=0.076970 stay (t=103)
+    bisect phi=0.36701451 -> steady key=0.078894 stay (t=103)
+    bisect phi=0.36712395 -> steady key=0.080412 stay (t=143)
+    bisect phi=0.36717868 -> steady key=0.081849 stay (t=143)
+    bisect phi=0.36720605 -> cycle key=0.121141 JUMP (t=77.28)
+    bisect phi=0.36719237 -> cycle key=0.120820 JUMP (t=77.39)
+    bisect phi=0.41572534 -> cycle key=0.345817 JUMP (t=9.411)
+    bisect phi=0.41177795 -> cycle key=0.256744 stay (t=19.36)
+    bisect phi=0.41374694 -> cycle key=0.285589 stay (t=18.77)
+    bisect phi=0.41473496 -> cycle key=0.322426 JUMP (t=17.94)
+    bisect phi=0.41424066 -> cycle key=0.303677 stay (t=18.37)
+    bisect phi=0.41448773 -> cycle key=0.313562 JUMP (t=18.14)
+    bisect phi=0.41436418 -> cycle key=0.308629 JUMP (t=18.25)
+    bisect phi=0.41430241 -> cycle key=0.306158 JUMP (t=18.31)
+    bisect phi=0.41427153 -> cycle key=0.304684 stay (t=18.34)
+    bisect phi=0.41428697 -> cycle key=0.305621 JUMP (t=18.32)
+    bisect phi=0.50312356 -> steady key=0.399211 JUMP (t=158.5)
+    bisect phi=0.49834631 -> cycle key=0.398952 stay (t=15.86)
+    bisect phi=0.50072923 -> cycle key=0.399125 stay (t=41.38)
+    bisect phi=0.50192497 -> unresolved_oscillating key=0.399240 JUMP (t=303) osc amp 1.09e-04 rate -0.0164
+    bisect phi=0.50132674 -> cycle key=0.399167 stay (t=66.8)
+    bisect phi=0.50162577 -> cycle key=0.399186 stay (t=253.3)
+    bisect phi=0.50312356 -> steady key=0.399211 stay (t=150.1)
+    bisect phi=0.49834631 -> cycle key=0.398965 JUMP (t=24.44)
+    bisect phi=0.50072923 -> cycle key=0.399117 JUMP (t=75.42)
+    bisect phi=0.50192497 -> unresolved_oscillating key=0.399199 stay (t=302.9) osc amp 1.94e-05 rate -0.0168
+    bisect phi=0.50132674 -> cycle key=0.399169 JUMP (t=219.6)
+    bisect phi=0.50162577 -> cycle key=0.399190 JUMP (t=3.848)
+    bisect phi=0.41572534 -> cycle key=0.345811 stay (t=9.411)
+    bisect phi=0.41177795 -> cycle key=0.256826 JUMP (t=19.36)
+    bisect phi=0.41374694 -> cycle key=0.285626 JUMP (t=18.77)
+    bisect phi=0.41473496 -> cycle key=0.322426 stay (t=17.94)
+    bisect phi=0.41424066 -> cycle key=0.303677 JUMP (t=18.37)
+    bisect phi=0.41448773 -> cycle key=0.313478 stay (t=18.14)
+    bisect phi=0.41436418 -> cycle key=0.308630 stay (t=18.25)
+    bisect phi=0.41430241 -> cycle key=0.306227 stay (t=18.31)
+    bisect phi=0.41427153 -> cycle key=0.304470 JUMP (t=18.34)
+    bisect phi=0.41428697 -> cycle key=0.305247 JUMP (t=18.32)
+    bisect phi=0.3707538 -> cycle key=0.148000 stay (t=39.73)
+    bisect phi=0.36723342 -> cycle key=0.121871 stay (t=77.06)
+    bisect phi=0.36548579 -> steady key=0.070987 JUMP (t=63)
+    bisect phi=0.36635856 -> steady key=0.074416 JUMP (t=103)
+    bisect phi=0.36679573 -> steady key=0.076970 JUMP (t=103)
+    bisect phi=0.36701451 -> cycle key=0.115294 stay (t=80.07)
+    bisect phi=0.36690511 -> steady key=0.077832 JUMP (t=103)
+    bisect phi=0.3669598 -> cycle key=0.111149 stay (t=83)
+    bisect phi=0.36693245 -> steady key=0.078074 JUMP (t=143)
+    bisect phi=0.36694613 -> cycle key=0.108470 stay (t=85.65)
+   probe phi=0.1 init=uniform th0=0.0 c0=0.0 -> steady 0.002104 (0.6s)
+   probe phi=0.1 init=uniform th0=0.0 c0=0.25 -> steady 0.002104 (0.3s)
+   probe phi=0.1 init=uniform th0=0.0 c0=0.5 -> steady 0.002104 (0.3s)
+   probe phi=0.1 init=uniform th0=0.0 c0=0.75 -> steady 0.002104 (0.2s)
+   probe phi=0.1 init=uniform th0=0.0 c0=1.0 -> steady 0.002104 (0.2s)
+   probe phi=0.1 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.002104 (0.6s)
+   probe phi=0.1 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.002104 (0.3s)
+   probe phi=0.1 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.002104 (0.6s)
+   probe phi=0.1 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.2 c0=0.0 -> steady 0.002104 (0.7s)
+   probe phi=0.1 init=uniform th0=0.2 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.2 c0=0.5 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.2 c0=0.75 -> steady 0.002104 (0.3s)
+   probe phi=0.1 init=uniform th0=0.2 c0=1.0 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.002104 (0.7s)
+   probe phi=0.1 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.002104 (0.3s)
+   probe phi=0.1 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.002104 (0.7s)
+   probe phi=0.1 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.002104 (0.7s)
+   probe phi=0.1 init=uniform th0=0.4 c0=0.0 -> steady 0.002104 (0.8s)
+   probe phi=0.1 init=uniform th0=0.4 c0=0.25 -> steady 0.002104 (0.4s)
+   probe phi=0.1 init=uniform th0=0.4 c0=0.5 -> steady 0.002104 (0.5s)
+   probe phi=0.1 init=uniform th0=0.4 c0=0.75 -> steady 0.002104 (0.8s)
+   probe phi=0.1 init=uniform th0=0.4 c0=1.0 -> steady 0.002104 (1.0s)
+   probe phi=0.1 init=sweep_up th0=None c0=None -> steady 0.002104 (0.0s)
+   probe phi=0.1 init=sweep_down th0=None c0=None -> steady 0.002104 (0.0s)
+   probe phi=0.3 init=uniform th0=0.0 c0=0.0 -> steady 0.026862 (1.7s)
+   probe phi=0.3 init=uniform th0=0.0 c0=0.25 -> steady 0.026862 (0.7s)
+   probe phi=0.3 init=uniform th0=0.0 c0=0.5 -> steady 0.026862 (0.6s)
+   probe phi=0.3 init=uniform th0=0.0 c0=0.75 -> steady 0.026862 (0.7s)
+   probe phi=0.3 init=uniform th0=0.0 c0=1.0 -> steady 0.026862 (0.6s)
+   probe phi=0.3 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.026862 (1.6s)
+   probe phi=0.3 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.026862 (1.2s)
+   probe phi=0.3 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.026862 (1.3s)
+   probe phi=0.3 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.026862 (0.9s)
+   probe phi=0.3 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.026862 (0.9s)
+   probe phi=0.3 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.026862 (2.0s)
+   probe phi=0.3 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.026862 (1.0s)
+   probe phi=0.3 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.026862 (1.0s)
+   probe phi=0.3 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.026862 (1.1s)
+   probe phi=0.3 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.026862 (5.5s)
+   probe phi=0.3 init=uniform th0=0.2 c0=0.0 -> steady 0.026862 (1.8s)
+   probe phi=0.3 init=uniform th0=0.2 c0=0.25 -> steady 0.026862 (1.0s)
+   probe phi=0.3 init=uniform th0=0.2 c0=0.5 -> steady 0.026862 (2.8s)
+   probe phi=0.3 init=uniform th0=0.2 c0=0.75 -> steady 0.026862 (3.9s)
+   probe phi=0.3 init=uniform th0=0.2 c0=1.0 -> steady 0.026862 (5.3s)
+   probe phi=0.3 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.026862 (1.9s)
+   probe phi=0.3 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.026862 (1.1s)
+   probe phi=0.3 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.026862 (2.6s)
+   probe phi=0.3 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.026862 (3.6s)
+   probe phi=0.3 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.026862 (4.9s)
+   probe phi=0.3 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.026862 (1.8s)
+   probe phi=0.3 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.026862 (1.3s)
+   probe phi=0.3 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.026862 (2.3s)
+   probe phi=0.3 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.026862 (3.4s)
+   probe phi=0.3 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.026862 (4.1s)
+   probe phi=0.3 init=uniform th0=0.4 c0=0.0 -> steady 0.026862 (1.8s)
+   probe phi=0.3 init=uniform th0=0.4 c0=0.25 -> steady 0.026862 (1.4s)
+   probe phi=0.3 init=uniform th0=0.4 c0=0.5 -> steady 0.026862 (2.4s)
+   probe phi=0.3 init=uniform th0=0.4 c0=0.75 -> steady 0.026862 (3.0s)
+   probe phi=0.3 init=uniform th0=0.4 c0=1.0 -> steady 0.026862 (3.7s)
+   probe phi=0.3 init=sweep_up th0=None c0=None -> steady 0.026862 (0.1s)
+   probe phi=0.3 init=sweep_down th0=None c0=None -> steady 0.026862 (0.1s)
+   probe phi=0.6 init=uniform th0=0.0 c0=0.0 -> steady 0.399856 (5.6s)
+   probe phi=0.6 init=uniform th0=0.0 c0=0.25 -> steady 0.399856 (4.6s)
+   probe phi=0.6 init=uniform th0=0.0 c0=0.5 -> steady 0.399856 (5.0s)
+   probe phi=0.6 init=uniform th0=0.0 c0=0.75 -> steady 0.399856 (6.2s)
+   probe phi=0.6 init=uniform th0=0.0 c0=1.0 -> steady 0.399856 (9.3s)
+   probe phi=0.6 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.399856 (5.5s)
+   probe phi=0.6 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.399856 (4.3s)
+   probe phi=0.6 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.399856 (4.5s)
+   probe phi=0.6 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.399856 (6.2s)
+   probe phi=0.6 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.399856 (10.1s)
+   probe phi=0.6 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.399856 (5.4s)
+   probe phi=0.6 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.399856 (3.2s)
+   probe phi=0.6 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.399856 (4.1s)
+   probe phi=0.6 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.399856 (5.8s)
+   probe phi=0.6 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.399856 (8.6s)
+   probe phi=0.6 init=uniform th0=0.2 c0=0.0 -> steady 0.399856 (5.2s)
+   probe phi=0.6 init=uniform th0=0.2 c0=0.25 -> steady 0.399856 (2.5s)
+   probe phi=0.6 init=uniform th0=0.2 c0=0.5 -> steady 0.399856 (3.5s)
+   probe phi=0.6 init=uniform th0=0.2 c0=0.75 -> steady 0.399856 (4.8s)
+   probe phi=0.6 init=uniform th0=0.2 c0=1.0 -> steady 0.399856 (6.6s)
+   probe phi=0.6 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.399856 (5.1s)
+   probe phi=0.6 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.399856 (1.7s)
+   probe phi=0.6 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.399856 (3.1s)
+   probe phi=0.6 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.399856 (4.0s)
+   probe phi=0.6 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.399856 (5.2s)
+   probe phi=0.6 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.399856 (4.3s)
+   probe phi=0.6 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.399856 (1.8s)
+   probe phi=0.6 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.399856 (2.6s)
+   probe phi=0.6 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.399856 (3.5s)
+   probe phi=0.6 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.399856 (4.5s)
+   probe phi=0.6 init=uniform th0=0.4 c0=0.0 -> steady 0.399856 (3.6s)
+   probe phi=0.6 init=uniform th0=0.4 c0=0.25 -> steady 0.399856 (1.7s)
+   probe phi=0.6 init=uniform th0=0.4 c0=0.5 -> steady 0.399856 (2.5s)
+   probe phi=0.6 init=uniform th0=0.4 c0=0.75 -> steady 0.399856 (3.3s)
+   probe phi=0.6 init=uniform th0=0.4 c0=1.0 -> steady 0.399856 (3.9s)
+   probe phi=0.6 init=sweep_up th0=None c0=None -> steady 0.399856 (0.2s)
+   probe phi=0.6 init=sweep_down th0=None c0=None -> steady 0.399856 (0.1s)
+   probe phi=1 init=uniform th0=0.0 c0=0.0 -> steady 0.400000 (5.2s)
+   probe phi=1 init=uniform th0=0.0 c0=0.25 -> steady 0.400000 (4.2s)
+   probe phi=1 init=uniform th0=0.0 c0=0.5 -> steady 0.400000 (5.5s)
+   probe phi=1 init=uniform th0=0.0 c0=0.75 -> steady 0.400000 (8.7s)
+   probe phi=1 init=uniform th0=0.0 c0=1.0 -> steady 0.400000 (15.9s)
+   probe phi=1 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.400000 (5.2s)
+   probe phi=1 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.400000 (4.0s)
+   probe phi=1 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.400000 (4.9s)
+   probe phi=1 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.400000 (8.6s)
+   probe phi=1 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.400000 (13.7s)
+   probe phi=1 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.400000 (4.7s)
+   probe phi=1 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.400000 (3.3s)
+   probe phi=1 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.400000 (4.3s)
+   probe phi=1 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.400000 (5.9s)
+   probe phi=1 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.400000 (8.8s)
+   probe phi=1 init=uniform th0=0.2 c0=0.0 -> steady 0.400000 (4.6s)
+   probe phi=1 init=uniform th0=0.2 c0=0.25 -> steady 0.400000 (2.7s)
+   probe phi=1 init=uniform th0=0.2 c0=0.5 -> steady 0.400000 (3.6s)
+   probe phi=1 init=uniform th0=0.2 c0=0.75 -> steady 0.400000 (4.7s)
+   probe phi=1 init=uniform th0=0.2 c0=1.0 -> steady 0.400000 (6.5s)
+   probe phi=1 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.400000 (4.8s)
+   probe phi=1 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.400000 (1.8s)
+   probe phi=1 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.400000 (2.9s)
+   probe phi=1 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.400000 (3.9s)
+   probe phi=1 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.400000 (5.0s)
+   probe phi=1 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.400000 (4.5s)
+   probe phi=1 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.400000 (1.6s)
+   probe phi=1 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.400000 (2.5s)
+   probe phi=1 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.400000 (3.5s)
+   probe phi=1 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.400000 (4.2s)
+   probe phi=1 init=uniform th0=0.4 c0=0.0 -> steady 0.400000 (3.6s)
+   probe phi=1 init=uniform th0=0.4 c0=0.25 -> steady 0.400000 (1.5s)
+   probe phi=1 init=uniform th0=0.4 c0=0.5 -> steady 0.400000 (2.3s)
+   probe phi=1 init=uniform th0=0.4 c0=0.75 -> steady 0.400000 (3.1s)
+   probe phi=1 init=uniform th0=0.4 c0=1.0 -> steady 0.400000 (3.8s)
+   probe phi=1 init=sweep_up th0=None c0=None -> steady 0.400000 (0.1s)
+   probe phi=1 init=sweep_down th0=None c0=None -> steady 0.400000 (0.1s)
+   probe phi=3 init=uniform th0=0.0 c0=0.0 -> steady 0.400000 (5.6s)
+   probe phi=3 init=uniform th0=0.0 c0=0.25 -> steady 0.400000 (4.2s)
+   probe phi=3 init=uniform th0=0.0 c0=0.5 -> steady 0.400000 (6.4s)
+   probe phi=3 init=uniform th0=0.0 c0=0.75 -> steady 0.400000 (10.9s)
+   probe phi=3 init=uniform th0=0.0 c0=1.0 -> steady 0.400000 (17.6s)
+   probe phi=3 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.400000 (6.1s)
+   probe phi=3 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.400000 (4.3s)
+   probe phi=3 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.400000 (5.4s)
+   probe phi=3 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.400000 (8.6s)
+   probe phi=3 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.400000 (13.4s)
+   probe phi=3 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.400000 (6.4s)
+   probe phi=3 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.400000 (3.3s)
+   probe phi=3 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.400000 (4.3s)
+   probe phi=3 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.400000 (5.9s)
+   probe phi=3 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.400000 (8.6s)
+   probe phi=3 init=uniform th0=0.2 c0=0.0 -> steady 0.400000 (6.3s)
+   probe phi=3 init=uniform th0=0.2 c0=0.25 -> steady 0.400000 (2.9s)
+   probe phi=3 init=uniform th0=0.2 c0=0.5 -> steady 0.400000 (3.6s)
+   probe phi=3 init=uniform th0=0.2 c0=0.75 -> steady 0.400000 (5.1s)
+   probe phi=3 init=uniform th0=0.2 c0=1.0 -> steady 0.400000 (6.3s)
+   probe phi=3 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.400000 (5.5s)
+   probe phi=3 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.400000 (1.9s)
+   probe phi=3 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.400000 (3.2s)
+   probe phi=3 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.400000 (4.4s)
+   probe phi=3 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.400000 (5.0s)
+   probe phi=3 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.400000 (4.6s)
+   probe phi=3 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.400000 (1.6s)
+   probe phi=3 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.400000 (2.8s)
+   probe phi=3 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.400000 (3.6s)
+   probe phi=3 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.400000 (4.2s)
+   probe phi=3 init=uniform th0=0.4 c0=0.0 -> steady 0.400000 (3.1s)
+   probe phi=3 init=uniform th0=0.4 c0=0.25 -> steady 0.400000 (1.7s)
+   probe phi=3 init=uniform th0=0.4 c0=0.5 -> steady 0.400000 (2.8s)
+   probe phi=3 init=uniform th0=0.4 c0=0.75 -> steady 0.400000 (3.3s)
+   probe phi=3 init=uniform th0=0.4 c0=1.0 -> steady 0.400000 (5.1s)
+   probe phi=3 init=sweep_up th0=None c0=None -> steady 0.400000 (0.1s)
+   probe phi=3 init=sweep_down th0=None c0=None -> steady 0.400000 (0.1s)
+   probe phi=10 init=uniform th0=0.0 c0=0.0 -> steady 0.400000 (5.0s)
+   probe phi=10 init=uniform th0=0.0 c0=0.25 -> steady 0.400000 (3.7s)
+   probe phi=10 init=uniform th0=0.0 c0=0.5 -> steady 0.400000 (5.5s)
+   probe phi=10 init=uniform th0=0.0 c0=0.75 -> steady 0.400000 (10.0s)
+   probe phi=10 init=uniform th0=0.0 c0=1.0 -> steady 0.400000 (17.5s)
+   probe phi=10 init=uniform th0=0.06666666666666667 c0=0.0 -> steady 0.400000 (4.6s)
+   probe phi=10 init=uniform th0=0.06666666666666667 c0=0.25 -> steady 0.400000 (3.6s)
+   probe phi=10 init=uniform th0=0.06666666666666667 c0=0.5 -> steady 0.400000 (4.6s)
+   probe phi=10 init=uniform th0=0.06666666666666667 c0=0.75 -> steady 0.400000 (7.8s)
+   probe phi=10 init=uniform th0=0.06666666666666667 c0=1.0 -> steady 0.400000 (11.3s)
+   probe phi=10 init=uniform th0=0.13333333333333333 c0=0.0 -> steady 0.400000 (4.3s)
+   probe phi=10 init=uniform th0=0.13333333333333333 c0=0.25 -> steady 0.400000 (2.5s)
+   probe phi=10 init=uniform th0=0.13333333333333333 c0=0.5 -> steady 0.400000 (2.9s)
+   probe phi=10 init=uniform th0=0.13333333333333333 c0=0.75 -> steady 0.400000 (5.1s)
+   probe phi=10 init=uniform th0=0.13333333333333333 c0=1.0 -> steady 0.400000 (8.3s)
+   probe phi=10 init=uniform th0=0.2 c0=0.0 -> steady 0.400000 (4.4s)
+   probe phi=10 init=uniform th0=0.2 c0=0.25 -> steady 0.400000 (2.4s)
+   probe phi=10 init=uniform th0=0.2 c0=0.5 -> steady 0.400000 (3.2s)
+   probe phi=10 init=uniform th0=0.2 c0=0.75 -> steady 0.400000 (4.3s)
+   probe phi=10 init=uniform th0=0.2 c0=1.0 -> steady 0.400000 (5.2s)
+   probe phi=10 init=uniform th0=0.26666666666666666 c0=0.0 -> steady 0.400000 (3.0s)
+   probe phi=10 init=uniform th0=0.26666666666666666 c0=0.25 -> steady 0.400000 (1.6s)
+   probe phi=10 init=uniform th0=0.26666666666666666 c0=0.5 -> steady 0.400000 (2.2s)
+   probe phi=10 init=uniform th0=0.26666666666666666 c0=0.75 -> steady 0.400000 (2.9s)
+   probe phi=10 init=uniform th0=0.26666666666666666 c0=1.0 -> steady 0.400000 (3.8s)
+   probe phi=10 init=uniform th0=0.3333333333333333 c0=0.0 -> steady 0.400000 (2.4s)
+   probe phi=10 init=uniform th0=0.3333333333333333 c0=0.25 -> steady 0.400000 (1.4s)
+   probe phi=10 init=uniform th0=0.3333333333333333 c0=0.5 -> steady 0.400000 (2.2s)
+   probe phi=10 init=uniform th0=0.3333333333333333 c0=0.75 -> steady 0.400000 (2.9s)
+   probe phi=10 init=uniform th0=0.3333333333333333 c0=1.0 -> steady 0.400000 (3.5s)
+   probe phi=10 init=uniform th0=0.4 c0=0.0 -> steady 0.400000 (1.7s)
+   probe phi=10 init=uniform th0=0.4 c0=0.25 -> steady 0.400000 (1.5s)
+   probe phi=10 init=uniform th0=0.4 c0=0.5 -> steady 0.400000 (2.0s)
+   probe phi=10 init=uniform th0=0.4 c0=0.75 -> steady 0.400000 (2.5s)
+   probe phi=10 init=uniform th0=0.4 c0=1.0 -> steady 0.400000 (2.9s)
+   probe phi=10 init=sweep_up th0=None c0=None -> steady 0.400000 (0.0s)
+   probe phi=10 init=sweep_down th0=None c0=None -> steady 0.400000 (0.0s)
+real 2993.74
+user 2655.18
+sys 78.48

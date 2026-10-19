@@ -1,0 +1,15 @@
+sweep dev_03 N=200 a=3.248 (h 1.26e-03..1.62e-02) steps/pass=162 ratio=1.0389  144.0s
+  q=0.1      up: steady thc=0.0005212 eta=1.0017626           | down: steady thc=0.0005212 eta=1.0017626
+  q=0.5      up: steady thc=0.0136315 eta=1.0401682           | down: steady thc=0.0136315 eta=1.0401682
+  q=1        up: steady thc=0.0536858 eta=1.0441483           | down: steady thc=0.0536858 eta=1.0441483
+  q=5        up: steady thc=0.0999866 eta=0.2412642           | down: steady thc=0.0999866 eta=0.2412642
+  unresolved steps 0, cycle steps 0
+probe phi=0.1: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (36.2s)
+    steady thc=0.0005212 eta=1.0017626  basin 37/37
+probe phi=0.5: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (46.2s)
+    steady thc=0.0136315 eta=1.0401682  basin 37/37
+probe phi=1: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (35.4s)
+    steady thc=0.0536858 eta=1.0441483  basin 37/37
+probe phi=5: 37 runs, 0 unresolved, 1 steady + 0 cycle attractors (41.2s)
+    steady thc=0.0999866 eta=0.2412642  basin 37/37
+summary written, total 303.5s

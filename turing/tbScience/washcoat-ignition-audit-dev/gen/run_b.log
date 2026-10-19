@@ -1,2 +1,13 @@
 {"recipe_id": "held_05", "shipped": false, "label": "two folds, Le > 1", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 14.4, "attempts": 3}
 {"recipe_id": "held_06", "shipped": false, "label": "two folds, large Le", "folds": 2, "hopf": 0, "states": [1, 1, 3, 1, 1], "secs": 17.9, "attempts": 1}
+{"recipe_id": "held_07", "failed": true, "label": "one Hopf point, Le < 1"}
+{"recipe_id": "held_08", "shipped": false, "label": "one Hopf point, Le < 1", "folds": 2, "hopf": 1, "states": [1, 1, 3, 1, 1, 1], "secs": 33.2, "attempts": 7}
+{"recipe_id": "held_09", "failed": true, "label": "one Hopf point, small Le"}
+{"recipe_id": "held_10", "failed": true, "label": "two Hopf points"}
+{"recipe_id": "held_11", "failed": true, "label": "two Hopf points"}
+{"recipe_id": "held_12", "shipped": false, "label": "four folds", "folds": 4, "hopf": 0, "states": [1, 1, 3, 5, 3, 1, 1], "secs": 32.3, "attempts": 34}
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:48: RuntimeWarning: overflow encountered in exp
+  return np.exp(self.gamma * th / (1.0 + th))
+/Users/adnananwar/Desktop/laraib/turing/tbScience/washcoat-ignition-audit-dev/../../tasks/engineering-sciences/chemical-engineering/washcoat-ignition-audit/solution/lightoff_exact.py:169: RuntimeWarning: invalid value encountered in subtract
+  J = D2 - phi2 * np.diag(Rv - L.beta * c * dRv)
+{"recipe_id": "held_13", "shipped": false, "label": "four folds", "folds": 4, "hopf": 0, "states": [1, 1, 3, 1, 3, 1, 1], "secs": 23.7, "attempts": 154}

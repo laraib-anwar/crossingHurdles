@@ -35,6 +35,7 @@ X32, W32 = np.polynomial.legendre.leggauss(32)
 X64, W64 = np.polynomial.legendre.leggauss(64)
 N_LEVELS = (48, 72, 108, 162)            # collocation resolutions tried for the spectrum
 EIG_TOL = 1e-7                           # agreement required between two resolutions
+N_SUB = 24                               # subdivisions of an interval next to a real-complex merger
 OMEGA_MIN = 1e-3                         # a crossing with |Im| below this is a real-pair merger, not a Hopf point
 
 
@@ -273,14 +274,26 @@ def solve(r):
     if inside:
         idx = list(range(max(min(inside) - 1, 0), min(max(inside) + 2, len(zs))))
         vals = {i: hopf_fn(zs[i], conv=False) for i in idx}
+        brackets = []
         for i, j in zip(idx[:-1], idx[1:]):
             a, b = vals[i], vals[j]
-            if not (math.isfinite(a) and math.isfinite(b) and a * b < 0.0):
-                continue
-            fa, fb = hopf_fn(zs[i]), hopf_fn(zs[j])
+            if math.isfinite(a) and math.isfinite(b):
+                if a * b < 0.0:
+                    brackets.append((zs[i], zs[j]))
+            elif math.isfinite(a) or math.isfinite(b):
+                # a complex pair appears or disappears inside the interval (merger with a real
+                # pair); it can cross the imaginary axis before reaching the grid point, so the
+                # interval is subdivided and searched for a sign change of the pair's real part
+                sub = np.linspace(zs[i], zs[j], N_SUB + 1)
+                sv = [hopf_fn(z, conv=False) for z in sub]
+                for k in range(N_SUB):
+                    if math.isfinite(sv[k]) and math.isfinite(sv[k + 1]) and sv[k] * sv[k + 1] < 0.0:
+                        brackets.append((sub[k], sub[k + 1]))
+        for za_, zb_ in brackets:
+            fa, fb = hopf_fn(za_), hopf_fn(zb_)
             if not (math.isfinite(fa) and math.isfinite(fb) and fa * fb < 0.0):
                 continue
-            zh = brentq(hopf_fn, zs[i], zs[j], xtol=1e-13, rtol=1e-15, maxiter=200)
+            zh = brentq(hopf_fn, za_, zb_, xtol=1e-13, rtol=1e-15, maxiter=200)
             cs = cs_of(zh)
             phi, thc, eta, c0 = L.state(cs)
             w = spectrum(L, cs, c0, phi)

@@ -1,0 +1,108 @@
+{
+ "recipe_id": "lightoff_04",
+ "folds": [
+  {
+   "phi": 0.11677683772287954,
+   "theta_c": 0.28529129152542376,
+   "eta": 87.3869000571266,
+   "kind": "extinction"
+  },
+  {
+   "phi": 0.30866476462953274,
+   "theta_c": 0.04532228813559322,
+   "eta": 2.4267218960857657,
+   "kind": "ignition"
+  }
+ ],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.025306,
+   "branches": []
+  },
+  {
+   "phi": 0.0682289,
+   "branches": [
+    {
+     "theta_c": 0.0012807575620234469,
+     "eta": 1.0262734635705526,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.130758,
+   "branches": [
+    {
+     "theta_c": 0.0037955466322603967,
+     "eta": 1.0785476973239112,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.2360934255835977,
+     "eta": 56.13335596526545,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.3177509433859363,
+     "eta": 88.12092463810826,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.171137,
+   "branches": [
+    {
+     "theta_c": 0.005545653698919298,
+     "eta": 1.115392312960127,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.17666065298841838,
+     "eta": 24.98512407222138,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.3271205364994665,
+     "eta": 68.02502989671115,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.246026,
+   "branches": [
+    {
+     "theta_c": 0.014116847919495934,
+     "eta": 1.3207357644963804,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.10852221294044595,
+     "eta": 7.965025570449923,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.32808503465134764,
+     "eta": 47.310897062613805,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.421853,
+   "branches": [
+    {
+     "theta_c": 0.3280999991450218,
+     "eta": 27.59201621315412,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.601449,
+   "branches": []
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "recipe_id": "dev_05",
+ "recipe": {
+  "beta": 0.4,
+  "gamma": 20.0,
+  "Bi_m": 100.0,
+  "Bi_h": 100.0,
+  "Le": 0.2,
+  "phi_min": 0.05,
+  "phi_max": 20.0,
+  "phi_query": [
+   0.1,
+   0.3,
+   0.6,
+   1.0,
+   3.0,
+   10.0
+  ]
+ },
+ "cells": 200,
+ "cluster_a": 6.042213240409675,
+ "h_min": 0.00014360339051622262,
+ "integrator": {
+  "method": "Radau",
+  "rtol": 1e-07,
+  "atol": 1e-11,
+  "ss_tol": 1e-09,
+  "probe_rtol": 1e-06
+ },
+ "sweep_step_ratio": 1.0388997231053625,
+ "bisection_resolution_ln_phi": 5e-05,
+ "events": [
+  {
+   "direction": "up",
+   "kind": "ignition+onset_of_oscillation",
+   "phi_old_side": 0.36717868163483675,
+   "phi_new_side": 0.36719236581979503,
+   "phi_estimate": 0.36718552366356855,
+   "rel_width": 3.726776813462496e-05,
+   "key_old_side": 0.0818491562097985,
+   "key_new_side": 0.120820184414231,
+   "from": "steady",
+   "to": "cycle"
+  },
+  {
+   "direction": "up",
+   "kind": "steep_continuous",
+   "phi_old_side": 0.4142715322045752,
+   "phi_new_side": 0.4142869714676729,
+   "phi_estimate": 0.4142792517642007,
+   "rel_width": 3.7267768134581773e-05,
+   "key_old_side": 0.3046843421305599,
+   "key_new_side": 0.3056210236558845,
+   "from": "cycle",
+   "to": "cycle"
+  },
+  {
+   "direction": "up",
+   "kind": "end_of_oscillation",
+   "phi_old_side": 0.5016257658456497,
+   "phi_new_side": 0.5019249666048329,
+   "phi_estimate": 0.5017753439241525,
+   "rel_width": 0.0005962842989520076,
+   "key_old_side": 0.3991864585291887,
+   "key_new_side": 0.3992402614184472,
+   "from": "cycle",
+   "to": "steady"
+  },
+  {
+   "direction": "down",
+   "kind": "onset_of_oscillation",
+   "phi_old_side": 0.5019249666048329,
+   "phi_new_side": 0.5016257658456497,
+   "phi_estimate": 0.5017753439241525,
+   "rel_width": 0.0005962842989520076,
+   "key_old_side": 0.3991990360973583,
+   "key_new_side": 0.3991897507628167,
+   "from": "steady",
+   "to": "cycle"
+  },
+  {
+   "direction": "down",
+   "kind": "steep_continuous",
+   "phi_old_side": 0.4143024113061682,
+   "phi_new_side": 0.4142869714676729,
+   "phi_estimate": 0.4142946913149945,
+   "rel_width": 3.72677681344945e-05,
+   "key_old_side": 0.3062271026672191,
+   "key_new_side": 0.3052471299001612,
+   "from": "cycle",
+   "to": "cycle"
+  },
+  {
+   "direction": "down",
+   "kind": "extinction+end_of_oscillation",
+   "phi_old_side": 0.3669461285003784,
+   "phi_new_side": 0.36693245349196446,
+   "phi_estimate": 0.3669392909324668,
+   "rel_width": 3.7267768134549003e-05,
+   "key_old_side": 0.10846977120123265,
+   "key_new_side": 0.0780736196396401,
+   "from": "cycle",
+   "to": "steady"
+  }
+ ],
+ "ignition_phi": [
+  0.36718552366356855
+ ],
+ "extinction_phi": [
+  0.3669392909324668
+ ],
+ "oscillation_onsets": [
+  {
+   "direction": "up",
+   "phi": 0.36718552366356855
+  },
+  {
+   "direction": "up",
+   "phi": 0.5017753439241525
+  },
+  {
+   "direction": "down",
+   "phi": 0.5017753439241525
+  },
+  {
+   "direction": "down",
+   "phi": 0.3669392909324668
+  }
+ ],
+ "n_cycle_steps_in_sweep": 16,
+ "n_unresolved_steps_in_sweep": 0,
+ "queries": [
+  {
+   "phi": 0.1,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.0021038737325720543,
+     "eta": 1.0250653876582303,
+     "resid": 1.049864149435531e-08,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.0021038737325720543,
+    "eta": 1.0250653876596514
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.0021038737325720543,
+    "eta": 1.0250653876596514
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 0.3,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.02686239484615764,
+     "eta": 1.3658859539162904,
+     "resid": 1.3510236887559479e-08,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.02686239484615774,
+    "eta": 1.3658859539162904
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.026862394846157732,
+    "eta": 1.3658859539161325
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 0.6,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.39985613279384,
+     "eta": 8.36904504489166,
+     "resid": 5.955115844891168e-09,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.39985613279383997,
+    "eta": 8.36904504489166
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.39985613279384,
+    "eta": 8.3690450448917
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 1.0,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.3999998681929412,
+     "eta": 5.0161776983606075,
+     "resid": 1.0726875165900651e-08,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.3999998681929412,
+    "eta": 5.016177698360593
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.3999998681929412,
+    "eta": 5.016177698360593
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 3.0,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.3999999999950607,
+     "eta": 1.6590712445965055,
+     "resid": 8.539547340862756e-10,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.4000000000001549,
+    "eta": 1.6590712446004199
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.4000000000001547,
+    "eta": 1.659071244600418
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  },
+  {
+   "phi": 10.0,
+   "n_attractors": 1,
+   "n_steady_attractors": 1,
+   "n_cycle_attractors": 0,
+   "attractors": [
+    {
+     "type": "steady",
+     "theta_c": 0.3999999999687058,
+     "eta": 0.4561731879044085,
+     "resid": 4.713456291938201e-11,
+     "n_basin": 37
+    }
+   ],
+   "sweep_up": {
+    "status": "steady",
+    "theta_c": 0.4000000003505245,
+    "eta": 0.4561731879267578
+   },
+   "sweep_down": {
+    "status": "steady",
+    "theta_c": 0.39999999989434143,
+    "eta": 0.45617318790005584
+   },
+   "probe_unresolved_runs": 0,
+   "probe_runs": 37
+  }
+ ],
+ "wall_s": {
+  "sweep": 2222.5559759140015,
+  "probe": 770.148256778717,
+  "total": 2992.845831155777
+ }
+}

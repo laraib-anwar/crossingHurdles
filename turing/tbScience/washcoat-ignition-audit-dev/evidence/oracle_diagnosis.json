@@ -1,0 +1,127 @@
+{
+ "defects": [
+  {
+   "description": "The film resistances are ignored (the exposed face is put at bulk-gas conditions), so the ignition and extinction points sit at the wrong Thiele modulus; the turning points are also read off a coarse grid without refinement.",
+   "recipe": {
+    "recipe_id": "lightoff_03",
+    "beta": 0.2045,
+    "gamma": 28.245,
+    "Bi_m": 19.527,
+    "Bi_h": 10.072,
+    "Le": 0.3376,
+    "phi_min": 0.0975,
+    "phi_max": 1.225,
+    "phi_query": [
+     0.184375,
+     0.272072,
+     0.380985,
+     0.656153,
+     0.788254
+    ]
+   },
+   "quantity": "fold_phi",
+   "selector": 0,
+   "legacy_value": 0.4152508745871042,
+   "correct_value": 0.3513381769792872
+  },
+  {
+   "description": "The steady-state curve is sampled on a coarse grid of wall concentrations under the wrong boundary conditions, so narrow hysteresis loops (and the second loop of a four-fold curve) are missed or invented.",
+   "recipe": {
+    "recipe_id": "lightoff_01",
+    "beta": 0.0766,
+    "gamma": 30.951,
+    "Bi_m": 17.872,
+    "Bi_h": 2.297,
+    "Le": 1.0,
+    "phi_min": 0.0763,
+    "phi_max": 1.796,
+    "phi_query": [
+     0.129889,
+     0.278525,
+     0.497721,
+     1.30386,
+     1.39986
+    ]
+   },
+   "quantity": "fold_count",
+   "selector": null,
+   "legacy_value": 0,
+   "correct_value": 2
+  },
+  {
+   "description": "With the film ignored and the curve read off a coarse grid, the number of steady states at a given Thiele modulus is wrong where the exact curve has a loop the script does not see, and states beyond the grid's range are lost.",
+   "recipe": {
+    "recipe_id": "lightoff_01",
+    "beta": 0.0766,
+    "gamma": 30.951,
+    "Bi_m": 17.872,
+    "Bi_h": 2.297,
+    "Le": 1.0,
+    "phi_min": 0.0763,
+    "phi_max": 1.796,
+    "phi_query": [
+     0.129889,
+     0.278525,
+     0.497721,
+     1.30386,
+     1.39986
+    ]
+   },
+   "quantity": "state_count",
+   "selector": 0.497721,
+   "legacy_value": 1,
+   "correct_value": 3
+  },
+  {
+   "description": "Stability follows the slope rule (middle state unstable, outer states stable). With a Lewis number below one the ignited state loses stability through a Hopf bifurcation, which only the linearised transient problem shows.",
+   "recipe": {
+    "recipe_id": "lightoff_06",
+    "beta": 0.3478,
+    "gamma": 13.594,
+    "Bi_m": 59.235,
+    "Bi_h": 39.813,
+    "Le": 0.1396,
+    "phi_min": 0.103,
+    "phi_max": 5.629,
+    "phi_query": [
+     0.182477,
+     0.339875,
+     0.691639,
+     3.28006,
+     4.08703
+    ]
+   },
+   "quantity": "stability",
+   "selector": [
+    0.691639,
+    0
+   ],
+   "legacy_value": "stable",
+   "correct_value": "unstable_complex"
+  },
+  {
+   "description": "No transient analysis is done, so Hopf points (and the oscillatory instability between them) are never reported.",
+   "recipe": {
+    "recipe_id": "lightoff_03",
+    "beta": 0.2045,
+    "gamma": 28.245,
+    "Bi_m": 19.527,
+    "Bi_h": 10.072,
+    "Le": 0.3376,
+    "phi_min": 0.0975,
+    "phi_max": 1.225,
+    "phi_query": [
+     0.184375,
+     0.272072,
+     0.380985,
+     0.656153,
+     0.788254
+    ]
+   },
+   "quantity": "hopf_count",
+   "selector": null,
+   "legacy_value": 0,
+   "correct_value": 1
+  }
+ ]
+}

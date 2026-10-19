@@ -1,0 +1,18 @@
+{
+ "recipe_id": "lightoff_04",
+ "shipped": true,
+ "label": "four folds (two hysteresis loops)",
+ "folds": 4,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  3,
+  5,
+  3,
+  1,
+  1
+ ],
+ "secs": 30.7,
+ "attempts": 118
+}

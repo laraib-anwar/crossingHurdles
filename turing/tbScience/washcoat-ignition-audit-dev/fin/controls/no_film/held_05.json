@@ -1,0 +1,68 @@
+{
+ "recipe_id": "held_05",
+ "folds": [
+  {
+   "phi": 0.06656549818189356,
+   "theta_c": 0.3601703035484056,
+   "eta": 271.2184653984159,
+   "kind": "extinction"
+  },
+  {
+   "phi": 0.2757389352585045,
+   "theta_c": 0.043236152190373245,
+   "eta": 2.3759356474371947,
+   "kind": "ignition"
+  }
+ ],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.016663,
+   "branches": []
+  },
+  {
+   "phi": 0.0286481,
+   "branches": []
+  },
+  {
+   "phi": 0.109781,
+   "branches": [
+    {
+     "theta_c": 0.002582552105834024,
+     "eta": 1.0530989481885227,
+     "stability": "stable"
+    },
+    {
+     "theta_c": 0.22269811016563615,
+     "eta": 60.03437555926159,
+     "stability": "unstable_real"
+    },
+    {
+     "theta_c": 0.40158719476144256,
+     "eta": 182.71030944578519,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.463518,
+   "branches": [
+    {
+     "theta_c": 0.4018,
+     "eta": 43.27382910496911,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.593816,
+   "branches": [
+    {
+     "theta_c": 0.4018,
+     "eta": 33.77847465525809,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "recipe_id": "held_01",
+ "folds": [],
+ "hopf_points": [],
+ "states": [
+  {
+   "phi": 0.038088,
+   "branches": []
+  },
+  {
+   "phi": 0.461452,
+   "branches": [
+    {
+     "theta_c": 0.039868663302608645,
+     "eta": 1.2753892324158433,
+     "stability": "stable"
+    }
+   ]
+  },
+  {
+   "phi": 0.830171,
+   "branches": [
+    {
+     "theta_c": 0.2256168766812239,
+     "eta": 2.212349049605695,
+     "stability": "stable"
+    }
+   ]
+  }
+ ]
+}
