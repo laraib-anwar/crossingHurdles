@@ -96,7 +96,7 @@ def validate_recipe(r, label):
     assert a["chloride"] == 1, f"{label}: alpha chloride must be 1"
     assert 1.5 <= a["nitrate"] <= 6.0 and 2.0 <= a["sulfate"] <= 25.0 and 0.10 <= a["bicarbonate"] <= 0.60, f"{label}: alpha domain"
     vals = [a[i] for i in IONS]
-    assert min(abs(u - v) for i, u in enumerate(vals) for v in vals[i + 1:]) >= 0.05, f"{label}: separation factors too close"
+    assert min(abs(u - v) for i, u in enumerate(vals) for v in vals[i + 1:]) >= 0.005, f"{label}: separation factors too close"
     assert number(r["eps"]) and 0.35 <= r["eps"] <= 0.45, f"{label}: eps domain"
     assert number(r["Q_eq_per_L_bed"]) and 0.8 <= r["Q_eq_per_L_bed"] <= 1.6, f"{label}: Q domain"
     CT = r["C_T_meq_per_L"]

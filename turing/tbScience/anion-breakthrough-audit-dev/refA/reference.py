@@ -28,6 +28,8 @@ ODE_ATOL = 1e-14
 ZERO_WAVE = 1e-9        # wave strength (composition units) below which a wave is absent
 WEAK_SHOCK = 1e-5       # below this strength the shock secant value is taken at the midpoint
 GAP_TOL = 1e-9          # BV gap below which two outlet events coincide
+REGION_N = 18           # Chebyshev nodes per direction in a fan-fan interaction region
+REGION_N_CHECK = 13     # coarser solve used to estimate the region's error
 
 DIAG = {"max_reflected": 0.0, "max_rh_residual": 0.0, "interactions": [], "passages": 0}
 
@@ -557,6 +559,349 @@ class Passage:
 
 
 # ======================================================================================
+# Fan-fan interaction region (Chebyshev tools
+# ---------------------------------------------------------------------------------------
+def cheb(N):
+    """Chebyshev points of the second kind on [-1,1] (x[0]=1 ... x[N-1]=-1) and the
+    differentiation matrix (Trefethen)."""
+    x = np.cos(np.pi * np.arange(N) / (N - 1))
+    c = np.hstack([2.0, np.ones(N - 2), 2.0]) * (-1.0) ** np.arange(N)
+    X = np.tile(x, (N, 1)).T
+    dX = X - X.T
+    D = np.outer(c, 1.0 / c) / (dX + np.eye(N))
+    D = D - np.diag(D.sum(axis=1))
+    return x, D
+
+
+def bary_weights(N):
+    w = (-1.0) ** np.arange(N)
+    w[0] *= 0.5
+    w[-1] *= 0.5
+    return w
+
+
+class ChebFun:
+    """Barycentric interpolant through values F[i] (shape (N, ...)) at Chebyshev nodes
+    t_i = lo + (hi-lo)(1+x_i)/2 (or the reversed map when flip=True)."""
+
+    def __init__(self, lo, hi, F, flip=False):
+        self.lo, self.hi = float(lo), float(hi)
+        self.F = np.asarray(F, dtype=float)
+        N = self.F.shape[0]
+        self.N = N
+        self.x, self.D = cheb(N)
+        self.w = bary_weights(N)
+        self.flip = flip
+        self.t = self.t_of_x(self.x)
+        scale = 2.0 / (self.hi - self.lo)
+        self.dF = (-scale if flip else scale) * np.tensordot(self.D, self.F, axes=(1, 0))
+
+    def t_of_x(self, x):
+        if self.flip:
+            return self.lo + (self.hi - self.lo) * (1.0 - x) / 2.0
+        return self.lo + (self.hi - self.lo) * (1.0 + x) / 2.0
+
+    def x_of_t(self, t):
+        if self.flip:
+            return 1.0 - 2.0 * (t - self.lo) / (self.hi - self.lo)
+        return -1.0 + 2.0 * (t - self.lo) / (self.hi - self.lo)
+
+    def _eval(self, F, t):
+        x = self.x_of_t(float(t))
+        d = x - self.x
+        hit = np.where(np.abs(d) < 1e-15)[0]
+        if hit.size:
+            return F[hit[0]]
+        wd = self.w / d
+        return np.tensordot(wd, F, axes=(0, 0)) / wd.sum()
+
+    def __call__(self, t):
+        return self._eval(self.F, t)
+
+    def deriv(self, t):
+        return self._eval(self.dF, t)
+
+
+class ChebFun2D:
+    """Tensor-product barycentric interpolant of values F[a, b] on the (p, q) Chebyshev grid."""
+
+    def __init__(self, p_lo, p_hi, q_lo, q_hi, F):
+        self.F = np.asarray(F, dtype=float)
+        Na, Nb = self.F.shape[0], self.F.shape[1]
+        self.fp = ChebFun(p_lo, p_hi, np.zeros(Na))            # geometry only
+        self.fq = ChebFun(q_lo, q_hi, np.zeros(Nb), flip=True)
+        sp = 2.0 / (self.fp.hi - self.fp.lo)
+        sq = -2.0 / (self.fq.hi - self.fq.lo)
+        self.Fp = sp * np.tensordot(self.fp.D, self.F, axes=(1, 0))
+        self.Fq = sq * np.tensordot(self.fq.D, self.F, axes=(1, 1)).transpose((1, 0) + tuple(range(2, self.F.ndim)))
+
+    def _w(self, f, t):
+        x = f.x_of_t(float(t))
+        d = x - f.x
+        hit = np.where(np.abs(d) < 1e-15)[0]
+        if hit.size:
+            w = np.zeros(f.N); w[hit[0]] = 1.0
+            return w
+        wd = f.w / d
+        return wd / wd.sum()
+
+    def __call__(self, p, q):
+        wa = self._w(self.fp, p)
+        wb = self._w(self.fq, q)
+        return np.tensordot(wa, np.tensordot(wb, self.F, axes=(0, 1)), axes=(0, 0))
+
+    def grad(self, p, q):
+        """(dF/dp, dF/dq) at (p, q) via the differentiation matrices."""
+        wa = self._w(self.fp, p); wb = self._w(self.fq, q)
+        gp = np.tensordot(wa, np.tensordot(wb, self.Fp, axes=(0, 1)), axes=(0, 0))
+        gq = np.tensordot(wa, np.tensordot(wb, self.Fq, axes=(0, 1)), axes=(0, 0))
+        return gp, gq
+
+
+# ---------------------------------------------------------------------------------------
+# A characteristic of family `fam` crossing a fan of another family
+# ---------------------------------------------------------------------------------------
+class CharThroughFan:
+    """Path of a characteristic of family fam that crosses the characteristics p of `fan`
+    (p from p_start to p_end), carrying the fan state at each crossing."""
+
+    def __init__(self, sysm, fan, fam, p_start, p_end, bv_start):
+        self.sysm, self.fan, self.fam = sysm, fan, fam
+        self.p_start = float(p_start)
+
+        def rhs(p, u):
+            bv = u[0]
+            x = fan.state(p)
+            s, ds = fan.speed_dspeed(p)
+            xi0, bv0 = fan.origin(p)
+            dxi0, dbv0 = fan.dorigin(p)
+            c = sysm.speed(sysm.eig(x)[0][fam])
+            return [(dxi0 - s * dbv0 + ds * (bv - bv0)) / (c - s)]
+
+        def hit_outlet(p, u):
+            return fan.xi_at(p, u[0]) - 1.0
+        hit_outlet.terminal = True
+
+        sol = solve_ivp(rhs, (p_start, p_end), [bv_start], method="DOP853", rtol=ODE_RTOL,
+                        atol=ODE_ATOL, dense_output=True, events=hit_outlet)
+        if not sol.success:
+            raise RuntimeError("characteristic ODE failed: " + sol.message)
+        self.sol = sol
+        if sol.t_events[0].size:
+            self.p_end = float(sol.t_events[0][0]); self.hit_outlet = True
+        else:
+            self.p_end = float(p_end); self.hit_outlet = False
+
+    def bv(self, p):
+        return float(self.sol.sol(p)[0])
+
+    def xi(self, p):
+        return self.fan.xi_at(p, self.bv(p))
+
+
+# ---------------------------------------------------------------------------------------
+# Region
+# ---------------------------------------------------------------------------------------
+def leave_simplex_curve(sysm, x0, k, direction_sign):
+    """Rarefaction-type integral curve of r_k from x0 (direction_sign=+1: lambda_k decreasing,
+    -1: increasing), integrated until the state leaves the composition simplex."""
+    lam, r, dl = sysm.rare_dir(x0, k)
+    r_ref = r * direction_sign
+
+    def rhs(s, x):
+        return sysm.unit_eigvec(x, k, r_ref)
+
+    def leave(s, x):
+        xf = sysm.full(x)
+        return np.min(xf) + 0.05
+    leave.terminal = True
+    sol = solve_ivp(rhs, (0.0, 3.0), x0, method="DOP853", rtol=ODE_RTOL, atol=ODE_ATOL,
+                    dense_output=True, events=leave)
+    S = float(sol.t_events[0][0]) if sol.t_events[0].size else 3.0
+    return sol, S, r_ref
+
+
+class Region:
+    """Interaction of fan A (family j, faster, behind) with fan B (family k, slower, ahead)."""
+
+    def __init__(self, sysm, A, B, bv0, xi0, N=24):
+        self.sysm = sysm
+        self.A, self.B = A, B
+        j, k = A.family, B.family
+        assert j > k
+        self.j, self.k = j, k
+        self.bv0, self.xi0 = bv0, xi0
+        # boundary characteristics
+        self.right = CharThroughFan(sysm, B, j, B.p_lo, B.p_hi, bv0)   # A-head through B (param q)
+        self.left = CharThroughFan(sysm, A, k, A.p_hi, A.p_lo, bv0)    # B-tail through A (param p)
+        self.p_hi = A.p_hi
+        self.p_lo = self.left.p_end
+        self.q_lo = B.p_lo
+        self.q_hi = self.right.p_end
+        self.solve(N)
+
+    def node_states(self, P, Q):
+        sysm = self.sysm
+        j, k = self.j, self.k
+        Na, Nb = len(P), len(Q)
+        xA = [self.A.state(p) for p in P]
+        xB = [self.B.state(q) for q in Q]
+        C = [leave_simplex_curve(sysm, xa, k, +1.0) for xa in xA]      # k-curves from A states
+        Dc = [leave_simplex_curve(sysm, xb, j, -1.0) for xb in xB]     # backward j-curves from B states
+        X = np.zeros((Na, Nb, sysm.m))
+        SIG = np.zeros((Na, Nb)); TAU = np.zeros((Na, Nb))
+        maxres = 0.0
+        for a in range(Na):
+            for b in range(Nb):
+                if a == 0 and b == 0:
+                    sig, tau = 0.0, 0.0
+                elif b == 0:
+                    sig, tau = 0.0, TAU[a - 1, 0] + (TAU[a - 1, 0] - TAU[a - 2, 0] if a >= 2 else 0.0)
+                elif a == 0:
+                    sig, tau = SIG[0, b - 1] + (SIG[0, b - 1] - SIG[0, b - 2] if b >= 2 else 0.0), 0.0
+                else:
+                    sig = SIG[a, b - 1] + (SIG[a - 1, b] - SIG[a - 1, b - 1])
+                    tau = TAU[a - 1, b] + (TAU[a, b - 1] - TAU[a - 1, b - 1])
+                solC, SC, rC = C[a]
+                solD, SD, rD = Dc[b]
+                for it in range(60):
+                    sig = min(max(sig, 0.0), SC); tau = min(max(tau, 0.0), SD)
+                    xc = solC.sol(sig); xd = solD.sol(tau)
+                    F = xc - xd
+                    if np.max(np.abs(F)) < 1e-14:
+                        break
+                    tc = sysm.unit_eigvec(xc, k, rC)
+                    td = sysm.unit_eigvec(xd, j, rD)
+                    Jm = np.column_stack([tc, -td])
+                    dz, *_ = np.linalg.lstsq(Jm, -F, rcond=None)
+                    sig += dz[0]; tau += dz[1]
+                xc = solC.sol(sig); xd = solD.sol(tau)
+                res = np.max(np.abs(xc - xd))
+                maxres = max(maxres, res)
+                X[a, b] = 0.5 * (xc + xd)
+                SIG[a, b] = sig; TAU[a, b] = tau
+        return X, maxres
+
+    def solve(self, N):
+        sysm = self.sysm
+        j, k = self.j, self.k
+        x, D = cheb(N)
+        P = self.p_lo + (self.p_hi - self.p_lo) * (1.0 + x) / 2.0      # a=0 -> p_hi
+        Q = self.q_lo + (self.q_hi - self.q_lo) * (1.0 - x) / 2.0      # b=0 -> q_lo
+        Dp = D * (2.0 / (self.p_hi - self.p_lo))
+        Dq = -D * (2.0 / (self.q_hi - self.q_lo))
+        X, maxres = self.node_states(P, Q)
+        self.state_residual = maxres
+        SJ = np.zeros((N, N)); SK = np.zeros((N, N))
+        for a in range(N):
+            for b in range(N):
+                lam = sysm.eig(X[a, b])[0]
+                SJ[a, b] = sysm.speed(lam[j]); SK[a, b] = sysm.speed(lam[k])
+        # collocation system for (XI, BV)
+        I = np.eye(N)
+        Kq = np.kron(I, Dq)       # acts on b index (row-major a*N+b)
+        Kp = np.kron(Dp, I)       # acts on a index
+        n2 = N * N
+        M = np.zeros((2 * n2, 2 * n2))
+        rhs = np.zeros(2 * n2)
+        sj = SJ.reshape(-1); sk = SK.reshape(-1)
+        # eq1 rows (0..n2-1): Kq XI - sj * Kq BV = 0 ;  eq2 rows (n2..): Kp XI - sk * Kp BV = 0
+        M[:n2, :n2] = Kq; M[:n2, n2:] = -sj[:, None] * Kq
+        M[n2:, :n2] = Kp; M[n2:, n2:] = -sk[:, None] * Kp
+        for a in range(N):
+            for b in range(N):
+                idx = a * N + b
+                if a == 0 or b == 0:
+                    if a == 0:
+                        bvv = self.right.bv(Q[b]); xiv = self.right.xi(Q[b])
+                    else:
+                        bvv = self.left.bv(P[a]); xiv = self.left.xi(P[a])
+                    M[idx, :] = 0.0; M[idx, idx] = 1.0; rhs[idx] = xiv
+                    M[n2 + idx, :] = 0.0; M[n2 + idx, n2 + idx] = 1.0; rhs[n2 + idx] = bvv
+        u = np.linalg.solve(M, rhs)
+        XI = u[:n2].reshape(N, N); BV = u[n2:].reshape(N, N)
+        self.N, self.P, self.Q, self.X, self.XI, self.BV, self.SJ, self.SK = N, P, Q, X, XI, BV, SJ, SK
+        self.fXI = ChebFun2D(self.p_lo, self.p_hi, self.q_lo, self.q_hi, XI)
+        self.fBV = ChebFun2D(self.p_lo, self.p_hi, self.q_lo, self.q_hi, BV)
+        self.fX = ChebFun2D(self.p_lo, self.p_hi, self.q_lo, self.q_hi, X)
+
+    # exit boundaries -------------------------------------------------------------------
+    def corner(self):
+        return self.XI[-1, -1], self.BV[-1, -1], self.X[-1, -1]
+
+    def transmitted_A(self, tag=""):
+        """Fan of family j (A's characteristics) after crossing B: exit side q = q_hi."""
+        fx = ChebFun(self.p_lo, self.p_hi, self.X[:, -1])
+        fxi = ChebFun(self.p_lo, self.p_hi, self.XI[:, -1])
+        fbv = ChebFun(self.p_lo, self.p_hi, self.BV[:, -1])
+        return Fan(self.sysm, self.j, self.p_lo, self.p_hi, fx, fx.deriv,
+                      lambda p: (float(fxi(p)), float(fbv(p))),
+                      lambda p: (float(fxi.deriv(p)), float(fbv.deriv(p))), tag=tag), fxi
+
+    def transmitted_B(self, tag=""):
+        """Fan of family k (B's characteristics) after crossing A: exit side p = p_lo."""
+        fx = ChebFun(self.q_lo, self.q_hi, self.X[-1, :], flip=True)
+        fxi = ChebFun(self.q_lo, self.q_hi, self.XI[-1, :], flip=True)
+        fbv = ChebFun(self.q_lo, self.q_hi, self.BV[-1, :], flip=True)
+        return Fan(self.sysm, self.k, self.q_lo, self.q_hi, fx, fx.deriv,
+                      lambda q: (float(fxi(q)), float(fbv(q))),
+                      lambda q: (float(fxi.deriv(q)), float(fbv.deriv(q))), tag=tag), fxi
+
+    def xi_max(self):
+        return float(np.max(self.XI))
+
+    def outlet_piece(self, M=240):
+        """The part of the effluent history produced while the outlet xi=1 lies inside the
+        region: points of the contour XI(p,q)=1 with their BV and state, plus a state_fn(bv)
+        that solves XI=1, BV=bv by Newton on the spectral interpolants."""
+        fXI, fBV, fX = self.fXI, self.fBV, self.fX
+        pts = []
+        for p in np.linspace(self.p_lo, self.p_hi, M):
+            g = lambda q: float(fXI(p, q)) - 1.0
+            ga, gb = g(self.q_lo), g(self.q_hi)
+            if ga * gb < 0:
+                q = brentq(g, self.q_lo, self.q_hi, xtol=1e-15, rtol=1e-15, maxiter=200)
+                pts.append((float(fBV(p, q)), p, q))
+            elif ga == 0.0:
+                pts.append((float(fBV(p, self.q_lo)), p, self.q_lo))
+            elif gb == 0.0:
+                pts.append((float(fBV(p, self.q_hi)), p, self.q_hi))
+        for q in np.linspace(self.q_lo, self.q_hi, M):
+            g = lambda p: float(fXI(p, q)) - 1.0
+            ga, gb = g(self.p_lo), g(self.p_hi)
+            if ga * gb < 0:
+                p = brentq(g, self.p_lo, self.p_hi, xtol=1e-15, rtol=1e-15, maxiter=200)
+                pts.append((float(fBV(p, q)), p, q))
+        if len(pts) < 2:
+            return None
+        pts.sort(key=lambda t: t[0])
+        bvs = np.array([t[0] for t in pts]); ps = np.array([t[1] for t in pts]); qs = np.array([t[2] for t in pts])
+        xs = np.array([fX(t[1], t[2]) for t in pts])
+
+        def state_fn(bv):
+            i = int(np.clip(np.searchsorted(bvs, bv), 1, len(bvs) - 1))
+            w = (bv - bvs[i - 1]) / max(bvs[i] - bvs[i - 1], 1e-300)
+            w = min(max(w, 0.0), 1.0)
+            p = ps[i - 1] + w * (ps[i] - ps[i - 1]); q = qs[i - 1] + w * (qs[i] - qs[i - 1])
+            for it in range(40):
+                F = np.array([float(fXI(p, q)) - 1.0, float(fBV(p, q)) - bv])
+                if np.max(np.abs(F)) < 1e-13 * max(1.0, abs(bv)):
+                    break
+                gxi = fXI.grad(p, q); gbv = fBV.grad(p, q)
+                Jm = np.array([[gxi[0], gxi[1]], [gbv[0], gbv[1]]])
+                d = np.linalg.solve(Jm, -F)
+                p = min(max(p + d[0], self.p_lo), self.p_hi); q = min(max(q + d[1], self.q_lo), self.q_hi)
+            return fX(p, q)
+
+        def scan_fn(n):
+            return bvs.copy(), xs.copy()
+
+        return {"kind": "region", "bv_start": float(bvs[0]), "bv_end": float(bvs[-1]),
+                "x_start": xs[0].copy(), "x_end": xs[-1].copy(), "state_fn": state_fn,
+                "scan_fn": scan_fn, "obj": self}
+
+
+# ======================================================================================
 # Front tracking
 # ======================================================================================
 def meeting(wa, wb, bv_now):
@@ -601,6 +946,7 @@ class Tracker:
         self.all = []          # every wave ever created
         self.bv_now = 0.0
         self.n_events = 0
+        self.region_pieces = []
 
     def add(self, waves, index=None):
         for w in waves:
@@ -620,7 +966,7 @@ class Tracker:
         keep = []
         for w in self.active:
             xi_l, _ = w.left_edge(self.bv_now)
-            if xi_l > 1.0 + 1e-12:
+            if xi_l >= 1.0 - 1e-12:
                 continue
             keep.append(w)
         self.active = keep
@@ -633,7 +979,7 @@ class Tracker:
             if mt is None:
                 continue
             bv_m, xi_m = mt
-            if xi_m > 1.0 + 1e-12 or bv_m > self.run_bv:
+            if xi_m >= 1.0 - 1e-12 or bv_m > self.run_bv:
                 continue
             if best is None or bv_m < best[0]:
                 best = (bv_m, xi_m, i)
@@ -658,8 +1004,98 @@ class Tracker:
             elif isinstance(wa, Fan) and isinstance(wb, Shock):
                 self.shock_fan(i, wb, wa, "L", bv_m)
             else:
-                raise NotImplementedError("rarefaction-rarefaction interaction of families %d and %d at BV %.6f, xi %.6f"
-                                          % (wa.family, wb.family, bv_m, xi_m))
+                self.fan_fan(i, wa, wb, bv_m, xi_m)
+
+    def other_meetings_before(self, exclude, bv_limit):
+        """Earliest straight-line meeting among adjacent pairs not both in `exclude`."""
+        best = None
+        for q in range(len(self.active) - 1):
+            wq, wr = self.active[q], self.active[q + 1]
+            if wq in exclude and wr in exclude:
+                continue
+            mt = meeting(wq, wr, self.bv_now)
+            if mt is None or mt[1] > 1.0 + 1e-12 or mt[0] > self.run_bv:
+                continue
+            if best is None or mt[0] < best:
+                best = mt[0]
+        return best
+
+    def fan_fan(self, i, A, B, bv_m, xi_m):
+        """Fan A (faster family, behind) overtakes fan B (slower family, ahead)."""
+        sysm = self.sysm
+        if A.family <= B.family:
+            raise RuntimeError("fan-fan meeting with non-increasing family order")
+        R = Region(sysm, A, B, bv_m, xi_m, N=REGION_N)
+        Rc = Region(sysm, A, B, bv_m, xi_m, N=REGION_N_CHECK)
+        # error estimate: coarse vs fine on the exit sides
+        ps = np.linspace(R.p_lo, R.p_hi, 9); qs = np.linspace(R.q_lo, R.q_hi, 9)
+        est = 0.0
+        for pp in ps:
+            est = max(est, abs(float(R.fBV(pp, R.q_hi)) - float(Rc.fBV(pp, R.q_hi))) / max(1.0, abs(float(R.fBV(pp, R.q_hi)))),
+                      abs(float(R.fXI(pp, R.q_hi)) - float(Rc.fXI(pp, R.q_hi))))
+        for qq in qs:
+            est = max(est, abs(float(R.fBV(R.p_lo, qq)) - float(Rc.fBV(R.p_lo, qq))) / max(1.0, abs(float(R.fBV(R.p_lo, qq)))),
+                      abs(float(R.fXI(R.p_lo, qq)) - float(Rc.fXI(R.p_lo, qq))))
+        xi_c, bv_c, x_c = R.corner()
+        cut = R.right.hit_outlet or R.left.hit_outlet or R.xi_max() > 1.0 + 1e-12
+        seq = []
+        # unperturbed remainders (characteristics that never entered the region inside the bed)
+        A.p_hi = R.p_lo
+        B.p_lo = R.q_hi
+        if not A.empty():
+            seq.append(A)
+        Ap, fxiA = R.transmitted_A(tag="A'@%.4f" % bv_m)
+        Bp, fxiB = R.transmitted_B(tag="B'@%.4f" % bv_m)
+        piece = None
+        if not cut:
+            bv_done = bv_c
+            seq += [Bp, Ap]
+        else:
+            # transmitted parts that originate inside the bed
+            if R.left.hit_outlet:
+                Bp = None
+            else:
+                g = lambda q: float(fxiB(q)) - 1.0
+                if g(R.q_lo) > 0:
+                    Bp = None
+                elif g(R.q_hi) > 0:
+                    Bp.p_hi = brentq(g, R.q_lo, R.q_hi, xtol=1e-15, rtol=1e-15, maxiter=200)
+            if R.right.hit_outlet:
+                Ap = None
+            else:
+                g = lambda p: float(fxiA(p)) - 1.0
+                if g(R.p_hi) > 0:
+                    Ap = None
+                elif g(R.p_lo) > 0:
+                    Ap.p_lo = brentq(g, R.p_lo, R.p_hi, xtol=1e-15, rtol=1e-15, maxiter=200)
+            piece = R.outlet_piece()
+            if piece is None:
+                raise RuntimeError("region cut by the outlet but no contour found")
+            self.region_pieces.append(piece)
+            bv_done = piece["bv_end"]
+            if Bp is not None and not Bp.empty():
+                seq.append(Bp)
+            if Ap is not None and not Ap.empty():
+                seq.append(Ap)
+        if not B.empty():
+            seq.append(B)
+        # interference by other waves while the region forms is not supported
+        other = self.other_meetings_before({A, B}, bv_done)
+        if other is not None and other < bv_done - 1e-9:
+            raise NotImplementedError("another wave reaches a forming fan-fan interaction region (BV %.6f < %.6f)" % (other, bv_done))
+        DIAG["interactions"].append({"type": "fan-fan", "families": [A.family, B.family], "bv_start": bv_m,
+                                     "xi_start": xi_m, "corner_xi": xi_c, "corner_bv": bv_c, "cut_by_outlet": cut,
+                                     "p_range": [R.p_lo, R.p_hi], "q_range": [R.q_lo, R.q_hi],
+                                     "state_residual": R.state_residual, "spectral_error_estimate": est,
+                                     "bv_done": bv_done})
+        DIAG["max_region_error_estimate"] = max(DIAG.get("max_region_error_estimate", 0.0), est)
+        pos = self.active.index(A)
+        self.active.remove(A); self.active.remove(B)
+        self.active[pos:pos] = seq
+        for w in seq:
+            if w not in self.all:
+                self.all.append(w)
+        self.bv_now = bv_done
 
     def shock_shock(self, i, wa, wb, bv_m, xi_m):
         xL = wa.xL
@@ -777,8 +1213,35 @@ class Tracker:
 # ======================================================================================
 # Outlet history
 # ======================================================================================
+def fan_state_at_bv(fan, p_a, p_b, bv):
+    """State of the fan characteristic that exits at BV = bv (p between p_a and p_b)."""
+    lo, hi = (p_a, p_b) if p_a <= p_b else (p_b, p_a)
+    f = lambda p: fan.exit_bv(p) - bv
+    fl, fh = f(lo), f(hi)
+    if fl * fh > 0:
+        return fan.state(lo if abs(fl) < abs(fh) else hi)
+    p = brentq(f, lo, hi, xtol=1e-15, rtol=1e-15, maxiter=200)
+    return fan.state(p)
+
+
+def fan_piece(w, p_start, p_end, bv_start, bv_end):
+    """Transition piece for the characteristics p_start (exits first) .. p_end of a fan."""
+    def state_fn(bv):
+        return fan_state_at_bv(w, p_start, p_end, bv)
+
+    def scan_fn(n):
+        ps = np.linspace(p_start, p_end, n)
+        bvs = np.array([w.exit_bv(p) for p in ps])
+        xs = np.array([w.state(p) for p in ps])
+        order = np.argsort(bvs)
+        return bvs[order], xs[order]
+
+    return {"kind": "fan", "bv_start": bv_start, "bv_end": bv_end, "x_start": w.state(p_start),
+            "x_end": w.state(p_end), "state_fn": state_fn, "scan_fn": scan_fn, "obj": w}
+
+
 def outlet_pieces(tracker, run_bv):
-    """Collect the outlet events: shocks (point) and fan pieces (intervals) within [0, run_bv]."""
+    """Collect the outlet events: shocks (point) and transition pieces (intervals) in [0, run_bv]."""
     pieces = []
     for w in tracker.all:
         if isinstance(w, Shock):
@@ -792,7 +1255,7 @@ def outlet_pieces(tracker, run_bv):
                 continue
             bv_hi = w.exit_bv(w.p_hi)   # head exits first
             bv_lo = w.exit_bv(w.p_lo)
-            if bv_hi > bv_lo:
+            if bv_hi > bv_lo + 1e-9:
                 raise RuntimeError("fan characteristics cross at the outlet")
             if bv_hi > run_bv:
                 continue
@@ -802,27 +1265,24 @@ def outlet_pieces(tracker, run_bv):
                 bv_lo = run_bv
             if bv_lo - bv_hi <= GAP_TOL:
                 continue
-            pieces.append({"kind": "fan", "bv_start": bv_hi, "bv_end": bv_lo, "obj": w,
-                           "p_start": w.p_hi, "p_end": p_lo_eff})
+            pieces.append(fan_piece(w, w.p_hi, p_lo_eff, bv_hi, bv_lo))
+    for pc in tracker.region_pieces:
+        if pc["bv_start"] > run_bv:
+            continue
+        pc = dict(pc)
+        if pc["bv_end"] > run_bv:
+            pc["bv_end"] = run_bv
+            pc["x_end"] = pc["state_fn"](run_bv)
+        if pc["bv_end"] - pc["bv_start"] <= GAP_TOL:
+            continue
+        pieces.append(pc)
     pieces.sort(key=lambda pc: pc["bv"] if pc["kind"] == "shock" else pc["bv_start"])
     return pieces
 
 
-def fan_state_at_bv(fan, p_a, p_b, bv):
-    """State of the fan characteristic that exits at BV = bv (p between p_a and p_b)."""
-    lo, hi = (p_a, p_b) if p_a <= p_b else (p_b, p_a)
-    f = lambda p: fan.exit_bv(p) - bv
-    fl, fh = f(lo), f(hi)
-    if fl * fh > 0:
-        # bv outside; clamp to the nearer end
-        return fan.state(lo if abs(fl) < abs(fh) else hi)
-    p = brentq(f, lo, hi, xtol=1e-15, rtol=1e-15, maxiter=200)
-    return fan.state(p)
-
-
 def build_history(sysm, pieces, x_bed, run_bv):
     """Partition [0, run_bv] into plateaus, transitions and shocks (reduced states)."""
-    segs = []   # list of dicts in BV order
+    segs = []
     bv = 0.0
     state = np.array(x_bed, dtype=float)
     for pc in pieces:
@@ -839,38 +1299,34 @@ def build_history(sysm, pieces, x_bed, run_bv):
             b0, b1 = pc["bv_start"], pc["bv_end"]
             if b0 - bv > GAP_TOL:
                 segs.append({"kind": "plateau", "bv_start": bv, "bv_end": b0, "x": state.copy()})
-            fan = pc["obj"]
-            xs = fan.state(pc["p_start"])
-            xe = fan.state(pc["p_end"])
+            xs = np.asarray(pc["x_start"], dtype=float)
+            xe = np.asarray(pc["x_end"], dtype=float)
             if np.max(np.abs(xs - state)) > 1e-7:
                 raise RuntimeError("inconsistent state at transition start BV %.9f: %r vs %r" % (b0, xs, state))
             segs.append({"kind": "transition", "bv_start": b0, "bv_end": b1, "x_start": xs, "x_end": xe,
-                         "fan": fan, "p_start": pc["p_start"], "p_end": pc["p_end"]})
+                         "parts": [pc]})
             state = xe.copy()
             bv = b1
     if run_bv - bv > GAP_TOL:
         segs.append({"kind": "plateau", "bv_start": bv, "bv_end": run_bv, "x": state.copy()})
-    # merge adjacent transitions that are continuous across their junction (same composition)
+    # merge adjacent transitions that are continuous across their junction
     merged = []
     for sg in segs:
         if merged and sg["kind"] == "transition" and merged[-1]["kind"] == "transition" \
                 and abs(merged[-1]["bv_end"] - sg["bv_start"]) <= GAP_TOL \
                 and np.max(np.abs(merged[-1]["x_end"] - sg["x_start"])) < 1e-7:
             prev = merged[-1]
-            new = {"kind": "transition", "bv_start": prev["bv_start"], "bv_end": sg["bv_end"],
-                   "x_start": prev["x_start"], "x_end": sg["x_end"],
-                   "parts": prev.get("parts", [prev]) + [sg]}
-            merged[-1] = new
+            merged[-1] = {"kind": "transition", "bv_start": prev["bv_start"], "bv_end": sg["bv_end"],
+                          "x_start": prev["x_start"], "x_end": sg["x_end"], "parts": prev["parts"] + sg["parts"]}
         else:
             merged.append(sg)
     return merged
 
 
 def transition_state(seg, bv):
-    parts = seg.get("parts", [seg])
-    for part in parts:
+    for part in seg["parts"]:
         if part["bv_start"] - 1e-9 <= bv <= part["bv_end"] + 1e-9:
-            return fan_state_at_bv(part["fan"], part["p_start"], part["p_end"], bv)
+            return np.asarray(part["state_fn"](min(max(bv, part["bv_start"]), part["bv_end"])), dtype=float)
     raise RuntimeError("bv outside transition")
 
 
@@ -903,41 +1359,36 @@ def nitrate_of(sysm, x, present, CT):
 
 def analyse_transition(sysm, seg, present, CT, limit, npts=400):
     """Return (peak value, bv of peak, first bv exceeding limit or None) inside a transition.
-    The scan runs over the fan parameter p (from the first-exiting characteristic p_start to
-    the last p_end), which is cheaper and better conditioned than scanning in BV."""
-    parts = seg.get("parts", [seg])
+    Each part is scanned on a grid (ascending BV), the maximum refined by bounded minimisation
+    and the first limit crossing by root bracketing; no monotonicity is assumed."""
     peak_v = -np.inf
     peak_bv = None
     cross = None
-    for part in parts:
-        fan = part["fan"]
-        ps = np.linspace(part["p_start"], part["p_end"], npts)   # increasing BV order
-        vals = np.array([nitrate_of(sysm, fan.state(p), present, CT) for p in ps])
-        nit = lambda p: nitrate_of(sysm, fan.state(p), present, CT)
+    for part in seg["parts"]:
+        bvs, xs = part["scan_fn"](npts)
+        keep = (bvs >= part["bv_start"] - 1e-9) & (bvs <= part["bv_end"] + 1e-9)
+        bvs, xs = bvs[keep], xs[keep]
+        vals = np.array([nitrate_of(sysm, x, present, CT) for x in xs])
+        nit = lambda b: nitrate_of(sysm, part["state_fn"](b), present, CT)
         i = int(np.argmax(vals))
-        cand = [(vals[i], ps[i]), (vals[0], ps[0]), (vals[-1], ps[-1])]
-        lo = min(ps[max(i - 1, 0)], ps[min(i + 1, npts - 1)])
-        hi = max(ps[max(i - 1, 0)], ps[min(i + 1, npts - 1)])
+        cand = [(vals[i], bvs[i]), (vals[0], bvs[0]), (vals[-1], bvs[-1])]
+        lo = bvs[max(i - 1, 0)]; hi = bvs[min(i + 1, len(bvs) - 1)]
         if hi > lo:
-            res = minimize_scalar(lambda p: -nit(p), bounds=(lo, hi), method="bounded",
-                                  options={"xatol": 1e-13})
+            res = minimize_scalar(lambda b: -nit(b), bounds=(lo, hi), method="bounded",
+                                  options={"xatol": 1e-11})
             cand.append((-res.fun, float(res.x)))
         v_best = max(c[0] for c in cand)
-        # among (near-)equal maxima take the earliest BV = the largest exit_bv-ordered first
-        bvs_best = [fan.exit_bv(c[1]) for c in cand if c[0] >= v_best - 1e-13]
-        b_best = min(bvs_best)
+        b_best = min(c[1] for c in cand if c[0] >= v_best - 1e-13)
         if v_best > peak_v + 1e-13 or (abs(v_best - peak_v) <= 1e-13 and b_best < peak_bv):
             peak_v, peak_bv = v_best, b_best
         if cross is None:
             if vals[0] > limit:
                 cross = part["bv_start"]
             else:
-                g = lambda p: nit(p) - limit
-                for q in range(1, npts):
+                g = lambda b: nit(b) - limit
+                for q in range(1, len(bvs)):
                     if vals[q] > limit:
-                        pa, pb = ps[q - 1], ps[q]
-                        pc = brentq(g, min(pa, pb), max(pa, pb), xtol=1e-15, rtol=1e-15, maxiter=200)
-                        cross = fan.exit_bv(pc)
+                        cross = brentq(g, bvs[q - 1], bvs[q], xtol=1e-13, rtol=1e-15, maxiter=200)
                         break
     return peak_v, peak_bv, cross
 

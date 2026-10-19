@@ -530,8 +530,9 @@ def analyze(bv, c, rec, N, c_cell=None, tol_flat=1e-6, vis_jump=1e-3):
     h = bvu[1] - bvu[0]
     cu = np.stack([np.interp(bvu, bv, c[:, k]) for k in range(4)], axis=1)
 
-    # flatness window: half-width W (BV); 10 cells-worth at the window's end or 0.1% of run_bv
-    W = max(1e-3 * run_bv, 10.0 * run_bv / N)
+    # flatness window: half-width W (BV); 4 cells-worth at the window's end or 0.05% of run_bv
+    # (a discrete minmod shock is ~2 cells wide, a spreading wave tens of BV)
+    W = max(5e-4 * run_bv, 4.0 * run_bv / N)
     wn = max(1, int(round(W / h)))
     size = 2 * wn + 1
     spread = np.zeros(Mu)
@@ -642,10 +643,17 @@ def analyze(bv, c, rec, N, c_cell=None, tol_flat=1e-6, vis_jump=1e-3):
                 cb = seg_c[b]
                 dj = cb - ca
                 tot += abs(dj[lead])
+                kk = int(np.argmax(np.abs(dj)))
+                pm = (bv >= seg_bv[a]) & (bv <= seg_bv[b])
+                mid = None
+                if pm.sum() >= 2 and abs(dj[kk]) > 0:
+                    mid = first_crossing(bv[pm], (c[pm, kk] - ca[kk]) / dj[kk], 0.5)
                 steep_parts.append({
                     "bv_start": float(seg_bv[a]), "bv_end": float(seg_bv[b]),
                     "jump_meq_per_L": dj.tolist(),
                     "fraction_of_front_jump_leading_ion": float(abs(dj[lead]) / jl),
+                    "leading_ion": IONS[kk], "bv_mid": mid,
+                    "before_meq_per_L": ca.tolist(), "after_meq_per_L": cb.tolist(),
                 })
             steep_fraction = float(min(tot / jl, 1.0))
         lead_width = widths.get(IONS[lead])
@@ -747,6 +755,7 @@ def analyze(bv, c, rec, N, c_cell=None, tol_flat=1e-6, vis_jump=1e-3):
         "analysis_parameters": {
             "uniform_resample_points": Mu, "flatness_half_window_bv": W,
             "flatness_tol_meq_per_L": tol_flat, "min_plateau_length_bv": 4.0 * W,
+            "flatness_half_window_rule": "max(5e-4 run_bv, 4 run_bv/N)",
             "visible_jump_meq_per_L": vis_jump,
             "steep_slope_threshold": "normalised slope > 1/(20 cells-worth of BV)",
             "shock_like_if": "steep fraction > 0.95 and 10-90 width < 15 cells",

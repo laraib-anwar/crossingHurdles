@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1508, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1495, in main
+    report, segs, sysm, present, CT, tracker = solve_recipe(rec)
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1434, in solve_recipe
+    segs = build_history(sysm, pieces, x_bed, run_bv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1305, in build_history
+    raise RuntimeError("inconsistent state at transition start BV %.9f: %r vs %r" % (b0, xs, state))
+RuntimeError: inconsistent state at transition start BV 174.743158516: array([ 4.72815271e-01, -2.77555756e-17,  4.36130469e-01]) vs array([ 8.85880057e-01,  5.51608915e-18, -1.66533454e-16])

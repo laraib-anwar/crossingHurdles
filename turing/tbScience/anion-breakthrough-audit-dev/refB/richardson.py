@@ -209,6 +209,49 @@ def main(argv=None):
                 per_ion_bv90[ion].append(cr["bv90"] if cr else None)
                 per_ion_width[ion].append(q["width_10_90_bv"].get(ion))
         kind, ratios = classify_widths(widths_lead)
+        sf = Fr["steep_fraction_of_jump"]
+        parts = Fr["steep_parts"]
+        # composite = a non-negligible part of the leading ion's change happens outside the steep
+        # parts AND that gentle extent does not shrink with N (a shock's smeared tails do)
+        composite = False
+        gentle_info = None
+        if parts and sf is not None:
+            k_lead = IONS.index(lead)
+            jl = Fr["jump_meq_per_L"][k_lead]
+            gentle_change = jl - sum(p["jump_meq_per_L"][k_lead] for p in parts)
+            extents = []
+            for N in cells:
+                m = front_matches[N][jf]
+                if m is None:
+                    extents.append(None); continue
+                q = summaries[N]["fronts"][m]
+                extents.append((q["bv_end"] - q["bv_start"]) - sum(p["bv_end"] - p["bv_start"] for p in q["steep_parts"]))
+            ex = [e for e in extents if e is not None]
+            ratio = ex[-2] / ex[-1] if len(ex) >= 2 and ex[-1] > 0 else None
+            gentle_info = {"gentle_change_leading_ion": gentle_change, "gentle_extent_per_level": dict(zip([str(N) for N in cells], extents)),
+                           "gentle_extent_ratio_two_finest": ratio}
+            composite = abs(gentle_change) > max(1e-3, 0.02 * abs(jl)) and ratio is not None and ratio < 1.4
+        if composite:
+            kind = "composite: spreading part(s) plus shock part(s) (see steep_parts_extrapolated)"
+        # match steep parts across levels by overlap and extrapolate their midpoints
+        steep_x = []
+        for sp in parts:
+            mids = []
+            for N in cells:
+                m = front_matches[N][jf]
+                cand = summaries[N]["fronts"][m]["steep_parts"] if m is not None else []
+                best, bo = None, 0.0
+                pad = 3.0 * summaries[N]["fronts"][m]["bv_per_cell_at_front"] if m is not None else 0.0
+                for q in cand:
+                    o = overlap((sp["bv_start"] - pad, sp["bv_end"] + pad), (q["bv_start"] - pad, q["bv_end"] + pad))
+                    if o > bo:
+                        best, bo = q, o
+                mids.append(best["bv_mid"] if best else None)
+            steep_x.append({"bv_start_fine": sp["bv_start"], "bv_end_fine": sp["bv_end"],
+                            "leading_ion": sp.get("leading_ion"), "jump_meq_per_L_fine": sp["jump_meq_per_L"],
+                            "before_fine": sp.get("before_meq_per_L"), "after_fine": sp.get("after_meq_per_L"),
+                            "bv_mid": richardson(mids[-3:] if len(mids) >= 3 else mids),
+                            "bv_mid_levels": dict(zip([str(N) for N in cells], mids))})
         nlev = len(cells)
         sel = slice(nlev - 3, nlev) if nlev >= 3 else slice(0, nlev)
         shock_bv = {}
@@ -232,6 +275,8 @@ def main(argv=None):
             "kind_single_resolution_per_level": dict(zip([str(N) for N in cells], kinds)),
             "steep_fraction_per_level": dict(zip([str(N) for N in cells], steep_fracs)),
             "steep_parts_fine": Fr["steep_parts"],
+            "steep_parts_extrapolated": steep_x,
+            "gentle_part": gentle_info,
             "shock_bv_midpoint_crossing": shock_bv,
             "shock_bv_midpoint_crossing_cell_history": shock_bv_cell,
             "onset_bv10": onset, "finish_bv90": finish,

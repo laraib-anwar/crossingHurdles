@@ -95,11 +95,11 @@ def superposition(recipe):
         return None
     r["feed_program"][1]["start_bv"] = 1e7
     r["run_bv"] = 1e9
-    rep = ix.solve(r, n_pieces=100)
+    rep = ix.solve(r, n_pieces=NP)
     return rep
 
 
-def generic_ok(recipe, rep, near=False):
+def generic_ok(recipe, rep, near=False, min_len=2e-3):
     """Structural guarantees of the spec: separations, plateau lengths, bound margins."""
     run_bv = recipe["run_bv"]
     sh, tr = events_of(rep)
@@ -111,10 +111,10 @@ def generic_ok(recipe, rep, near=False):
         if 0 < sep < (3e-4 if near else 1e-3) and not (u in sh and v in sh and u == v):
             return False
     for t0, t1 in tr:
-        if (t1 - t0) / max(1.0, t1) < 2e-3:
+        if (t1 - t0) / max(1.0, t1) < min_len:
             return False
     for p in rep["plateaus"]:
-        if (p["bv_end"] - p["bv_start"]) / max(1.0, p["bv_end"]) < 2e-3:
+        if (p["bv_end"] - p["bv_start"]) / max(1.0, p["bv_end"]) < (3e-4 if near else 2e-3):
             return False
     for b in sh + [t[0] for t in tr] + [t[1] for t in tr]:
         if b != run_bv and abs(run_bv - b) <= 3 * tol_bv(run_bv):
@@ -130,7 +130,7 @@ def generic_ok(recipe, rep, near=False):
                 r2 = json.loads(json.dumps(recipe))
                 d = 1e-3 * max(1.0, lb)
                 r2["sample_bv"] = [lb - d, lb + d]
-                s = ix.solve(r2, n_pieces=100)["samples"]
+                s = ix.solve(r2, n_pieces=NP)["samples"]
                 slope = (s[1][1] - s[0][1]) / (2 * d)
                 if abs(slope) < 5e-3:
                     return False
@@ -159,15 +159,78 @@ def choose_samples(recipe, rep, n):
     return cands
 
 
-def finish(recipe, n_samples, near=False, extra_ok=None, tries=400):
+NP = 60                                # fan pieces for screening runs (events are exact at any N)
+
+
+def set_window(recipe, factor=None):
+    """Set run_bv from the actual events: a little past the last event (every wave seen), or
+    the given fraction of the way to it."""
+    r = json.loads(json.dumps(recipe))
+    r["run_bv"] = 1e9
+    rep = ix.solve(r, n_pieces=NP)
+    sh, tr = events_of(rep)
+    last = max(sh + [t[1] for t in tr] + [1.0])
+    f = factor if factor is not None else rng.uniform(1.08, 1.35)
+    recipe["run_bv"] = float(round(min(5000.0, last * f), 0))
+    return recipe
+
+
+def set_limit(recipe, mode):
+    """Place the nitrate limit relative to the exact history: inside a transition on which
+    nitrate changes, between the two sides of a shock, above the peak, or below the initial
+    effluent nitrate."""
+    rep = ix.solve(recipe, n_pieces=NP)
+    nit = lambda c: c[1]
+    if mode == "fan":
+        opts = [(nit(t["start_meq_per_L"]), nit(t["end_meq_per_L"])) for t in rep["transitions"]
+                if abs(nit(t["end_meq_per_L"]) - nit(t["start_meq_per_L"])) > 0.08]
+        # the crossing must be the FIRST exceedance: pick the earliest such transition whose
+        # start is below everything reported before it
+        for t in rep["transitions"]:
+            a, b = nit(t["start_meq_per_L"]), nit(t["end_meq_per_L"])
+            if b - a > 0.08:
+                prior = [p["composition_meq_per_L"][1] for p in rep["plateaus"] if p["bv_end"] <= t["bv_start"] + 1e-9]
+                prior += [s["after_meq_per_L"][1] for s in rep["shocks"] if s["bv"] <= t["bv_start"] + 1e-9]
+                lo = max([a] + prior)
+                if b - lo > 0.06 and 0.1 <= lo + 0.4 * (b - lo) <= 2.0:
+                    recipe["nitrate_limit_meq_per_L"] = round(lo + rng.uniform(0.3, 0.7) * (b - lo), 4)
+                    return recipe
+        return None
+    if mode == "shock":
+        for s in rep["shocks"]:
+            a, b = nit(s["before_meq_per_L"]), nit(s["after_meq_per_L"])
+            prior = [p["composition_meq_per_L"][1] for p in rep["plateaus"] if p["bv_end"] <= s["bv"] + 1e-9]
+            prior += [t["end_meq_per_L"][1] for t in rep["transitions"] if t["bv_end"] <= s["bv"] + 1e-9]
+            prior += [t["start_meq_per_L"][1] for t in rep["transitions"] if t["bv_end"] <= s["bv"] + 1e-9]
+            lo = max([a] + prior)
+            if b - lo > 0.06 and 0.1 <= lo + 0.4 * (b - lo) <= 2.0:
+                recipe["nitrate_limit_meq_per_L"] = round(lo + rng.uniform(0.3, 0.7) * (b - lo), 4)
+                return recipe
+        return None
+    if mode == "never":
+        pk = rep["nitrate_peak"]["meq_per_L"]
+        if pk + 0.05 > 2.0:
+            return None
+        recipe["nitrate_limit_meq_per_L"] = round(min(2.0, pk + rng.uniform(0.05, 0.3)), 4)
+        return recipe
+    if mode == "zero":
+        x0 = rep["plateaus"][0]["composition_meq_per_L"][1] if rep["plateaus"] and rep["plateaus"][0]["bv_start"] == 0 else None
+        if x0 is None or x0 < 0.2:
+            return None
+        recipe["nitrate_limit_meq_per_L"] = round(rng.uniform(0.1, x0 - 0.05), 4)
+        return recipe
+    return recipe
+
+
+def finish(recipe, n_samples, near=False, extra_ok=None, min_len=2e-3):
     """Attach samples, run the oracle, check the guarantees and the category predicate."""
-    rep = ix.solve(recipe, n_pieces=100)
-    if not generic_ok(recipe, rep, near):
+    rep = ix.solve(recipe, n_pieces=NP)
+    if not generic_ok(recipe, rep, near, min_len):
         return None
     if extra_ok is not None and not extra_ok(recipe, rep):
         return None
     recipe["sample_bv"] = choose_samples(recipe, rep, n_samples)
-    rep = ix.solve(recipe, n_pieces=100)
+    rep = ix.solve(recipe, n_pieces=NP)
     return recipe, rep
 
 
@@ -210,7 +273,7 @@ def cat_absent(rid):
 
 def cat_trace(rid):
     al, col, CT = alphas(), column(), round(rng.uniform(3.0, 9.0), 2)
-    f = feed(CT, hco3=round(1e-4 * CT, 6))
+    f = feed(CT, hco3=round(2e-3 * CT, 6))
     if f is None:
         return None
     return make(rid, al, col, CT, resin(), [(0.0, f)], round(rng.uniform(1.4, 2.2) * 1000 * col["Q"] / CT * 0.5, 0))
@@ -245,21 +308,30 @@ def cat_two(rid, kind):
         f2 = feed(CT, so4=round(rng.uniform(1.5, 0.45 * CT), 3), no3=f1["nitrate"] if f1 else None)
     if f1 is None or f2 is None:
         return None
-    scale = 1000 * col["Q"] / CT * 0.5
+    base = make(rid, al, col, CT, y0, [(0.0, f1)], 1e9)
+    rep = ix.solve(base, n_pieces=NP)
+    sh, tr = events_of(rep)
+    pts = sorted(sh + [t[0] for t in tr] + [t[1] for t in tr])
+    if not pts:
+        return None
+    first, last = pts[0], pts[-1]
     if kind == "late":
-        base = make(rid, al, col, CT, y0, [(0.0, f1)], 1e9)
-        rep = ix.solve(base, n_pieces=100)
-        sh, tr = events_of(rep)
-        last = max(sh + [t[1] for t in tr] + [0.0])
         switch = round(last * rng.uniform(1.05, 1.3), 0)
-        run_bv = round(switch + rng.uniform(1.4, 2.0) * scale, 0)
+        run_bv = 1e9                                     # set from the events afterwards
     elif kind == "unseen":
-        switch = round(rng.uniform(0.6, 0.9) * scale, 0)
-        run_bv = round(switch + rng.uniform(0.3, 0.6) * col["eps"] * 1.0 + 0.2 * scale, 0)
+        # the switch comes after the second-to-last first-feed event (the nitrate history is
+        # already in the window) and the window closes a fraction of a bed volume later
+        anchor = pts[-2] if len(pts) >= 2 else 0.9 * last
+        switch = round(anchor + rng.uniform(0.05, 0.3) * (last - anchor), 0)
+        # the window closes before the second feed's fastest wave (at least eps BV after the
+        # switch, usually much more) can arrive: keep it within a few BV of the switch
+        run_bv = round(switch + rng.uniform(0.3, 0.9) * col["eps"], 1)
+        if run_bv <= switch:
+            return None
     else:
-        switch = round(rng.uniform(0.25, 0.7) * scale, 0)
-        run_bv = round(rng.uniform(1.6, 2.4) * scale, 0)
-    if not 0 < switch < run_bv or run_bv > 5000:
+        switch = round(rng.uniform(0.15, 0.75) * last, 0)
+        run_bv = 1e9
+    if not 0 < switch < run_bv:
         return None
     return make(rid, al, col, CT, y0, [(0.0, f1), (switch, f2)], run_bv)
 
@@ -270,7 +342,7 @@ def cat_short(rid):
     if f is None:
         return None
     r = make(rid, al, col, CT, resin(), [(0.0, f)], 1e9)
-    rep = ix.solve(r, n_pieces=100)
+    rep = ix.solve(r, n_pieces=NP)
     sh, tr = events_of(rep)
     first = min(sh + [t[0] for t in tr])
     r["run_bv"] = round(rng.uniform(0.5, 0.9) * first, 1)
@@ -358,7 +430,8 @@ def p_late(recipe, rep):
 
 
 def p_unseen(recipe, rep):
-    return interaction_kind(recipe, rep) == "unseen" and (len(rep["shocks"]) + len(rep["transitions"])) >= 1
+    return interaction_kind(recipe, rep) == "unseen" and (len(rep["shocks"]) + len(rep["transitions"])) >= 2 \
+        and rep["nitrate_peak"]["meq_per_L"] > 0.1
 
 
 def p_short(recipe, rep):
@@ -373,18 +446,18 @@ PLAN = [
     ("service_03", True, lambda rid: cat_elution(rid), 5, None, "complete elution with chloride"),
     ("service_04", True, lambda rid: cat_base(rid, nitsel=True), 7, None, "nitrate-selective resin"),
     ("service_05", True, lambda rid: cat_two(rid, "cross"), 12, p_cross, "feed change, second waves cross first waves"),
-    ("service_06", True, lambda rid: cat_base(rid), 6, p_limit_in_fan, "limit exceeded inside a spreading wave"),
+    ("service_06", True, lambda rid: cat_preload(rid, "sulfate"), 6, p_limit_in_fan, "limit exceeded inside a spreading wave"),
     # held-out
     ("held_01", False, lambda rid: cat_base(rid), 5, None, "chloride-form bed, four-ion feed"),
     ("held_02", False, lambda rid: cat_base(rid), 9, None, "chloride-form bed, four-ion feed"),
-    ("held_03", False, lambda rid: cat_preload(rid, "bicarbonate"), 6, p_has_fan, "bicarbonate-loaded bed"),
+    ("held_03", False, lambda rid: cat_preload(rid, "bicarbonate"), 6, None, "bicarbonate-loaded bed"),
     ("held_04", False, lambda rid: cat_preload(rid, "sulfate"), 7, p_has_fan, "sulfate-loaded bed"),
     ("held_05", False, lambda rid: cat_elution(rid), 6, None, "complete elution with chloride"),
     ("held_06", False, lambda rid: cat_absent(rid), 4, p_absent_wave, "bicarbonate absent from feed and bed"),
     ("held_07", False, lambda rid: cat_trace(rid), 6, p_trace, "bicarbonate at trace level in the feed"),
     ("held_08", False, lambda rid: cat_base(rid, nitsel=True), 6, None, "nitrate-selective resin"),
     ("held_09", False, lambda rid: cat_base(rid), 5, p_near, "nearly coincident outlet events"),
-    ("held_10", False, lambda rid: cat_base(rid), 6, p_limit_in_fan, "limit exceeded inside a spreading wave"),
+    ("held_10", False, lambda rid: cat_preload(rid, "sulfate"), 6, p_limit_in_fan, "limit exceeded inside a spreading wave"),
     ("held_11", False, lambda rid: cat_limit_never(rid), 5, p_limit_never, "limit never exceeded"),
     ("held_12", False, lambda rid: cat_limit_zero(rid), 5, p_limit_zero, "limit exceeded at BV = 0"),
     ("held_13", False, lambda rid: cat_base(rid), 6, p_limit_at_shock, "limit exceeded at a shock"),
@@ -400,25 +473,77 @@ PLAN = [
 ]
 
 
+LIMIT_MODE = {"service_06": "fan", "held_10": "fan", "held_11": "never", "held_12": "zero", "held_13": "shock"}
+
+
+def near_coincident(rid):
+    """Bisection on alpha_sulfate (close to alpha_nitrate) until two consecutive outlet events
+    are 3e-4 to 1e-3 apart in relative BV."""
+    base = cat_base(rid)
+    if base is None:
+        return None
+    a_n = base["alpha"]["nitrate"]
+    if a_n + 0.6 > 6.0 or a_n + 0.06 < 2.0:
+        return None
+
+    def sep_at(a_s):
+        r = json.loads(json.dumps(base))
+        r["alpha"]["sulfate"] = a_s
+        r["run_bv"] = 1e9
+        rep = ix.solve(r, n_pieces=NP)
+        sh, tr = events_of(rep)
+        pts = sorted(sh + [t[0] for t in tr] + [t[1] for t in tr])
+        seps = [(v - u) / max(1.0, v) for u, v in zip(pts[:-1], pts[1:]) if v > u]
+        return min(seps) if seps else 1.0, r
+    lo, hi = max(a_n + 0.005, 2.0), min(a_n + 0.05, 25.0)
+    s_lo, _ = sep_at(lo)
+    s_hi, _ = sep_at(hi)
+    if not (s_lo < 5e-4 < s_hi):
+        return None
+    for _ in range(60):
+        mid = 0.5 * (lo + hi)
+        s_mid, r = sep_at(mid)
+        if 3.5e-4 <= s_mid <= 9e-4:
+            r["alpha"]["sulfate"] = round(mid, 6)
+            return r
+        if s_mid < 5e-4:
+            lo = mid
+        else:
+            hi = mid
+    return None
+
+
 def main():
     rows, shipped = [], []
-    for rid, is_shipped, builder, n_samples, pred, label in PLAN:
+    for index, (rid, is_shipped, builder, n_samples, pred, label) in enumerate(PLAN):
+        rng.seed(20261019 + 7919 * index)         # one stream per recipe: fixing one leaves the rest unchanged
         got = None
-        for attempt in range(600):
-            r = builder(rid)
-            if r is None:
-                continue
-            if rid == "held_22":
-                r["C_T_meq_per_L"] = float(rng.choice([2.0, 15.0]))
-                f = r["feed_program"][0]["composition_meq_per_L"]
-                sc = r["C_T_meq_per_L"] / sum(f.values())
-                r["feed_program"][0]["composition_meq_per_L"] = {i: f[i] * sc for i in IONS}
-                r["run_bv"] = round(1.8 * 1000 * r["Q_eq_per_L_bed"] / r["C_T_meq_per_L"] * 0.5, 0)
-                if r["run_bv"] > 5000:
-                    continue
+        for attempt in range(300):
             try:
-                got = finish(r, n_samples, near=(rid == "held_09"), extra_ok=pred)
-            except (AssertionError, ValueError, ZeroDivisionError) as e:
+                r = near_coincident(rid) if rid == "held_09" else builder(rid)
+                if r is None:
+                    continue
+                two = len(r["feed_program"]) == 2
+                if rid == "held_22":
+                    r["C_T_meq_per_L"] = float(rng.choice([2.0, 15.0]))
+                    f = r["feed_program"][0]["composition_meq_per_L"]
+                    sc = r["C_T_meq_per_L"] / sum(f.values())
+                    r["feed_program"][0]["composition_meq_per_L"] = {i: f[i] * sc for i in IONS}
+                if rid == "held_20":
+                    pass                                   # window set by its builder
+                elif two and label.startswith("feed change whose waves do not reach"):
+                    pass                                   # window set by its builder
+                else:
+                    set_window(r)
+                    if two and r["feed_program"][1]["start_bv"] >= r["run_bv"]:
+                        continue
+                if rid in LIMIT_MODE:
+                    r = set_limit(r, LIMIT_MODE[rid])
+                    if r is None:
+                        continue
+                got = finish(r, n_samples, near=(rid == "held_09"), extra_ok=pred,
+                             min_len=(4e-4 if rid == "held_07" else 2e-3))
+            except (AssertionError, ValueError, ZeroDivisionError):
                 got = None
             if got is not None:
                 break

@@ -1,0 +1,36 @@
+{
+ "recipe_id": "held_20",
+ "ions": [
+  "chloride",
+  "nitrate",
+  "sulfate",
+  "bicarbonate"
+ ],
+ "shocks": [],
+ "transitions": [],
+ "plateaus": [
+  {
+   "bv_start": 0,
+   "bv_end": 31.7,
+   "composition_meq_per_L": [
+    5.99,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "nitrate_peak": {
+  "meq_per_L": 0.0,
+  "bv": 0
+ },
+ "nitrate_limit_bv": null,
+ "samples": [
+  [
+   5.99,
+   0.0,
+   0.0,
+   0.0
+  ]
+ ]
+}

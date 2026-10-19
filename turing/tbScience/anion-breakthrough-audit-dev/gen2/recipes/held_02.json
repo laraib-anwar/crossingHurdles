@@ -1,0 +1,46 @@
+{
+ "recipe_id": "held_02",
+ "ions": [
+  "chloride",
+  "nitrate",
+  "sulfate",
+  "bicarbonate"
+ ],
+ "alpha": {
+  "chloride": 1.0,
+  "nitrate": 2.011,
+  "sulfate": 17.666,
+  "bicarbonate": 0.383
+ },
+ "eps": 0.387,
+ "Q_eq_per_L_bed": 1.006,
+ "C_T_meq_per_L": 6.06,
+ "initial_resin_fraction": {
+  "chloride": 1.0,
+  "nitrate": 0.0,
+  "sulfate": 0.0,
+  "bicarbonate": 0.0
+ },
+ "feed_program": [
+  {
+   "start_bv": 0.0,
+   "composition_meq_per_L": {
+    "chloride": 3.4569999999999994,
+    "nitrate": 0.761,
+    "sulfate": 1.384,
+    "bicarbonate": 0.458
+   }
+  }
+ ],
+ "run_bv": 665.0,
+ "sample_bv": [
+  31.98,
+  65.8,
+  67.63,
+  69.46,
+  179.1,
+  443.73,
+  632.77
+ ],
+ "nitrate_limit_meq_per_L": 0.714
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1508, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1495, in main
+    report, segs, sysm, present, CT, tracker = solve_recipe(rec)
+                                               ^^^^^^^^^^^^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 1432, in solve_recipe
+    tracker.run()
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/anion-breakthrough-audit-dev/refA/reference.py", line 996, in run
+    raise RuntimeError("too many interactions")
+RuntimeError: too many interactions

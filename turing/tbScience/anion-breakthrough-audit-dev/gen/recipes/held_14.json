@@ -8,49 +8,49 @@
  ],
  "alpha": {
   "chloride": 1.0,
-  "nitrate": 2.027,
-  "sulfate": 16.946,
-  "bicarbonate": 0.317
+  "nitrate": 2.227,
+  "sulfate": 13.901,
+  "bicarbonate": 0.129
  },
- "eps": 0.445,
+ "eps": 0.429,
  "Q_eq_per_L_bed": 1.34,
- "C_T_meq_per_L": 5.93,
+ "C_T_meq_per_L": 6.72,
  "initial_resin_fraction": {
-  "chloride": 1.0,
+  "chloride": 0.6579999999999999,
   "nitrate": 0.0,
-  "sulfate": 0.0,
+  "sulfate": 0.342,
   "bicarbonate": 0.0
  },
  "feed_program": [
   {
    "start_bv": 0.0,
    "composition_meq_per_L": {
-    "chloride": 2.9989999999999997,
-    "nitrate": 1.228,
-    "sulfate": 0.596,
-    "bicarbonate": 1.107
+    "chloride": 2.4409999999999994,
+    "nitrate": 0.498,
+    "sulfate": 1.822,
+    "bicarbonate": 1.959
    }
   },
   {
-   "start_bv": 73.0,
+   "start_bv": 121.0,
    "composition_meq_per_L": {
-    "chloride": 3.7319999999999993,
-    "nitrate": 0.618,
-    "sulfate": 0.854,
-    "bicarbonate": 0.726
+    "chloride": 2.103999999999999,
+    "nitrate": 0.503,
+    "sulfate": 1.475,
+    "bicarbonate": 2.638
    }
   }
  ],
- "run_bv": 248.0,
+ "run_bv": 536.0,
  "sample_bv": [
-  36.04,
-  78.33,
-  84.58,
-  90.83,
-  143.0,
-  178.0,
-  203.07,
-  213.0
+  21.79,
+  89.65,
+  147.99,
+  151.75,
+  204.0,
+  287.0,
+  293.42,
+  453.0
  ],
  "nitrate_limit_meq_per_L": 0.714
 }

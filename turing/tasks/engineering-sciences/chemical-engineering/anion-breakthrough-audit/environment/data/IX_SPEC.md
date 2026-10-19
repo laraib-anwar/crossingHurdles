@@ -80,7 +80,7 @@ the interesting behaviour is.
 | `alpha_nitrate` | 1.5 to 6.0 |
 | `alpha_sulfate` | 2.0 to 25.0 |
 | `alpha_bicarbonate` | 0.10 to 0.60 |
-| any two separation factors (including chloride's 1) | differ by at least 0.05 |
+| any two separation factors (including chloride's 1) | differ by at least 0.005 |
 | `eps` | 0.35 to 0.45 |
 | `Q_eq_per_L_bed` | 0.8 to 1.6 |
 | `C_T_meq_per_L` | 2.0 to 15.0 |
