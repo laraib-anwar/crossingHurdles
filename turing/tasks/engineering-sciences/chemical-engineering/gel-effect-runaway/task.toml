@@ -1,0 +1,38 @@
+schema_version = "1.4"
+
+# Files uploaded from the agent container to the separate verifier container.
+artifacts = ["/root/results/predictions.json", "/root/results/cure_program.json"]
+
+[task]
+name = "turing/gel-effect-runaway"
+description = "Infer diffusion-controlled bulk MMA polymerization kinetics from ampoule data, predict thick PMMA sheet castings, and design a safe fast cure program for a 20 mm sheet."
+version = "1.0.0"
+keywords = ["free-radical-polymerization", "gel-effect", "trommsdorff-norrish", "diffusion-controlled-kinetics", "method-of-moments", "molar-mass-distribution", "gpc-universal-calibration", "parameter-estimation", "pmma-casting", "heat-conduction", "thermal-runaway", "cure-cycle-optimization", "depropagation", "polymer-reaction-engineering"]
+
+[metadata]
+domain = "engineering-sciences"
+field = "chemical-engineering"
+subfield = "polymer-reaction-engineering"
+reward_type = "binary"
+source = "Written by PhD annotators"
+public_overlap = "None"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+network_mode = "no-network"
+cpus = 1
+memory_mb = 1024
+
+[agent]
+timeout_sec = 18000
+network_mode = "public"
+
+[environment]
+cpus = 2
+memory_mb = 2048
+storage_mb = 10240
+network_mode = "public"

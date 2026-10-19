@@ -1,0 +1,14 @@
+{
+  "id": "D1",
+  "thickness_mm": 20.0,
+  "h_W_per_m2K": 125.0,
+  "w_AIBN": 0.001,
+  "max_points": 4,
+  "bath_temperature_min_C": 40.0,
+  "bath_temperature_max_C": 130.0,
+  "max_ramp_K_per_min": 1.0,
+  "max_cycle_time_min": 670.0,
+  "bubble_conversion": 0.9,
+  "bubble_temperature_C": 95.0,
+  "target_conversion": 0.975
+}
