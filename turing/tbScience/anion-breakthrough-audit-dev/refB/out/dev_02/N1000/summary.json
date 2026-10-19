@@ -1,0 +1,510 @@
+{
+ "recipe_id": "dev_02",
+ "ions": [
+  "chloride",
+  "nitrate",
+  "sulfate",
+  "bicarbonate"
+ ],
+ "Lambda": 233.33333333333334,
+ "solver": {
+  "cells": 1000,
+  "order": 2,
+  "limiter": "minmod",
+  "rk": 2,
+  "cfl": 0.4,
+  "n_steps": 54230,
+  "dt_min": 0.0028767697505145406,
+  "dt_max": 0.016047912799486426,
+  "runtime_s": 145.10215973854065,
+  "inversion_failures": 0,
+  "eigenvalue_bisection_fallbacks": 0,
+  "eigenvalue_argmax_exact_fixes": 603062,
+  "steady_state_exit_bv": null,
+  "feed_switches": [],
+  "mass_balance": {
+   "W0_total_per_ion": [
+    117.02706270627067,
+    0.0,
+    116.70627062706268,
+    0.0
+   ],
+   "W_end_total_per_ion": [
+    59.792295233595915,
+    57.26279972449705,
+    108.53314760475854,
+    8.145090770478067
+   ],
+   "inflow_per_ion": [
+    350.0,
+    104.99999999999972,
+    69.99999999999935,
+    175.0
+   ],
+   "outflow_per_ion": [
+    407.23476747261435,
+    47.73720027543722,
+    78.17312302243207,
+    166.8549092295037
+   ],
+   "error_per_ion": [
+    -6.040323796696612e-11,
+    -6.544809139086283e-11,
+    1.2857981346314773e-10,
+    -1.822897388592537e-11
+   ],
+   "relative_error_per_ion": [
+    -1.293356269697711e-13,
+    -6.233151561034572e-13,
+    6.886743173183537e-13,
+    -1.0416556506243069e-13
+   ],
+   "history_trapezoid_outflow_minus_stage_outflow": [
+    5.684039820152975e-06,
+    -4.0062549686581406e-06,
+    -2.4621888883302745e-06,
+    7.844179208404967e-07
+   ]
+  },
+  "snapshot_bv": [
+   20.0,
+   120.0,
+   300.0,
+   500.0
+  ]
+ },
+ "analysis_parameters": {
+  "uniform_resample_points": 108462,
+  "flatness_half_window_bv": 7.0,
+  "flatness_tol_meq_per_L": 1e-06,
+  "min_plateau_length_bv": 28.0,
+  "visible_jump_meq_per_L": 0.001,
+  "steep_slope_threshold": "normalised slope > 1/(20 cells-worth of BV)",
+  "shock_like_if": "steep fraction > 0.95 and 10-90 width < 15 cells"
+ },
+ "n_plateaus": 2,
+ "n_fronts": 3,
+ "plateaus": [
+  {
+   "bv_start": 64.7393994154581,
+   "bv_end": 315.10035865426283,
+   "composition_meq_per_L": [
+    3.953127022371795,
+    1.1276554510821149e-93,
+    0.4739513756651289,
+    1.572921601962639
+   ],
+   "spread_central_half_meq_per_L": 9.53584988749867e-10,
+   "note": "bounds are where the windowed spread crosses tol_flat; a bounding shock lies inside the adjacent front, see fronts[].crossings"
+  },
+  {
+   "bv_start": 333.86194115857313,
+   "bv_end": 474.17689307677415,
+   "composition_meq_per_L": [
+    2.892791628804066,
+    0.7144989361092033,
+    0.9053197865694145,
+    1.4873896485173264
+   ],
+   "spread_central_half_meq_per_L": 6.642051353367151e-10,
+   "note": "bounds are where the windowed spread crosses tol_flat; a bounding shock lies inside the adjacent front, see fronts[].crossings"
+  }
+ ],
+ "fronts": [
+  {
+   "bv_start": 0.0,
+   "bv_end": 64.7393994154581,
+   "cut_by_window_end": false,
+   "before_meq_per_L": [
+    5.405940594059405,
+    0.0,
+    0.594059405940594,
+    0.0
+   ],
+   "after_meq_per_L": [
+    3.953127022371795,
+    1.1276554510821149e-93,
+    0.4739513756651289,
+    1.572921601962639
+   ],
+   "jump_meq_per_L": [
+    -1.4528135716876105,
+    1.1276554510821149e-93,
+    -0.12010803027546513,
+    1.572921601962639
+   ],
+   "leading_ion": "bicarbonate",
+   "bv_per_cell_at_front": 0.03236969970772905,
+   "width_10_90_bv": {
+    "chloride": 15.342294706596675,
+    "sulfate": 15.342294706604818,
+    "bicarbonate": 15.342294706591332
+   },
+   "width_10_90_in_cells": {
+    "chloride": 473.9708692117811,
+    "sulfate": 473.97086921203265,
+    "bicarbonate": 473.97086921161605
+   },
+   "crossings": {
+    "chloride": {
+     "bv10": 36.707378017961126,
+     "bv50": 43.35489204637438,
+     "bv90": 52.0496727245578,
+     "bv50_cell": 43.33319947618759
+    },
+    "sulfate": {
+     "bv10": 36.707378017961574,
+     "bv50": 43.35489204637798,
+     "bv90": 52.04967272456639,
+     "bv50_cell": 43.33319947619116
+    },
+    "bicarbonate": {
+     "bv10": 36.707378017960735,
+     "bv50": 43.35489204637206,
+     "bv90": 52.04967272455207,
+     "bv50_cell": 43.33319947618526
+    }
+   },
+   "max_abs_slope_meq_per_L_per_bv": 0.10523111403836376,
+   "steep_fraction_of_jump": 0.0,
+   "steep_parts": [],
+   "kind_single_resolution": "spreading",
+   "monotonicity": {
+    "chloride": {
+     "min_in_front_cell": 3.953127022598073,
+     "max_in_front_cell": 5.405940594059406,
+     "overshoot_beyond_ends_cell": 8.881784197001252e-16,
+     "overshoot_beyond_ends_face": 8.881784197001252e-16
+    },
+    "nitrate": {
+     "min_in_front_cell": 0.0,
+     "max_in_front_cell": 0.0,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.47395137568388107,
+     "max_in_front_cell": 0.594059405940594,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 0.0,
+     "max_in_front_cell": 1.572921601718046,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    }
+   }
+  },
+  {
+   "bv_start": 315.10035865426283,
+   "bv_end": 333.86194115857313,
+   "cut_by_window_end": false,
+   "before_meq_per_L": [
+    3.953127022371795,
+    1.1276554510821149e-93,
+    0.4739513756651289,
+    1.572921601962639
+   ],
+   "after_meq_per_L": [
+    2.892791628804066,
+    0.7144989361092033,
+    0.9053197865694145,
+    1.4873896485173264
+   ],
+   "jump_meq_per_L": [
+    -1.0603353935677289,
+    0.7144989361092033,
+    0.43136841090428557,
+    -0.08553195344531273
+   ],
+   "leading_ion": "chloride",
+   "bv_per_cell_at_front": 0.32448114990641796,
+   "width_10_90_bv": {
+    "chloride": 0.5797182151181346,
+    "nitrate": 0.5797182151210905,
+    "sulfate": 0.5797182151217157,
+    "bicarbonate": 0.5797182151583229
+   },
+   "width_10_90_in_cells": {
+    "chloride": 1.786600593856772,
+    "nitrate": 1.7866005938658815,
+    "sulfate": 1.7866005938678085,
+    "bicarbonate": 1.786600593980626
+   },
+   "crossings": {
+    "chloride": {
+     "bv10": 324.3108305169611,
+     "bv50": 324.544314576333,
+     "bv90": 324.89054873207925,
+     "bv50_cell": 324.44971957839226
+    },
+    "nitrate": {
+     "bv10": 324.3108305168363,
+     "bv50": 324.54431457625975,
+     "bv90": 324.8905487319574,
+     "bv50_cell": 324.44971957830506
+    },
+    "sulfate": {
+     "bv10": 324.3108305168109,
+     "bv50": 324.54431457624486,
+     "bv90": 324.8905487319326,
+     "bv50_cell": 324.4497195782873
+    },
+    "bicarbonate": {
+     "bv10": 324.31083051516407,
+     "bv50": 324.54431457527807,
+     "bv90": 324.8905487303224,
+     "bv50_cell": 324.4497195771357
+    }
+   },
+   "max_abs_slope_meq_per_L_per_bv": 1.976036853807892,
+   "steep_fraction_of_jump": 0.9883806588901564,
+   "steep_parts": [
+    {
+     "bv_start": 324.12295663879183,
+     "bv_end": 325.12977014779506,
+     "jump_meq_per_L": [
+      -1.0480149949390252,
+      0.7061969291526632,
+      0.4263561941247365,
+      -0.08453812833837415
+     ],
+     "fraction_of_front_jump_leading_ion": 0.9883806588901564
+    }
+   ],
+   "kind_single_resolution": "shock_like",
+   "monotonicity": {
+    "chloride": {
+     "min_in_front_cell": 2.8927916137483014,
+     "max_in_front_cell": 3.9531270225455346,
+     "overshoot_beyond_ends_cell": 1.5055764635008018e-08,
+     "overshoot_beyond_ends_face": 0.021738684741642533
+    },
+    "nitrate": {
+     "min_in_front_cell": 9.607755158849856e-19,
+     "max_in_front_cell": 0.7144989462124434,
+     "overshoot_beyond_ends_cell": 1.0103240022374393e-08,
+     "overshoot_beyond_ends_face": 0.014648447189400813
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.4739513756667393,
+     "max_in_front_cell": 0.9053197926639713,
+     "overshoot_beyond_ends_cell": 6.094556859181921e-09,
+     "overshoot_beyond_ends_face": 0.008843788364536476
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 1.4873896473355552,
+     "max_in_front_cell": 1.572921601943507,
+     "overshoot_beyond_ends_cell": 1.1817711254025198e-09,
+     "overshoot_beyond_ends_face": 0.0017535508127306532
+    }
+   }
+  },
+  {
+   "bv_start": 474.17689307677415,
+   "bv_end": 700.0,
+   "cut_by_window_end": true,
+   "before_meq_per_L": [
+    2.892791628804066,
+    0.7144989361092033,
+    0.9053197865694145,
+    1.4873896485173264
+   ],
+   "after_meq_per_L": [
+    2.9950496377024116,
+    0.8914344610903966,
+    0.6140981860738027,
+    1.49941771513339
+   ],
+   "jump_meq_per_L": [
+    0.10225800889834558,
+    0.17693552498119325,
+    -0.29122160049561174,
+    0.012028066616063704
+   ],
+   "leading_ion": "sulfate",
+   "bv_per_cell_at_front": 0.5870884465383871,
+   "width_10_90_bv": {
+    "chloride": 150.1454473301019,
+    "nitrate": 150.14547379893247,
+    "sulfate": 150.14548217185484,
+    "bicarbonate": 150.14590325445943
+   },
+   "width_10_90_in_cells": {
+    "chloride": 255.74587307141726,
+    "nitrate": 255.74591815632866,
+    "sulfate": 255.745932418102,
+    "bicarbonate": 255.74664965688785
+   },
+   "crossings": {
+    "chloride": {
+     "bv10": 525.3536773770887,
+     "bv50": 593.8870678009695,
+     "bv90": 675.4991247071906,
+     "bv50_cell": 593.5902467977041
+    },
+    "nitrate": {
+     "bv10": 525.3536374943607,
+     "bv50": 593.8869180860125,
+     "bv90": 675.4991112932931,
+     "bv50_cell": 593.5902793151755
+    },
+    "sulfate": {
+     "bv10": 525.3536263948142,
+     "bv50": 593.886887750957,
+     "bv90": 675.4991085666691,
+     "bv50_cell": 593.5902857008566
+    },
+    "bicarbonate": {
+     "bv10": 525.3530303066266,
+     "bv50": 593.8850108243239,
+     "bv90": 675.498933561086,
+     "bv50_cell": 593.5906826578235
+    }
+   },
+   "max_abs_slope_meq_per_L_per_bv": 0.0017968893858812001,
+   "steep_fraction_of_jump": 0.0,
+   "steep_parts": [],
+   "kind_single_resolution": "spreading",
+   "monotonicity": {
+    "chloride": {
+     "min_in_front_cell": 2.8927916581981643,
+     "max_in_front_cell": 2.9951739741267867,
+     "overshoot_beyond_ends_cell": 0.00012433642437503778,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "nitrate": {
+     "min_in_front_cell": 0.7144989865816326,
+     "max_in_front_cell": 0.8916495985595525,
+     "overshoot_beyond_ends_cell": 0.0002151374691559127,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.6137440871555031,
+     "max_in_front_cell": 0.905319703395397,
+     "overshoot_beyond_ends_cell": 0.0003540989182996279,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 1.4873896517877507,
+     "max_in_front_cell": 1.4994323401581582,
+     "overshoot_beyond_ends_cell": 1.462502476812233e-05,
+     "overshoot_beyond_ends_face": 0.0
+    }
+   }
+  }
+ ],
+ "nitrate_peak": {
+  "meq_per_L": 0.8916495985595525,
+  "bv_of_argmax": 700.0,
+  "bv_first_within_1e-7": 699.9998392688871,
+  "meq_per_L_face_history": 0.8914344610903966,
+  "location": "front[2]",
+  "bv_estimate": 699.9998392688871
+ },
+ "nitrate_limit_bv": 325.74695156890795,
+ "nitrate_limit_bv_cell": 325.68718686596475,
+ "samples": [
+  [
+   5.405940594059406,
+   0.0,
+   0.594059405940594,
+   7.381661461687977e-70
+  ],
+  [
+   3.9531270224491335,
+   5.80461333084e-313,
+   0.4739513756715623,
+   1.572921601879305
+  ],
+  [
+   3.95312702253688,
+   6.119299825370368e-38,
+   0.47395137567881074,
+   1.5729216017843095
+  ],
+  [
+   2.8929288188900264,
+   0.714736544504596,
+   0.9049286219396316,
+   1.4874060146657462
+  ]
+ ],
+ "sample_bv": [
+  20.0,
+  120.0,
+  300.0,
+  500.0
+ ],
+ "rollup": {
+  "chloride": {
+   "max_effluent": 5.405940594059406,
+   "min_effluent": 2.8927916137483014,
+   "initial": 5.405940594059405,
+   "max_effluent_face": 5.405940594059406,
+   "min_effluent_face": 2.8927916137391163,
+   "feeds": [
+    3.0
+   ],
+   "exceeds_feed_and_initial_by": 8.881784197001252e-16,
+   "roll_up": false,
+   "undershoots_feed_and_initial_by": 0.1072083862516986,
+   "roll_down": true
+  },
+  "nitrate": {
+   "max_effluent": 0.8916495985595525,
+   "min_effluent": 0.0,
+   "initial": 0.0,
+   "max_effluent_face": 0.8914344610903966,
+   "min_effluent_face": -0.014648447189400813,
+   "feeds": [
+    0.8999999999999999
+   ],
+   "exceeds_feed_and_initial_by": -0.008350401440447408,
+   "roll_up": false,
+   "undershoots_feed_and_initial_by": 0.0,
+   "roll_down": false
+  },
+  "sulfate": {
+   "max_effluent": 0.9053197926639713,
+   "min_effluent": 0.47395137560131384,
+   "initial": 0.594059405940594,
+   "max_effluent_face": 0.9053197926701054,
+   "min_effluent_face": 0.46510758730059243,
+   "feeds": [
+    0.6
+   ],
+   "exceeds_feed_and_initial_by": 0.30531979266397136,
+   "roll_up": true,
+   "undershoots_feed_and_initial_by": 0.12010803033928019,
+   "roll_down": true
+  },
+  "bicarbonate": {
+   "max_effluent": 1.572921602799167,
+   "min_effluent": 0.0,
+   "initial": 0.0,
+   "max_effluent_face": 1.5746751527753697,
+   "min_effluent_face": 0.0,
+   "feeds": [
+    1.5
+   ],
+   "exceeds_feed_and_initial_by": 0.07292160279916704,
+   "roll_up": true,
+   "undershoots_feed_and_initial_by": 0.0,
+   "roll_down": false
+  }
+ },
+ "effluent_at_run_bv": [
+  2.9950496377024116,
+  0.8914344610903966,
+  0.6140981860738027,
+  1.49941771513339
+ ],
+ "effluent_at_0": [
+  5.405940594059405,
+  0.0,
+  0.594059405940594,
+  0.0
+ ]
+}
