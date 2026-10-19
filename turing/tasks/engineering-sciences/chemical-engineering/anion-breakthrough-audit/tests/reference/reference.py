@@ -110,13 +110,23 @@ class System:
         return lam, r, d
 
     def unit_eigvec(self, x, k, r_ref):
+        """Unit eigenvector continuing the direction r_ref (the eigenvector most parallel to
+        r_ref is taken, so a family is followed by continuity even where eigenvalues of two
+        families cross on a face of the simplex where an ion is absent)."""
         lam, R = np.linalg.eig(self.J(x))
-        order = np.argsort(-lam.real)
-        r = R[:, order[k]].real
-        r = r / np.linalg.norm(r)
+        R = R.real
+        R = R / np.linalg.norm(R, axis=0)
+        i = int(np.argmax(np.abs(r_ref @ R)))
+        r = R[:, i]
         if r @ r_ref < 0:
             r = -r
         return r
+
+    def eig_along(self, x, v):
+        """(lambda, r, l) of the eigenpair whose eigenvector is most parallel to v."""
+        lam, R, L = self.eig(x)
+        i = int(np.argmax(np.abs(v @ R)))
+        return lam[i], R[:, i], L[i]
 
     def rarefaction(self, x0, k, S, r_ref):
         """Integral curve of r_k from x0 over arc length [0, S]; dense output."""
@@ -170,6 +180,41 @@ class System:
             mu = self.eig(0.5 * (x_from + x_to))[0][k]
         return x_to, {"type": "shock", "mu": mu}
 
+    def wave_windows(self, xL, s, compose):
+        """[(lam_slow, lam_fast)] per wave: eigenvalue range (shock: mu, mu) of each family."""
+        x, infos = compose(s)
+        out = []
+        xl = xL.copy()
+        for k in range(self.m):
+            x_to, info = infos[k]
+            if abs(s[k]) < ZERO_WAVE:
+                out.append(None)
+            elif info["type"] == "rare":
+                out.append((self.eig(xl)[0][k], self.eig(x_to)[0][k]))
+            else:
+                out.append((info["mu"], info["mu"]))
+            xl = x_to
+        return out
+
+    def ordered(self, xL, s, compose):
+        """True if every wave is slower than the next one (lambda decreasing left to right)
+        and rarefactions have lambda decreasing across them."""
+        try:
+            win = self.wave_windows(xL, s, compose)
+        except Exception:
+            return False
+        prev_min = np.inf
+        for w in win:
+            if w is None:
+                continue
+            hi, lo = w
+            if lo > hi + 1e-9:
+                return False
+            if hi > prev_min + 1e-9:
+                return False
+            prev_min = lo
+        return True
+
     # ----------------------------------------------------------------------------------
     def riemann(self, xL, xR, s_init=None):
         """Riemann problem (left state xL, right state xR) by nested root-finding over the
@@ -212,6 +257,11 @@ class System:
                 accepted = False
                 for _ in range(25):
                     s_try = s + step * ds
+                    # stay in the starting orthant: a strength may shrink towards zero but
+                    # not flip sign (branches are explored by the caller's sign patterns)
+                    for kk in range(m):
+                        if s[kk] * s_try[kk] < 0.0:
+                            s_try[kk] = 0.1 * s[kk] if abs(s[kk]) > 1e-3 else 0.0
                     try:
                         xt, it_ = compose(s_try)
                         if np.max(np.abs(xt - target)) < err:
@@ -237,25 +287,50 @@ class System:
         else:
             s0 = np.asarray(s_init, dtype=float)
 
-        s, ok = newton(s0, xR)
-        if not ok:
-            nsteps = 4
-            ok_all = False
-            while nsteps <= 512 and not ok_all:
+        def continuation():
+            nsteps = 8
+            while nsteps <= 1024:
                 ok_all = True
                 s_run = np.zeros(m)
                 for i in range(1, nsteps + 1):
                     t = i / nsteps
                     target = xL + t * (xR - xL)
                     s_run, ok = newton(s_run, target)
-                    if not ok:
+                    if not ok or not self.ordered(xL, s_run, compose):
                         ok_all = False
                         break
                 if ok_all:
-                    s = s_run
+                    return s_run, True
                 nsteps *= 2
-            if not ok_all:
-                raise RuntimeError("Riemann solver failed to converge")
+            return None, False
+
+        import time as _time
+        _t0 = _time.time()
+        s, ok = newton(s0, xR)
+        DIAG.setdefault("riemann_attempts", []).append(("guess", bool(ok), _time.time() - _t0))
+        if not ok or not self.ordered(xL, s, compose):
+            # the midpoint guess can converge to a root whose waves are not ordered by speed
+            # (eigenvalue labels swap on faces where an ion is absent).  Try the other sign
+            # patterns of the guess (shock <-> rarefaction per family) first, then fall back
+            # to continuation from the trivial solution.
+            found = False
+            import itertools
+            for signs in itertools.product((1.0, -1.0), repeat=m):
+                s_try = np.abs(s0) * np.array(signs)
+                if np.allclose(s_try, s0):
+                    continue
+                _t1 = _time.time()
+                s_c, ok_c = newton(s_try, xR)
+                DIAG["riemann_attempts"].append((str(signs), bool(ok_c), _time.time() - _t1))
+                if ok_c and self.ordered(xL, s_c, compose):
+                    s, found = s_c, True
+                    break
+            if not found:
+                _t2 = _time.time()
+                s, ok = continuation()
+                DIAG["riemann_attempts"].append(("continuation", bool(ok), _time.time() - _t2))
+                if not ok:
+                    raise RuntimeError("Riemann solver failed to converge to an ordered solution")
 
         x, infos = compose(s)
         waves = []
@@ -353,17 +428,21 @@ class Fan:
         return self._dorigin(p)
 
     def lam(self, p):
-        return self.sysm.eig(self.state(p))[0][self.family]
+        x = self.state(p)
+        lam, r, l = self.sysm.eig_along(x, self.dstate(p))
+        return lam
 
     def speed(self, p):
         return self.sysm.speed(self.lam(p))
 
     def speed_dspeed(self, p):
         x = self.state(p)
+        v = self.dstate(p)
         lam, R, L = self.sysm.eig(x)
-        g = self.sysm.grad_lambda(x, self.family, R, L)
-        dl = g @ self.dstate(p)
-        s = self.sysm.speed(lam[self.family])
+        i = int(np.argmax(np.abs(v @ R)))
+        g = self.sysm.grad_lambda(x, i, R, L)
+        dl = g @ v
+        s = self.sysm.speed(lam[i])
         return s, -self.sysm.Lam * dl * s * s
 
     def xi_at(self, p, bv):
@@ -713,11 +792,11 @@ def leave_simplex_curve(sysm, x0, k, direction_sign):
 
     def leave(s, x):
         xf = sysm.full(x)
-        return np.min(xf) + 0.05
+        return np.min(xf) + 0.02
     leave.terminal = True
-    sol = solve_ivp(rhs, (0.0, 3.0), x0, method="DOP853", rtol=ODE_RTOL, atol=ODE_ATOL,
+    sol = solve_ivp(rhs, (0.0, 2.0), x0, method="DOP853", rtol=ODE_RTOL, atol=ODE_ATOL,
                     dense_output=True, events=leave)
-    S = float(sol.t_events[0][0]) if sol.t_events[0].size else 3.0
+    S = float(sol.t_events[0][0]) if sol.t_events[0].size else 2.0
     return sol, S, r_ref
 
 
@@ -910,15 +989,12 @@ def meeting(wa, wb, bv_now):
     xa, sa = wa.right_edge(bv_now)
     xb, sb = wb.left_edge(bv_now)
     gap = xb - xa
-    if gap < -1e-9:
-        # should not happen; treat as touching
-        gap = 0.0
-    if gap <= 1e-13:
-        if sa > sb:
-            return bv_now, xa
-        return None
     if sa <= sb:
         return None
+    if abs(gap) <= 1e-13:
+        return bv_now, xa
+    # gap < 0: the straight paths already crossed (a pair that touched while another
+    # interaction was being processed); the meeting is at the earlier crossing time
     dt = gap / (sa - sb)
     return bv_now + dt, xa + sa * dt
 
@@ -966,7 +1042,7 @@ class Tracker:
         keep = []
         for w in self.active:
             xi_l, _ = w.left_edge(self.bv_now)
-            if xi_l > 1.0 + 1e-12:
+            if xi_l >= 1.0 - 1e-12:
                 continue
             keep.append(w)
         self.active = keep
@@ -979,7 +1055,7 @@ class Tracker:
             if mt is None:
                 continue
             bv_m, xi_m = mt
-            if xi_m > 1.0 + 1e-12 or bv_m > self.run_bv:
+            if xi_m >= 1.0 - 1e-12 or bv_m > self.run_bv:
                 continue
             if best is None or bv_m < best[0]:
                 best = (bv_m, xi_m, i)
@@ -1128,6 +1204,19 @@ class Tracker:
             mt = meeting(wq, wr, self.bv_now)
             if mt is None or mt[1] > 1.0 + 1e-12 or mt[0] > self.run_bv:
                 continue
+            if mt[0] <= self.bv_now + 1e-12:
+                # a pair already touching: a concurrent passage elsewhere.  Our passage may
+                # only run as far as that passage runs before it is processed.
+                if isinstance(wq, Shock) and isinstance(wr, Shock):
+                    continue
+                if isinstance(wq, Fan) and isinstance(wr, Fan):
+                    raise NotImplementedError("fan-fan interaction concurrent with a shock passage")
+                sh, fn, sd = (wq, wr, "R") if isinstance(wq, Shock) else (wr, wq, "L")
+                other = Passage(sysm, sh, fn, sd, mt[0])
+                end_other = other.bv(other.p_end)
+                if end_other > bv_m + 1e-9 and (bv_cut is None or end_other < bv_cut):
+                    bv_cut = end_other
+                continue
             if bv_cut is None or mt[0] < bv_cut:
                 bv_cut = mt[0]
         # (b) the fan's far edge against its other neighbour (straight motion)
@@ -1136,6 +1225,8 @@ class Tracker:
             if idx_fan + 1 < len(self.active):
                 mt = meeting(fan, self.active[idx_fan + 1], self.bv_now)
                 if mt is not None and mt[1] <= 1.0 + 1e-12 and mt[0] <= self.run_bv:
+                    if mt[0] <= bv_m + 1e-9:
+                        raise NotImplementedError("a shock inside two fans at once (BV %.6f)" % bv_m)
                     if bv_cut is None or mt[0] < bv_cut:
                         bv_cut = mt[0]
             # the shock's other neighbour (to its left) against the curved shock path
@@ -1145,12 +1236,14 @@ class Tracker:
                 p_hit = meeting_curve(passage, exi, esp, self.bv_now)
                 if p_hit is not None:
                     bvh = passage.bv(p_hit)
-                    if bvh <= self.run_bv and (bv_cut is None or bvh < bv_cut):
+                    if bvh <= self.run_bv and bvh > bv_m + 1e-9 and (bv_cut is None or bvh < bv_cut):
                         bv_cut = bvh
         else:
             if idx_fan - 1 >= 0:
                 mt = meeting(self.active[idx_fan - 1], fan, self.bv_now)
                 if mt is not None and mt[1] <= 1.0 + 1e-12 and mt[0] <= self.run_bv:
+                    if mt[0] <= bv_m + 1e-9:
+                        raise NotImplementedError("a shock inside two fans at once (BV %.6f)" % bv_m)
                     if bv_cut is None or mt[0] < bv_cut:
                         bv_cut = mt[0]
             if idx_shock + 1 < len(self.active):
@@ -1159,8 +1252,40 @@ class Tracker:
                 p_hit = meeting_curve(passage, exi, esp, self.bv_now)
                 if p_hit is not None:
                     bvh = passage.bv(p_hit)
-                    if bvh <= self.run_bv and (bv_cut is None or bvh < bv_cut):
+                    if bvh <= self.run_bv and bvh > bv_m + 1e-9 and (bv_cut is None or bvh < bv_cut):
                         bv_cut = bvh
+        # (c) the characteristics refracted so far (between the shock and its other neighbour)
+        #     against that neighbour's edge
+        nb_idx = idx_shock + 1 if side == "L" else idx_shock - 1
+        if 0 <= nb_idx < len(self.active):
+            nb = self.active[nb_idx]
+            exi, esp = nb.left_edge(self.bv_now) if side == "L" else nb.right_edge(self.bv_now)
+            fam_k = fan.family
+
+            def t_meet(p):
+                xi_p = passage.xi(p); bv_p = passage.bv(p)
+                xk = passage.x_unk(p)
+                lam_k, r_k, l_k = sysm.eig_along(xk, passage.dx_unk(p)) if np.linalg.norm(passage.dx_unk(p)) > 1e-14 \
+                    else (sysm.eig(xk)[0][fam_k], None, None)
+                sc = sysm.speed(lam_k)
+                den = (sc - esp) if side == "L" else (esp - sc)
+                if den <= 1e-15:
+                    return np.inf
+                t = ((exi + esp * (bv_p - self.bv_now)) - xi_p) / den + bv_p
+                return t if t >= bv_p - 1e-9 else np.inf
+            pp = np.linspace(passage.p_start, p_e, 60)
+            ts = np.array([t_meet(q) for q in pp])
+            if np.isfinite(ts).any():
+                i0 = int(np.argmin(ts))
+                lo, hi = pp[max(i0 - 1, 0)], pp[min(i0 + 1, len(pp) - 1)]
+                if lo != hi:
+                    res = minimize_scalar(t_meet, bounds=(min(lo, hi), max(lo, hi)), method="bounded",
+                                          options={"xatol": 1e-12})
+                    t_best, p_best = min((ts[i0], pp[i0]), (float(res.fun), float(res.x)))
+                else:
+                    t_best, p_best = ts[i0], pp[i0]
+                if t_best <= self.run_bv and t_best > bv_m + 1e-9 and (bv_cut is None or t_best < bv_cut):
+                    bv_cut = t_best
         truncated = False
         if bv_cut is not None and bv_cut < bv_e - 1e-12:
             p_e = passage.p_of_bv(bv_cut)

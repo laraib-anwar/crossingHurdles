@@ -1,0 +1,1110 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 30 items
+
+test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                           [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_saved_base_case _____________________________
+
+    def test_saved_base_case():
+        """The declared artifacts exist as regular files and the saved base-case report meets the
+        output contract and the tolerances against the independent expected values."""
+>       regular_file(ARTIFACT)
+
+test_outputs.py:314: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_01] ___________________________
+
+case_name = 'held_01'
+record_property = <function record_property.<locals>.append_property at 0x7e9554370540>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_02] ___________________________
+
+case_name = 'held_02'
+record_property = <function record_property.<locals>.append_property at 0x7e95543e5440>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_03] ___________________________
+
+case_name = 'held_03'
+record_property = <function record_property.<locals>.append_property at 0x7e95543713a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_04] ___________________________
+
+case_name = 'held_04'
+record_property = <function record_property.<locals>.append_property at 0x7e9554370220>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_05] ___________________________
+
+case_name = 'held_05'
+record_property = <function record_property.<locals>.append_property at 0x7e9554372160>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_06] ___________________________
+
+case_name = 'held_06'
+record_property = <function record_property.<locals>.append_property at 0x7e95543719e0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_07] ___________________________
+
+case_name = 'held_07'
+record_property = <function record_property.<locals>.append_property at 0x7e9554372020>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_08] ___________________________
+
+case_name = 'held_08'
+record_property = <function record_property.<locals>.append_property at 0x7e95543731a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_09] ___________________________
+
+case_name = 'held_09'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373600>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_10] ___________________________
+
+case_name = 'held_10'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373a60>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_11] ___________________________
+
+case_name = 'held_11'
+record_property = <function record_property.<locals>.append_property at 0x7e95543737e0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_12] ___________________________
+
+case_name = 'held_12'
+record_property = <function record_property.<locals>.append_property at 0x7e95543f7c40>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_13] ___________________________
+
+case_name = 'held_13'
+record_property = <function record_property.<locals>.append_property at 0x7e9554370860>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_14] ___________________________
+
+case_name = 'held_14'
+record_property = <function record_property.<locals>.append_property at 0x7e9554372200>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_15] ___________________________
+
+case_name = 'held_15'
+record_property = <function record_property.<locals>.append_property at 0x7e9554371d00>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_16] ___________________________
+
+case_name = 'held_16'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373ba0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_17] ___________________________
+
+case_name = 'held_17'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373f60>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_18] ___________________________
+
+case_name = 'held_18'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373ce0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_19] ___________________________
+
+case_name = 'held_19'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4c360>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_20] ___________________________
+
+case_name = 'held_20'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4cae0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_21] ___________________________
+
+case_name = 'held_21'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4d3a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+___________________________ test_fresh_case[held_22] ___________________________
+
+case_name = 'held_22'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4db20>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_01] __________________________
+
+case_name = 'service_01'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4df80>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_02] __________________________
+
+case_name = 'service_02'
+record_property = <function record_property.<locals>.append_property at 0x7e9554370720>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_03] __________________________
+
+case_name = 'service_03'
+record_property = <function record_property.<locals>.append_property at 0x7e95543732e0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_04] __________________________
+
+case_name = 'service_04'
+record_property = <function record_property.<locals>.append_property at 0x7e9554373560>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_05] __________________________
+
+case_name = 'service_05'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4d940>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+_________________________ test_fresh_case[service_06] __________________________
+
+case_name = 'service_06'
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4e520>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/ixfront.py: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/ixfront.py').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=24, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/ixfront.py'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+________________________________ test_diagnosis ________________________________
+
+record_property = <function record_property.<locals>.append_property at 0x7e9553e4d620>
+
+    def test_diagnosis(record_property):
+        """diagnosis.json holds 3 to 8 witnesses of at least three distinct quantities; for each, the
+        pristine legacy script reproduces the reported legacy value, the independent reference
+        reproduces the reported correct value, and the two differ by more than the tolerance."""
+>       doc = read_json(DIAGNOSIS)
+              ^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:55: in read_json
+    regular_file(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/diagnosis.json')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+        assert path.exists(), f"{path}: missing"
+>       assert not path.is_symlink() and stat.S_ISREG(os.lstat(path).st_mode), f"{path}: not a regular file"
+E       AssertionError: /root/results/diagnosis.json: not a regular file
+E       assert (not False and False)
+E        +  where False = is_symlink()
+E        +    where is_symlink = PosixPath('/root/results/diagnosis.json').is_symlink
+E        +  and   False = <built-in function S_ISREG>(4516)
+E        +    where <built-in function S_ISREG> = stat.S_ISREG
+E        +    and   4516 = os.stat_result(st_mode=4516, st_ino=25, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149).st_mode
+E        +      where os.stat_result(st_mode=4516, st_ino=25, st_dev=34, st_nlink=1, st_uid=0, st_gid=0, st_size=0, st_atime=1792400149, st_mtime=1792400149, st_ctime=1792400149) = <built-in function lstat>(PosixPath('/root/results/diagnosis.json'))
+E        +        where <built-in function lstat> = os.lstat
+
+test_outputs.py:51: AssertionError
+=========================== short test summary info ============================
+FAILED test_outputs.py::test_saved_base_case - AssertionError: /root/results/...
+FAILED test_outputs.py::test_fresh_case[held_01] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_02] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_03] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_04] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_05] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_06] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_07] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_08] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_09] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_10] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_11] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_12] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_13] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_14] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_15] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_16] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_17] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_18] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_19] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_20] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_21] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_22] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[service_01] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_02] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_03] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_04] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_05] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_06] - AssertionError: /root/r...
+FAILED test_outputs.py::test_diagnosis - AssertionError: /root/results/diagno...
+============================== 30 failed in 1.68s ==============================

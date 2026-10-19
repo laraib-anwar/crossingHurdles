@@ -115,8 +115,8 @@ three levels suffice for the referee's purpose (TOL_BV = 2e-4 relative, TOL_C = 
 | dev_04 | 600 | 79004 / 110 | 158056 / 352 | 316159 / 1041 | no |
 | dev_05 | 600 | 72150 / 142 | 144500 / 425 | 310718 / 1102 | 565 / 564 / none |
 | dev_06 | 800 | 40950 / 77 | 82050 / 228 | 187739 / 835 | 701 / 700 / none |
-| dev_07 | 900 | see out/dev_07/extrapolated.json | | | |
-| dev_08 | 1600 | see out/dev_08/extrapolated.json | | | |
+| dev_07 | 900 | 106100 / 175 | 212650 / 1038 | 453028 / 1734 | 850 / 850 / none |
+| dev_08 | 1600 | 71091 / 122 | 142861 / 772 | 286341 / 1661 | no |
 
 (the N=4000 runs of dev_05/06 did not reach the 1e-12 uniformity test before run_bv because the
 precursor tails decay more slowly on the finer grid; irrelevant for the results.)
@@ -206,8 +206,42 @@ for N = 1k/2k/4k: a shock with a one-sided discrete tail, not a composite wave. 
 feed. Roll-up: sulfate (2.083 vs 1.5) and bicarbonate (2.008 vs 1.8); no nitrate roll-up on a
 nitrate-selective resin.
 
-### dev_07, dev_08
-See the end of this file (filled after the runs completed).
+### dev_07 (dev_02 feed to 150 BV, then more sulfate / less chloride, run 900)
+Identical to dev_02 until the switch waves arrive. Structure: plateau (5.4059406, 0, 0.5940594, 0)
+0-34 | spreading bicarbonate wave (mid 43.38, width 15.2) | plateau (3.953127, 0, 0.4739514,
+1.5729216) | **small spreading wave** from the switch (family 1; jump 0.15 in Cl/HCO3; mid 196.67
++- 0.004, width 2.37/2.03/1.87 BV, ratios 1.17/1.09, so converging to a finite width ~1.7 BV) |
+plateau (3.8138967, 0, 0.4624408, 1.7236625) | **shock** 315.590 +- 0.009 (nitrate 0 -> 1.5114,
+sulfate 0.462 -> 1.377, chloride 3.81 -> 1.59) | plateau (1.5919219, 1.5113635, 1.376635, 1.5200796)
+317-422 | **composite**: a spreading wave 421.6 -> 492.4 (nitrate 1.511 -> 1.709 rising, sulfate
+1.377 -> 1.143 falling, N-independent extent ~72 BV) that ends directly in a **shock** at
+492.373 +- 0.05 (to feed 2) with no intermediate plateau | plateau = feed 2 (1.5, 0.9, 2.1, 1.5)
+from 494. dev_02's shock at 324.6 and its long sulfate wave never reach the outlet: the feed-2 sulfate
+wave overtakes them (merged shock at 315.6, earlier and stronger), and the family-2 fan it leaves
+behind is cut off by the final shock. Nitrate peak 1.7212 +- 0.0016 (p = 0.86) at the pre-shock end
+of the composite wave, BV 492.37 (the shock position); nitrate limit first exceeded at the shock
+315.590 +- 0.01. Samples: 100 -> plateau 1; 250 -> plateau 2; 400 -> plateau 3 (all to 1e-9 or
+better); 550, 700, 850 -> feed 2. Roll-up: nitrate (1.72 vs feeds 0.9) and bicarbonate (1.72 vs
+1.5); roll-down: sulfate (0.462 below feed 1's 0.6 and initial 0.594).
+
+### dev_08 (dev_03 elution to 100 BV, then 4 Cl / 2 HCO3 feed, run 1600)
+Identical to dev_03 until the switch waves arrive. Structure: plateau (1.6947323, 0.7944058,
+0.3724686, 3.1383932) 0-43 | **shock** 45.0089 +- 0.002 (bicarbonate out) | plateau (3.9039499,
+1.4474512, 0.6485989, 0) 47-132 | **spreading wave** (bicarbonate returns 0 -> 1.849; 136.5 ->
+158.0, width 21.5 N-independent) | **short plateau** (2.6026332, 1.0627816, 0.4859472, 1.8486379)
+165-193 (27 BV; detected at N = 2000 and 4000 only, so no error estimate; values flat to 1e-9) |
+**spreading wave** (nitrate eluted 1.063 -> 0, sulfate 0.486 -> 0.236, chloride 2.60 -> 3.79;
+onset 220.8, end 569.4, N-independent) | plateau (3.790436, 0, 0.2355162, 1.9740478) 672-1320 |
+**spreading wave** (sulfate eluted, onset 1371 +- 1, mid 1466.6 +- 1, cut at 1600; effluent
+(3.8468, 0, 0.1722, 1.9810) at 1600). dev_03's long nitrate fan (177-539) is replaced: the feed-2
+bicarbonate wave interacts with it, producing the short plateau and a steeper fan that ends at 569
+instead of 539; the final sulfate fan is also shifted (onset 1371 vs 1082 in dev_03). Nitrate peak
+1.4474512 on plateau 1, attained at the shock 45.0089; nitrate limit exceeded at BV 0. Samples:
+150 -> (3.041312, 1.192455, 0.540778, 1.225456) +- 8e-6 (inside the bicarbonate wave); 300 ->
+(3.056422, 0.656757, 0.390273, 1.896548) +- 2.4e-4 (p = 0.75, inside the nitrate fan); 450 ->
+(3.46108, 0.294688, 0.304956, 1.939276) +- 6e-5; 700 and 1100 -> plateau 3; 1400 -> (3.803035,
+0, 0.221357, 1.975608) +- 5e-4 (inside the cut sulfate fan, p = 0.94). Roll-up: nitrate (1.447 vs
+initial 0.794), sulfate (0.649 vs 0.372); no roll-down.
 
 ## 6. Suspicious or notable
 
@@ -220,7 +254,15 @@ See the end of this file (filled after the runs completed).
   the FV argmax inside a flat plateau is roundoff-random, so `nitrate_peak.bv` is the preceding
   shock's crossing. For dev_05 the location label says `front[3]` because the roundoff argmax of
   the cell history fell just past the detected plateau end; the value and the shock-based BV are right.
-* dev_02 initial plateau is only 33 BV long and was merged into the first wave at N = 1000.
+* dev_02 initial plateau is only 33 BV long and was merged into the first wave at N = 1000 with the
+  first flatness window; the window was then tightened to `W = max(5e-4 run_bv, 4 run_bv/N)` and
+  all summaries re-analysed (`--analyze-only`), after which every plateau of dev_01..07 is found at
+  all three levels; dev_08's 27-BV plateau is still missed at N = 1000.
+* Composite fronts (dev_07): a spreading wave that ends in a shock has no plateau between them, so
+  the detector reports one front; `richardson.py` labels it composite when the part of the leading
+  ion's change outside the steep sub-interval exceeds 2 % and its extent does not shrink with N, and
+  extrapolates the shock part's own midpoint (`steep_parts_extrapolated`). Samples inside spreading
+  waves converge at first order (p 0.75 .. 1.0) and carry 1e-4 .. 5e-4 before extrapolation.
 * dev_02 nitrate peak is at run_bv inside an unfinished spreading wave, so it converges only at
   first order (+-5e-4 after extrapolation); an exact solver's value should lie within that.
 * Precursor tails: ions that have not yet broken through carry positive values down to 1e-300 in the

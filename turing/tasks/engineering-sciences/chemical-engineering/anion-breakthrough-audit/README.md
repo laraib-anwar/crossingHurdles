@@ -97,20 +97,48 @@ time and selects witnesses on which they differ by more than the tolerance (five
 ## Verification
 
 Expected values come from `tests/reference/reference.py`, written by a separate agent from the
-spec alone and forbidden from using the h-transformation: it works on the conserved variables
-with a numerical Jacobian and eigen-decomposition, integrates rarefaction curves as ODEs at
-rtol 1e-12, solves Rankine-Hugoniot conditions by Newton with the Lax admissibility test, builds
-the Riemann solution by nested root finding on the wave curves, and tracks interactions by
-event-driven integration. A third code, a conservative second-order finite-volume solver with
-Richardson extrapolation, served as a referee for the structure (number and kind of waves,
-plateaus, roll-up) during development; its results are summarised under "Reproducing the
-reference values".
+spec alone and forbidden from using the h-transformation or Riemann invariants: it works on the
+reduced three-component system with an analytic Jacobian and `numpy.linalg.eig`, integrates
+rarefaction curves as eigenvector ODEs (DOP853, rtol 1e-12), solves Rankine-Hugoniot conditions
+by Newton with the Lax admissibility test, builds each Riemann solution by nested root finding
+over the three wave strengths with wave-ordering validation, and tracks interactions in the
+(position, bed volume) plane: shock-shock re-solves, a shock through a spreading wave as an ODE
+with the unknown side free along all non-shock eigendirections (the reflected components come
+out at 1e-14, which independently confirms the simple-wave structure the oracle assumes),
+same-family absorption, and spreading-wave crossings as a Goursat problem by Chebyshev
+collocation (N = 18, with an N = 13 solve as the error estimate). Its own evidence: rarefaction
+curves straight to 1e-17 (emergent, not assumed), jump-condition residuals at most 4e-14,
+integral mass balance closed to 7e-12 bed volumes, graded numbers insensitive to its ODE
+tolerance between 1e-8 and 1e-13 (changes at most 9e-15), and a crude upwind finite-volume
+solve agreeing on wave counts, kinds and plateaus. It takes 0.5 to 10.6 s per recipe on one CPU.
+During development it caught one real defect in the oracle (a same-family absorption that was
+skipped when the merged front sat at the leading end of its chain, on `held_14`); after the fix
+the two codes agree on every recipe.
+
+A third code, a conservative finite-volume solver (conserved variable `eps x + Lambda y`,
+upwind flux, MUSCL with a cell-common minmod limiter, SSP-RK2, CFL 0.4 on the tracked maximum
+characteristic speed, exact inversion of the conserved variable), run at 1000, 2000 and 4000
+cells with Richardson extrapolation, served as a referee for the structure on the eight
+development recipes (base case, pre-loaded resins, elution, absent ion, nitrate-selective
+resin, and three feed changes with crossing and absorbing waves). It classifies fronts by how
+their 10-90 % width scales with resolution (halving: shock; constant: spreading wave), and it
+reproduces the exact solution's structure in every case: the same numbers of shocks and
+spreading waves, plateau compositions equal to the invariant values to 1e-9 at 1000 cells,
+shock positions within its own extrapolation error (519.944 +- 0.019 against the exact 519.9441
+in the base case; 467.315 +- 0.017 and 561.591 +- 0.020 for the merged shocks after a feed
+change; 492.373 +- 0.05 for a shock that absorbs a spreading wave right up to the outlet), the
+same roll-ups (nitrate at 2.91 meq/L against a 0.7 meq/L feed after the feed change), and the
+same composite "spreading wave ending in a shock". Its mass balance closes to 1e-9. Where it is
+weak is instructive: the edges of spreading waves are located only to a few bed volumes, and
+compositions inside them converge at first order (1e-4 to 5e-4 meq/L at 4000 cells, after
+17 to 29 minutes per recipe), which is why a dispersive solver cannot meet the tolerances
+within the 60 s call limit and why the exact solution is required.
 
 Agreement of the two exact codes over the 28 recipes (every structure identical):
 
 | Quantity | Largest difference |
 | --- | --- |
-| any bed volume (shocks, wave edges, plateau edges, peak, limit) | 4.6e-13 relative |
+| any bed volume (shocks, wave edges, plateau edges, peak, limit) | 1.8e-12 relative |
 | any composition entry (meq/L) | 1.3e-11 |
 
 Tests (`tests/test_outputs.py`, hardened runner from the project template: unprivileged uid,
@@ -131,9 +159,9 @@ with every failure in the call phase; `conftest.py` preserves parametrised nodes
 
 | Graded quantity | Tolerance | Agreement of the two codes | Basis |
 | --- | --- | --- | --- |
-| bed volume of a shock, wave edge, plateau edge, peak or limit crossing | max(2e-4 relative, 1e-6) | 4.6e-13 | nearest wrong answer: the sharp-front control is off by at least 7.4e-4 on a shock it places (3.7 tolerances) and the superposition control by at least 8.7e-4; the closest pair of distinct events in any recipe is 7.4e-4 apart (`held_09`) |
+| bed volume of a shock, wave edge, plateau edge, peak or limit crossing | max(2e-4 relative, 1e-6) | 1.8e-12 | nearest wrong answer: the sharp-front control is off by at least 7.4e-4 on a shock it places (3.7 tolerances) and the superposition control by at least 8.7e-4; the closest pair of distinct events in any recipe is 7.4e-4 apart (`held_09`) |
 | composition entry (meq/L) | 1e-4 absolute | 1.3e-11 | nearest wrong answer: the legacy script is off by at least 3.3e-4 on any plateau it gets wrong; the sharp-front control comes within 1.1e-4 on one sample inside a wave it misrepresents while failing that recipe elsewhere; roll-up plateaus differ from the clamped value by 0.3 to 2 meq/L |
-| `nitrate_limit_bv` | as a bed volume; `null` exact | 4.6e-13 | crossings inside spreading waves are screened to have slope at least 5e-3 meq/L per BV, so a 1e-4 meq/L composition error moves the crossing by at most 0.02 BV |
+| `nitrate_limit_bv` | as a bed volume; `null` exact | 1.8e-12 | crossings inside spreading waves are screened to have slope at least 5e-3 meq/L per BV, so a 1e-4 meq/L composition error moves the crossing by at most 0.02 BV |
 | counts of shocks, transitions, plateaus | exact | identical | the sharp-front control reports no transitions; the legacy one front per ion |
 
 ### Wrong-method controls
@@ -145,17 +173,17 @@ compare functions on all 28 recipes against the reference values:
 | --- | --- | --- | --- |
 | legacy script | sharp fronts, component-wise stoichiometry, superposition | 0 / 28 | 1.8e-3 relative (BV), 3.3e-4 meq/L |
 | all-shock | the exact Riemann structure with every spreading wave collapsed to one front at its jump-condition position | 3 / 28 (the recipes with no spreading wave) | 7.4e-4 relative, 1.1e-4 meq/L |
-| clamp | the exact history with every effluent concentration capped at the influent value | 1 / 28 (the recipe without roll-up) | 6.5e-2 relative on the limit crossing |
-| superposition | both feeds solved as independent Riemann problems, no interactions | 23 / 28 (all single-feed recipes, the late switch and the unseen switch) | 8.7e-4 relative |
+| clamp | the exact history with every effluent concentration capped at the influent value | 1 / 28 (the recipe without roll-up) | 6.5e-2 relative on the limit crossing, 6.2e-4 meq/L |
+| superposition | both feeds solved as independent Riemann problems, no interactions | 23 / 28 (all single-feed recipes, the late switch and the unseen switch) | 8.7e-4 relative, 1.15e-4 meq/L |
 
 ### Runs
 
 | Check | Result |
 | --- | --- |
-| oracle, `docker run --network none --cpus=1 --memory=2048m` with `solve.sh` | all three artifacts written in 24 s |
-| verifier image on the oracle's artifacts, `--cpus=1 --memory=2048m`, no network | 30 passed, reward 1, 100 s |
+| oracle, `docker run --network none --cpus=1 --memory=2048m` with `solve.sh` | all three artifacts written in 15 s |
+| verifier image on the oracle's artifacts, `--cpus=1 --memory=2048m`, no network | 30 passed, reward 1, 61 s (two independent oracle runs gave identical reports) |
 | verifier on an empty results directory | 30 failed, reward 0 |
-| FIFOs planted at the three artifact paths | 30 failed in 7 s, reward 0, no hang (`not a regular file`) |
+| FIFOs planted at the three artifact paths | 30 failed in 3 s, reward 0, no hang (`not a regular file`) |
 | Harbor 0.24 `oracle` / `nop` (local, Docker in a Colima VM on macOS) | the agent phase runs and all three artifacts are collected (oracle trial 1 min 19 s); the verifier then stops at `test.sh`'s lockdown self-check, because the VM's virtiofs and 9p bind mounts of `/logs/verifier` ignore `chmod`, so the check correctly refuses to grade in that environment (reward 0 for both). On a Linux Docker host the same bind mount honours `chmod 700` and the check passes, as it did for the two earlier tasks built on this template; the plain-Docker rows above are the grading evidence from this machine |
 | OpenBLAS kernels `OPENBLAS_CORETYPE` = default, Prescott, SandyBridge, Zen on all 28 recipes | byte-identical reports under all four (the method uses no BLAS beyond scalar work; the SkylakeX kernel needs AVX-512, which the development machine lacks, so it could not be run) |
 

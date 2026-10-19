@@ -1,0 +1,2146 @@
+{
+ "recipe_id": "dev_08",
+ "ions": [
+  "chloride",
+  "nitrate",
+  "sulfate",
+  "bicarbonate"
+ ],
+ "cells": [
+  1000,
+  2000,
+  4000
+ ],
+ "levels_used_for_extrapolation": [
+  1000,
+  2000,
+  4000
+ ],
+ "scheme": {
+  "order": 2,
+  "limiter": "minmod",
+  "cfl": 0.4,
+  "rk": 2
+ },
+ "timings": {
+  "1000": {
+   "runtime_s": 121.66685104370117,
+   "n_steps": 71091,
+   "dt_min": 0.0033063057554443276,
+   "dt_max": 0.03377742068229143,
+   "steady_state_exit_bv": null,
+   "max_abs_mass_balance_error": 9.57811607804615e-11,
+   "inversion_failures": 0
+  },
+  "2000": {
+   "runtime_s": 772.0260450839996,
+   "n_steps": 142861,
+   "dt_min": 0.0012556700256709519,
+   "dt_max": 0.01687999353348787,
+   "steady_state_exit_bv": null,
+   "max_abs_mass_balance_error": 8.100187187665142e-11,
+   "inversion_failures": 0
+  },
+  "4000": {
+   "runtime_s": 1661.2767262458801,
+   "n_steps": 286341,
+   "dt_min": 0.00035137042405608554,
+   "dt_max": 0.008438197551891883,
+   "steady_state_exit_bv": null,
+   "max_abs_mass_balance_error": 4.4849457481177524e-11,
+   "inversion_failures": 0
+  }
+ },
+ "structure_fine_level": [
+  "plateau[0] 0.00-43.32: [1.69473, 0.79441, 0.37247, 3.13839]",
+  "front[0] 43.32-46.70: shock (width ~ 1/N) (lead bicarbonate, jump [2.2092, 0.653, 0.2761, -3.1384])",
+  "plateau[1] 46.70-132.30: [3.90395, 1.44745, 0.6486, 0.0]",
+  "front[1] 132.30-165.35: spreading wave (width independent of N) (lead bicarbonate, jump [-1.3013, -0.3847, -0.1627, 1.8486])",
+  "plateau[2] 165.35-192.69: [2.60263, 1.06278, 0.48595, 1.84864]",
+  "front[2] 192.69-671.83: spreading wave (width independent of N) (lead chloride, jump [1.1878, -1.0628, -0.2504, 0.1254])",
+  "plateau[3] 671.83-1319.75: [3.79044, 0.0, 0.23552, 1.97405]",
+  "front[3] 1319.75-1600.00: spreading wave (width independent of N) (lead sulfate, jump [0.0564, -0.0, -0.0633, 0.007])"
+ ],
+ "n_plateaus_per_level": {
+  "1000": 3,
+  "2000": 4,
+  "4000": 4
+ },
+ "n_fronts_per_level": {
+  "1000": 3,
+  "2000": 4,
+  "4000": 4
+ },
+ "plateaus": [
+  {
+   "index": 0,
+   "bv_start_fine": 0.0,
+   "bv_end_fine": 43.32010830027075,
+   "bv_start_levels": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "bv_end_levels": [
+    38.26055154273014,
+    41.6347301407307,
+    43.32010830027075
+   ],
+   "composition_meq_per_L": [
+    {
+     "fine_value": 1.6947323420474967,
+     "diff_two_finest": 2.8199664825478976e-14,
+     "levels": [
+      1.6947323420475413,
+      1.6947323420474685,
+      1.6947323420474967
+     ],
+     "value": 1.6947323420474967,
+     "error": 7.283063041541027e-14,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.7944057853347004,
+     "diff_two_finest": 1.1657341758564144e-14,
+     "levels": [
+      0.794405785334756,
+      0.7944057853347121,
+      0.7944057853347004
+     ],
+     "value": 0.7944057853347004,
+     "error": 4.39648317751562e-14,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.37246864660387413,
+     "diff_two_finest": 2.098321516541546e-14,
+     "levels": [
+      0.3724686466038437,
+      0.37246864660385315,
+      0.37246864660387413
+     ],
+     "value": 0.37246864660387413,
+     "error": 2.098321516541546e-14,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 3.138393226014075,
+     "diff_two_finest": 3.8191672047105385e-14,
+     "levels": [
+      3.1383932260138923,
+      3.138393226014037,
+      3.138393226014075
+     ],
+     "value": 3.138393226014075,
+     "error": 1.4477308241112041e-13,
+     "observed_order": null,
+     "flag": "converged"
+    }
+   ],
+   "spread_fine": 0.0,
+   "matched_in_all_levels": true,
+   "n_plateaus_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 1,
+   "bv_start_fine": 46.69611674029185,
+   "bv_end_fine": 132.29633074082685,
+   "bv_start_levels": [
+    51.753022513239976,
+    48.376924503802634,
+    46.69611674029185
+   ],
+   "bv_end_levels": [
+    125.9559862993466,
+    130.12883107065232,
+    132.29633074082685
+   ],
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.9039498563366495,
+     "diff_two_finest": 2.5002222514558525e-13,
+     "levels": [
+      3.9039498563373596,
+      3.9039498563368995,
+      3.9039498563366495
+     ],
+     "value": 3.9039498563366495,
+     "error": 4.600764214046649e-13,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 1.447451230391386,
+     "diff_two_finest": 2.6645352591003757e-15,
+     "levels": [
+      1.4474512303914027,
+      1.4474512303913887,
+      1.447451230391386
+     ],
+     "value": 1.447451230391386,
+     "error": 1.3988810110276972e-14,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.6485989132715443,
+     "diff_two_finest": 2.531308496145357e-14,
+     "levels": [
+      0.6485989132714225,
+      0.648598913271519,
+      0.6485989132715443
+     ],
+     "value": 0.6485989132715443,
+     "error": 9.64783808399261e-14,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 4.135010552555101e-17,
+     "diff_two_finest": 2.3140696874535635e-17,
+     "levels": [
+      5.0962541480446656e-17,
+      6.449080240008664e-17,
+      4.135010552555101e-17
+     ],
+     "value": 4.135010552555101e-17,
+     "error": 2.3140696874535635e-17,
+     "observed_order": null,
+     "flag": "converged"
+    }
+   ],
+   "spread_fine": 5.591321717694876e-15,
+   "matched_in_all_levels": true,
+   "n_plateaus_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 2,
+   "bv_start_fine": 165.34841337103342,
+   "bv_end_fine": 192.69248173120434,
+   "bv_start_levels": [
+    null,
+    168.2916671041533,
+    165.34841337103342
+   ],
+   "bv_end_levels": [
+    null,
+    188.0926631737732,
+    192.69248173120434
+   ],
+   "composition_meq_per_L": [
+    {
+     "value": 2.6026332373623706,
+     "error": null,
+     "fine_value": 2.6026332373623706,
+     "diff_two_finest": null,
+     "observed_order": null,
+     "levels": [
+      null,
+      2.6026332372797807,
+      2.6026332373623706
+     ],
+     "flag": "missing level"
+    },
+    {
+     "value": 1.0627815973183292,
+     "error": null,
+     "fine_value": 1.0627815973183292,
+     "diff_two_finest": null,
+     "observed_order": null,
+     "levels": [
+      null,
+      1.062781597293819,
+      1.0627815973183292
+     ],
+     "flag": "missing level"
+    },
+    {
+     "value": 0.4859472491899564,
+     "error": null,
+     "fine_value": 0.4859472491899564,
+     "diff_two_finest": null,
+     "observed_order": null,
+     "levels": [
+      null,
+      0.4859472491796051,
+      0.4859472491899564
+     ],
+     "flag": "missing level"
+    },
+    {
+     "value": 1.8486379161293416,
+     "error": null,
+     "fine_value": 1.8486379161293416,
+     "diff_two_finest": null,
+     "observed_order": null,
+     "levels": [
+      null,
+      1.8486379162467965,
+      1.8486379161293416
+     ],
+     "flag": "missing level"
+    }
+   ],
+   "spread_fine": 2.4965025602341484e-09,
+   "matched_in_all_levels": false,
+   "n_plateaus_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 3,
+   "bv_start_fine": 671.829679574199,
+   "bv_end_fine": 1319.7512993782484,
+   "bv_start_levels": [
+    699.9880435776429,
+    682.3279889963355,
+    671.829679574199
+   ],
+   "bv_end_levels": [
+    1267.6846036445988,
+    1301.4507057534745,
+    1319.7512993782484
+   ],
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.790435989801978,
+     "diff_two_finest": 1.7745804825608502e-12,
+     "levels": [
+      3.7904359898165816,
+      3.7904359898037527,
+      3.790435989801978
+     ],
+     "value": 3.7904359898016935,
+     "error": 2.8466118351389014e-13,
+     "observed_order": 2.8538418371562218,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 3.045308475158658e-22,
+     "diff_two_finest": 2.2213430075078686e-21,
+     "levels": [
+      2.299013422294706e-22,
+      2.5258738550237343e-21,
+      3.045308475158658e-22
+     ],
+     "value": 3.045308475158658e-22,
+     "error": 2.2959725127942635e-21,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.2355162463397289,
+     "diff_two_finest": 6.084022174945858e-14,
+     "levels": [
+      0.2355162463403286,
+      0.23551624633978974,
+      0.2355162463397289
+     ],
+     "value": 0.2355162463397289,
+     "error": 5.388745005774354e-13,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 1.9740477638583183,
+     "diff_two_finest": 1.894262524615442e-12,
+     "levels": [
+      1.9740477638430847,
+      1.974047763856424,
+      1.9740477638583183
+     ],
+     "value": 1.9740477638586318,
+     "error": 3.135269821541442e-13,
+     "observed_order": 2.815977974719859,
+     "flag": "extrapolated"
+    }
+   ],
+   "spread_fine": 1.5244561168969994e-09,
+   "matched_in_all_levels": true,
+   "n_plateaus_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  }
+ ],
+ "fronts": [
+  {
+   "index": 0,
+   "bv_start_fine": 43.32010830027075,
+   "bv_end_fine": 46.69611674029185,
+   "cut_by_window_end": false,
+   "leading_ion": "bicarbonate",
+   "before_meq_per_L_fine": [
+    1.6947323420474967,
+    0.7944057853347004,
+    0.37246864660387413,
+    3.138393226014075
+   ],
+   "after_meq_per_L_fine": [
+    3.9039498563366495,
+    1.447451230391386,
+    0.6485989132715443,
+    4.135010552555101e-17
+   ],
+   "jump_meq_per_L_fine": [
+    2.209217514289153,
+    0.6530454450566856,
+    0.27613026666767015,
+    -3.138393226014075
+   ],
+   "width_10_90_leading_ion_bv_per_level": {
+    "1000": 0.07775118589135843,
+    "2000": 0.03889765172327486,
+    "4000": 0.019512204939843514
+   },
+   "width_ratio_consecutive_levels": [
+    1.9988658041491771,
+    1.9935036477526265
+   ],
+   "kind_from_width_scaling": "shock (width ~ 1/N)",
+   "kind_single_resolution_per_level": {
+    "1000": "shock_like",
+    "2000": "shock_like",
+    "4000": "shock_like"
+   },
+   "steep_fraction_per_level": {
+    "1000": 1.0,
+    "2000": 1.0,
+    "4000": 0.9800429479716014
+   },
+   "steep_parts_fine": [
+    {
+     "bv_start": 44.99611249028123,
+     "bv_end": 45.02811257028142,
+     "jump_meq_per_L": [
+      2.1651280454149973,
+      0.6400125831328323,
+      0.27061952056910865,
+      -3.0757601491169386
+     ],
+     "fraction_of_front_jump_leading_ion": 0.9800429479716014,
+     "leading_ion": "bicarbonate",
+     "bv_mid": 45.00692401611267,
+     "before_meq_per_L": [
+      1.6899471066378926,
+      0.7929912681278555,
+      0.3718705396627341,
+      3.1451910855715184
+     ],
+     "after_meq_per_L": [
+      3.8550751520528896,
+      1.4330038512606877,
+      0.6424900602318427,
+      0.06943093645457957
+     ]
+    }
+   ],
+   "steep_parts_extrapolated": [
+    {
+     "bv_start_fine": 44.99611249028123,
+     "bv_end_fine": 45.02811257028142,
+     "leading_ion": "bicarbonate",
+     "jump_meq_per_L_fine": [
+      2.1651280454149973,
+      0.6400125831328323,
+      0.27061952056910865,
+      -3.0757601491169386
+     ],
+     "before_fine": [
+      1.6899471066378926,
+      0.7929912681278555,
+      0.3718705396627341,
+      3.1451910855715184
+     ],
+     "after_fine": [
+      3.8550751520528896,
+      1.4330038512606877,
+      0.6424900602318427,
+      0.06943093645457957
+     ],
+     "bv_mid": {
+      "fine_value": 45.00692401611267,
+      "diff_two_finest": 0.0022622680205657275,
+      "levels": [
+       45.00042020885415,
+       45.004661748092104,
+       45.00692401611267
+      ],
+      "value": 45.00950974390577,
+      "error": 0.002585727793096737,
+      "observed_order": 0.9068180464759492,
+      "flag": "extrapolated"
+     },
+     "bv_mid_levels": {
+      "1000": 45.00042020885415,
+      "2000": 45.004661748092104,
+      "4000": 45.00692401611267
+     }
+    }
+   ],
+   "gentle_part": {
+    "gentle_change_leading_ion": -0.0626330768971366,
+    "gentle_extent_per_level": {
+     "1000": 13.346180626375869,
+     "2000": 6.6693965834042075,
+     "4000": 3.3440083600209007
+    },
+    "gentle_extent_ratio_two_finest": 1.9944317912418503
+   },
+   "shock_bv_midpoint_crossing": {
+    "chloride": {
+     "fine_value": 45.00715963912409,
+     "diff_two_finest": 0.0016618207150429498,
+     "levels": [
+      45.00222759450389,
+      45.00549781840905,
+      45.00715963912409
+     ],
+     "value": 45.008876651441604,
+     "error": 0.0017170123175134222,
+     "observed_order": 0.9766246714682255,
+     "flag": "extrapolated"
+    },
+    "nitrate": {
+     "fine_value": 45.00715963912409,
+     "diff_two_finest": 0.0016618207150500552,
+     "levels": [
+      45.00222759450388,
+      45.00549781840904,
+      45.00715963912409
+     ],
+     "value": 45.00887665144162,
+     "error": 0.001717012317527633,
+     "observed_order": 0.9766246714651916,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 45.0071596391241,
+     "diff_two_finest": 0.0016618207150429498,
+     "levels": [
+      45.002227594503886,
+      45.005497818409054,
+      45.0071596391241
+     ],
+     "value": 45.0088766514416,
+     "error": 0.0017170123174992113,
+     "observed_order": 0.9766246714744947,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 45.00715963912409,
+     "diff_two_finest": 0.0016618207150429498,
+     "levels": [
+      45.002227594503886,
+      45.00549781840905,
+      45.00715963912409
+     ],
+     "value": 45.0088766514416,
+     "error": 0.0017170123175063168,
+     "observed_order": 0.9766246714713601,
+     "flag": "extrapolated"
+    }
+   },
+   "shock_bv_midpoint_crossing_cell_history": {
+    "chloride": {
+     "fine_value": 45.00397695890132,
+     "diff_two_finest": 0.004816847840046989,
+     "levels": [
+      44.98951391006426,
+      44.99916011106127,
+      45.00397695890132
+     ],
+     "value": 45.008781333806205,
+     "error": 0.004804374904885833,
+     "observed_order": 1.0018715205307622,
+     "flag": "extrapolated"
+    },
+    "nitrate": {
+     "fine_value": 45.00397695890132,
+     "diff_two_finest": 0.004816847840046989,
+     "levels": [
+      44.98951391006425,
+      44.99916011106127,
+      45.00397695890132
+     ],
+     "value": 45.00878133380619,
+     "error": 0.004804374904871622,
+     "observed_order": 1.0018715205328876,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 45.003976958901326,
+     "diff_two_finest": 0.004816847840046989,
+     "levels": [
+      44.98951391006425,
+      44.99916011106128,
+      45.003976958901326
+     ],
+     "value": 45.00878133380619,
+     "error": 0.004804374904864517,
+     "observed_order": 1.0018715205339503,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 45.00397695890132,
+     "diff_two_finest": 0.004816847840046989,
+     "levels": [
+      44.989513910064254,
+      44.99916011106127,
+      45.00397695890132
+     ],
+     "value": 45.0087813338062,
+     "error": 0.004804374904878728,
+     "observed_order": 1.0018715205318252,
+     "flag": "extrapolated"
+    }
+   },
+   "onset_bv10": {
+    "chloride": {
+     "fine_value": 44.99944675810552,
+     "diff_two_finest": 0.009264795035235807,
+     "levels": [
+      44.97124944235154,
+      44.990181963070285,
+      44.99944675810552
+     ],
+     "value": 45.00832541580175,
+     "error": 0.008878657696229197,
+     "observed_order": 1.0310355424973854,
+     "flag": "extrapolated"
+    },
+    "nitrate": {
+     "fine_value": 44.99944675810552,
+     "diff_two_finest": 0.009264795035235807,
+     "levels": [
+      44.97124944235154,
+      44.990181963070285,
+      44.99944675810552
+     ],
+     "value": 45.00832541580175,
+     "error": 0.008878657696229197,
+     "observed_order": 1.0310355424973854,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 44.99944675810553,
+     "diff_two_finest": 0.009264795035235807,
+     "levels": [
+      44.97124944235154,
+      44.99018196307029,
+      44.99944675810553
+     ],
+     "value": 45.00832541580176,
+     "error": 0.008878657696229197,
+     "observed_order": 1.031035542497927,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 44.99944675810552,
+     "diff_two_finest": 0.009264795035235807,
+     "levels": [
+      44.97124944235154,
+      44.990181963070285,
+      44.99944675810552
+     ],
+     "value": 45.00832541580175,
+     "error": 0.008878657696229197,
+     "observed_order": 1.0310355424973854,
+     "flag": "extrapolated"
+    }
+   },
+   "finish_bv90": {
+    "chloride": {
+     "fine_value": 45.01895896304536,
+     "diff_two_finest": 0.010120651748195542,
+     "levels": [
+      45.049000628242936,
+      45.02907961479355,
+      45.01895896304536
+     ],
+     "value": 45.00850755370647,
+     "error": 0.010451409338884332,
+     "observed_order": 0.9769888445728572,
+     "flag": "extrapolated"
+    },
+    "nitrate": {
+     "fine_value": 45.01895896304536,
+     "diff_two_finest": 0.010120651748188436,
+     "levels": [
+      45.04900062824287,
+      45.029079614793545,
+      45.01895896304536
+     ],
+     "value": 45.00850755370643,
+     "error": 0.010451409338926965,
+     "observed_order": 0.9769888445697534,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 45.018958963045385,
+     "diff_two_finest": 0.010120651748216858,
+     "levels": [
+      45.04900062824289,
+      45.0290796147936,
+      45.018958963045385
+     ],
+     "value": 45.00850755370633,
+     "error": 0.010451409339054862,
+     "observed_order": 0.9769888445626144,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 45.018958963045364,
+     "diff_two_finest": 0.010120651748195542,
+     "levels": [
+      45.0490006282429,
+      45.02907961479356,
+      45.018958963045364
+     ],
+     "value": 45.00850755370643,
+     "error": 0.01045140933893407,
+     "observed_order": 0.9769888445697696,
+     "flag": "extrapolated"
+    }
+   },
+   "per_ion_width_10_90_bv_per_level": {
+    "chloride": {
+     "1000": 0.07775118589139396,
+     "2000": 0.03889765172326776,
+     "4000": 0.01951220493983641
+    },
+    "nitrate": {
+     "1000": 0.07775118589133001,
+     "2000": 0.03889765172326065,
+     "4000": 0.01951220493983641
+    },
+    "sulfate": {
+     "1000": 0.07775118589134422,
+     "2000": 0.03889765172331039,
+     "4000": 0.019512204939857725
+    },
+    "bicarbonate": {
+     "1000": 0.07775118589135843,
+     "2000": 0.03889765172327486,
+     "4000": 0.019512204939843514
+    }
+   },
+   "monotonicity_fine": {
+    "chloride": {
+     "min_in_front_cell": 1.6947323420475,
+     "max_in_front_cell": 3.903949856337097,
+     "overshoot_beyond_ends_cell": 4.476419235288631e-13,
+     "overshoot_beyond_ends_face": 0.078009184272672
+    },
+    "nitrate": {
+     "min_in_front_cell": 0.7944057853347655,
+     "max_in_front_cell": 1.447451230391464,
+     "overshoot_beyond_ends_cell": 7.793765632868599e-14,
+     "overshoot_beyond_ends_face": 0.02305954127749088
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.3724686466038461,
+     "max_in_front_cell": 0.6485989132714396,
+     "overshoot_beyond_ends_cell": 2.8033131371785203e-14,
+     "overshoot_beyond_ends_face": 0.00975037392944278
+    },
+    "bicarbonate": {
+     "min_in_front_cell": -4.2914545344232276e-16,
+     "max_in_front_cell": 3.1383932260138883,
+     "overshoot_beyond_ends_cell": 4.704955589678738e-16,
+     "overshoot_beyond_ends_face": 0.11081909947946045
+    }
+   },
+   "matched_in_all_levels": true,
+   "n_fronts_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 1,
+   "bv_start_fine": 132.29633074082685,
+   "bv_end_fine": 165.34841337103342,
+   "cut_by_window_end": false,
+   "leading_ion": "bicarbonate",
+   "before_meq_per_L_fine": [
+    3.9039498563366495,
+    1.447451230391386,
+    0.6485989132715443,
+    4.135010552555101e-17
+   ],
+   "after_meq_per_L_fine": [
+    2.6026332373623706,
+    1.0627815973183292,
+    0.4859472491899564,
+    1.8486379161293416
+   ],
+   "jump_meq_per_L_fine": [
+    -1.3013166189742789,
+    -0.3846696330730568,
+    -0.16265166408158788,
+    1.8486379161293416
+   ],
+   "width_10_90_leading_ion_bv_per_level": {
+    "1000": 24.565536681663332,
+    "2000": 21.60905165891478,
+    "4000": 21.50098802706907
+   },
+   "width_ratio_consecutive_levels": [
+    1.1368169723232098,
+    1.0050259844668377
+   ],
+   "kind_from_width_scaling": "spreading wave (width independent of N)",
+   "kind_single_resolution_per_level": {
+    "1000": "spreading",
+    "2000": "spreading",
+    "4000": "spreading"
+   },
+   "steep_fraction_per_level": {
+    "1000": 0.0,
+    "2000": 0.0,
+    "4000": 0.0
+   },
+   "steep_parts_fine": [],
+   "steep_parts_extrapolated": [],
+   "gentle_part": null,
+   "shock_bv_midpoint_crossing": {
+    "chloride": {
+     "fine_value": 145.42475154799493,
+     "diff_two_finest": 0.012650720352269218,
+     "levels": [
+      135.04780502041686,
+      145.41210082764266,
+      145.42475154799493
+     ],
+     "value": 145.42655879375954,
+     "error": 0.0018072457646098883,
+     "observed_order": 9.678186845196151,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 145.42475154802983,
+     "diff_two_finest": 0.012650720344339561,
+     "levels": [
+      279.4472413385719,
+      145.4121008276855,
+      145.42475154802983
+     ],
+     "value": 145.42475154802983,
+     "error": 134.03514051088644,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "sulfate": {
+     "fine_value": 145.42475154800664,
+     "diff_two_finest": 0.012650720344225874,
+     "levels": [
+      238.81011900293635,
+      145.4121008276624,
+      145.42475154800664
+     ],
+     "value": 145.42475154800664,
+     "error": 93.39801817527393,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "bicarbonate": {
+     "fine_value": 145.42475154800033,
+     "diff_two_finest": 0.012650720348375444,
+     "levels": [
+      146.30250456853946,
+      145.41210082765195,
+      145.42475154800033
+     ],
+     "value": 145.42475154800033,
+     "error": 0.890403740887507,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   },
+   "shock_bv_midpoint_crossing_cell_history": {
+    "chloride": {
+     "fine_value": 145.42044960765529,
+     "diff_two_finest": 0.01691716782096364,
+     "levels": [
+      135.03419137475845,
+      145.40353243983432,
+      145.42044960765529
+     ],
+     "value": 145.42286634591542,
+     "error": 0.002416738260137663,
+     "observed_order": 9.259620442944726,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 145.42044960769016,
+     "diff_two_finest": 0.016917167813033984,
+     "levels": [
+      279.28716306327607,
+      145.40353243987713,
+      145.42044960769016
+     ],
+     "value": 145.42044960769016,
+     "error": 133.88363062339894,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "sulfate": {
+     "fine_value": 145.42044960766705,
+     "diff_two_finest": 0.01691716781297714,
+     "levels": [
+      238.6699330608628,
+      145.40353243985408,
+      145.42044960766705
+     ],
+     "value": 145.42044960766705,
+     "error": 93.26640062100873,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "bicarbonate": {
+     "fine_value": 145.42044960766071,
+     "diff_two_finest": 0.01691716781709829,
+     "levels": [
+      146.28501977062817,
+      145.40353243984362,
+      145.42044960766071
+     ],
+     "value": 145.42044960766071,
+     "error": 0.8814873307845517,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   },
+   "onset_bv10": {
+    "chloride": {
+     "fine_value": 136.54410597289186,
+     "diff_two_finest": 0.05641353148871531,
+     "levels": [
+      133.98760107275024,
+      136.48769244140314,
+      136.54410597289186
+     ],
+     "value": 136.5521650488188,
+     "error": 0.008059075926951209,
+     "observed_order": 5.469795758018279,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 136.54410597289527,
+     "diff_two_finest": 0.056413531485191015,
+     "levels": [
+      142.30489214711085,
+      136.48769244141008,
+      136.54410597289527
+     ],
+     "value": 136.54410597289527,
+     "error": 5.817199705700773,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "sulfate": {
+     "fine_value": 136.54410597287858,
+     "diff_two_finest": 0.05641353148260464,
+     "levels": [
+      139.52754231703096,
+      136.48769244139598,
+      136.54410597287858
+     ],
+     "value": 136.54410597287858,
+     "error": 3.039849875634985,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "bicarbonate": {
+     "fine_value": 136.54410597288748,
+     "diff_two_finest": 0.056413531485333124,
+     "levels": [
+      136.47270437395844,
+      136.48769244140215,
+      136.54410597288748
+     ],
+     "value": 136.54410597288748,
+     "error": 0.056413531485333124,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   },
+   "finish_bv90": {
+    "chloride": {
+     "fine_value": 158.04509399992943,
+     "diff_two_finest": 0.05165010035725004,
+     "levels": [
+      135.88458790740947,
+      158.09674410028668,
+      158.04509399992943
+     ],
+     "value": 158.04509399992943,
+     "error": 22.212156192877217,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "nitrate": {
+     "fine_value": 158.0450940000362,
+     "diff_two_finest": 0.051650100366146035,
+     "levels": [
+      542.0384902606427,
+      158.09674410040233,
+      158.0450940000362
+     ],
+     "value": 158.0377154142696,
+     "error": 0.00737858576658823,
+     "observed_order": 12.859828660620346,
+     "flag": "extrapolated (order clipped)"
+    },
+    "sulfate": {
+     "fine_value": 158.04509399999642,
+     "diff_two_finest": 0.051650100364838636,
+     "levels": [
+      521.3043533512723,
+      158.09674410036126,
+      158.04509399999642
+     ],
+     "value": 158.03771541423,
+     "error": 0.0073785857664177,
+     "observed_order": 12.779735654668192,
+     "flag": "extrapolated (order clipped)"
+    },
+    "bicarbonate": {
+     "fine_value": 158.04509399995655,
+     "diff_two_finest": 0.05165010036037643,
+     "levels": [
+      161.03824105562177,
+      158.09674410031693,
+      158.04509399995655
+     ],
+     "value": 158.03771541419079,
+     "error": 0.007378585765764001,
+     "observed_order": 5.831635580349073,
+     "flag": "extrapolated (order clipped)"
+    }
+   },
+   "per_ion_width_10_90_bv_per_level": {
+    "chloride": {
+     "1000": 1.8969868346592307,
+     "2000": 21.609051658883544,
+     "4000": 21.50098802703758
+    },
+    "nitrate": {
+     "1000": 399.7335981135318,
+     "2000": 21.609051658992257,
+     "4000": 21.50098802714092
+    },
+    "sulfate": {
+     "1000": 381.77681103424135,
+     "2000": 21.609051658965285,
+     "4000": 21.50098802711784
+    },
+    "bicarbonate": {
+     "1000": 24.565536681663332,
+     "2000": 21.60905165891478,
+     "4000": 21.50098802706907
+    }
+   },
+   "monotonicity_fine": {
+    "chloride": {
+     "min_in_front_cell": 2.602628394721786,
+     "max_in_front_cell": 3.9039498563370953,
+     "overshoot_beyond_ends_cell": 4.842640584534763e-06,
+     "overshoot_beyond_ends_face": 4.848061435858142e-06
+    },
+    "nitrate": {
+     "min_in_front_cell": 1.0627801658332579,
+     "max_in_front_cell": 1.4474512303914633,
+     "overshoot_beyond_ends_cell": 1.4314850713681437e-06,
+     "overshoot_beyond_ends_face": 1.433087477131778e-06
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.48594664390825437,
+     "max_in_front_cell": 0.6485989132714391,
+     "overshoot_beyond_ends_cell": 6.052817020374412e-07,
+     "overshoot_beyond_ends_face": 6.05959254995625e-07
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 2.3439128780072353e-15,
+     "max_in_front_cell": 1.8486447955367022,
+     "overshoot_beyond_ends_cell": 6.8794073606603945e-06,
+     "overshoot_beyond_ends_face": 6.887108171316214e-06
+    }
+   },
+   "matched_in_all_levels": true,
+   "n_fronts_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 2,
+   "bv_start_fine": 192.69248173120434,
+   "bv_end_fine": 671.829679574199,
+   "cut_by_window_end": false,
+   "leading_ion": "chloride",
+   "before_meq_per_L_fine": [
+    2.6026332373623706,
+    1.0627815973183292,
+    0.4859472491899564,
+    1.8486379161293416
+   ],
+   "after_meq_per_L_fine": [
+    3.790435989801978,
+    3.045308475158658e-22,
+    0.2355162463397289,
+    1.9740477638583183
+   ],
+   "jump_meq_per_L_fine": [
+    1.1878027524396075,
+    -1.0627815973183292,
+    -0.2504310028502275,
+    0.12540984772897668
+   ],
+   "width_10_90_leading_ion_bv_per_level": {
+    "1000": 1.8969868346592307,
+    "2000": 348.9161821795024,
+    "4000": 348.613755803391
+   },
+   "width_ratio_consecutive_levels": [
+    0.005436798095203599,
+    1.0008675113103742
+   ],
+   "kind_from_width_scaling": "spreading wave (width independent of N)",
+   "kind_single_resolution_per_level": {
+    "1000": "spreading",
+    "2000": "spreading",
+    "4000": "spreading"
+   },
+   "steep_fraction_per_level": {
+    "1000": 0.0,
+    "2000": 0.0,
+    "4000": 0.0
+   },
+   "steep_parts_fine": [],
+   "steep_parts_extrapolated": [],
+   "gentle_part": null,
+   "shock_bv_midpoint_crossing": {
+    "chloride": {
+     "fine_value": 343.2751656220947,
+     "diff_two_finest": 0.023252458277397636,
+     "levels": [
+      135.04780502041686,
+      343.2519131638173,
+      343.2751656220947
+     ],
+     "value": 343.27848740184857,
+     "error": 0.0033217797538895866,
+     "observed_order": 13.128327667045447,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 343.27511955894005,
+     "diff_two_finest": 0.023391962941616384,
+     "levels": [
+      279.4472413385719,
+      343.25172759599843,
+      343.27511955894005
+     ],
+     "value": 343.27846126793173,
+     "error": 0.003341708991683845,
+     "observed_order": 11.413429220979387,
+     "flag": "extrapolated (order clipped)"
+    },
+    "sulfate": {
+     "fine_value": 343.2751104886023,
+     "diff_two_finest": 0.023419430428987198,
+     "levels": [
+      238.81011900293635,
+      343.2516910581733,
+      343.2751104886023
+     ],
+     "value": 343.2784561215207,
+     "error": 0.0033456329184105016,
+     "observed_order": 12.122702468653886,
+     "flag": "extrapolated (order clipped)"
+    },
+    "bicarbonate": {
+     "fine_value": 343.274672716096,
+     "diff_two_finest": 0.024743963016589987,
+     "levels": [
+      146.30250456853946,
+      343.2499287530794,
+      343.274672716096
+     ],
+     "value": 343.2782075679555,
+     "error": 0.0035348518595128553,
+     "observed_order": 12.958446345828863,
+     "flag": "extrapolated (order clipped)"
+    }
+   },
+   "shock_bv_midpoint_crossing_cell_history": {
+    "chloride": {
+     "fine_value": 343.2272244926474,
+     "diff_two_finest": 0.07107163886161061,
+     "levels": [
+      135.03419137475845,
+      343.1561528537858,
+      343.2272244926474
+     ],
+     "value": 343.2373775839133,
+     "error": 0.010153091265920011,
+     "observed_order": 11.515867621745294,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 343.2272708302586,
+     "diff_two_finest": 0.07094959464700423,
+     "levels": [
+      279.28716306327607,
+      343.1563212356116,
+      343.2272708302586
+     ],
+     "value": 343.23740648663676,
+     "error": 0.010135656378167823,
+     "observed_order": 9.81410927802432,
+     "flag": "extrapolated (order clipped)"
+    },
+    "sulfate": {
+     "fine_value": 343.22727996473856,
+     "diff_two_finest": 0.07092560165790474,
+     "levels": [
+      238.6699330608628,
+      343.15635436308065,
+      343.22727996473856
+     ],
+     "value": 343.23741219354685,
+     "error": 0.010132228808288346,
+     "observed_order": 10.524721362473526,
+     "flag": "extrapolated (order clipped)"
+    },
+    "bicarbonate": {
+     "fine_value": 343.227724710003,
+     "diff_two_finest": 0.06978286871458295,
+     "levels": [
+      146.28501977062817,
+      343.1579418412884,
+      343.227724710003
+     ],
+     "value": 343.2376936912479,
+     "error": 0.00996898124492418,
+     "observed_order": 11.462104169233514,
+     "flag": "extrapolated (order clipped)"
+    }
+   },
+   "onset_bv10": {
+    "chloride": {
+     "fine_value": 220.75676656366502,
+     "diff_two_finest": 0.1583562963630527,
+     "levels": [
+      133.98760107275024,
+      220.59841026730197,
+      220.75676656366502
+     ],
+     "value": 220.77938889171688,
+     "error": 0.02262232805185249,
+     "observed_order": 9.09522904593734,
+     "flag": "extrapolated (order clipped)"
+    },
+    "nitrate": {
+     "fine_value": 220.75678160051388,
+     "diff_two_finest": 0.1585123102808268,
+     "levels": [
+      142.30489214711085,
+      220.59826929023305,
+      220.75678160051388
+     ],
+     "value": 220.7794262162683,
+     "error": 0.02264461575441601,
+     "observed_order": 8.94815157814085,
+     "flag": "extrapolated (order clipped)"
+    },
+    "sulfate": {
+     "fine_value": 220.75678458340263,
+     "diff_two_finest": 0.15854304683142573,
+     "levels": [
+      139.52754231703096,
+      220.5982415365712,
+      220.75678458340263
+     ],
+     "value": 220.77943359009285,
+     "error": 0.022649006690215856,
+     "observed_order": 8.998162168829587,
+     "flag": "extrapolated (order clipped)"
+    },
+    "bicarbonate": {
+     "fine_value": 220.75693772949472,
+     "diff_two_finest": 0.16003309083794193,
+     "levels": [
+      136.47270437395844,
+      220.59690463865678,
+      220.75693772949472
+     ],
+     "value": 220.77979959961442,
+     "error": 0.02286187011969787,
+     "observed_order": 9.038006825249106,
+     "flag": "extrapolated (order clipped)"
+    }
+   },
+   "finish_bv90": {
+    "chloride": {
+     "fine_value": 569.370522367056,
+     "diff_two_finest": 0.1440700797484169,
+     "levels": [
+      135.88458790740947,
+      569.5145924468044,
+      569.370522367056
+     ],
+     "value": 569.370522367056,
+     "error": 433.6300045393949,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "nitrate": {
+     "fine_value": 569.3705484246369,
+     "diff_two_finest": 0.14392418024215203,
+     "levels": [
+      542.0384902606427,
+      569.5144726048791,
+      569.3705484246369
+     ],
+     "value": 569.3705484246369,
+     "error": 27.4759823442364,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "sulfate": {
+     "fine_value": 569.3705535241187,
+     "diff_two_finest": 0.14389533756320816,
+     "levels": [
+      521.3043533512723,
+      569.5144488616819,
+      569.3705535241187
+     ],
+     "value": 569.3705535241187,
+     "error": 48.21009551040959,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    "bicarbonate": {
+     "fine_value": 569.3707878763792,
+     "diff_two_finest": 0.14245515674235776,
+     "levels": [
+      161.03824105562177,
+      569.5132430331215,
+      569.3707878763792
+     ],
+     "value": 569.3707878763792,
+     "error": 408.47500197749974,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   },
+   "per_ion_width_10_90_bv_per_level": {
+    "chloride": {
+     "1000": 1.8969868346592307,
+     "2000": 348.9161821795024,
+     "4000": 348.613755803391
+    },
+    "nitrate": {
+     "1000": 399.7335981135318,
+     "2000": 348.91620331464605,
+     "4000": 348.61376682412305
+    },
+    "sulfate": {
+     "1000": 381.77681103424135,
+     "2000": 348.9162073251107,
+     "4000": 348.61376894071606
+    },
+    "bicarbonate": {
+     "1000": 24.565536681663332,
+     "2000": 348.91633839446473,
+     "4000": 348.61385014688443
+    }
+   },
+   "monotonicity_fine": {
+    "chloride": {
+     "min_in_front_cell": 2.6026332694679892,
+     "max_in_front_cell": 3.7904357432103084,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "nitrate": {
+     "min_in_front_cell": 2.211456689932374e-07,
+     "max_in_front_cell": 1.062781569208884,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.23551629847357902,
+     "max_in_front_cell": 0.4859472425949992,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 1.8486379176986985,
+     "max_in_front_cell": 1.9740477371704437,
+     "overshoot_beyond_ends_cell": 0.0,
+     "overshoot_beyond_ends_face": 0.0
+    }
+   },
+   "matched_in_all_levels": true,
+   "n_fronts_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  },
+  {
+   "index": 3,
+   "bv_start_fine": 1319.7512993782484,
+   "bv_end_fine": 1600.0,
+   "cut_by_window_end": true,
+   "leading_ion": "sulfate",
+   "before_meq_per_L_fine": [
+    3.790435989801978,
+    3.045308475158658e-22,
+    0.2355162463397289,
+    1.9740477638583183
+   ],
+   "after_meq_per_L_fine": [
+    3.8467931444432937,
+    -7.334071514102479e-20,
+    0.17217976971013055,
+    1.981027085846577
+   ],
+   "jump_meq_per_L_fine": [
+    0.05635715464131552,
+    -7.364524598854065e-20,
+    -0.06333647662959835,
+    0.006979321988258791
+   ],
+   "width_10_90_leading_ion_bv_per_level": {
+    "1000": 210.60988388860028,
+    "2000": 205.56550289467395,
+    "4000": 203.10727607723834
+   },
+   "width_ratio_consecutive_levels": [
+    1.0245390443576077,
+    1.012103095787178
+   ],
+   "kind_from_width_scaling": "spreading wave (width independent of N)",
+   "kind_single_resolution_per_level": {
+    "1000": "spreading",
+    "2000": "spreading",
+    "4000": "spreading"
+   },
+   "steep_fraction_per_level": {
+    "1000": 0.0,
+    "2000": 0.0,
+    "4000": 0.0
+   },
+   "steep_parts_fine": [],
+   "steep_parts_extrapolated": [],
+   "gentle_part": null,
+   "shock_bv_midpoint_crossing": {
+    "chloride": {
+     "fine_value": 1465.6976663557598,
+     "diff_two_finest": 0.9265108355639313,
+     "levels": [
+      1462.9382134555713,
+      1464.7711555201959,
+      1465.6976663557598
+     ],
+     "value": 1466.6447016088446,
+     "error": 0.9470352530847777,
+     "observed_order": 0.9842814322831479,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 1465.6979792663633,
+     "diff_two_finest": 0.9270416894187292,
+     "levels": [
+      1462.938246585968,
+      1464.7709375769446,
+      1465.6979792663633
+     ],
+     "value": 1466.6469186543163,
+     "error": 0.9489393879530326,
+     "observed_order": 0.9832574303935695,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 1465.700804515494,
+     "diff_two_finest": 0.9316460104464568,
+     "levels": [
+      1462.9385074437275,
+      1464.7691585050475,
+      1465.700804515494
+     ],
+     "value": 1466.6662766092686,
+     "error": 0.9654720937746788,
+     "observed_order": 0.974503030960963,
+     "flag": "extrapolated"
+    }
+   },
+   "shock_bv_midpoint_crossing_cell_history": {
+    "chloride": {
+     "fine_value": 1465.5104426530543,
+     "diff_two_finest": 1.1145918810448165,
+     "levels": [
+      1462.186854014934,
+      1464.3958507720095,
+      1465.5104426530543
+     ],
+     "value": 1466.6455939014631,
+     "error": 1.1351512484088744,
+     "observed_order": 0.9868757511123838,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 1465.5105460434916,
+     "diff_two_finest": 1.1149415052618679,
+     "levels": [
+      1462.1868998036018,
+      1464.3956045382297,
+      1465.5105460434916
+     ],
+     "value": 1466.6470758945418,
+     "error": 1.136529851050227,
+     "observed_order": 0.9862325463718821,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 1465.5114374402424,
+     "diff_two_finest": 1.117807503166432,
+     "levels": [
+      1462.1872767840443,
+      1464.393629937076,
+      1465.5114374402424
+     ],
+     "value": 1466.6592934022683,
+     "error": 1.1478559620259148,
+     "observed_order": 0.9809919658052179,
+     "flag": "extrapolated"
+    }
+   },
+   "onset_bv10": {
+    "chloride": {
+     "fine_value": 1368.6687537150435,
+     "diff_two_finest": 2.6217840014148805,
+     "levels": [
+      1360.6678904106088,
+      1366.0469697136286,
+      1368.6687537150435
+     ],
+     "value": 1371.1616863168124,
+     "error": 2.492932601768871,
+     "observed_order": 1.0368104261138444,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 1368.6691890667328,
+     "diff_two_finest": 2.6223189734746484,
+     "levels": [
+      1360.6680111745204,
+      1366.0468700932581,
+      1368.6691890667328
+     ],
+     "value": 1371.1638225330325,
+     "error": 2.4946334662997742,
+     "observed_order": 1.0364569665131795,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 1368.673065692474,
+     "diff_two_finest": 2.6269684443052483,
+     "levels": [
+      1360.6690086304425,
+      1366.0460972481687,
+      1368.673065692474
+     ],
+     "value": 1371.1823972024463,
+     "error": 2.5093315099722986,
+     "observed_order": 1.0334263776896961,
+     "flag": "extrapolated"
+    }
+   },
+   "finish_bv90": {
+    "chloride": {
+     "fine_value": 1571.7767526106043,
+     "diff_two_finest": 0.1638202804563207,
+     "levels": [
+      1571.2774818114867,
+      1571.612932330148,
+      1571.7767526106043
+     ],
+     "value": 1571.9331183219701,
+     "error": 0.15636571136587918,
+     "observed_order": 1.0339860050065028,
+     "flag": "extrapolated"
+    },
+    "sulfate": {
+     "fine_value": 1571.776465143971,
+     "diff_two_finest": 0.1640921560390325,
+     "levels": [
+      1571.2778950631207,
+      1571.612372987932,
+      1571.776465143971
+     ],
+     "value": 1571.9344961571687,
+     "error": 0.1580310131976148,
+     "observed_order": 1.0274047211169042,
+     "flag": "extrapolated"
+    },
+    "bicarbonate": {
+     "fine_value": 1571.7741275733204,
+     "diff_two_finest": 0.1665872164353459,
+     "levels": [
+      1571.2815155690764,
+      1571.607540356885,
+      1571.7741275733204
+     ],
+     "value": 1571.9481850457257,
+     "error": 0.17405747240536584,
+     "observed_order": 0.9687039619037698,
+     "flag": "extrapolated"
+    }
+   },
+   "per_ion_width_10_90_bv_per_level": {
+    "chloride": {
+     "1000": 210.6095914008779,
+     "2000": 205.5659626165193,
+     "4000": 203.10799889556074
+    },
+    "sulfate": {
+     "1000": 210.60988388860028,
+     "2000": 205.56550289467395,
+     "4000": 203.10727607723834
+    },
+    "bicarbonate": {
+     "1000": 210.61250693863394,
+     "2000": 205.56144310871628,
+     "4000": 203.10106188084637
+    }
+   },
+   "monotonicity_fine": {
+    "chloride": {
+     "min_in_front_cell": 3.79043706845692,
+     "max_in_front_cell": 3.846833378517716,
+     "overshoot_beyond_ends_cell": 4.023407442232951e-05,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "nitrate": {
+     "min_in_front_cell": -2.5586356046032694e-19,
+     "max_in_front_cell": 2.591937968079178e-19,
+     "overshoot_beyond_ends_cell": 2.5888926596040194e-19,
+     "overshoot_beyond_ends_face": 2.6754991764910794e-19
+    },
+    "sulfate": {
+     "min_in_front_cell": 0.17213460877661416,
+     "max_in_front_cell": 0.23551503030821966,
+     "overshoot_beyond_ends_cell": 4.516093351639161e-05,
+     "overshoot_beyond_ends_face": 0.0
+    },
+    "bicarbonate": {
+     "min_in_front_cell": 1.9740478929031955,
+     "max_in_front_cell": 1.9810320127056713,
+     "overshoot_beyond_ends_cell": 4.926859094256386e-06,
+     "overshoot_beyond_ends_face": 0.0
+    }
+   },
+   "matched_in_all_levels": true,
+   "n_fronts_per_level": {
+    "1000": 3,
+    "2000": 4,
+    "4000": 4
+   }
+  }
+ ],
+ "nitrate_peak": {
+  "meq_per_L": {
+   "fine_value": 1.4474512303914653,
+   "diff_two_finest": 8.881784197001252e-16,
+   "levels": [
+    1.4474512303914668,
+    1.4474512303914662,
+    1.4474512303914653
+   ],
+   "value": 1.4474512303914653,
+   "error": 8.881784197001252e-16,
+   "observed_order": null,
+   "flag": "converged"
+  },
+  "bv": {
+   "fine_value": 45.00715963912409,
+   "diff_two_finest": 0.0016618207150500552,
+   "levels": [
+    45.00222759450388,
+    45.00549781840904,
+    45.00715963912409
+   ],
+   "value": 45.00887665144162,
+   "error": 0.001717012317527633,
+   "observed_order": 0.9766246714651916,
+   "flag": "extrapolated"
+  },
+  "meq_per_L_face_history": {
+   "fine_value": 1.4474512303914653,
+   "diff_two_finest": 8.881784197001252e-16,
+   "levels": [
+    1.4474512303914668,
+    1.4474512303914662,
+    1.4474512303914653
+   ],
+   "value": 1.4474512303914653,
+   "error": 8.881784197001252e-16,
+   "observed_order": null,
+   "flag": "converged"
+  },
+  "location_fine": "plateau[1]",
+  "raw_argmax_bv_fine": 131.48233726749058
+ },
+ "nitrate_limit_bv": {
+  "fine_value": 0.0,
+  "diff_two_finest": 0.0,
+  "levels": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "value": 0.0,
+  "error": 0.0,
+  "observed_order": null,
+  "flag": "converged"
+ },
+ "nitrate_limit_bv_cell_history": {
+  "fine_value": 0.0,
+  "diff_two_finest": 0.0,
+  "levels": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "value": 0.0,
+  "error": 0.0,
+  "observed_order": null,
+  "flag": "converged"
+ },
+ "samples": [
+  {
+   "bv": 150.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.0413168975268627,
+     "diff_two_finest": 3.7091566947644594e-05,
+     "levels": [
+      3.042992277011529,
+      3.0413539890938104,
+      3.0413168975268627
+     ],
+     "value": 3.0413115987315846,
+     "error": 5.298795278108059e-06,
+     "observed_order": 5.464953896324811,
+     "flag": "extrapolated (order clipped)"
+    },
+    {
+     "fine_value": 1.1924566357609991,
+     "diff_two_finest": 1.096427973767966e-05,
+     "levels": [
+      1.1929518785037896,
+      1.1924676000407368,
+      1.1924566357609991
+     ],
+     "value": 1.1924550694353224,
+     "error": 1.5663256767162181e-06,
+     "observed_order": 5.464953897360447,
+     "flag": "extrapolated (order clipped)"
+    },
+    {
+     "fine_value": 0.5407783535430225,
+     "diff_two_finest": 4.6360778003240455e-06,
+     "levels": [
+      0.5409877593533963,
+      0.5407829896208228,
+      0.5407783535430225
+     ],
+     "value": 0.5407776912461939,
+     "error": 6.622968286018605e-07,
+     "observed_order": 5.464953896082394,
+     "flag": "extrapolated (order clipped)"
+    },
+    {
+     "fine_value": 1.2254481131691173,
+     "diff_two_finest": 5.269192448653648e-05,
+     "levels": [
+      1.2230680851312854,
+      1.2253954212446307,
+      1.2254481131691173
+     ],
+     "value": 1.225455640586901,
+     "error": 7.527417783759205e-06,
+     "observed_order": 5.464953896494869,
+     "flag": "extrapolated (order clipped)"
+    }
+   ]
+  },
+  {
+   "bv": 300.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.056664655568714,
+     "diff_two_finest": 0.00016479062057062066,
+     "levels": [
+      3.057106156287514,
+      3.0568294461892846,
+      3.056664655568714
+     ],
+     "value": 3.05642201729702,
+     "error": 0.0002426382716942399,
+     "observed_order": 0.7477411638512731,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 0.6565389264085683,
+     "diff_two_finest": 0.00014753773344400312,
+     "levels": [
+      0.656143969991972,
+      0.6563913886751243,
+      0.6565389264085683
+     ],
+     "value": 0.6567568596866696,
+     "error": 0.00021793327810137875,
+     "observed_order": 0.7458704681777893,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 0.3902213195275547,
+     "diff_two_finest": 3.4769672660861506e-05,
+     "levels": [
+      0.3901282565220985,
+      0.3901865498548938,
+      0.3902213195275547
+     ],
+     "value": 0.3902727116208783,
+     "error": 5.1392093323610055e-05,
+     "observed_order": 0.745501402099053,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 1.896575098495164,
+     "diff_two_finest": 1.7516785532967205e-05,
+     "levels": [
+      1.8966216171984152,
+      1.896592615280697,
+      1.896575098495164
+     ],
+     "value": 1.8965483824094926,
+     "error": 2.6716085671285583e-05,
+     "observed_order": 0.7274102465217634,
+     "flag": "extrapolated"
+    }
+   ]
+  },
+  {
+   "bv": 450.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.4610203617686257,
+     "diff_two_finest": 4.816398330609317e-05,
+     "levels": [
+      3.460885437019769,
+      3.4609721977853196,
+      3.4610203617686257
+     ],
+     "value": 3.461080464428822,
+     "error": 6.0102660196292845e-05,
+     "observed_order": 0.8490880707230911,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 0.2947430052408939,
+     "diff_two_finest": 4.336972383067739e-05,
+     "levels": [
+      0.29486412196204975,
+      0.2947863749647246,
+      0.2947430052408939
+     ],
+     "value": 0.29468829081028464,
+     "error": 5.471443060928172e-05,
+     "observed_order": 0.842098701394184,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 0.3049686846322369,
+     "diff_two_finest": 1.0232318442937594e-05,
+     "levels": [
+      0.3049972425373907,
+      0.30497891695067986,
+      0.3049686846322369
+     ],
+     "value": 0.3049557479128237,
+     "error": 1.2936719413214615e-05,
+     "observed_order": 0.8407263197723445,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 1.9392679483582427,
+     "diff_two_finest": 5.4380589675773194e-06,
+     "levels": [
+      1.939253198480789,
+      1.939262510299275,
+      1.9392679483582427
+     ],
+     "value": 1.939275582411207,
+     "error": 7.634052964222704e-06,
+     "observed_order": 0.7759711409672746,
+     "flag": "extrapolated"
+    }
+   ]
+  },
+  {
+   "bv": 700.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.7904359905829867,
+     "diff_two_finest": 7.475979835191993e-10,
+     "levels": [
+      3.790435895521785,
+      3.7904359898353888,
+      3.7904359905829867
+     ],
+     "value": 3.7904359906897866,
+     "error": 1.0679990225526126e-10,
+     "observed_order": 6.979059389211539,
+     "flag": "extrapolated (order clipped)"
+    },
+    {
+     "fine_value": 2.8069357427668703e-13,
+     "diff_two_finest": 2.0011342486396016e-11,
+     "levels": [
+      8.435749956717435e-08,
+      2.0292036060672704e-11,
+      2.8069357427668703e-13
+     ],
+     "value": -2.578069638065601e-12,
+     "error": 2.858763212342288e-12,
+     "observed_order": 12.041135582818855,
+     "flag": "extrapolated (order clipped)"
+    },
+    {
+     "fine_value": 0.2355162463723125,
+     "diff_two_finest": 2.5460689112577484e-11,
+     "levels": [
+      0.23551626621753463,
+      0.2355162463468518,
+      0.2355162463723125
+     ],
+     "value": 0.2355162463723125,
+     "error": 1.987068282138793e-08,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    {
+     "fine_value": 1.9740477630444213,
+     "diff_two_finest": 7.530467360794546e-10,
+     "levels": [
+      1.9740477539031822,
+      1.974047763797468,
+      1.9740477630444213
+     ],
+     "value": 1.9740477630444213,
+     "error": 9.894285835088112e-09,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   ]
+  },
+  {
+   "bv": 1100.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.7904359896780377,
+     "diff_two_finest": 1.5791901120110197e-10,
+     "levels": [
+      3.790435989752944,
+      3.7904359898359568,
+      3.7904359896780377
+     ],
+     "value": 3.7904359896780377,
+     "error": 1.5791901120110197e-10,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    {
+     "fine_value": -5.636075322763555e-21,
+     "diff_two_finest": 5.812344530830978e-20,
+     "levels": [
+      3.011730987736063e-20,
+      5.248736998554623e-20,
+      -5.636075322763555e-21
+     ],
+     "value": -5.636075322763555e-21,
+     "error": 5.812344530830978e-20,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.23551624633456986,
+     "diff_two_finest": 6.573991351288555e-12,
+     "levels": [
+      0.23551624633768595,
+      0.23551624634114385,
+      0.23551624633456986
+     ],
+     "value": 0.23551624633456986,
+     "error": 6.573991351288555e-12,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    },
+    {
+     "fine_value": 1.9740477639873921,
+     "diff_two_finest": 1.6449286377451244e-10,
+     "levels": [
+      1.97404776390937,
+      1.9740477638228993,
+      1.9740477639873921
+     ],
+     "value": 1.9740477639873921,
+     "error": 1.6449286377451244e-10,
+     "observed_order": null,
+     "flag": "non-monotone or not shrinking; fine value kept"
+    }
+   ]
+  },
+  {
+   "bv": 1400.0,
+   "composition_meq_per_L": [
+    {
+     "fine_value": 3.803516146062631,
+     "diff_two_finest": 0.0004408254181327287,
+     "levels": [
+      3.8048015552835768,
+      3.8039569714807637,
+      3.803516146062631
+     ],
+     "value": 3.803034850672504,
+     "error": 0.000481295390127201,
+     "observed_order": 0.9380331672522707,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 6.91955926353815e-21,
+     "diff_two_finest": 2.0415562076279756e-18,
+     "levels": [
+      9.184744542251583e-18,
+      2.0484757668915136e-18,
+      6.91955926353815e-21
+     ],
+     "value": 6.91955926353815e-21,
+     "error": 7.13626877536007e-18,
+     "observed_order": null,
+     "flag": "converged"
+    },
+    {
+     "fine_value": 0.22081637152572817,
+     "diff_two_finest": 0.0004954175978214848,
+     "levels": [
+      0.21937147728718054,
+      0.22032095392790668,
+      0.22081637152572817
+     ],
+     "value": 0.22135691487590817,
+     "error": 0.0005405433501800005,
+     "observed_order": 0.9384873915130013,
+     "flag": "extrapolated"
+    },
+    {
+     "fine_value": 1.9756674824116396,
+     "diff_two_finest": 5.459217968839525e-05,
+     "levels": [
+      1.975826967429244,
+      1.975722074591328,
+      1.9756674824116396
+     ],
+     "value": 1.9756082325690303,
+     "error": 5.924984260929911e-05,
+     "observed_order": 0.9421499685721357,
+     "flag": "extrapolated"
+    }
+   ]
+  }
+ ],
+ "rollup": {
+  "chloride": {
+   "initial": 1.6947323420475,
+   "feeds": [
+    6.0,
+    4.0
+   ],
+   "max_plateau_extrapolated": 3.9039498563366495,
+   "min_plateau_extrapolated": 1.6947323420474967,
+   "roll_up_on_a_plateau": false,
+   "roll_down_on_a_plateau": false,
+   "raw_max_effluent_fine": 3.9039498563371007,
+   "raw_min_effluent_fine": 1.6947323420475
+  },
+  "nitrate": {
+   "initial": 0.7944057853347654,
+   "feeds": [
+    0.0,
+    0.0
+   ],
+   "max_plateau_extrapolated": 1.447451230391386,
+   "min_plateau_extrapolated": 3.045308475158658e-22,
+   "roll_up_on_a_plateau": true,
+   "roll_down_on_a_plateau": false,
+   "raw_max_effluent_fine": 1.4474512303914653,
+   "raw_min_effluent_fine": -2.3110945521309346e-17
+  },
+  "sulfate": {
+   "initial": 0.37246864660384615,
+   "feeds": [
+    0.0,
+    0.0
+   ],
+   "max_plateau_extrapolated": 0.6485989132715443,
+   "min_plateau_extrapolated": 0.2355162463397289,
+   "roll_up_on_a_plateau": true,
+   "roll_down_on_a_plateau": false,
+   "raw_max_effluent_fine": 0.6485989132714403,
+   "raw_min_effluent_fine": 0.17213460877661416
+  },
+  "bicarbonate": {
+   "initial": 3.1383932260138883,
+   "feeds": [
+    0.0,
+    2.0
+   ],
+   "max_plateau_extrapolated": 3.138393226014075,
+   "min_plateau_extrapolated": 4.135010552555101e-17,
+   "roll_up_on_a_plateau": false,
+   "roll_down_on_a_plateau": false,
+   "raw_max_effluent_fine": 3.1383932260138883,
+   "raw_min_effluent_fine": -7.008006967849417e-15
+  }
+ },
+ "effluent_at_run_bv_fine": [
+  3.8467931444432937,
+  -7.334071514102479e-20,
+  0.17217976971013055,
+  1.981027085846577
+ ]
+}

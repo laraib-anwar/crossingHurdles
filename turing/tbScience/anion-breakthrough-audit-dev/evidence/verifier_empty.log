@@ -1,0 +1,930 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 30 items
+
+test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                           [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_saved_base_case _____________________________
+
+    def test_saved_base_case():
+        """The declared artifacts exist as regular files and the saved base-case report meets the
+        output contract and the tolerances against the independent expected values."""
+>       regular_file(ARTIFACT)
+
+test_outputs.py:314: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_01] ___________________________
+
+case_name = 'held_01'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b54e0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_02] ___________________________
+
+case_name = 'held_02'
+record_property = <function record_property.<locals>.append_property at 0x7ec561729440>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_03] ___________________________
+
+case_name = 'held_03'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b4e00>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_04] ___________________________
+
+case_name = 'held_04'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b58a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_05] ___________________________
+
+case_name = 'held_05'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b62a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_06] ___________________________
+
+case_name = 'held_06'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b67a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_07] ___________________________
+
+case_name = 'held_07'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b6520>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_08] ___________________________
+
+case_name = 'held_08'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b5620>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_09] ___________________________
+
+case_name = 'held_09'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b5f80>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_10] ___________________________
+
+case_name = 'held_10'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b4d60>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_11] ___________________________
+
+case_name = 'held_11'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b6700>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_12] ___________________________
+
+case_name = 'held_12'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b6020>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_13] ___________________________
+
+case_name = 'held_13'
+record_property = <function record_property.<locals>.append_property at 0x7ec56173bc40>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_14] ___________________________
+
+case_name = 'held_14'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7380>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_15] ___________________________
+
+case_name = 'held_15'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7420>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_16] ___________________________
+
+case_name = 'held_16'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7b00>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_17] ___________________________
+
+case_name = 'held_17'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7ce0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_18] ___________________________
+
+case_name = 'held_18'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7d80>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_19] ___________________________
+
+case_name = 'held_19'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7e20>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_20] ___________________________
+
+case_name = 'held_20'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b59e0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_21] ___________________________
+
+case_name = 'held_21'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7f60>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+___________________________ test_fresh_case[held_22] ___________________________
+
+case_name = 'held_22'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b6520>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_01] __________________________
+
+case_name = 'service_01'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b49a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_02] __________________________
+
+case_name = 'service_02'
+record_property = <function record_property.<locals>.append_property at 0x7ec561219300>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_03] __________________________
+
+case_name = 'service_03'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7e20>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_04] __________________________
+
+case_name = 'service_04'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b7740>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_05] __________________________
+
+case_name = 'service_05'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b53a0>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+_________________________ test_fresh_case[service_06] __________________________
+
+case_name = 'service_06'
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b4180>
+
+    @pytest.mark.parametrize("case_name", CASE_NAMES)
+    def test_fresh_case(case_name, record_property):
+        """A fresh, stateless run of the program on a shipped or held-out recipe meets the output
+        contract and every tolerance against the independent expected values."""
+        recipe = load_case(case_name)
+>       rep = _invoke(case_name, recipe, ARTIFACT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:329: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:266: in _invoke
+    regular_file(program_source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/ixfront.py')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/ixfront.py: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/ixfront.py').exists
+
+test_outputs.py:50: AssertionError
+________________________________ test_diagnosis ________________________________
+
+record_property = <function record_property.<locals>.append_property at 0x7ec5616b5080>
+
+    def test_diagnosis(record_property):
+        """diagnosis.json holds 3 to 8 witnesses of at least three distinct quantities; for each, the
+        pristine legacy script reproduces the reported legacy value, the independent reference
+        reproduces the reported correct value, and the two differ by more than the tolerance."""
+>       doc = read_json(DIAGNOSIS)
+              ^^^^^^^^^^^^^^^^^^^^
+
+test_outputs.py:387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_outputs.py:55: in read_json
+    regular_file(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/results/diagnosis.json')
+
+    def regular_file(path):
+        """A submitted artifact must be a plain regular file: no symlink, FIFO, device or directory."""
+>       assert path.exists(), f"{path}: missing"
+E       AssertionError: /root/results/diagnosis.json: missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/results/diagnosis.json').exists
+
+test_outputs.py:50: AssertionError
+=========================== short test summary info ============================
+FAILED test_outputs.py::test_saved_base_case - AssertionError: /root/results/...
+FAILED test_outputs.py::test_fresh_case[held_01] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_02] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_03] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_04] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_05] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_06] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_07] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_08] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_09] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_10] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_11] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_12] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_13] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_14] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_15] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_16] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_17] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_18] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_19] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_20] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_21] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[held_22] - AssertionError: /root/resu...
+FAILED test_outputs.py::test_fresh_case[service_01] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_02] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_03] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_04] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_05] - AssertionError: /root/r...
+FAILED test_outputs.py::test_fresh_case[service_06] - AssertionError: /root/r...
+FAILED test_outputs.py::test_diagnosis - AssertionError: /root/results/diagno...
+============================== 30 failed in 1.63s ==============================

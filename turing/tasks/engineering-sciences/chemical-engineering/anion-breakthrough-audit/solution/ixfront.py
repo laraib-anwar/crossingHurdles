@@ -343,8 +343,9 @@ def merge_same_family(sysm, A, B, target):
         return x, t
 
     # Only the junction element can collide: pristine fan pieces of one block spread apart, and a
-    # block is a single shock otherwise. q indexes the element just behind the junction.
-    while 0 < q < len(chain):
+    # block is a single shock otherwise. q indexes the junction element (the one just behind the
+    # junction, or the merged element after a merge, which may sit at either end of the chain).
+    while len(chain) >= 2:
         best = None
         for i in (q - 1, q):
             if 0 <= i < len(chain) - 1:
@@ -370,7 +371,7 @@ def merge_same_family(sysm, A, B, target):
                 marker = Jump(nb.k, v, v, nb.H_behind(), x, t, nb.block, False)
             if marker is not None:
                 chain.insert(i, marker)
-            q = i
+            q = min(max(i, 0), max(len(chain) - 1, 0))
             continue
         is_shock = back.eb < front.ea
         if is_shock:

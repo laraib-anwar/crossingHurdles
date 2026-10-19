@@ -1,0 +1,289 @@
+{
+ "defects": [
+  {
+   "description": "Every front is treated as sharp. Unfavourable (desorbing) transitions spread into continuous waves; the script reports none and misplaces the material they carry.",
+   "recipe": {
+    "recipe_id": "service_01",
+    "ions": [
+     "chloride",
+     "nitrate",
+     "sulfate",
+     "bicarbonate"
+    ],
+    "alpha": {
+     "chloride": 1.0,
+     "nitrate": 4.069,
+     "sulfate": 19.424,
+     "bicarbonate": 0.196
+    },
+    "eps": 0.387,
+    "Q_eq_per_L_bed": 1.075,
+    "C_T_meq_per_L": 7.43,
+    "initial_resin_fraction": {
+     "chloride": 1.0,
+     "nitrate": 0.0,
+     "sulfate": 0.0,
+     "bicarbonate": 0.0
+    },
+    "feed_program": [
+     {
+      "start_bv": 0.0,
+      "composition_meq_per_L": {
+       "chloride": 1.8659999999999997,
+       "nitrate": 0.753,
+       "sulfate": 1.984,
+       "bicarbonate": 2.827
+      }
+     }
+    ],
+    "run_bv": 568.0,
+    "sample_bv": [
+     14.37,
+     37.94,
+     47.14,
+     210.27,
+     414.87,
+     521.36
+    ],
+    "nitrate_limit_meq_per_L": 0.714
+   },
+   "quantity": "transition_count",
+   "bv": null,
+   "legacy_value": 0,
+   "correct_value": 1
+  },
+  {
+   "description": "Plateau compositions are built ion by ion (ions whose front has passed sit at their feed value), so the effluent can never exceed the influent. The exact solution displaces weakly held nitrate above its feed concentration (chromatographic peaking).",
+   "recipe": {
+    "recipe_id": "service_01",
+    "ions": [
+     "chloride",
+     "nitrate",
+     "sulfate",
+     "bicarbonate"
+    ],
+    "alpha": {
+     "chloride": 1.0,
+     "nitrate": 4.069,
+     "sulfate": 19.424,
+     "bicarbonate": 0.196
+    },
+    "eps": 0.387,
+    "Q_eq_per_L_bed": 1.075,
+    "C_T_meq_per_L": 7.43,
+    "initial_resin_fraction": {
+     "chloride": 1.0,
+     "nitrate": 0.0,
+     "sulfate": 0.0,
+     "bicarbonate": 0.0
+    },
+    "feed_program": [
+     {
+      "start_bv": 0.0,
+      "composition_meq_per_L": {
+       "chloride": 1.8659999999999997,
+       "nitrate": 0.753,
+       "sulfate": 1.984,
+       "bicarbonate": 2.827
+      }
+     }
+    ],
+    "run_bv": 568.0,
+    "sample_bv": [
+     14.37,
+     37.94,
+     47.14,
+     210.27,
+     414.87,
+     521.36
+    ],
+    "nitrate_limit_meq_per_L": 0.714
+   },
+   "quantity": "nitrate_peak",
+   "bv": null,
+   "legacy_value": 1.027320969518913,
+   "correct_value": 2.3586438072842784
+  },
+  {
+   "description": "After a feed change the script superposes the new fronts on the old ones. Faster second-feed waves overtake and interact with first-feed waves, changing their positions and the compositions between them.",
+   "recipe": {
+    "recipe_id": "service_05",
+    "ions": [
+     "chloride",
+     "nitrate",
+     "sulfate",
+     "bicarbonate"
+    ],
+    "alpha": {
+     "chloride": 1.0,
+     "nitrate": 4.362,
+     "sulfate": 15.972,
+     "bicarbonate": 0.492
+    },
+    "eps": 0.426,
+    "Q_eq_per_L_bed": 1.018,
+    "C_T_meq_per_L": 5.31,
+    "initial_resin_fraction": {
+     "chloride": 1.0,
+     "nitrate": 0.0,
+     "sulfate": 0.0,
+     "bicarbonate": 0.0
+    },
+    "feed_program": [
+     {
+      "start_bv": 0.0,
+      "composition_meq_per_L": {
+       "chloride": 1.9329999999999998,
+       "nitrate": 1.032,
+       "sulfate": 1.384,
+       "bicarbonate": 0.961
+      }
+     },
+     {
+      "start_bv": 323.0,
+      "composition_meq_per_L": {
+       "chloride": 2.2529999999999997,
+       "nitrate": 1.221,
+       "sulfate": 0.456,
+       "bicarbonate": 1.38
+      }
+     }
+    ],
+    "run_bv": 1248.0,
+    "sample_bv": [
+     47.37,
+     239.8,
+     358.41,
+     359.01,
+     391.85,
+     423.78,
+     439.84,
+     701.22,
+     796.14,
+     878.0,
+     891.07,
+     1063.0
+    ],
+    "nitrate_limit_meq_per_L": 0.714
+   },
+   "quantity": "sample",
+   "bv": 358.41,
+   "legacy_value": [
+    2.614424350483953,
+    1.3958023433520121,
+    0.0,
+    1.2997733061640346
+   ],
+   "correct_value": [
+    3.8451300551498937,
+    0.0,
+    0.0,
+    1.4648699448501064
+   ]
+  },
+  {
+   "description": "Fronts are counted per ion from single-ion stoichiometry. The exact solution has one wave per independent component with compositions fixed by the coherence (invariant) conditions, so the number and positions of the discontinuities differ.",
+   "recipe": {
+    "recipe_id": "service_01",
+    "ions": [
+     "chloride",
+     "nitrate",
+     "sulfate",
+     "bicarbonate"
+    ],
+    "alpha": {
+     "chloride": 1.0,
+     "nitrate": 4.069,
+     "sulfate": 19.424,
+     "bicarbonate": 0.196
+    },
+    "eps": 0.387,
+    "Q_eq_per_L_bed": 1.075,
+    "C_T_meq_per_L": 7.43,
+    "initial_resin_fraction": {
+     "chloride": 1.0,
+     "nitrate": 0.0,
+     "sulfate": 0.0,
+     "bicarbonate": 0.0
+    },
+    "feed_program": [
+     {
+      "start_bv": 0.0,
+      "composition_meq_per_L": {
+       "chloride": 1.8659999999999997,
+       "nitrate": 0.753,
+       "sulfate": 1.984,
+       "bicarbonate": 2.827
+      }
+     }
+    ],
+    "run_bv": 568.0,
+    "sample_bv": [
+     14.37,
+     37.94,
+     47.14,
+     210.27,
+     414.87,
+     521.36
+    ],
+    "nitrate_limit_meq_per_L": 0.714
+   },
+   "quantity": "shock_count",
+   "bv": null,
+   "legacy_value": 4,
+   "correct_value": 2
+  },
+  {
+   "description": "Because fronts are sharp and plateaus component-wise, the first exceedance of the nitrate limit is placed at the wrong bed volume (or missed when it occurs inside a spreading wave or on a rolled-up plateau).",
+   "recipe": {
+    "recipe_id": "service_01",
+    "ions": [
+     "chloride",
+     "nitrate",
+     "sulfate",
+     "bicarbonate"
+    ],
+    "alpha": {
+     "chloride": 1.0,
+     "nitrate": 4.069,
+     "sulfate": 19.424,
+     "bicarbonate": 0.196
+    },
+    "eps": 0.387,
+    "Q_eq_per_L_bed": 1.075,
+    "C_T_meq_per_L": 7.43,
+    "initial_resin_fraction": {
+     "chloride": 1.0,
+     "nitrate": 0.0,
+     "sulfate": 0.0,
+     "bicarbonate": 0.0
+    },
+    "feed_program": [
+     {
+      "start_bv": 0.0,
+      "composition_meq_per_L": {
+       "chloride": 1.8659999999999997,
+       "nitrate": 0.753,
+       "sulfate": 1.984,
+       "bicarbonate": 2.827
+      }
+     }
+    ],
+    "run_bv": 568.0,
+    "sample_bv": [
+     14.37,
+     37.94,
+     47.14,
+     210.27,
+     414.87,
+     521.36
+    ],
+    "nitrate_limit_meq_per_L": 0.714
+   },
+   "quantity": "nitrate_limit_bv",
+   "bv": null,
+   "legacy_value": 185.40357979137238,
+   "correct_value": 355.0119573236321
+  }
+ ]
+}
