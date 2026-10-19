@@ -11,8 +11,8 @@ keywords = ["free-radical-polymerization", "gel-effect", "trommsdorff-norrish", 
 
 [metadata]
 domain = "engineering-sciences"
-field = "chemical-engineering"
-subfield = "polymer-reaction-engineering"
+category = "chemical-engineering"
+subcategory = "polymer-reaction-engineering"
 reward_type = "binary"
 source = "Written by PhD annotators"
 public_overlap = "None"
