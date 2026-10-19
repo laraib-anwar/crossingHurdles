@@ -1,0 +1,14 @@
+{
+ "recipe_id": "lightoff_02",
+ "shipped": true,
+ "label": "unique steady state",
+ "folds": 0,
+ "hopf": 0,
+ "states": [
+  1,
+  1,
+  1
+ ],
+ "secs": 10.0,
+ "attempts": 3
+}

@@ -1,0 +1,52 @@
+schema_version = "1.4"
+
+artifacts = ["/root/results/lightoff_exact.py", "/root/results/base_case_report.json", "/root/results/diagnosis.json"]
+
+[task]
+name = "turing/washcoat-ignition-audit"
+version = "1.0.0"
+description = "Locate every ignition, extinction and Hopf point of a catalytic washcoat layer with external film resistances, classify the stability of every steady state, and diagnose a legacy light-off script."
+authors = [{ name = "Laraib Anwar", email = "laraib.anwar919@gmail.com" }]
+keywords = ["catalytic-washcoat", "light-off", "reaction-diffusion", "multiplicity", "hopf-bifurcation", "thiele-modulus", "stability"]
+
+[metadata]
+author_name = "Laraib Anwar"
+author_email = "laraib.anwar919@gmail.com"
+author_organization = "Independent Researcher"
+author_profile = ""
+research_advisor = ""
+referred_by = ""
+domain = "engineering-sciences"
+category = "chemical-engineering"
+subcategory = "reaction-engineering"
+tags = ["catalytic-washcoat", "light-off", "reaction-diffusion", "multiplicity", "hopf-bifurcation"]
+expert_time_estimate_hours = 20.0
+relevant_experience = ""
+conflicts_of_interest = "Engaged as a paid contractor by Turing to author this task."
+reward_type = "binary"
+source = "Written by PhD annotators"
+public_overlap = "The model is the classical non-isothermal reaction-diffusion problem of a catalyst slab with external film resistances (Weisz-Hicks with Biot numbers); the recipes, legacy script and task are not public."
+
+[verifier]
+timeout_sec = 7200
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+network_mode = "no-network"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+
+[agent]
+timeout_sec = 10800
+network_mode = "public"
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
