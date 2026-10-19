@@ -170,6 +170,41 @@ class System:
             mu = self.eig(0.5 * (x_from + x_to))[0][k]
         return x_to, {"type": "shock", "mu": mu}
 
+    def wave_windows(self, xL, s, compose):
+        """[(lam_slow, lam_fast)] per wave: eigenvalue range (shock: mu, mu) of each family."""
+        x, infos = compose(s)
+        out = []
+        xl = xL.copy()
+        for k in range(self.m):
+            x_to, info = infos[k]
+            if abs(s[k]) < ZERO_WAVE:
+                out.append(None)
+            elif info["type"] == "rare":
+                out.append((self.eig(xl)[0][k], self.eig(x_to)[0][k]))
+            else:
+                out.append((info["mu"], info["mu"]))
+            xl = x_to
+        return out
+
+    def ordered(self, xL, s, compose):
+        """True if every wave is slower than the next one (lambda decreasing left to right)
+        and rarefactions have lambda decreasing across them."""
+        try:
+            win = self.wave_windows(xL, s, compose)
+        except Exception:
+            return False
+        prev_min = np.inf
+        for w in win:
+            if w is None:
+                continue
+            hi, lo = w
+            if lo > hi + 1e-9:
+                return False
+            if hi > prev_min + 1e-9:
+                return False
+            prev_min = lo
+        return True
+
     # ----------------------------------------------------------------------------------
     def riemann(self, xL, xR, s_init=None):
         """Riemann problem (left state xL, right state xR) by nested root-finding over the
@@ -237,25 +272,31 @@ class System:
         else:
             s0 = np.asarray(s_init, dtype=float)
 
-        s, ok = newton(s0, xR)
-        if not ok:
-            nsteps = 4
-            ok_all = False
-            while nsteps <= 512 and not ok_all:
+        def continuation():
+            nsteps = 8
+            while nsteps <= 1024:
                 ok_all = True
                 s_run = np.zeros(m)
                 for i in range(1, nsteps + 1):
                     t = i / nsteps
                     target = xL + t * (xR - xL)
                     s_run, ok = newton(s_run, target)
-                    if not ok:
+                    if not ok or not self.ordered(xL, s_run, compose):
                         ok_all = False
                         break
                 if ok_all:
-                    s = s_run
+                    return s_run, True
                 nsteps *= 2
-            if not ok_all:
-                raise RuntimeError("Riemann solver failed to converge")
+            return None, False
+
+        s, ok = newton(s0, xR)
+        if not ok or not self.ordered(xL, s, compose):
+            # the midpoint guess can converge to a root whose waves are not ordered by speed
+            # (eigenvalue labels swap on faces where an ion is absent); follow the physical
+            # branch by continuation from the trivial solution instead
+            s, ok = continuation()
+            if not ok:
+                raise RuntimeError("Riemann solver failed to converge to an ordered solution")
 
         x, infos = compose(s)
         waves = []

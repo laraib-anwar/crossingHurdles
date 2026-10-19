@@ -156,8 +156,8 @@ compare functions on all 28 recipes against the reference values:
 | verifier image on the oracle's artifacts, `--cpus=1 --memory=2048m`, no network | 30 passed, reward 1, 100 s |
 | verifier on an empty results directory | 30 failed, reward 0 |
 | FIFOs planted at the three artifact paths | 30 failed in 7 s, reward 0, no hang (`not a regular file`) |
-| Harbor `oracle` / `nop` | HARBOR_PLACEHOLDER |
-| five OpenBLAS kernels (default, Prescott, SandyBridge, SkylakeX, Zen) | KERNELS_PLACEHOLDER |
+| Harbor 0.24 `oracle` / `nop` (local, Docker in a Colima VM on macOS) | the agent phase runs and all three artifacts are collected (oracle trial 1 min 19 s); the verifier then stops at `test.sh`'s lockdown self-check, because the VM's virtiofs and 9p bind mounts of `/logs/verifier` ignore `chmod`, so the check correctly refuses to grade in that environment (reward 0 for both). On a Linux Docker host the same bind mount honours `chmod 700` and the check passes, as it did for the two earlier tasks built on this template; the plain-Docker rows above are the grading evidence from this machine |
+| OpenBLAS kernels `OPENBLAS_CORETYPE` = default, Prescott, SandyBridge, Zen on all 28 recipes | byte-identical reports under all four (the method uses no BLAS beyond scalar work; the SkylakeX kernel needs AVX-512, which the development machine lacks, so it could not be run) |
 
 ### Coverage of the 28 recipes
 
