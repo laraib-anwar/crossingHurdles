@@ -1,0 +1,28 @@
+{
+ "model_id": "dev_02",
+ "layers": [
+  {
+   "thickness_km": 3.0,
+   "v_top_km_s": 3.0,
+   "gradient_per_s": 0.4
+  },
+  {
+   "thickness_km": 27.0,
+   "v_top_km_s": 5.8,
+   "gradient_per_s": 0.03
+  },
+  {
+   "thickness_km": null,
+   "v_top_km_s": 7.9,
+   "gradient_per_s": 0.002
+  }
+ ],
+ "x_max_km": 250.0,
+ "offsets_km": [
+  10.0,
+  60.0,
+  120.0,
+  150.0,
+  200.0
+ ]
+}

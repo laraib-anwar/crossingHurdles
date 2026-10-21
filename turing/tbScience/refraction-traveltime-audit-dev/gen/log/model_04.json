@@ -1,0 +1,20 @@
+{
+ "model_id": "model_04",
+ "shipped": true,
+ "label": "strong-gradient zone with a caustic",
+ "layers": 4,
+ "arrivals": [
+  6,
+  6,
+  6,
+  6,
+  3,
+  1,
+  1,
+  1
+ ],
+ "caustics": 1,
+ "first_arrival": 3,
+ "secs": 0.34,
+ "attempts": 4
+}

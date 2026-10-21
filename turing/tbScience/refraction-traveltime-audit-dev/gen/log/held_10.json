@@ -1,0 +1,17 @@
+{
+ "model_id": "held_10",
+ "shipped": false,
+ "label": "velocity drop",
+ "layers": 6,
+ "arrivals": [
+  9,
+  9,
+  7,
+  5,
+  6
+ ],
+ "caustics": 2,
+ "first_arrival": 5,
+ "secs": 0.69,
+ "attempts": 2
+}

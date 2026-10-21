@@ -1,0 +1,21 @@
+{
+ "model_id": "model_05",
+ "shipped": true,
+ "label": "velocity drop: shadow zone",
+ "layers": 5,
+ "arrivals": [
+  5,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  6,
+  1
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.55,
+ "attempts": 4
+}

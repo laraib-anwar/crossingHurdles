@@ -1,0 +1,19 @@
+{
+ "model_id": "held_12",
+ "shipped": false,
+ "label": "caustic on a turning branch",
+ "layers": 3,
+ "arrivals": [
+  3,
+  3,
+  4,
+  5,
+  5,
+  1,
+  1
+ ],
+ "caustics": 1,
+ "first_arrival": 2,
+ "secs": 0.31,
+ "attempts": 4
+}

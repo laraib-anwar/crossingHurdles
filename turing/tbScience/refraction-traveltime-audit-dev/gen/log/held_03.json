@@ -1,0 +1,21 @@
+{
+ "model_id": "held_03",
+ "shipped": false,
+ "label": "mixed layers with head waves",
+ "layers": 4,
+ "arrivals": [
+  6,
+  6,
+  6,
+  6,
+  6,
+  4,
+  3,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 4,
+ "secs": 0.32,
+ "attempts": 1
+}

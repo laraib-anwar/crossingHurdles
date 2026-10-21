@@ -1,0 +1,20 @@
+{
+ "model_id": "model_03",
+ "shipped": true,
+ "label": "low-velocity zone",
+ "layers": 4,
+ "arrivals": [
+  5,
+  5,
+  5,
+  5,
+  5,
+  3,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.35,
+ "attempts": 1
+}

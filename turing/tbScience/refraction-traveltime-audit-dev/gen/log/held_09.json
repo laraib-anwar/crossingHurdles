@@ -1,0 +1,21 @@
+{
+ "model_id": "held_09",
+ "shipped": false,
+ "label": "low-velocity zone",
+ "layers": 4,
+ "arrivals": [
+  4,
+  6,
+  6,
+  6,
+  6,
+  5,
+  3,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.47,
+ "attempts": 6
+}

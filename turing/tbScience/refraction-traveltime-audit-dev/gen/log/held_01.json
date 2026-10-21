@@ -1,0 +1,19 @@
+{
+ "model_id": "held_01",
+ "shipped": false,
+ "label": "constant layers",
+ "layers": 5,
+ "arrivals": [
+  7,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.25,
+ "attempts": 1
+}

@@ -1,0 +1,32 @@
+{
+ "model_id": "model_02",
+ "layers": [
+  {
+   "thickness_km": 0.834,
+   "v_top_km_s": 3.085,
+   "gradient_per_s": 0.0278
+  },
+  {
+   "thickness_km": 10.168,
+   "v_top_km_s": 3.448,
+   "gradient_per_s": 0.119
+  },
+  {
+   "thickness_km": null,
+   "v_top_km_s": 5.164,
+   "gradient_per_s": 0.0466
+  }
+ ],
+ "x_max_km": 102.3,
+ "offsets_km": [
+  4.2095,
+  12.122,
+  14.641,
+  15.145,
+  17.05,
+  22.701,
+  25.906,
+  41.219,
+  85.984
+ ]
+}

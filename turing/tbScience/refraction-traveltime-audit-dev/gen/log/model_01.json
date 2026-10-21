@@ -1,0 +1,21 @@
+{
+ "model_id": "model_01",
+ "shipped": true,
+ "label": "constant layers: direct and head waves (base case)",
+ "layers": 5,
+ "arrivals": [
+  5,
+  5,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "caustics": 0,
+ "first_arrival": 4,
+ "secs": 0.49,
+ "attempts": 1
+}

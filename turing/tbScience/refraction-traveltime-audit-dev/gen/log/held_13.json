@@ -1,0 +1,19 @@
+{
+ "model_id": "held_13",
+ "shipped": false,
+ "label": "two caustics",
+ "layers": 4,
+ "arrivals": [
+  4,
+  6,
+  6,
+  6,
+  4,
+  4,
+  4
+ ],
+ "caustics": 2,
+ "first_arrival": 4,
+ "secs": 0.57,
+ "attempts": 9
+}

@@ -1,0 +1,9 @@
+{"model_id": "held_05", "shipped": false, "label": "gradient layers, three turning branches", "layers": 3, "arrivals": [4, 5, 5, 5, 5, 3], "caustics": 0, "first_arrival": 3, "secs": 0.36, "attempts": 11}
+{"model_id": "held_06", "shipped": false, "label": "first arrival with several crossovers", "layers": 6, "arrivals": [7, 7, 7, 7, 7, 7, 5, 3, 3], "caustics": 0, "first_arrival": 5, "secs": 0.71, "attempts": 3}
+{"model_id": "held_07", "shipped": false, "label": "first arrival with several crossovers", "layers": 5, "arrivals": [7, 9, 9, 9, 5, 5], "caustics": 0, "first_arrival": 4, "secs": 0.49, "attempts": 1}
+{"model_id": "held_08", "shipped": false, "label": "negative-gradient low-velocity zone", "layers": 4, "arrivals": [4, 5, 5, 5, 1, 1], "caustics": 0, "first_arrival": 3, "secs": 0.37, "attempts": 3}
+{"model_id": "held_09", "shipped": false, "label": "low-velocity zone", "layers": 4, "arrivals": [4, 6, 6, 6, 6, 5, 3, 3, 3], "caustics": 0, "first_arrival": 3, "secs": 0.47, "attempts": 6}
+{"model_id": "held_10", "shipped": false, "label": "velocity drop", "layers": 6, "arrivals": [9, 9, 7, 5, 6], "caustics": 2, "first_arrival": 5, "secs": 0.69, "attempts": 2}
+{"model_id": "held_11", "shipped": false, "label": "velocity drop: shadow zone", "layers": 5, "arrivals": [6, 7, 5, 7, 5], "caustics": 1, "first_arrival": 4, "secs": 0.57, "attempts": 4}
+{"model_id": "held_12", "shipped": false, "label": "caustic on a turning branch", "layers": 3, "arrivals": [3, 3, 4, 5, 5, 1, 1], "caustics": 1, "first_arrival": 2, "secs": 0.31, "attempts": 4}
+{"model_id": "held_13", "shipped": false, "label": "two caustics", "layers": 4, "arrivals": [4, 6, 6, 6, 4, 4, 4], "caustics": 2, "first_arrival": 4, "secs": 0.57, "attempts": 9}

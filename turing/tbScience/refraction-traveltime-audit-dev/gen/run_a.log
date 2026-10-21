@@ -1,0 +1,10 @@
+{"model_id": "model_01", "shipped": true, "label": "constant layers: direct and head waves (base case)", "layers": 5, "arrivals": [5, 5, 9, 9, 9, 9, 9, 9, 9], "caustics": 0, "first_arrival": 4, "secs": 0.49, "attempts": 1}
+{"model_id": "model_02", "shipped": true, "label": "gradient crust over a gradient half-space", "layers": 3, "arrivals": [4, 4, 4, 4, 4, 4, 4, 3, 1], "caustics": 0, "first_arrival": 3, "secs": 0.28, "attempts": 1}
+{"model_id": "model_03", "shipped": true, "label": "low-velocity zone", "layers": 4, "arrivals": [5, 5, 5, 5, 5, 3, 3, 3], "caustics": 0, "first_arrival": 3, "secs": 0.35, "attempts": 1}
+{"model_id": "model_04", "shipped": true, "label": "strong-gradient zone with a caustic", "layers": 4, "arrivals": [6, 6, 6, 6, 3, 1, 1, 1], "caustics": 1, "first_arrival": 3, "secs": 0.34, "attempts": 4}
+{"model_id": "model_05", "shipped": true, "label": "velocity drop: shadow zone", "layers": 5, "arrivals": [5, 8, 8, 8, 8, 8, 8, 6, 1], "caustics": 0, "first_arrival": 3, "secs": 0.55, "attempts": 4}
+{"model_id": "model_06", "shipped": true, "label": "head wave with critical offset beyond the window", "layers": 2, "arrivals": [2, 2, 2, 2, 2, 2, 2], "caustics": 0, "first_arrival": 1, "secs": 0.16, "attempts": 191}
+{"model_id": "held_01", "shipped": false, "label": "constant layers", "layers": 5, "arrivals": [7, 9, 9, 9, 9, 9, 9], "caustics": 0, "first_arrival": 3, "secs": 0.25, "attempts": 1}
+{"model_id": "held_02", "shipped": false, "label": "constant layers, three head waves", "layers": 4, "arrivals": [6, 7, 7, 7, 7, 7, 7, 7], "caustics": 0, "first_arrival": 4, "secs": 0.2, "attempts": 2}
+{"model_id": "held_03", "shipped": false, "label": "mixed layers with head waves", "layers": 4, "arrivals": [6, 6, 6, 6, 6, 4, 3, 3, 3], "caustics": 0, "first_arrival": 4, "secs": 0.32, "attempts": 1}
+{"model_id": "held_04", "shipped": false, "label": "gradient layers", "layers": 3, "arrivals": [5, 5, 5, 1, 1], "caustics": 0, "first_arrival": 2, "secs": 0.17, "attempts": 1}

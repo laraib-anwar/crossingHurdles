@@ -1,0 +1,118 @@
+{
+ "model_id": "dev_01",
+ "arrivals": [
+  {
+   "x_km": 2.0,
+   "rays": [
+    {
+     "kind": "direct",
+     "index": 0,
+     "p_s_km": 0.5,
+     "t_s": 1.0
+    },
+    {
+     "kind": "reflection",
+     "index": 1,
+     "p_s_km": 0.22360679774997894,
+     "t_s": 2.23606797749979
+    },
+    {
+     "kind": "reflection",
+     "index": 2,
+     "p_s_km": 0.04116845035459073,
+     "t_s": 4.541416211760714
+    }
+   ]
+  },
+  {
+   "x_km": 8.0,
+   "rays": [
+    {
+     "kind": "head",
+     "index": 1,
+     "p_s_km": 0.25,
+     "t_s": 3.7320508075688776
+    },
+    {
+     "kind": "direct",
+     "index": 0,
+     "p_s_km": 0.5,
+     "t_s": 4.0
+    },
+    {
+     "kind": "reflection",
+     "index": 2,
+     "p_s_km": 0.14092922877716496,
+     "t_s": 5.111265979198432
+    }
+   ]
+  },
+  {
+   "x_km": 20.0,
+   "rays": [
+    {
+     "kind": "head",
+     "index": 1,
+     "p_s_km": 0.25,
+     "t_s": 6.732050807568878
+    },
+    {
+     "kind": "head",
+     "index": 2,
+     "p_s_km": 0.16666666666666666,
+     "t_s": 7.082341397747284
+    },
+    {
+     "kind": "direct",
+     "index": 0,
+     "p_s_km": 0.5,
+     "t_s": 10.0
+    }
+   ]
+  },
+  {
+   "x_km": 45.0,
+   "rays": [
+    {
+     "kind": "head",
+     "index": 2,
+     "p_s_km": 0.16666666666666666,
+     "t_s": 11.249008064413951
+    },
+    {
+     "kind": "head",
+     "index": 1,
+     "p_s_km": 0.25,
+     "t_s": 12.982050807568879
+    },
+    {
+     "kind": "direct",
+     "index": 0,
+     "p_s_km": 0.5,
+     "t_s": 22.5
+    }
+   ]
+  }
+ ],
+ "caustics": [],
+ "first_arrival": [
+  {
+   "kind": "direct",
+   "index": 0,
+   "x_start_km": 0.0,
+   "x_end_km": 6.9282032302755105
+  },
+  {
+   "kind": "head",
+   "index": 1,
+   "x_start_km": 6.9282032302755105,
+   "x_end_km": 24.20348708214088
+  },
+  {
+   "kind": "head",
+   "index": 2,
+   "x_start_km": 24.20348708214088,
+   "x_end_km": 60.0
+  }
+ ]
+}

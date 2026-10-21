@@ -1,0 +1,17 @@
+{
+ "model_id": "held_04",
+ "shipped": false,
+ "label": "gradient layers",
+ "layers": 3,
+ "arrivals": [
+  5,
+  5,
+  5,
+  1,
+  1
+ ],
+ "caustics": 0,
+ "first_arrival": 2,
+ "secs": 0.17,
+ "attempts": 1
+}

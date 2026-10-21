@@ -1,0 +1,21 @@
+{
+ "model_id": "model_02",
+ "shipped": true,
+ "label": "gradient crust over a gradient half-space",
+ "layers": 3,
+ "arrivals": [
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  3,
+  1
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.28,
+ "attempts": 1
+}

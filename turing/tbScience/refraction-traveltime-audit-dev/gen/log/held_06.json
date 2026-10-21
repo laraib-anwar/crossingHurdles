@@ -1,0 +1,21 @@
+{
+ "model_id": "held_06",
+ "shipped": false,
+ "label": "first arrival with several crossovers",
+ "layers": 6,
+ "arrivals": [
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  5,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 5,
+ "secs": 0.71,
+ "attempts": 3
+}
