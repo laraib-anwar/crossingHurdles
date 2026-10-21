@@ -1,0 +1,21 @@
+{
+ "model_id": "held_21",
+ "shipped": false,
+ "label": "mixed layers, long window",
+ "layers": 5,
+ "arrivals": [
+  5,
+  7,
+  7,
+  7,
+  7,
+  5,
+  6,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 5,
+ "secs": 0.53,
+ "attempts": 1
+}

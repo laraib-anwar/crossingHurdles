@@ -1,0 +1,20 @@
+{
+ "model_id": "held_20",
+ "shipped": false,
+ "label": "direct wave and gradient layers",
+ "layers": 4,
+ "arrivals": [
+  4,
+  4,
+  6,
+  6,
+  6,
+  6,
+  5,
+  5
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.45,
+ "attempts": 1
+}

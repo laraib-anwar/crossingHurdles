@@ -1,0 +1,41 @@
+{
+ "model_id": "model_03",
+ "layers": [
+  {
+   "thickness_km": 7.131,
+   "v_top_km_s": 2.558,
+   "gradient_per_s": 0.1251
+  },
+  {
+   "thickness_km": 10.046,
+   "v_top_km_s": 4.782,
+   "gradient_per_s": -0.2154
+  },
+  {
+   "thickness_km": 12.08,
+   "v_top_km_s": 3.045,
+   "gradient_per_s": 0.0616
+  },
+  {
+   "thickness_km": 10.41,
+   "v_top_km_s": 3.538,
+   "gradient_per_s": 0.1283
+  },
+  {
+   "thickness_km": null,
+   "v_top_km_s": 6.36,
+   "gradient_per_s": 0.0528
+  }
+ ],
+ "x_max_km": 182.8,
+ "offsets_km": [
+  20.76,
+  21.66,
+  31.563,
+  35.164,
+  55.965,
+  79.825,
+  96.096,
+  97.012
+ ]
+}

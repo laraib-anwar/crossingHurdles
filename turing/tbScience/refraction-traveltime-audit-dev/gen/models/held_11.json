@@ -2,37 +2,27 @@
  "model_id": "held_11",
  "layers": [
   {
-   "thickness_km": 7.674,
-   "v_top_km_s": 3.307,
-   "gradient_per_s": 0.0697
+   "thickness_km": 2.312,
+   "v_top_km_s": 1.756,
+   "gradient_per_s": 0.0355
   },
   {
-   "thickness_km": 8.634,
-   "v_top_km_s": 4.382,
-   "gradient_per_s": 0.0149
-  },
-  {
-   "thickness_km": 5.46,
-   "v_top_km_s": 5.081,
-   "gradient_per_s": 0.0
-  },
-  {
-   "thickness_km": 0.556,
-   "v_top_km_s": 4.122,
-   "gradient_per_s": 0.0
+   "thickness_km": 9.427,
+   "v_top_km_s": 1.5,
+   "gradient_per_s": 0.004
   },
   {
    "thickness_km": null,
-   "v_top_km_s": 4.326,
-   "gradient_per_s": 0.0818
+   "v_top_km_s": 1.844,
+   "gradient_per_s": 0.0092
   }
  ],
- "x_max_km": 187.2,
+ "x_max_km": 102.4,
  "offsets_km": [
-  41.402,
-  49.838,
-  103.71,
-  156.78,
-  164.31
+  6.0823,
+  7.0908,
+  53.07,
+  68.6,
+  71.94
  ]
 }

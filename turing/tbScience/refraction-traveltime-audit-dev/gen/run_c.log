@@ -1,0 +1,9 @@
+{"model_id": "held_14", "failed": true, "label": "caustic on a reflection branch"}
+{"model_id": "held_15", "shipped": false, "label": "triplication: five or more arrivals at one offset", "layers": 5, "arrivals": [6, 8, 8, 8, 5, 5, 3], "caustics": 1, "first_arrival": 2, "secs": 0.34, "attempts": 6}
+{"model_id": "held_16", "shipped": false, "label": "steep gradients, four or more arrivals", "layers": 3, "arrivals": [3, 8, 6, 6, 6, 4, 3, 3], "caustics": 4, "first_arrival": 2, "secs": 0.24, "attempts": 2}
+{"model_id": "held_17", "shipped": false, "label": "head wave with critical offset beyond the window", "layers": 3, "arrivals": [3, 3, 4, 4, 4, 4, 4, 4], "caustics": 0, "first_arrival": 2, "secs": 0.27, "attempts": 13}
+{"model_id": "held_18", "shipped": false, "label": "constant half-space below gradient layers", "layers": 2, "arrivals": [3, 3, 3, 3, 3], "caustics": 0, "first_arrival": 2, "secs": 0.18, "attempts": 1}
+{"model_id": "held_19", "shipped": false, "label": "gradient half-space", "layers": 2, "arrivals": [3, 3, 3, 3, 3, 3], "caustics": 0, "first_arrival": 2, "secs": 0.24, "attempts": 1}
+{"model_id": "held_20", "shipped": false, "label": "direct wave and gradient layers", "layers": 4, "arrivals": [4, 4, 6, 6, 6, 6, 5, 5], "caustics": 0, "first_arrival": 3, "secs": 0.45, "attempts": 1}
+{"model_id": "held_21", "shipped": false, "label": "mixed layers, long window", "layers": 5, "arrivals": [5, 7, 7, 7, 7, 5, 6, 3, 3], "caustics": 0, "first_arrival": 5, "secs": 0.53, "attempts": 1}
+{"model_id": "held_22", "shipped": false, "label": "head waves and post-critical reflections", "layers": 6, "arrivals": [9, 11, 11, 11, 3, 3, 3], "caustics": 0, "first_arrival": 3, "secs": 0.46, "attempts": 2}

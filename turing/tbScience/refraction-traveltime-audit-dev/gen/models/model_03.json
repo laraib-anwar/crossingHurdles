@@ -2,35 +2,40 @@
  "model_id": "model_03",
  "layers": [
   {
-   "thickness_km": 1.037,
-   "v_top_km_s": 1.759,
-   "gradient_per_s": 0.1419
+   "thickness_km": 7.131,
+   "v_top_km_s": 2.558,
+   "gradient_per_s": 0.1251
   },
   {
-   "thickness_km": 0.517,
-   "v_top_km_s": 1.5,
-   "gradient_per_s": 0.1384
+   "thickness_km": 10.046,
+   "v_top_km_s": 4.782,
+   "gradient_per_s": -0.2154
   },
   {
-   "thickness_km": 2.715,
-   "v_top_km_s": 2.147,
-   "gradient_per_s": 0.0564
+   "thickness_km": 12.08,
+   "v_top_km_s": 3.045,
+   "gradient_per_s": 0.0616
+  },
+  {
+   "thickness_km": 10.41,
+   "v_top_km_s": 3.538,
+   "gradient_per_s": 0.1283
   },
   {
    "thickness_km": null,
-   "v_top_km_s": 2.471,
-   "gradient_per_s": 0.1237
+   "v_top_km_s": 6.36,
+   "gradient_per_s": 0.0528
   }
  ],
- "x_max_km": 25.2,
+ "x_max_km": 182.8,
  "offsets_km": [
-  5.468,
-  8.5248,
-  9.191,
-  10.184,
-  10.308,
-  10.914,
-  15.805,
-  21.782
+  20.76,
+  21.66,
+  31.563,
+  35.164,
+  55.965,
+  79.825,
+  96.096,
+  97.012
  ]
 }

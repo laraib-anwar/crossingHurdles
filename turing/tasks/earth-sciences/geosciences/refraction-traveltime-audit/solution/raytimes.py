@@ -86,6 +86,10 @@ class Model:
 
     def XT(self, kind, idx, p):
         """Two-way (X, T, dX/dp) of a branch, p array."""
+        with np.errstate(all="ignore"):
+            return self._XT(kind, idx, p)
+
+    def _XT(self, kind, idx, p):
         p = np.asarray(p, float)
         X = np.zeros_like(p); T = np.zeros_like(p); D = np.zeros_like(p)
         top = idx  # layers fully crossed: 0..idx-1
@@ -114,7 +118,17 @@ class Model:
                 if D[j] * D[j + 1] < 0.0:
                     f = lambda q: float(self.XT(kind, idx, np.array([q]))[2][0])
                     cuts.append(brentq(f, ps[j], ps[j + 1], xtol=1e-300, rtol=4 * np.finfo(float).eps, maxiter=500))
-            ends = [ps[0]] + cuts + [ps[-1]]
+            # branch ends: the exact limits wherever X is finite there (a turning ray grazing the
+            # top of its layer at p = 1/a_k, a reflection grazing a gradient-layer bottom); only
+            # divergent limits (p -> 0 for a half-space turning ray, grazing in a constant layer)
+            # keep the last grid point
+            def finite_at(q):
+                with np.errstate(all="ignore"):
+                    X_, T_, _ = self.XT(kind, idx, np.array([q]))
+                return bool(np.isfinite(X_[0]) and np.isfinite(T_[0]))
+            p_lo = lo if (lo > 0.0 or kind == "reflection") and finite_at(lo) else ps[0]
+            p_hi = hi if finite_at(hi) else ps[-1]
+            ends = [p_lo] + cuts + [p_hi]
             for j in range(len(ends) - 1):
                 p0, p1 = ends[j], ends[j + 1]
                 x0 = float(self.XT(kind, idx, np.array([p0]))[0][0])

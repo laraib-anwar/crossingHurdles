@@ -1,0 +1,18 @@
+{
+ "model_id": "held_19",
+ "shipped": false,
+ "label": "gradient half-space",
+ "layers": 2,
+ "arrivals": [
+  3,
+  3,
+  3,
+  3,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 2,
+ "secs": 0.24,
+ "attempts": 1
+}

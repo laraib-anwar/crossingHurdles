@@ -1,21 +1,20 @@
 {
  "model_id": "held_09",
  "shipped": false,
- "label": "low-velocity zone",
+ "label": "low-velocity zone: reflection fills the shadow",
  "layers": 4,
  "arrivals": [
   4,
-  6,
-  6,
-  6,
-  6,
-  5,
-  3,
-  3,
-  3
+  4,
+  4,
+  2,
+  2,
+  2,
+  2,
+  4
  ],
- "caustics": 0,
- "first_arrival": 3,
- "secs": 0.47,
- "attempts": 6
+ "caustics": 1,
+ "first_arrival": 4,
+ "secs": 0.15,
+ "attempts": 13
 }

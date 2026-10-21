@@ -1,0 +1,20 @@
+{
+ "model_id": "held_17",
+ "shipped": false,
+ "label": "head wave with critical offset beyond the window",
+ "layers": 3,
+ "arrivals": [
+  3,
+  3,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4
+ ],
+ "caustics": 0,
+ "first_arrival": 2,
+ "secs": 0.27,
+ "attempts": 13
+}

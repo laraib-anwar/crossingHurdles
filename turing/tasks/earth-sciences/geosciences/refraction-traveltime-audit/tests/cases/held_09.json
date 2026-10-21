@@ -1,0 +1,36 @@
+{
+ "model_id": "held_09",
+ "layers": [
+  {
+   "thickness_km": 2.42,
+   "v_top_km_s": 1.911,
+   "gradient_per_s": 0.1318
+  },
+  {
+   "thickness_km": 12.25,
+   "v_top_km_s": 3.104,
+   "gradient_per_s": -0.1075
+  },
+  {
+   "thickness_km": 5.603,
+   "v_top_km_s": 2.966,
+   "gradient_per_s": 0.0612
+  },
+  {
+   "thickness_km": null,
+   "v_top_km_s": 3.502,
+   "gradient_per_s": 0.0
+  }
+ ],
+ "x_max_km": 154.0,
+ "offsets_km": [
+  5.3552,
+  7.6304,
+  11.422,
+  26.042,
+  28.19,
+  53.348,
+  66.804,
+  79.678
+ ]
+}

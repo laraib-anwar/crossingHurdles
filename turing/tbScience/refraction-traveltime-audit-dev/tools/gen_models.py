@@ -137,9 +137,9 @@ def choose_offsets(rng, m, rep0, n):
 PLAN = [
     ("model_01", True, "constant", dict(min_heads=2), "constant layers: direct and head waves (base case)"),
     ("model_02", True, "gradient_halfspace", dict(min_turning=2), "gradient crust over a gradient half-space"),
-    ("model_03", True, "lvz", dict(lvz=True), "low-velocity zone"),
+    ("model_03", True, "lvz", dict(lvz=True, refl_first=True), "low-velocity zone: reflection fills the shadow"),
     ("model_04", True, "caustic", dict(min_caustics=1), "strong-gradient zone with a caustic"),
-    ("model_05", True, "drop", dict(drop=True, min_fa=3), "velocity drop: shadow zone"),
+    ("model_05", True, "drop", dict(drop=True, min_fa=3, refl_first=True), "velocity drop: shadow zone"),
     ("model_06", True, "far_head", dict(far_head=True), "head wave with critical offset beyond the window"),
     ("held_01", False, "constant", dict(min_heads=2), "constant layers"),
     ("held_02", False, "constant", dict(min_heads=3), "constant layers, three head waves"),
@@ -149,12 +149,12 @@ PLAN = [
     ("held_06", False, "mixed", dict(min_fa=4), "first arrival with several crossovers"),
     ("held_07", False, "mixed", dict(min_fa=4), "first arrival with several crossovers"),
     ("held_08", False, "lvz", dict(lvz=True, neg=True), "negative-gradient low-velocity zone"),
-    ("held_09", False, "lvz", dict(lvz=True), "low-velocity zone"),
-    ("held_10", False, "drop", dict(drop=True), "velocity drop"),
-    ("held_11", False, "drop", dict(drop=True, min_fa=3), "velocity drop: shadow zone"),
+    ("held_09", False, "lvz", dict(lvz=True, refl_first=True), "low-velocity zone: reflection fills the shadow"),
+    ("held_10", False, "drop", dict(drop=True, refl_first=True), "velocity drop: reflection first"),
+    ("held_11", False, "drop", dict(drop=True, min_fa=3, refl_first=True), "velocity drop: shadow zone"),
     ("held_12", False, "caustic", dict(min_caustics=1), "caustic on a turning branch"),
     ("held_13", False, "caustic", dict(min_caustics=2), "two caustics"),
-    ("held_14", False, "caustic", dict(refl_caustic=True), "caustic on a reflection branch"),
+    ("held_14", False, "caustic", dict(min_caustics=1, min_fa=3), "caustic and several first-arrival intervals"),
     ("held_15", False, "caustic", dict(min_arrivals=5), "triplication: five or more arrivals at one offset"),
     ("held_16", False, "steep", dict(min_arrivals=4), "steep gradients, four or more arrivals"),
     ("held_17", False, "far_head", dict(far_head=True), "head wave with critical offset beyond the window"),
@@ -178,6 +178,7 @@ def predicate(want, m, rep):
     if max(len(a["rays"]) for a in rep["arrivals"]) < want.get("min_arrivals", 0): return False
     if len(rep["first_arrival"]) < want.get("min_fa", 0): return False
     if want.get("direct") and "direct" not in kinds: return False
+    if want.get("refl_first") and not any(f["kind"] == "reflection" for f in rep["first_arrival"]): return False
     if want.get("neg") and not any(l["gradient_per_s"] < 0 for l in lay): return False
     if want.get("lvz") and not (any(l["gradient_per_s"] < 0 for l in lay) or drop_present(lay)): return False
     if want.get("drop") and not drop_present(lay): return False

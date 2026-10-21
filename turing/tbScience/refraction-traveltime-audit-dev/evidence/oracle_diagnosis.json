@@ -1,0 +1,183 @@
+{
+ "defects": [
+  {
+   "description": "Every layer is replaced by its mean velocity, so the turning waves of the gradient layers are replaced by head waves and the first-arrival times are wrong wherever a layer has a gradient.",
+   "model": {
+    "model_id": "model_02",
+    "layers": [
+     {
+      "thickness_km": 0.834,
+      "v_top_km_s": 3.085,
+      "gradient_per_s": 0.0278
+     },
+     {
+      "thickness_km": 10.168,
+      "v_top_km_s": 3.448,
+      "gradient_per_s": 0.119
+     },
+     {
+      "thickness_km": null,
+      "v_top_km_s": 5.164,
+      "gradient_per_s": 0.0466
+     }
+    ],
+    "x_max_km": 102.3,
+    "offsets_km": [
+     4.2095,
+     12.122,
+     14.641,
+     15.145,
+     17.05,
+     22.701,
+     25.906,
+     41.219,
+     85.984
+    ]
+   },
+   "quantity": "first_arrival_time",
+   "offset_km": 4.2095,
+   "legacy_value": 1.3593974228317927,
+   "correct_value": 1.3644238762275789
+  },
+  {
+   "description": "Reflections are kept only up to the critical angle, so post-critical (wide-angle) reflections are missing, and turning waves do not exist in the constant-velocity stand-in; the number of arrivals at an offset is wrong.",
+   "model": {
+    "model_id": "model_01",
+    "layers": [
+     {
+      "thickness_km": 3.004,
+      "v_top_km_s": 3.48,
+      "gradient_per_s": 0.0
+     },
+     {
+      "thickness_km": 7.243,
+      "v_top_km_s": 3.616,
+      "gradient_per_s": 0.0
+     },
+     {
+      "thickness_km": 12.115,
+      "v_top_km_s": 4.626,
+      "gradient_per_s": 0.0
+     },
+     {
+      "thickness_km": 2.669,
+      "v_top_km_s": 5.182,
+      "gradient_per_s": 0.0
+     },
+     {
+      "thickness_km": null,
+      "v_top_km_s": 6.258,
+      "gradient_per_s": 0.0
+     }
+    ],
+    "x_max_km": 215.3,
+    "offsets_km": [
+     7.2811,
+     20.97,
+     74.538,
+     154.86,
+     161.11,
+     163.35,
+     163.89,
+     175.01,
+     188.79
+    ]
+   },
+   "quantity": "arrival_count",
+   "offset_km": 74.538,
+   "legacy_value": 5,
+   "correct_value": 9
+  },
+  {
+   "description": "The first-arrival curve is the envelope of the direct and head-wave lines only; reflections and turning waves that arrive first (in shadow zones below low-velocity layers, or from gradient layers) are ignored, so the number of first-arrival intervals is wrong.",
+   "model": {
+    "model_id": "model_03",
+    "layers": [
+     {
+      "thickness_km": 7.131,
+      "v_top_km_s": 2.558,
+      "gradient_per_s": 0.1251
+     },
+     {
+      "thickness_km": 10.046,
+      "v_top_km_s": 4.782,
+      "gradient_per_s": -0.2154
+     },
+     {
+      "thickness_km": 12.08,
+      "v_top_km_s": 3.045,
+      "gradient_per_s": 0.0616
+     },
+     {
+      "thickness_km": 10.41,
+      "v_top_km_s": 3.538,
+      "gradient_per_s": 0.1283
+     },
+     {
+      "thickness_km": null,
+      "v_top_km_s": 6.36,
+      "gradient_per_s": 0.0528
+     }
+    ],
+    "x_max_km": 182.8,
+    "offsets_km": [
+     20.76,
+     21.66,
+     31.563,
+     35.164,
+     55.965,
+     79.825,
+     96.096,
+     97.012
+    ]
+   },
+   "quantity": "first_arrival_count",
+   "offset_km": null,
+   "legacy_value": 3,
+   "correct_value": 4
+  },
+  {
+   "description": "No caustics are computed: the turning and reflection branches of gradient zones fold back and produce caustics (triplications) that a constant-velocity stand-in cannot have.",
+   "model": {
+    "model_id": "model_04",
+    "layers": [
+     {
+      "thickness_km": 6.917,
+      "v_top_km_s": 3.399,
+      "gradient_per_s": 0.1205
+     },
+     {
+      "thickness_km": 7.764,
+      "v_top_km_s": 5.229,
+      "gradient_per_s": 0.1448
+     },
+     {
+      "thickness_km": 0.735,
+      "v_top_km_s": 6.538,
+      "gradient_per_s": 0.7105
+     },
+     {
+      "thickness_km": null,
+      "v_top_km_s": 8.378,
+      "gradient_per_s": 0.0144
+     }
+    ],
+    "x_max_km": 120.6,
+    "offsets_km": [
+     24.981,
+     26.762,
+     32.107,
+     35.077,
+     48.556,
+     98.432,
+     109.79,
+     115.3
+    ]
+   },
+   "quantity": "caustic_count",
+   "offset_km": null,
+   "legacy_value": 0,
+   "correct_value": 1
+  }
+ ]
+}

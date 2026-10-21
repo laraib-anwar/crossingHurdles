@@ -1,17 +1,18 @@
 {
  "model_id": "held_10",
  "shipped": false,
- "label": "velocity drop",
- "layers": 6,
+ "label": "velocity drop: reflection first",
+ "layers": 3,
  "arrivals": [
-  9,
-  9,
-  7,
-  5,
-  6
+  3,
+  3,
+  1,
+  3,
+  3,
+  2
  ],
- "caustics": 2,
- "first_arrival": 5,
- "secs": 0.69,
- "attempts": 2
+ "caustics": 1,
+ "first_arrival": 3,
+ "secs": 0.38,
+ "attempts": 10
 }

@@ -2,16 +2,16 @@
  "model_id": "held_11",
  "shipped": false,
  "label": "velocity drop: shadow zone",
- "layers": 5,
+ "layers": 3,
  "arrivals": [
-  6,
-  7,
-  5,
-  7,
-  5
+  3,
+  3,
+  2,
+  1,
+  1
  ],
- "caustics": 1,
- "first_arrival": 4,
- "secs": 0.57,
- "attempts": 4
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.33,
+ "attempts": 18
 }

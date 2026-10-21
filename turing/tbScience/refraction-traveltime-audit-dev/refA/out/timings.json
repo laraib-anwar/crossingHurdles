@@ -1,0 +1,28 @@
+{
+ "python": "/Users/adnananwar/.venvs/tbs/bin/python",
+ "env": "OPENBLAS/OMP/MKL_NUM_THREADS=1, PYTHONHASHSEED=0",
+ "machine": "x86_64 macOS-14.8.9-x86_64-i386-64bit",
+ "runs": {
+  "dev_01": {
+   "wall_s": 1.8,
+   "exit": 0
+  },
+  "dev_02": {
+   "wall_s": 1.95,
+   "exit": 0
+  },
+  "dev_03": {
+   "wall_s": 1.37,
+   "exit": 0
+  },
+  "dev_04": {
+   "wall_s": 1.01,
+   "exit": 0
+  },
+  "dev_05": {
+   "wall_s": 1.4,
+   "exit": 0
+  }
+ },
+ "max_wall_s": 1.95
+}

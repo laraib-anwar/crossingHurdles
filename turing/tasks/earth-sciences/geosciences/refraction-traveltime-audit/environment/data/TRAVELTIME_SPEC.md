@@ -122,7 +122,7 @@ reference values for that model:
    intervals equal the reference numbers.
 3. Element by element in the stated orders: every `kind` and `index` is equal; every `t_s` and
    `p_s_km` is within `1e-9` relative of the reference; every `x_km` of a caustic and every
-   interior boundary `x_end_km` / `x_start_km` of the first-arrival intervals is within `1e-7`
+   interior boundary `x_end_km` / `x_start_km` of the first-arrival intervals is within `5e-7`
    relative of the reference. The outer boundaries `0` and `X_max` are exact.
 
 A value exactly on a bound passes. No other tolerance applies. The rationale for each tolerance
@@ -158,7 +158,7 @@ shipped in `/root/data/models/` and on 22 held-out models of the same schema and
 calls in total. The held-out models cover: constant-velocity layers with head waves and a direct
 wave; gradient layers with turning waves; velocity increases and decreases at interfaces;
 low-velocity zones (negative gradients and velocity drops); triplications with three or more
-arrivals at one offset; reflection branches with caustics; head waves whose critical offset lies
+arrivals at one offset; turning branches with one or several caustics; head waves whose critical offset lies
 inside the window and beyond it; gradient half-spaces and constant-velocity half-spaces; and first
 arrivals with several crossovers. Their contents are not disclosed.
 

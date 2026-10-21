@@ -1,0 +1,19 @@
+{
+ "model_id": "held_22",
+ "shipped": false,
+ "label": "head waves and post-critical reflections",
+ "layers": 6,
+ "arrivals": [
+  9,
+  11,
+  11,
+  11,
+  3,
+  3,
+  3
+ ],
+ "caustics": 0,
+ "first_arrival": 3,
+ "secs": 0.46,
+ "attempts": 2
+}

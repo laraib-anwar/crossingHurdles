@@ -1,0 +1,20 @@
+{
+ "model_id": "held_16",
+ "shipped": false,
+ "label": "steep gradients, four or more arrivals",
+ "layers": 3,
+ "arrivals": [
+  3,
+  8,
+  6,
+  6,
+  6,
+  4,
+  3,
+  3
+ ],
+ "caustics": 4,
+ "first_arrival": 2,
+ "secs": 0.24,
+ "attempts": 2
+}

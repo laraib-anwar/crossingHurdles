@@ -1,0 +1,19 @@
+{
+ "model_id": "held_15",
+ "shipped": false,
+ "label": "triplication: five or more arrivals at one offset",
+ "layers": 5,
+ "arrivals": [
+  6,
+  8,
+  8,
+  8,
+  5,
+  5,
+  3
+ ],
+ "caustics": 1,
+ "first_arrival": 2,
+ "secs": 0.34,
+ "attempts": 6
+}
