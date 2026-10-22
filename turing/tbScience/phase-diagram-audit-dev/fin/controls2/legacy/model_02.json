@@ -1,0 +1,114 @@
+{
+ "system_id": "model_02",
+ "isotherms": [
+  {
+   "temperature_K": 697.14,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.6733076498361139
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.7082139793765534,
+     "x_hi": 0.7674570688705612
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7907372772943809,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.6733076498361139,
+     "right_phase": "liquid",
+     "x_right": 0.7082139793765534
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.7674570688705612,
+     "right_phase": "alpha",
+     "x_right": 0.7907372772943809
+    }
+   ]
+  },
+  {
+   "temperature_K": 708.4,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.5239271688935128
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.665042522440801,
+     "x_hi": 0.8723599336654109
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.9018338035254901,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.5239271688935128,
+     "right_phase": "liquid",
+     "x_right": 0.665042522440801
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.8723599336654109,
+     "right_phase": "alpha",
+     "x_right": 0.9018338035254901
+    }
+   ]
+  },
+  {
+   "temperature_K": 802.28,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.22190415457143017
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.5603661212792691,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.22190415457143017,
+     "right_phase": "liquid",
+     "x_right": 0.5603661212792691
+    }
+   ]
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [
+  {
+   "temperature_K": 695.8438415527344,
+   "x": 0.7347211498304487,
+   "phase_above": "liquid",
+   "phase_below": "alpha",
+   "two_phase_side": "below"
+  }
+ ],
+ "critical_points": [
+  {
+   "temperature_K": 488.25145251689656,
+   "x": 0.5,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

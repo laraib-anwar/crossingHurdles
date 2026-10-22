@@ -1,0 +1,119 @@
+{
+ "system_id": "dev_03",
+ "isotherms": [
+  {
+   "temperature_K": 1000.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0735
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.446,
+     "x_hi": 0.601
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.901,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0735,
+     "right_phase": "liquid",
+     "x_right": 0.446
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.601,
+     "right_phase": "alpha",
+     "x_right": 0.901
+    }
+   ]
+  },
+  {
+   "temperature_K": 1150.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.047
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.3145,
+     "x_hi": 0.748
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.9480000000000001,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.047,
+     "right_phase": "liquid",
+     "x_right": 0.3145
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.748,
+     "right_phase": "alpha",
+     "x_right": 0.9480000000000001
+    }
+   ]
+  },
+  {
+   "temperature_K": 1450.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.005623413251903491
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.046000000000000006,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.005623413251903491,
+     "right_phase": "liquid",
+     "x_right": 0.046000000000000006
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 915.8791890469125,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.09323021293219862
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5188382706638881
+    },
+    {
+     "phase": "alpha",
+     "x": 0.8546759526170811
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

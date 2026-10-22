@@ -1,0 +1,32 @@
+{
+ "system_id": "held_04",
+ "shipped": false,
+ "style": "lens_min",
+ "label": "lens with a congruent minimum",
+ "attempts": 1,
+ "secs": 12.71,
+ "window": [
+  485.7,
+  1674.5
+ ],
+ "isotherms": [
+  1453.49,
+  1646.73,
+  1667.85
+ ],
+ "summary": {
+  "names": [],
+  "classes": [],
+  "con": [
+   [
+    "above",
+    "liquid",
+    "alpha"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 0,
+  "n_events": 1,
+  "inv_T": []
+ }
+}

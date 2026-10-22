@@ -1,0 +1,49 @@
+{
+ "system_id": "held_03",
+ "isotherms": [
+  {
+   "temperature_K": 1843.37,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1850.05,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1934.14,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [
+  {
+   "temperature_K": 1760.7922520132456,
+   "x": 0.16584065871162137,
+   "phase_above": "liquid",
+   "phase_below": "alpha",
+   "two_phase_side": "below"
+  }
+ ],
+ "critical_points": []
+}

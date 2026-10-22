@@ -1,0 +1,40 @@
+{
+ "system_id": "held_08",
+ "shipped": false,
+ "style": "solid_gap",
+ "label": "solid miscibility gap, two tie-lines at an isotherm",
+ "attempts": 2,
+ "secs": 23.47,
+ "window": [
+  1025.0,
+  2008.2
+ ],
+ "isotherms": [
+  1034.02,
+  1176.27,
+  1268.8,
+  1748.16,
+  1800.78,
+  1992.21
+ ],
+ "summary": {
+  "names": [],
+  "classes": [],
+  "con": [
+   [
+    "above",
+    "liquid",
+    "alpha"
+   ]
+  ],
+  "cri": [
+   [
+    "below",
+    "alpha"
+   ]
+  ],
+  "n_pure": 0,
+  "n_events": 2,
+  "inv_T": []
+ }
+}

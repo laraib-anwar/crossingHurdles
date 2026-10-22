@@ -1,0 +1,48 @@
+{
+ "system_id": "held_17",
+ "shipped": false,
+ "style": "compounds",
+ "label": "several compounds, three or more invariants",
+ "attempts": 10,
+ "secs": 24.84,
+ "window": [
+  587.9,
+  1563.7
+ ],
+ "isotherms": [
+  786.26,
+  1536.2
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "A4B"
+   ],
+   [
+    "below",
+    "liquid",
+    "AB2"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 7,
+  "inv_T": [
+   860.0066638328208,
+   1003.1989143243851,
+   1183.3794681709307
+  ]
+ }
+}

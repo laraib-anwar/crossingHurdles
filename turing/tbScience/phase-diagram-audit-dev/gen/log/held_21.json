@@ -1,0 +1,34 @@
+{
+ "system_id": "held_21",
+ "shipped": false,
+ "style": "eutectic",
+ "label": "eutectic, two tie-lines at an isotherm",
+ "attempts": 1,
+ "secs": 31.66,
+ "window": [
+  609.3,
+  1725.1
+ ],
+ "isotherms": [
+  834.73,
+  935.86,
+  1012.65,
+  1093.41,
+  1329.22
+ ],
+ "summary": {
+  "names": [
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 3,
+  "inv_T": [
+   897.3018616882797
+  ]
+ }
+}

@@ -1,0 +1,1026 @@
+{
+ "system_id": "held_02",
+ "thresholds": {
+  "tangent_J_mol": 1e-06,
+  "stability_J_mol": 1e-06,
+  "T_relative": 1e-07,
+  "x_absolute": 1e-09,
+  "match_K": 0.25
+ },
+ "grids": {
+  "topology_points": 50241,
+  "scan_points": 20119,
+  "fine_points": 200599
+ },
+ "hull_backend": "C monotone chain",
+ "schema_errors": [],
+ "isotherms": [
+  {
+   "temperature_K": 783.71,
+   "n_regions": 4,
+   "n_tie_lines": 3,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "right_phase": "liquid",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -1.493138945818373e-12,
+      "mu_B": 4.692579658183149e-12,
+      "max": 4.692579658183149e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.13133930470994418,
+      "x_right": 0.6028570613829548,
+      "converged": true,
+      "dx_left": -2.498001805406602e-16,
+      "dx_right": 0.0
+     }
+    },
+    {
+     "left_phase": "liquid",
+     "right_phase": "alpha",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": 2.8423929876453258e-12,
+      "mu_B": -6.944445019030354e-12,
+      "max": 6.944445019030354e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.6119304771406743,
+      "x_right": 0.7128954147051255,
+      "converged": true,
+      "dx_left": 1.4432899320127035e-15,
+      "dx_right": 2.6645352591003757e-15
+     }
+    },
+    {
+     "left_phase": "alpha",
+     "right_phase": "beta",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": 6.935119145623503e-12,
+      "mu_B": -1.3783418850721318e-13,
+      "max": 6.935119145623503e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.7786517700726407,
+      "x_right": 0.9294552368241626,
+      "converged": true,
+      "dx_left": -1.1102230246251565e-16,
+      "dx_right": -1.1102230246251565e-16
+     }
+    }
+   ],
+   "max_tangent_residual": 6.944445019030354e-12,
+   "max_dx_newton_from_report": 2.6645352591003757e-15,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.6028600000000001
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.13133930470994443,
+     "min_G2": 18247.370415479134,
+     "min_margin_other_phases": 4901.721888422596
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.6028570613829548,
+     "x_hi": 0.6119304771406728,
+     "min_G2": 27670.925560323696,
+     "min_margin_other_phases": 43.002862133465655
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7128954147051229,
+     "x_hi": 0.7786517700726409,
+     "min_G2": 11801.456319881294,
+     "min_margin_other_phases": 133.84467952364153
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9294552368241628,
+     "x_hi": 1.0,
+     "min_G2": 91434.12514211521,
+     "min_margin_other_phases": 385.8819316836492
+    }
+   ],
+   "min_slope_increment": -3.1164404390437994e-11,
+   "independent": {
+    "n_regions": 4,
+    "n_tie_lines": 3,
+    "regions": [
+     {
+      "phase": "alpha",
+      "x_lo": 0.0,
+      "x_hi": 0.13133930470994418
+     },
+     {
+      "phase": "liquid",
+      "x_lo": 0.6028570613829548,
+      "x_hi": 0.6119304771406743
+     },
+     {
+      "phase": "alpha",
+      "x_lo": 0.7128954147051255,
+      "x_hi": 0.7786517700726407
+     },
+     {
+      "phase": "beta",
+      "x_lo": 0.9294552368241626,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [
+     {
+      "left_phase": "alpha",
+      "x_left": 0.13133930470994418,
+      "right_phase": "liquid",
+      "x_right": 0.6028570613829548
+     },
+     {
+      "left_phase": "liquid",
+      "x_left": 0.6119304771406743,
+      "right_phase": "alpha",
+      "x_right": 0.7128954147051255
+     },
+     {
+      "left_phase": "alpha",
+      "x_left": 0.7786517700726407,
+      "right_phase": "beta",
+      "x_right": 0.9294552368241626
+     }
+    ],
+    "flags": [],
+    "max_dx": 2.6645352591003757e-15
+   }
+  },
+  {
+   "temperature_K": 810.78,
+   "n_regions": 4,
+   "n_tie_lines": 3,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "right_phase": "liquid",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -1.714017816567548e-12,
+      "mu_B": 4.470424030955655e-12,
+      "max": 4.470424030955655e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.1263793828643025,
+      "x_right": 0.5760303686095417,
+      "converged": true,
+      "dx_left": -1.942890293094024e-16,
+      "dx_right": 1.1102230246251565e-16
+     }
+    },
+    {
+     "left_phase": "liquid",
+     "right_phase": "alpha",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -2.497779760801677e-12,
+      "mu_B": -3.357564226647014e-12,
+      "max": 3.357564226647014e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.6708411374294262,
+      "x_right": 0.7962182913032587,
+      "converged": true,
+      "dx_left": 9.992007221626409e-16,
+      "dx_right": 9.992007221626409e-16
+     }
+    },
+    {
+     "left_phase": "alpha",
+     "right_phase": "beta",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": 4.021227795192317e-12,
+      "mu_B": -1.5364653993543698e-12,
+      "max": 4.021227795192317e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.7996416741034408,
+      "x_right": 0.9321948348773813,
+      "converged": true,
+      "dx_left": 3.3306690738754696e-16,
+      "dx_right": 0.0
+     }
+    }
+   ],
+   "max_tangent_residual": 4.470424030955655e-12,
+   "max_dx_newton_from_report": 9.992007221626409e-16,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.5760350000000001
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.1263793828643027,
+     "min_G2": 22228.65026797473,
+     "min_margin_other_phases": 4771.705693697728
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.5760303686095416,
+     "x_hi": 0.6708411374294252,
+     "min_G2": 26237.193792105238,
+     "min_margin_other_phases": 149.51492133741337
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7962182913032577,
+     "x_hi": 0.7996416741034404,
+     "min_G2": 25895.0393536605,
+     "min_margin_other_phases": 205.157259744092
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9321948348773813,
+     "x_hi": 1.0,
+     "min_G2": 98866.4776854922,
+     "min_margin_other_phases": 353.6207541825913
+    }
+   ],
+   "min_slope_increment": -2.4556356947869062e-11,
+   "independent": {
+    "n_regions": 4,
+    "n_tie_lines": 3,
+    "regions": [
+     {
+      "phase": "alpha",
+      "x_lo": 0.0,
+      "x_hi": 0.1263793828643025
+     },
+     {
+      "phase": "liquid",
+      "x_lo": 0.5760303686095417,
+      "x_hi": 0.6708411374294262
+     },
+     {
+      "phase": "alpha",
+      "x_lo": 0.7962182913032587,
+      "x_hi": 0.7996416741034408
+     },
+     {
+      "phase": "beta",
+      "x_lo": 0.9321948348773813,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [
+     {
+      "left_phase": "alpha",
+      "x_left": 0.1263793828643025,
+      "right_phase": "liquid",
+      "x_right": 0.5760303686095417
+     },
+     {
+      "left_phase": "liquid",
+      "x_left": 0.6708411374294262,
+      "right_phase": "alpha",
+      "x_right": 0.7962182913032587
+     },
+     {
+      "left_phase": "alpha",
+      "x_left": 0.7996416741034408,
+      "right_phase": "beta",
+      "x_right": 0.9321948348773813
+     }
+    ],
+    "flags": [],
+    "max_dx": 9.992007221626409e-16
+   }
+  },
+  {
+   "temperature_K": 986.24,
+   "n_regions": 3,
+   "n_tie_lines": 2,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "right_phase": "liquid",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": 2.0319301796689615e-12,
+      "mu_B": 1.3211653993039363e-12,
+      "max": 2.0319301796689615e-12
+     },
+     "newton_from_report": {
+      "x_left": 0.0897591274963198,
+      "x_right": 0.4301663334665026,
+      "converged": true,
+      "dx_left": -8.326672684688674e-17,
+      "dx_right": -1.1102230246251565e-16
+     }
+    },
+    {
+     "left_phase": "liquid",
+     "right_phase": "beta",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -6.799893981224159e-11,
+      "mu_B": -3.569020079474683e-12,
+      "max": 6.799893981224159e-11
+     },
+     "newton_from_report": {
+      "x_left": 0.9653753382868909,
+      "x_right": 0.9894228041422032,
+      "converged": true,
+      "dx_left": 7.771561172376096e-16,
+      "dx_right": 3.3306690738754696e-16
+     }
+    }
+   ],
+   "max_tangent_residual": 6.799893981224159e-11,
+   "max_dx_newton_from_report": 7.771561172376096e-16,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.43017000000000005
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.08975912749631988,
+     "min_G2": 61700.10999495345,
+     "min_margin_other_phases": 4075.823432186549
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.43016633346650274,
+     "x_hi": 0.9653753382868902,
+     "min_G2": 32164.37807947177,
+     "min_margin_other_phases": 140.4170148887268
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9894228041422028,
+     "x_hi": 1.0,
+     "min_G2": 778859.7907632897,
+     "min_margin_other_phases": 91.18240261804108
+    }
+   ],
+   "min_slope_increment": -2.4010660126805305e-10,
+   "independent": {
+    "n_regions": 3,
+    "n_tie_lines": 2,
+    "regions": [
+     {
+      "phase": "alpha",
+      "x_lo": 0.0,
+      "x_hi": 0.0897591274963198
+     },
+     {
+      "phase": "liquid",
+      "x_lo": 0.4301663334665026,
+      "x_hi": 0.9653753382868909
+     },
+     {
+      "phase": "beta",
+      "x_lo": 0.9894228041422032,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [
+     {
+      "left_phase": "alpha",
+      "x_left": 0.0897591274963198,
+      "right_phase": "liquid",
+      "x_right": 0.4301663334665026
+     },
+     {
+      "left_phase": "liquid",
+      "x_left": 0.9653753382868909,
+      "right_phase": "beta",
+      "x_right": 0.9894228041422032
+     }
+    ],
+    "flags": [],
+    "max_dx": 7.771561172376096e-16
+   }
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 744.2699892507178,
+   "class": "eutectic",
+   "name": "eutectoid",
+   "phases": [
+    [
+     "alpha",
+     0.10575083654898754
+    ],
+    [
+     "alpha",
+     0.7389201351329225
+    ],
+    [
+     "beta",
+     0.9263528785529794
+    ]
+   ],
+   "failures": [],
+   "collinearity_residual": 1.9359513991901167e-13,
+   "tangency": [
+    {
+     "phase": "alpha",
+     "mu_A": -1.292022044907526e-13,
+     "mu_B": 1.0925149673823853e-12,
+     "slope": 1.221711100340972e-12
+    },
+    {
+     "phase": "alpha",
+     "mu_A": 1.1140255384844977e-12,
+     "mu_B": -1.316169395693123e-13,
+     "slope": -1.245648549585976e-12
+    },
+    {
+     "phase": "beta",
+     "mu_A": -9.18334852606506e-12,
+     "mu_B": 7.300826609935029e-13,
+     "slope": 9.913425115526397e-12
+    }
+   ],
+   "max_residual": 9.18334852606506e-12,
+   "stability_violation": -1.1854486836604394e-10,
+   "stability_violation_at": {
+    "phase": "alpha",
+    "x": 0.73892
+   },
+   "refined": {
+    "temperature_K": 744.2699892507178,
+    "x": [
+     0.10575083654898754,
+     0.7389201351329227,
+     0.9263528785529793
+    ],
+    "dT": 0.0,
+    "dT_rel": 0.0,
+    "max_dx": 1.1102230246251565e-16
+   },
+   "class_check": {
+    "middle_stable_above": true,
+    "outer_tie_covers_above": false,
+    "middle_stable_below": false,
+    "outer_tie_covers_below": true,
+    "class": "eutectic",
+    "outer_tie_consistent": true,
+    "name": "eutectoid"
+   }
+  },
+  {
+   "temperature_K": 781.2073594991625,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    [
+     "alpha",
+     0.1317559756818726
+    ],
+    [
+     "liquid",
+     0.6054161430555763
+    ],
+    [
+     "alpha",
+     0.6963431142641002
+    ]
+   ],
+   "failures": [],
+   "collinearity_residual": -1.3350431871117507e-12,
+   "tangency": [
+    {
+     "phase": "alpha",
+     "mu_A": 1.4804824033376462e-13,
+     "mu_B": -9.7577501634305e-13,
+     "slope": -1.1238093788890069e-12
+    },
+    {
+     "phase": "liquid",
+     "mu_A": 1.4636625245145751e-12,
+     "mu_B": -3.159139616570883e-12,
+     "slope": -4.62278826329765e-12
+    },
+    {
+     "phase": "alpha",
+     "mu_A": -3.044231533522179e-13,
+     "mu_B": 1.3272716259393746e-13,
+     "slope": 4.371641937339632e-13
+    }
+   ],
+   "max_residual": 3.159139616570883e-12,
+   "stability_violation": -8.523102723589915e-09,
+   "stability_violation_at": {
+    "phase": "alpha",
+    "x": 0.131755
+   },
+   "refined": {
+    "temperature_K": 781.2073594991624,
+    "x": [
+     0.13175597568187253,
+     0.6054161430555766,
+     0.6963431142641003
+    ],
+    "dT": 1.1368683772161603e-13,
+    "dT_rel": 1.4552709512939234e-16,
+    "max_dx": 2.220446049250313e-16
+   },
+   "class_check": {
+    "middle_stable_above": true,
+    "outer_tie_covers_above": false,
+    "middle_stable_below": false,
+    "outer_tie_covers_below": true,
+    "class": "eutectic",
+    "outer_tie_consistent": true,
+    "name": "eutectic"
+   }
+  },
+  {
+   "temperature_K": 813.5493182904248,
+   "class": "peritectic",
+   "name": "peritectic",
+   "phases": [
+    [
+     "liquid",
+     0.6766870318935185
+    ],
+    [
+     "alpha",
+     0.8016105553382755
+    ],
+    [
+     "beta",
+     0.9324967780425624
+    ]
+   ],
+   "failures": [],
+   "collinearity_residual": -8.663070261150096e-13,
+   "tangency": [
+    {
+     "phase": "liquid",
+     "mu_A": 1.0273559780671349e-11,
+     "mu_B": -4.9084070141702796e-12,
+     "slope": -1.5181855772539166e-11
+    },
+    {
+     "phase": "alpha",
+     "mu_A": 5.413447468072263e-12,
+     "mu_B": -2.420535993863382e-12,
+     "slope": -7.83395570636003e-12
+    },
+    {
+     "phase": "beta",
+     "mu_A": 7.062794793455396e-12,
+     "mu_B": -5.112021916886533e-13,
+     "slope": -7.574163518597743e-12
+    }
+   ],
+   "max_residual": 1.0273559780671349e-11,
+   "stability_violation": -4.1915005910553305e-09,
+   "stability_violation_at": {
+    "phase": "alpha",
+    "x": 0.80161
+   },
+   "refined": {
+    "temperature_K": 813.5493182904252,
+    "x": [
+     0.6766870318935194,
+     0.8016105553382761,
+     0.9324967780425625
+    ],
+    "dT": 3.410605131648481e-13,
+    "dT_rel": 4.1922536900595697e-16,
+    "max_dx": 8.881784197001252e-16
+   },
+   "class_check": {
+    "middle_stable_above": false,
+    "outer_tie_covers_above": true,
+    "middle_stable_below": true,
+    "outer_tie_covers_below": false,
+    "class": "peritectic",
+    "outer_tie_consistent": true,
+    "name": "peritectic"
+   }
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [],
+ "completeness": {
+  "scan_step_K": 0.1,
+  "n_hulls": 11640,
+  "scan_seconds": 29.905696868896484,
+  "pure_end_transitions": [
+   {
+    "end": "B",
+    "T": 1009.5477054648584,
+    "phase_below": "beta",
+    "phase_above": "liquid"
+   },
+   {
+    "end": "A",
+    "T": 1668.2876031794558,
+    "phase_below": "alpha",
+    "phase_above": "liquid"
+   }
+  ],
+  "changes": [
+   {
+    "interval_K": [
+     744.2,
+     744.3
+    ],
+    "bracket_K": [
+     744.2699886322021,
+     744.2699890136718
+    ],
+    "kind_found": "invariant",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "found_event": {
+     "kind": "invariant",
+     "temperature_K": 744.2699892507178,
+     "class": "eutectic",
+     "name": "eutectoid",
+     "phases": [
+      {
+       "phase": "alpha",
+       "x": 0.10575083654898754
+      },
+      {
+       "phase": "alpha",
+       "x": 0.7389201351329227
+      },
+      {
+       "phase": "beta",
+       "x": 0.9263528785529793
+      }
+     ],
+     "stability_violation": -1.1864700888430946e-10
+    },
+    "matched": {
+     "kind": "invariant",
+     "temperature_K": 744.2699892507178,
+     "dT": 0.0,
+     "max_dx": 1.1102230246251565e-16
+    }
+   },
+   {
+    "interval_K": [
+     781.2,
+     781.3
+    ],
+    "bracket_K": [
+     781.207359313965,
+     781.2073600769045
+    ],
+    "kind_found": "invariant",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "found_event": {
+     "kind": "invariant",
+     "temperature_K": 781.2073594991623,
+     "class": "eutectic",
+     "name": "eutectic",
+     "phases": [
+      {
+       "phase": "alpha",
+       "x": 0.13175597568187256
+      },
+      {
+       "phase": "liquid",
+       "x": 0.6054161430555766
+      },
+      {
+       "phase": "alpha",
+       "x": 0.6963431142641004
+      }
+     ],
+     "stability_violation": -8.52324544275973e-09
+    },
+    "matched": {
+     "kind": "invariant",
+     "temperature_K": 781.2073594991625,
+     "dT": 2.2737367544323206e-13,
+     "max_dx": 2.220446049250313e-16
+    }
+   },
+   {
+    "interval_K": [
+     813.5,
+     813.6
+    ],
+    "bracket_K": [
+     813.5493179321288,
+     813.5493186950682
+    ],
+    "kind_found": "invariant",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "found_event": {
+     "kind": "invariant",
+     "temperature_K": 813.549318290425,
+     "class": "peritectic",
+     "name": "peritectic",
+     "phases": [
+      {
+       "phase": "liquid",
+       "x": 0.6766870318935194
+      },
+      {
+       "phase": "alpha",
+       "x": 0.8016105553382761
+      },
+      {
+       "phase": "beta",
+       "x": 0.9324967780425625
+      }
+     ],
+     "stability_violation": -4.1917730397855735e-09
+    },
+    "matched": {
+     "kind": "invariant",
+     "temperature_K": 813.5493182904248,
+     "dT": -2.2737367544323206e-13,
+     "max_dx": 8.881784197001252e-16
+    }
+   },
+   {
+    "interval_K": [
+     1009.5,
+     1009.6
+    ],
+    "bracket_K": [
+     1009.5477050781251,
+     1009.5477058410645
+    ],
+    "kind_found": "pure_end",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid"
+    ],
+    "detector": "labels",
+    "matched": "pure_end",
+    "analytic": {
+     "end": "B",
+     "T": 1009.5477054648584,
+     "phase_below": "beta",
+     "phase_above": "liquid"
+    }
+   },
+   {
+    "interval_K": [
+     1668.2,
+     1668.3000000000002
+    ],
+    "bracket_K": [
+     1668.287602233887,
+     1668.2876037597657
+    ],
+    "kind_found": "pure_end",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid"
+    ],
+    "labels_above": [
+     "R:liquid"
+    ],
+    "detector": "labels",
+    "matched": "pure_end",
+    "analytic": {
+     "end": "A",
+     "T": 1668.2876031794558,
+     "phase_below": "alpha",
+     "phase_above": "liquid"
+    }
+   }
+  ],
+  "failures": [],
+  "reported_without_change": [],
+  "independent_events": [
+   {
+    "kind": "invariant",
+    "temperature_K": 744.2699892507178,
+    "class": "eutectic",
+    "name": "eutectoid",
+    "phases": [
+     {
+      "phase": "alpha",
+      "x": 0.10575083654898754
+     },
+     {
+      "phase": "alpha",
+      "x": 0.7389201351329227
+     },
+     {
+      "phase": "beta",
+      "x": 0.9263528785529793
+     }
+    ],
+    "stability_violation": -1.1864700888430946e-10,
+    "rich_side": "above",
+    "bracket_K": [
+     744.2699886322021,
+     744.2699890136718
+    ],
+    "scan_interval_K": [
+     744.2,
+     744.3
+    ],
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ]
+   },
+   {
+    "kind": "invariant",
+    "temperature_K": 781.2073594991623,
+    "class": "eutectic",
+    "name": "eutectic",
+    "phases": [
+     {
+      "phase": "alpha",
+      "x": 0.13175597568187256
+     },
+     {
+      "phase": "liquid",
+      "x": 0.6054161430555766
+     },
+     {
+      "phase": "alpha",
+      "x": 0.6963431142641004
+     }
+    ],
+    "stability_violation": -8.52324544275973e-09,
+    "rich_side": "above",
+    "bracket_K": [
+     781.207359313965,
+     781.2073600769045
+    ],
+    "scan_interval_K": [
+     781.2,
+     781.3
+    ],
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ]
+   },
+   {
+    "kind": "invariant",
+    "temperature_K": 813.549318290425,
+    "class": "peritectic",
+    "name": "peritectic",
+    "phases": [
+     {
+      "phase": "liquid",
+      "x": 0.6766870318935194
+     },
+     {
+      "phase": "alpha",
+      "x": 0.8016105553382761
+     },
+     {
+      "phase": "beta",
+      "x": 0.9324967780425625
+     }
+    ],
+    "stability_violation": -4.1917730397855735e-09,
+    "rich_side": "below",
+    "bracket_K": [
+     813.5493179321288,
+     813.5493186950682
+    ],
+    "scan_interval_K": [
+     813.5,
+     813.6
+    ],
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|alpha",
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ]
+   }
+  ]
+ },
+ "summary": {
+  "max_tangent_residual": 6.799893981224159e-11,
+  "max_stability_violation": 0.0,
+  "max_dx_isotherms_newton": 2.6645352591003757e-15,
+  "max_dx_isotherms_independent": 2.6645352591003757e-15,
+  "max_dT_rel_events": 4.1922536900595697e-16,
+  "max_dx_events": 8.881784197001252e-16
+ },
+ "timing_seconds": {
+  "certificates": 1.5285110473632812,
+  "completeness": 30.725395917892456,
+  "total": 32.253907918930054
+ },
+ "failures": [],
+ "pass": true
+}

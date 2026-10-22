@@ -1,0 +1,96 @@
+{
+ "system_id": "t7_allotropic_noevent",
+ "solution_phases": [
+  {
+   "name": "liquid",
+   "end_members": {
+    "A": {
+     "h": 0,
+     "s": 0
+    },
+    "B": {
+     "h": 0,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alpha",
+   "end_members": {
+    "A": {
+     "h": -12000,
+     "s": -10
+    },
+    "B": {
+     "h": -11000,
+     "s": -10
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 2000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "gamma",
+   "end_members": {
+    "A": {
+     "h": -12900,
+     "s": -11
+    },
+    "B": {
+     "h": 5000,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 8000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ],
+ "compounds": [],
+ "window_K": [
+  700,
+  1000
+ ],
+ "isotherms_K": [
+  750,
+  850,
+  950
+ ]
+}

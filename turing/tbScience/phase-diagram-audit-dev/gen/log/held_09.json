@@ -1,0 +1,36 @@
+{
+ "system_id": "held_09",
+ "shipped": false,
+ "style": "lower",
+ "label": "lower consolute point",
+ "attempts": 37,
+ "secs": 8.72,
+ "window": [
+  1076.1,
+  1434.3
+ ],
+ "isotherms": [
+  1291.32,
+  1304.29
+ ],
+ "summary": {
+  "names": [
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [
+   [
+    "above",
+    "alpha"
+   ]
+  ],
+  "n_pure": 0,
+  "n_events": 2,
+  "inv_T": [
+   1249.7905092038477
+  ]
+ }
+}

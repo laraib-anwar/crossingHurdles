@@ -1,0 +1,57 @@
+{
+ "system_id": "held_09",
+ "isotherms": [
+  {
+   "temperature_K": 1093.67,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1178.85,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 1249.7905092038477,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.3013944895672746
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5114442378369677
+    },
+    {
+     "phase": "alpha",
+     "x": 0.5179839644336484
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [
+  {
+   "temperature_K": 1191.027911101174,
+   "x": 0.4004468081594689,
+   "phase": "alpha",
+   "gap_side": "above"
+  }
+ ]
+}

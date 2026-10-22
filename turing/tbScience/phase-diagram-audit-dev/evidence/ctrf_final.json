@@ -1,0 +1,319 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1792683181049,
+      "stop": 1792683607156
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 12.687636975897476
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 8335.525175993098,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 15816.41858399962,
+        "extra": {
+          "invariants": 3,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 4960.847149981419,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 9095.041990978643,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 12495.855293993372,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 18536.968237021938,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 12533.20439698291,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 10843.69699502713,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 5830.495871021412,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 0,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 9296.085487003438,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 0,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 1771.2424109922722,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 14590.691889985465,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 14522.92562200455,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 12009.007895016111,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 20407.90140099125,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 5325.288364983862,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 0,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 15792.85989498021,
+        "extra": {
+          "invariants": 3,
+          "congruent_points": 2,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 18133.74637797824,
+        "extra": {
+          "invariants": 4,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 10655.50961298868,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 5426.384813996265,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 14803.66548904567,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 11692.23757198779,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 14297.63530998025,
+        "extra": {
+          "invariants": 1,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 5131.1645010137,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 15509.956903988495,
+        "extra": {
+          "invariants": 3,
+          "congruent_points": 1,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 8973.950458021136,
+        "extra": {
+          "invariants": 0,
+          "congruent_points": 1,
+          "critical_points": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 15841.68248900096,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 6681.2879830249585,
+        "extra": {
+          "invariants": 2,
+          "congruent_points": 0,
+          "critical_points": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 109369.86899701878,
+        "extra": {
+          "quantities": [
+            "critical_count",
+            "invariant_count",
+            "peritectic_count",
+            "tie_line_count",
+            "two_phase_fraction"
+          ]
+        }
+      }
+    ]
+  }
+}

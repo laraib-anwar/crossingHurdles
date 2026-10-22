@@ -1,0 +1,7 @@
+{"system_id": "refB_consolute",
+ "solution_phases": [
+  {"name": "liquid", "end_members": {"A": {"h": 30000, "s": 15}, "B": {"h": 30000, "s": 15}}, "redlich_kister": [{"a": 0, "b": 0}, {"a": 0, "b": 0}, {"a": 0, "b": 0}]},
+  {"name": "alpha", "end_members": {"A": {"h": 0, "s": 0}, "B": {"h": 0, "s": 0}}, "redlich_kister": [{"a": 20000, "b": 0}, {"a": 0, "b": 0}, {"a": 0, "b": 0}]}],
+ "compounds": [],
+ "window_K": [1000, 1400],
+ "isotherms_K": [1050, 1150, 1300]}

@@ -1,0 +1,72 @@
+{
+ "system_id": "refB_consolute",
+ "isotherms": [
+  {
+   "temperature_K": 1050.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.20742233779197544
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7925776622080245,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.20742233779197544,
+     "right_phase": "alpha",
+     "x_right": 0.7925776622080245
+    }
+   ]
+  },
+  {
+   "temperature_K": 1150.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.32188175138628994
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.6781182486137101,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.32188175138628994,
+     "right_phase": "alpha",
+     "x_right": 0.6781182486137101
+    }
+   ]
+  },
+  {
+   "temperature_K": 1300.0,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [],
+ "critical_points": [
+  {
+   "temperature_K": 1202.7235504494272,
+   "x": 0.5,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

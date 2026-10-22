@@ -1,0 +1,203 @@
+{
+ "system_id": "held_11",
+ "thresholds": {
+  "tangent_J_mol": 1e-06,
+  "stability_J_mol": 1e-06,
+  "T_relative": 1e-07,
+  "x_absolute": 1e-09,
+  "match_K": 0.25
+ },
+ "grids": {
+  "topology_points": 50241,
+  "scan_points": 20119,
+  "fine_points": 200599
+ },
+ "hull_backend": "C monotone chain",
+ "schema_errors": [],
+ "isotherms": [
+  {
+   "temperature_K": 378.06,
+   "n_regions": 2,
+   "n_tie_lines": 1,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "right_phase": "beta",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -5.549972569192374e-11,
+      "mu_B": -6.077925706129972e-12,
+      "max": 5.549972569192374e-11
+     },
+     "newton_from_report": {
+      "x_left": 0.0009855116607738682,
+      "x_right": 0.9993455740092079,
+      "converged": true,
+      "dx_left": 1.951563910473908e-18,
+      "dx_right": 0.0
+     }
+    }
+   ],
+   "max_tangent_residual": 5.549972569192374e-11,
+   "max_dx_newton_from_report": 1.951563910473908e-18,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "alpha",
+    "x": 0.0
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0009855116607738663,
+     "min_G2": 3177778.3082033526,
+     "min_margin_other_phases": 2994.159320319234
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9993455740092079,
+     "x_hi": 1.0,
+     "min_G2": 4833436.862212786,
+     "min_margin_other_phases": 3720.571053765987
+    }
+   ],
+   "min_slope_increment": -5.5542015431342406e-11,
+   "independent": {
+    "n_regions": 2,
+    "n_tie_lines": 1,
+    "regions": [
+     {
+      "phase": "alpha",
+      "x_lo": 0.0,
+      "x_hi": 0.0009855116607738682
+     },
+     {
+      "phase": "beta",
+      "x_lo": 0.9993455740092079,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [
+     {
+      "left_phase": "alpha",
+      "x_left": 0.0009855116607738682,
+      "right_phase": "beta",
+      "x_right": 0.9993455740092079
+     }
+    ],
+    "flags": [],
+    "max_dx": 1.951563910473908e-18
+   }
+  },
+  {
+   "temperature_K": 396.72,
+   "n_regions": 2,
+   "n_tie_lines": 1,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "right_phase": "beta",
+     "residuals": {
+      "type": "solution-solution",
+      "mu_A": -1.669717905605772e-10,
+      "mu_B": 4.032753514807141e-12,
+      "max": 1.669717905605772e-10
+     },
+     "newton_from_report": {
+      "x_left": 0.0013778332438379875,
+      "x_right": 0.9990787921362503,
+      "converged": true,
+      "dx_left": -1.734723475976807e-18,
+      "dx_right": 0.0
+     }
+    }
+   ],
+   "max_tangent_residual": 1.669717905605772e-10,
+   "max_dx_newton_from_report": 1.734723475976807e-18,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "alpha",
+    "x": 0.0
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0013778332438379893,
+     "min_G2": 2385642.8181744795,
+     "min_margin_other_phases": 2826.6323299760115
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9990787921362503,
+     "x_hi": 1.0,
+     "min_G2": 3583019.858755209,
+     "min_margin_other_phases": 3703.7841268294433
+    }
+   ],
+   "min_slope_increment": -1.6712031758459034e-10,
+   "independent": {
+    "n_regions": 2,
+    "n_tie_lines": 1,
+    "regions": [
+     {
+      "phase": "alpha",
+      "x_lo": 0.0,
+      "x_hi": 0.0013778332438379875
+     },
+     {
+      "phase": "beta",
+      "x_lo": 0.9990787921362503,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [
+     {
+      "left_phase": "alpha",
+      "x_left": 0.0013778332438379875,
+      "right_phase": "beta",
+      "x_right": 0.9990787921362503
+     }
+    ],
+    "flags": [],
+    "max_dx": 1.734723475976807e-18
+   }
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [],
+ "critical_points": [],
+ "completeness": {
+  "scan_step_K": 0.09993875598086123,
+  "n_hulls": 1046,
+  "scan_seconds": 1.7175638675689697,
+  "pure_end_transitions": [],
+  "changes": [],
+  "failures": [],
+  "reported_without_change": [],
+  "independent_events": []
+ },
+ "summary": {
+  "max_tangent_residual": 1.669717905605772e-10,
+  "max_stability_violation": 0.0,
+  "max_dx_isotherms_newton": 1.951563910473908e-18,
+  "max_dx_isotherms_independent": 1.951563910473908e-18,
+  "max_dT_rel_events": 0.0,
+  "max_dx_events": 0.0
+ },
+ "timing_seconds": {
+  "certificates": 0.7277498245239258,
+  "completeness": 1.71883225440979,
+  "total": 2.4465830326080322
+ },
+ "failures": [],
+ "pass": true
+}

@@ -1,0 +1,33 @@
+{
+ "system_id": "model_01",
+ "shipped": true,
+ "style": "eutectic",
+ "label": "simple eutectic between two terminal solid solutions (base case)",
+ "attempts": 5,
+ "secs": 36.76,
+ "window": [
+  516.6,
+  1578.2
+ ],
+ "isotherms": [
+  568.77,
+  689.15,
+  1523.21,
+  1532.21
+ ],
+ "summary": {
+  "names": [
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 3,
+  "inv_T": [
+   782.227029912078
+  ]
+ }
+}

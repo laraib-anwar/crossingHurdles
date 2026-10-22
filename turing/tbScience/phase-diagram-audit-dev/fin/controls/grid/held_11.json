@@ -1,0 +1,54 @@
+{
+ "system_id": "held_11",
+ "isotherms": [
+  {
+   "temperature_K": 378.06,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.001
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.999318707930942,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.001,
+     "right_phase": "beta",
+     "x_right": 0.999318707930942
+    }
+   ]
+  },
+  {
+   "temperature_K": 396.72,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0014677992676220676
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.999,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0014677992676220676,
+     "right_phase": "beta",
+     "x_right": 0.999
+    }
+   ]
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [],
+ "critical_points": []
+}

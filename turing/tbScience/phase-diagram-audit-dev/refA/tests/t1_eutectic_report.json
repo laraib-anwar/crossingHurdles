@@ -1,0 +1,119 @@
+{
+ "system_id": "t1_eutectic",
+ "isotherms": [
+  {
+   "temperature_K": 620,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.004863872835658318
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9975214999674786,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.004863872835658318,
+     "right_phase": "beta",
+     "x_right": 0.9975214999674786
+    }
+   ]
+  },
+  {
+   "temperature_K": 905,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.01230719392826498
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.3302406675258891,
+     "x_hi": 0.896936442941188
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9976520748008368,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.01230719392826498,
+     "right_phase": "liquid",
+     "x_right": 0.3302406675258891
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.896936442941188,
+     "right_phase": "beta",
+     "x_right": 0.9976520748008368
+    }
+   ]
+  },
+  {
+   "temperature_K": 1105,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.007445920293616686
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.12103762370692062,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.007445920293616686,
+     "right_phase": "liquid",
+     "x_right": 0.12103762370692062
+    }
+   ]
+  },
+  {
+   "temperature_K": 1300,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 665.5627696758164,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.0076551747155493444
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5819944945737461
+    },
+    {
+     "phase": "beta",
+     "x": 0.9961116178171363
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

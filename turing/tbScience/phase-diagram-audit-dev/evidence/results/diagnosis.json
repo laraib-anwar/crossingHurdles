@@ -1,0 +1,552 @@
+{
+ "defects": [
+  {
+   "description": "Every three-phase equilibrium is classified eutectic-type (eutectic if the liquid takes part, eutectoid otherwise); the stability of the middle phase above or below the invariant temperature is never examined, so peritectic-class reactions are never found.",
+   "system": {
+    "system_id": "model_03",
+    "solution_phases": [
+     {
+      "name": "liquid",
+      "end_members": {
+       "A": {
+        "h": 13058.9,
+        "s": 9.60715
+       },
+       "B": {
+        "h": 8023.01,
+        "s": 8.63692
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": -23935.1,
+        "b": 1.29713
+       },
+       {
+        "a": 7382.29,
+        "b": -1.23919
+       },
+       {
+        "a": -650.235,
+        "b": 0.829292
+       }
+      ]
+     },
+     {
+      "name": "alpha",
+      "end_members": {
+       "A": {
+        "h": 0.0,
+        "s": 0.0
+       },
+       "B": {
+        "h": 8663.14,
+        "s": -1.02142
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 25240.7,
+        "b": 2.19527
+       },
+       {
+        "a": 2174.96,
+        "b": -1.18118
+       },
+       {
+        "a": 335.532,
+        "b": 0.0
+       }
+      ]
+     },
+     {
+      "name": "beta",
+      "end_members": {
+       "A": {
+        "h": 9432.72,
+        "s": 1.52911
+       },
+       "B": {
+        "h": 0.0,
+        "s": 0.0
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 12721.6,
+        "b": -1.01229
+       },
+       {
+        "a": 2049.36,
+        "b": 1.19522
+       },
+       {
+        "a": -378.736,
+        "b": 0.0
+       }
+      ]
+     }
+    ],
+    "compounds": [
+     {
+      "name": "AB",
+      "x_b": 0.5,
+      "h": -14888.2,
+      "s": -4.23137
+     },
+     {
+      "name": "A4B",
+      "x_b": 0.2,
+      "h": -5534.5,
+      "s": 3.37558
+     }
+    ],
+    "window_K": [
+     561.2,
+     1513.7
+    ],
+    "isotherms_K": [
+     1250.44,
+     1294.4,
+     1367.79,
+     1381.7,
+     1425.68
+    ]
+   },
+   "quantity": "peritectic_count",
+   "temperature_K": null,
+   "legacy_value": 0,
+   "correct_value": 1
+  },
+  {
+   "description": "Consolute points come from the regular-solution formula T_c = L0/(2R) at x = 1/2 for every phase with a positive L0, whether or not the gap is stable, without the asymmetric and temperature terms, so the number of critical points in the window is wrong.",
+   "system": {
+    "system_id": "model_01",
+    "solution_phases": [
+     {
+      "name": "liquid",
+      "end_members": {
+       "A": {
+        "h": 11587.8,
+        "s": 10.1862
+       },
+       "B": {
+        "h": 12155.5,
+        "s": 8.06047
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": -897.107,
+        "b": 1.47488
+       },
+       {
+        "a": -2916.7,
+        "b": -1.38033
+       },
+       {
+        "a": -610.067,
+        "b": -0.819546
+       }
+      ]
+     },
+     {
+      "name": "alpha",
+      "end_members": {
+       "A": {
+        "h": 0.0,
+        "s": 0.0
+       },
+       "B": {
+        "h": 6454.25,
+        "s": -1.50215
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 23275.6,
+        "b": -0.374787
+       },
+       {
+        "a": -1353.66,
+        "b": -0.077633
+       },
+       {
+        "a": 1187.15,
+        "b": 0.0
+       }
+      ]
+     },
+     {
+      "name": "beta",
+      "end_members": {
+       "A": {
+        "h": 6338.37,
+        "s": 1.22473
+       },
+       "B": {
+        "h": 0.0,
+        "s": 0.0
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 25048.1,
+        "b": 0.804688
+       },
+       {
+        "a": -5483.6,
+        "b": -0.761363
+       },
+       {
+        "a": -1205.6,
+        "b": 0.0
+       }
+      ]
+     }
+    ],
+    "compounds": [],
+    "window_K": [
+     516.6,
+     1578.2
+    ],
+    "isotherms_K": [
+     568.77,
+     689.15,
+     1523.21,
+     1532.21
+    ]
+   },
+   "quantity": "critical_count",
+   "temperature_K": null,
+   "legacy_value": 1,
+   "correct_value": 0
+  },
+  {
+   "description": "Three-phase equilibria are read off changes of the pairwise tangent set on a 5 K scan: equilibria between two states of one phase and a third phase are misread as congruent points, metastable tangents create spurious changes and invariants involving compounds are missed, so the number of invariants in the window is wrong.",
+   "system": {
+    "system_id": "model_03",
+    "solution_phases": [
+     {
+      "name": "liquid",
+      "end_members": {
+       "A": {
+        "h": 13058.9,
+        "s": 9.60715
+       },
+       "B": {
+        "h": 8023.01,
+        "s": 8.63692
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": -23935.1,
+        "b": 1.29713
+       },
+       {
+        "a": 7382.29,
+        "b": -1.23919
+       },
+       {
+        "a": -650.235,
+        "b": 0.829292
+       }
+      ]
+     },
+     {
+      "name": "alpha",
+      "end_members": {
+       "A": {
+        "h": 0.0,
+        "s": 0.0
+       },
+       "B": {
+        "h": 8663.14,
+        "s": -1.02142
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 25240.7,
+        "b": 2.19527
+       },
+       {
+        "a": 2174.96,
+        "b": -1.18118
+       },
+       {
+        "a": 335.532,
+        "b": 0.0
+       }
+      ]
+     },
+     {
+      "name": "beta",
+      "end_members": {
+       "A": {
+        "h": 9432.72,
+        "s": 1.52911
+       },
+       "B": {
+        "h": 0.0,
+        "s": 0.0
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 12721.6,
+        "b": -1.01229
+       },
+       {
+        "a": 2049.36,
+        "b": 1.19522
+       },
+       {
+        "a": -378.736,
+        "b": 0.0
+       }
+      ]
+     }
+    ],
+    "compounds": [
+     {
+      "name": "AB",
+      "x_b": 0.5,
+      "h": -14888.2,
+      "s": -4.23137
+     },
+     {
+      "name": "A4B",
+      "x_b": 0.2,
+      "h": -5534.5,
+      "s": 3.37558
+     }
+    ],
+    "window_K": [
+     561.2,
+     1513.7
+    ],
+    "isotherms_K": [
+     1250.44,
+     1294.4,
+     1367.79,
+     1381.7,
+     1425.68
+    ]
+   },
+   "quantity": "invariant_count",
+   "temperature_K": null,
+   "legacy_value": 6,
+   "correct_value": 3
+  },
+  {
+   "description": "Tie-lines are taken from pairwise common tangents checked only at their midpoint against the other solution phases, never against the whole hull, so metastable tangents survive and compounds are admitted or dropped by the mechanical-mixture line; the number of tie-lines at an isotherm is wrong.",
+   "system": {
+    "system_id": "model_05",
+    "solution_phases": [
+     {
+      "name": "liquid",
+      "end_members": {
+       "A": {
+        "h": 9565.14,
+        "s": 8.05348
+       },
+       "B": {
+        "h": 11955.4,
+        "s": 8.43468
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": -646.235,
+        "b": -1.28366
+       },
+       {
+        "a": 161.25,
+        "b": -0.342507
+       },
+       {
+        "a": 821.848,
+        "b": -0.774413
+       }
+      ]
+     },
+     {
+      "name": "alpha",
+      "end_members": {
+       "A": {
+        "h": 0.0,
+        "s": 0.0
+       },
+       "B": {
+        "h": 7304.39,
+        "s": 1.61846
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 24290.9,
+        "b": 0.480586
+       },
+       {
+        "a": 1792.8,
+        "b": -0.217562
+       },
+       {
+        "a": 413.149,
+        "b": 0.0
+       }
+      ]
+     },
+     {
+      "name": "gamma",
+      "end_members": {
+       "A": {
+        "h": 1167.88,
+        "s": 1.30188
+       },
+       "B": {
+        "h": 7645.19,
+        "s": 1.92641
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 22700.9,
+        "b": -1.07676
+       },
+       {
+        "a": -368.246,
+        "b": 0.0
+       },
+       {
+        "a": 0.0,
+        "b": 0.0
+       }
+      ]
+     },
+     {
+      "name": "beta",
+      "end_members": {
+       "A": {
+        "h": 6344.58,
+        "s": 1.59062
+       },
+       "B": {
+        "h": 0.0,
+        "s": 0.0
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 28222.6,
+        "b": 3.49909
+       },
+       {
+        "a": 5504.07,
+        "b": 1.20951
+       },
+       {
+        "a": 1433.39,
+        "b": 0.0
+       }
+      ]
+     }
+    ],
+    "compounds": [],
+    "window_K": [
+     562.9,
+     1475.8
+    ],
+    "isotherms_K": [
+     790.84,
+     865.69,
+     886.89,
+     895.52
+    ]
+   },
+   "quantity": "tie_line_count",
+   "temperature_K": 895.52,
+   "legacy_value": 2,
+   "correct_value": 3
+  },
+  {
+   "description": "Miscibility gaps are bounded by the spinodal (zero second derivative) instead of the binodal (common tangent), and metastable tangents replace the stable ones, so the total two-phase extent at an isotherm is wrong.",
+   "system": {
+    "system_id": "model_04",
+    "solution_phases": [
+     {
+      "name": "liquid",
+      "end_members": {
+       "A": {
+        "h": 21616.8,
+        "s": 10.822
+       },
+       "B": {
+        "h": 18609.3,
+        "s": 9.10722
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 5580.05,
+        "b": -1.90286
+       },
+       {
+        "a": -3151.76,
+        "b": 0.588675
+       },
+       {
+        "a": 71.701,
+        "b": 0.614402
+       }
+      ]
+     },
+     {
+      "name": "alpha",
+      "end_members": {
+       "A": {
+        "h": 0.0,
+        "s": 0.0
+       },
+       "B": {
+        "h": 0.0,
+        "s": 0.0
+       }
+      },
+      "redlich_kister": [
+       {
+        "a": 21862.0,
+        "b": -0.211322
+       },
+       {
+        "a": 888.377,
+        "b": 0.0
+       },
+       {
+        "a": -338.918,
+        "b": 0.0
+       }
+      ]
+     }
+    ],
+    "compounds": [],
+    "window_K": [
+     1110.2,
+     1802.8
+    ],
+    "isotherms_K": [
+     1184.11,
+     1472.62,
+     1494.7,
+     1785.22
+    ]
+   },
+   "quantity": "two_phase_fraction",
+   "temperature_K": 1184.11,
+   "legacy_value": 0.3107623869443271,
+   "correct_value": 0.5186589374811854
+  }
+ ]
+}

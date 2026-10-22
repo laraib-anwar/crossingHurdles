@@ -1,0 +1,114 @@
+{
+ "system_id": "t3_gap_eutectoid",
+ "isotherms": [
+  {
+   "temperature_K": 950,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.13764126886805358
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.8623587311319464,
+     "x_hi": 0.8774065735687323
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9894769272804644,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.13764126886805358,
+     "right_phase": "alpha",
+     "x_right": 0.8623587311319464
+    },
+    {
+     "left_phase": "alpha",
+     "x_left": 0.8774065735687323,
+     "right_phase": "beta",
+     "x_right": 0.9894769272804644
+    }
+   ]
+  },
+  {
+   "temperature_K": 1100,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.25568119134329087
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7443188086567091,
+     "x_hi": 0.9719557503766629
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.995128508662046,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.25568119134329087,
+     "right_phase": "alpha",
+     "x_right": 0.7443188086567091
+    },
+    {
+     "left_phase": "alpha",
+     "x_left": 0.9719557503766629,
+     "right_phase": "beta",
+     "x_right": 0.995128508662046
+    }
+   ]
+  },
+  {
+   "temperature_K": 1230,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 940.7178856149186,
+   "class": "eutectic",
+   "name": "eutectoid",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.1323922438215374
+    },
+    {
+     "phase": "alpha",
+     "x": 0.8676077561784626
+    },
+    {
+     "phase": "beta",
+     "x": 0.989379753420227
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [
+  {
+   "temperature_K": 1202.7235504494272,
+   "x": 0.5,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

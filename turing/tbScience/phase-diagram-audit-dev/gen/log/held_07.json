@@ -1,0 +1,40 @@
+{
+ "system_id": "held_07",
+ "shipped": false,
+ "style": "compounds",
+ "label": "congruently melting compound with eutectics",
+ "attempts": 1,
+ "secs": 19.65,
+ "window": [
+  831.3,
+  1645.9
+ ],
+ "isotherms": [
+  1034.4,
+  1644.09
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "A2B3"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 5,
+  "inv_T": [
+   1122.3753689089478,
+   1230.943110453151
+  ]
+ }
+}

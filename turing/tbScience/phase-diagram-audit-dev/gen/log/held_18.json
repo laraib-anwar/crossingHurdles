@@ -1,0 +1,47 @@
+{
+ "system_id": "held_18",
+ "shipped": false,
+ "style": "mixed",
+ "label": "mixed system with four or more events",
+ "attempts": 4,
+ "secs": 28.99,
+ "window": [
+  568.2,
+  1750.7
+ ],
+ "isotherms": [
+  1350.08,
+  1366.32,
+  1379.39
+ ],
+ "summary": {
+  "names": [
+   "eutectoid",
+   "eutectic",
+   "peritectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic",
+   "peritectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "AB3"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 7,
+  "inv_T": [
+   585.1422903545467,
+   634.8863131191728,
+   698.7978373200829,
+   1341.7743358619516
+  ]
+ }
+}

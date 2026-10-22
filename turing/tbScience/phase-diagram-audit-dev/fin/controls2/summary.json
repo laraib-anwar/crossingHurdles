@@ -1,0 +1,52 @@
+{
+ "grid": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "isotherms[0].single_phase_regions[0].x_hi": 28
+  }
+ },
+ "scan": {
+  "fails": 27,
+  "total": 28,
+  "reasons": {
+   "invariants[0].temperature_K": 21,
+   "congruent_points[0].temperature_K": 6
+  }
+ },
+ "rule": {
+  "fails": 6,
+  "total": 28,
+  "reasons": {
+   "invariants[2]": 2,
+   "invariants[1]": 3,
+   "invariants[0]": 1
+  }
+ },
+ "spinodal": {
+  "fails": 5,
+  "total": 28,
+  "reasons": {
+   "isotherms[0].single_phase_regions[0].x_hi": 2,
+   "isotherms[4].single_phase_regions[0].x_hi": 1,
+   "isotherms[1].single_phase_regions[1].x_hi": 1,
+   "held_18": 1
+  }
+ },
+ "legacy": {
+  "fails": 27,
+  "total": 28,
+  "reasons": {
+   "isotherms[0]": 1,
+   "1": 9,
+   "congruent_points[0].temperature_K": 4,
+   "0": 4,
+   "isotherms[0].single_phase_regions[0].x_hi": 2,
+   "2": 3,
+   "isotherms[1]": 1,
+   "4": 1,
+   "6": 1,
+   "isotherms[3]": 1
+  }
+ }
+}

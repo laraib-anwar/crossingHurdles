@@ -1,0 +1,54 @@
+{
+ "system_id": "t8_noevent",
+ "isotherms": [
+  {
+   "temperature_K": 1050,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.6306143134785923
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.674430705803781,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.6306143134785923,
+     "right_phase": "liquid",
+     "x_right": 0.674430705803781
+    }
+   ]
+  },
+  {
+   "temperature_K": 1150,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.16818966319410775
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.2082302800147429,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.16818966319410775,
+     "right_phase": "liquid",
+     "x_right": 0.2082302800147429
+    }
+   ]
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [],
+ "critical_points": []
+}

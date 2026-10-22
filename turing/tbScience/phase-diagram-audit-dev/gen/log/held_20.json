@@ -1,0 +1,34 @@
+{
+ "system_id": "held_20",
+ "shipped": false,
+ "style": "lens_max",
+ "label": "congruent maximum, two tie-lines",
+ "attempts": 1,
+ "secs": 12.12,
+ "window": [
+  1467.3,
+  1837.0
+ ],
+ "isotherms": [
+  1498.63,
+  1506.44,
+  1570.12,
+  1681.47,
+  1692.51
+ ],
+ "summary": {
+  "names": [],
+  "classes": [],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "alpha"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 1,
+  "n_events": 2,
+  "inv_T": []
+ }
+}

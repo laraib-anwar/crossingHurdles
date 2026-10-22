@@ -1,0 +1,119 @@
+{
+ "system_id": "dev_01",
+ "isotherms": [
+  {
+   "temperature_K": 600,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.021336112830982815
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.5218158983081645,
+     "x_hi": 0.690275135648485
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9735218809901139,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.021336112830982815,
+     "right_phase": "liquid",
+     "x_right": 0.5218158983081645
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.690275135648485,
+     "right_phase": "beta",
+     "x_right": 0.9735218809901139
+    }
+   ]
+  },
+  {
+   "temperature_K": 750,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.018576656332674114
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.32884369439095473,
+     "x_hi": 0.9198460450262553
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9931245704682308,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.018576656332674114,
+     "right_phase": "liquid",
+     "x_right": 0.32884369439095473
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.9198460450262553,
+     "right_phase": "beta",
+     "x_right": 0.9931245704682308
+    }
+   ]
+  },
+  {
+   "temperature_K": 950,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0047080489262698805
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.06540007983070842,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0047080489262698805,
+     "right_phase": "liquid",
+     "x_right": 0.06540007983070842
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 539.3847612174352,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.020005402154288726
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5978103152160845
+    },
+    {
+     "phase": "beta",
+     "x": 0.9670646031092199
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

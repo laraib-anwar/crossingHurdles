@@ -1,0 +1,70 @@
+{
+ "system_id": "t2_lens_minimum",
+ "solution_phases": [
+  {
+   "name": "liquid",
+   "end_members": {
+    "A": {
+     "h": 0,
+     "s": 0
+    },
+    "B": {
+     "h": 0,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alpha",
+   "end_members": {
+    "A": {
+     "h": -12000,
+     "s": -10
+    },
+    "B": {
+     "h": -9000,
+     "s": -9
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 6000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ],
+ "compounds": [],
+ "window_K": [
+  700,
+  1400
+ ],
+ "isotherms_K": [
+  800,
+  950,
+  1100,
+  1300
+ ]
+}

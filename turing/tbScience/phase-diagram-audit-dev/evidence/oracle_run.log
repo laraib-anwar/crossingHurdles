@@ -1,0 +1,5 @@
+diagnosis: peritectic_count@model_03, critical_count@model_01, invariant_count@model_03, tie_line_count@model_05, two_phase_fraction@model_04
+real 239.82
+user 0.05
+sys 0.04
+exit 0

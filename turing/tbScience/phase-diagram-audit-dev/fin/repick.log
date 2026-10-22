@@ -1,0 +1,15 @@
+held_02 ok [783.71, 810.78, 986.24] [3, 3, 2]
+held_03 ok [1618.84, 1673.25, 1683.87, 1705.85, 1741.53] [1, 1, 1, 2, 2]
+held_04 ok [1453.49, 1646.73, 1667.85] [2, 2, 2]
+held_09 ok [1291.32, 1304.29] [2, 2]
+held_10 ok [667.72, 899.71, 983.6, 1002.93, 1094.44, 1099.52] [1, 2, 2, 2, 1, 1]
+held_13 ok [994.11, 1001.06] [3, 3]
+held_14 ok [1438.36, 1454.54, 1493.53] [4, 4, 4]
+Traceback (most recent call last):
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/phase-diagram-audit-dev/tools/repick.py", line 21, in <module>
+    S2 = pd.System(m); report = S2.report(); _, events2 = pd.System(m).solve()
+                                ^^^^^^^^^^^
+  File "/Users/adnananwar/Desktop/laraib/turing/tbScience/phase-diagram-audit-dev/../../tasks/physical-sciences/materials-science/phase-diagram-audit/solution/phasediagram.py", line 829, in report
+    ties, sole = anchors[T]
+                 ~~~~~~~^^^
+KeyError: 1101.68

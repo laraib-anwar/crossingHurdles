@@ -1,0 +1,572 @@
+{
+ "system_id": "model_05",
+ "thresholds": {
+  "tangent_J_mol": 1e-06,
+  "stability_J_mol": 1e-06,
+  "T_relative": 1e-07,
+  "x_absolute": 1e-09,
+  "match_K": 0.25
+ },
+ "grids": {
+  "topology_points": 50241,
+  "scan_points": 20119,
+  "fine_points": 200599
+ },
+ "hull_backend": "C monotone chain",
+ "schema_errors": [],
+ "isotherms": [
+  {
+   "temperature_K": 1428.92,
+   "n_regions": 1,
+   "n_tie_lines": 0,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [],
+   "max_tangent_residual": 0.0,
+   "max_dx_newton_from_report": 0.0,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.0
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0,
+     "min_G2": 51895.299674477545,
+     "min_margin_other_phases": 97.08298137785738
+    }
+   ],
+   "min_slope_increment": null,
+   "independent": {
+    "n_regions": 1,
+    "n_tie_lines": 0,
+    "regions": [
+     {
+      "phase": "liquid",
+      "x_lo": 0.0,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [],
+    "flags": [],
+    "max_dx": 0.0
+   }
+  },
+  {
+   "temperature_K": 1448.78,
+   "n_regions": 1,
+   "n_tie_lines": 0,
+   "failures": [],
+   "sequence_errors": [],
+   "worst_shared_boundary_gap": 0.0,
+   "tie_lines": [],
+   "max_tangent_residual": 0.0,
+   "max_dx_newton_from_report": 0.0,
+   "stability_violation": 0.0,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.0
+   },
+   "uncovered_grid_points": 0,
+   "regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0,
+     "min_G2": 52575.554620786716,
+     "min_margin_other_phases": 264.5957262182384
+    }
+   ],
+   "min_slope_increment": null,
+   "independent": {
+    "n_regions": 1,
+    "n_tie_lines": 0,
+    "regions": [
+     {
+      "phase": "liquid",
+      "x_lo": 0.0,
+      "x_hi": 1.0
+     }
+    ],
+    "tie_lines": [],
+    "flags": [],
+    "max_dx": 0.0
+   }
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 736.3317529829252,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    [
+     "alpha",
+     0.004922848702824428
+    ],
+    [
+     "liquid",
+     0.42373113582236416
+    ],
+    [
+     "beta",
+     0.9934622332561633
+    ]
+   ],
+   "failures": [],
+   "collinearity_residual": 5.487485466026953e-13,
+   "tangency": [
+    {
+     "phase": "alpha",
+     "mu_A": 7.979727989493313e-17,
+     "mu_B": -1.6080886622305002e-14,
+     "slope": -1.6161551263937923e-14
+    },
+    {
+     "phase": "liquid",
+     "mu_A": -8.82809450541977e-13,
+     "mu_B": 2.4956460509262257e-12,
+     "slope": 3.3784563688299407e-12
+    },
+    {
+     "phase": "beta",
+     "mu_A": -4.2708381969847053e-11,
+     "mu_B": 2.810529586838584e-13,
+     "slope": 4.2989437530616126e-11
+    }
+   ],
+   "max_residual": 4.2708381969847053e-11,
+   "stability_violation": -1.8559361245756856e-08,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.42373000000000005
+   },
+   "refined": {
+    "temperature_K": 736.3317529829252,
+    "x": [
+     0.004922848702824429,
+     0.42373113582236405,
+     0.9934622332561633
+    ],
+    "dT": 0.0,
+    "dT_rel": 0.0,
+    "max_dx": 1.1102230246251565e-16
+   },
+   "class_check": {
+    "middle_stable_above": true,
+    "outer_tie_covers_above": false,
+    "middle_stable_below": false,
+    "outer_tie_covers_below": true,
+    "class": "eutectic",
+    "outer_tie_consistent": true,
+    "name": "eutectic"
+   }
+  },
+  {
+   "temperature_K": 864.1122821574511,
+   "class": "eutectic",
+   "name": "metatectic",
+   "phases": [
+    [
+     "alpha",
+     0.005543682324609319
+    ],
+    [
+     "gamma",
+     0.011723081603394869
+    ],
+    [
+     "liquid",
+     0.2929697390526973
+    ]
+   ],
+   "failures": [],
+   "collinearity_residual": 4.5267956050309976e-13,
+   "tangency": [
+    {
+     "phase": "alpha",
+     "mu_A": 3.4715286201247864e-14,
+     "mu_B": -6.227018900517578e-12,
+     "slope": -6.261657858885883e-12
+    },
+    {
+     "phase": "gamma",
+     "mu_A": 4.997009750429271e-13,
+     "mu_B": -3.511413382284445e-12,
+     "slope": -4.0110137433657655e-12
+    },
+    {
+     "phase": "liquid",
+     "mu_A": -1.1828732437990652e-13,
+     "mu_B": 2.859934511434403e-13,
+     "slope": 4.04121180963557e-13
+    }
+   ],
+   "max_residual": 6.227018900517578e-12,
+   "stability_violation": -1.3115468711077938e-09,
+   "stability_violation_at": {
+    "phase": "liquid",
+    "x": 0.29297
+   },
+   "refined": {
+    "temperature_K": 864.1122821574514,
+    "x": [
+     0.005543682324609327,
+     0.011723081603394879,
+     0.2929697390526971
+    ],
+    "dT": 3.410605131648481e-13,
+    "dT_rel": 3.946946712912281e-16,
+    "max_dx": 2.220446049250313e-16
+   },
+   "class_check": {
+    "middle_stable_above": true,
+    "outer_tie_covers_above": false,
+    "middle_stable_below": false,
+    "outer_tie_covers_below": true,
+    "class": "eutectic",
+    "outer_tie_consistent": true,
+    "name": "metatectic"
+   }
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [],
+ "completeness": {
+  "scan_step_K": 0.09999999999999999,
+  "n_hulls": 9130,
+  "scan_seconds": 20.14843225479126,
+  "pure_end_transitions": [
+   {
+    "end": "A",
+    "T": 897.0719267520817,
+    "phase_below": "alpha",
+    "phase_above": "gamma"
+   },
+   {
+    "end": "A",
+    "T": 1243.743705195805,
+    "phase_below": "gamma",
+    "phase_above": "liquid"
+   },
+   {
+    "end": "B",
+    "T": 1417.4100262250613,
+    "phase_below": "beta",
+    "phase_above": "liquid"
+   }
+  ],
+  "changes": [
+   {
+    "interval_K": [
+     736.3,
+     736.4
+    ],
+    "bracket_K": [
+     736.3317527770996,
+     736.3317531585693
+    ],
+    "kind_found": "invariant",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "found_event": {
+     "kind": "invariant",
+     "temperature_K": 736.3317529829252,
+     "class": "eutectic",
+     "name": "eutectic",
+     "phases": [
+      {
+       "phase": "alpha",
+       "x": 0.004922848702824429
+      },
+      {
+       "phase": "liquid",
+       "x": 0.42373113582236405
+      },
+      {
+       "phase": "beta",
+       "x": 0.9934622332561633
+      }
+     ],
+     "stability_violation": -1.8559374176385646e-08
+    },
+    "matched": {
+     "kind": "invariant",
+     "temperature_K": 736.3317529829252,
+     "dT": 0.0,
+     "max_dx": 1.1102230246251565e-16
+    }
+   },
+   {
+    "interval_K": [
+     864.0999999999999,
+     864.1999999999999
+    ],
+    "bracket_K": [
+     864.1122772216797,
+     864.1122779846191
+    ],
+    "kind_found": "invariant",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|gamma",
+     "R:gamma",
+     "T:gamma|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "found_event": {
+     "kind": "invariant",
+     "temperature_K": 864.1122821574514,
+     "class": "eutectic",
+     "name": "metatectic",
+     "phases": [
+      {
+       "phase": "alpha",
+       "x": 0.0055436823246093276
+      },
+      {
+       "phase": "gamma",
+       "x": 0.011723081603394879
+      },
+      {
+       "phase": "liquid",
+       "x": 0.292969739052697
+      }
+     ],
+     "stability_violation": -1.3104544116515626e-09
+    },
+    "matched": {
+     "kind": "invariant",
+     "temperature_K": 864.1122821574511,
+     "dT": -3.410605131648481e-13,
+     "max_dx": 2.7755575615628914e-16
+    }
+   },
+   {
+    "interval_K": [
+     897.0,
+     897.0999999999999
+    ],
+    "bracket_K": [
+     897.0719261169434,
+     897.0719268798828
+    ],
+    "kind_found": "pure_end",
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|gamma",
+     "R:gamma",
+     "T:gamma|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:gamma",
+     "T:gamma|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "matched": "pure_end",
+    "analytic": {
+     "end": "A",
+     "T": 897.0719267520817,
+     "phase_below": "alpha",
+     "phase_above": "gamma"
+    }
+   },
+   {
+    "interval_K": [
+     1243.6999999999998,
+     1243.8
+    ],
+    "bracket_K": [
+     1243.7437049865723,
+     1243.7437057495117
+    ],
+    "kind_found": "pure_end",
+    "labels_below": [
+     "R:gamma",
+     "T:gamma|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "detector": "labels",
+    "matched": "pure_end",
+    "analytic": {
+     "end": "A",
+     "T": 1243.743705195805,
+     "phase_below": "gamma",
+     "phase_above": "liquid"
+    }
+   },
+   {
+    "interval_K": [
+     1417.3999999999999,
+     1417.5
+    ],
+    "bracket_K": [
+     1417.4100257873536,
+     1417.410026550293
+    ],
+    "kind_found": "pure_end",
+    "labels_below": [
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:liquid"
+    ],
+    "detector": "labels",
+    "matched": "pure_end",
+    "analytic": {
+     "end": "B",
+     "T": 1417.4100262250613,
+     "phase_below": "beta",
+     "phase_above": "liquid"
+    }
+   }
+  ],
+  "failures": [],
+  "reported_without_change": [],
+  "independent_events": [
+   {
+    "kind": "invariant",
+    "temperature_K": 736.3317529829252,
+    "class": "eutectic",
+    "name": "eutectic",
+    "phases": [
+     {
+      "phase": "alpha",
+      "x": 0.004922848702824429
+     },
+     {
+      "phase": "liquid",
+      "x": 0.42373113582236405
+     },
+     {
+      "phase": "beta",
+      "x": 0.9934622332561633
+     }
+    ],
+    "stability_violation": -1.8559374176385646e-08,
+    "rich_side": "above",
+    "bracket_K": [
+     736.3317527770996,
+     736.3317531585693
+    ],
+    "scan_interval_K": [
+     736.3,
+     736.4
+    ],
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ]
+   },
+   {
+    "kind": "invariant",
+    "temperature_K": 864.1122821574514,
+    "class": "eutectic",
+    "name": "metatectic",
+    "phases": [
+     {
+      "phase": "alpha",
+      "x": 0.0055436823246093276
+     },
+     {
+      "phase": "gamma",
+      "x": 0.011723081603394879
+     },
+     {
+      "phase": "liquid",
+      "x": 0.292969739052697
+     }
+    ],
+    "stability_violation": -1.3104544116515626e-09,
+    "rich_side": "above",
+    "bracket_K": [
+     864.1122772216797,
+     864.1122779846191
+    ],
+    "scan_interval_K": [
+     864.0999999999999,
+     864.1999999999999
+    ],
+    "labels_below": [
+     "R:alpha",
+     "T:alpha|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ],
+    "labels_above": [
+     "R:alpha",
+     "T:alpha|gamma",
+     "R:gamma",
+     "T:gamma|liquid",
+     "R:liquid",
+     "T:liquid|beta",
+     "R:beta"
+    ]
+   }
+  ]
+ },
+ "summary": {
+  "max_tangent_residual": 4.2708381969847053e-11,
+  "max_stability_violation": 0.0,
+  "max_dx_isotherms_newton": 0.0,
+  "max_dx_isotherms_independent": 0.0,
+  "max_dT_rel_events": 3.946946712912281e-16,
+  "max_dx_events": 2.220446049250313e-16
+ },
+ "timing_seconds": {
+  "certificates": 1.06492018699646,
+  "completeness": 20.92799687385559,
+  "total": 21.99291706085205
+ },
+ "failures": [],
+ "pass": true
+}

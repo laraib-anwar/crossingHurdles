@@ -1,0 +1,68 @@
+{
+ "system_id": "t8_noevent",
+ "solution_phases": [
+  {
+   "name": "liquid",
+   "end_members": {
+    "A": {
+     "h": 0,
+     "s": 0
+    },
+    "B": {
+     "h": 0,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alpha",
+   "end_members": {
+    "A": {
+     "h": -12000,
+     "s": -10
+    },
+    "B": {
+     "h": -9000,
+     "s": -9
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 1000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ],
+ "compounds": [],
+ "window_K": [
+  1010,
+  1190
+ ],
+ "isotherms_K": [
+  1050,
+  1150
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "system_id": "held_10",
+ "shipped": false,
+ "style": "syntectic",
+ "label": "syntectic",
+ "attempts": 6,
+ "secs": 14.23,
+ "window": [
+  301.0,
+  1104.2
+ ],
+ "isotherms": [
+  667.72,
+  899.71,
+  983.6,
+  1002.93,
+  1094.44,
+  1099.52
+ ],
+ "summary": {
+  "names": [
+   "syntectic"
+  ],
+  "classes": [
+   "peritectic"
+  ],
+  "con": [],
+  "cri": [
+   [
+    "below",
+    "alpha"
+   ]
+  ],
+  "n_pure": 2,
+  "n_events": 4,
+  "inv_T": [
+   1092.0400369479541
+  ]
+ }
+}

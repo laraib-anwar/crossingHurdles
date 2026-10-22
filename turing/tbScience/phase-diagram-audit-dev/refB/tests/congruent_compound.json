@@ -1,0 +1,103 @@
+{
+ "system_id": "refB_congruent_compound",
+ "solution_phases": [
+  {
+   "name": "liquid",
+   "end_members": {
+    "A": {
+     "h": 12000,
+     "s": 12
+    },
+    "B": {
+     "h": 9000,
+     "s": 10
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": -8000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alpha",
+   "end_members": {
+    "A": {
+     "h": 0,
+     "s": 0
+    },
+    "B": {
+     "h": 8000,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 15000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "beta",
+   "end_members": {
+    "A": {
+     "h": 8000,
+     "s": 0
+    },
+    "B": {
+     "h": 0,
+     "s": 0
+    }
+   },
+   "redlich_kister": [
+    {
+     "a": 15000,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    },
+    {
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ],
+ "compounds": [
+  {
+   "name": "AB",
+   "x_b": 0.5,
+   "h": 175,
+   "s": 8
+  }
+ ],
+ "window_K": [
+  600,
+  1100
+ ],
+ "isotherms_K": [
+  700,
+  880,
+  1000
+ ]
+}

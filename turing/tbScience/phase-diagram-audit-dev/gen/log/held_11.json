@@ -1,0 +1,25 @@
+{
+ "system_id": "held_11",
+ "shipped": false,
+ "style": "eutectic",
+ "label": "window with no event",
+ "attempts": 3,
+ "secs": 1.75,
+ "window": [
+  360.2010122386211,
+  464.63671091311727
+ ],
+ "isotherms": [
+  378.06,
+  396.72
+ ],
+ "summary": {
+  "names": [],
+  "classes": [],
+  "con": [],
+  "cri": [],
+  "n_pure": 0,
+  "n_events": 0,
+  "inv_T": []
+ }
+}

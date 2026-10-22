@@ -1,0 +1,133 @@
+{
+ "system_id": "t5_compound_peritectic",
+ "isotherms": [
+  {
+   "temperature_K": 800,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.005048121973424656
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.991844064290757,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.005048121973424656,
+     "right_phase": "A2B3",
+     "x_right": 0.6
+    },
+    {
+     "left_phase": "A2B3",
+     "x_left": 0.6,
+     "right_phase": "beta",
+     "x_right": 0.991844064290757
+    }
+   ]
+  },
+  {
+   "temperature_K": 1000,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.004953763663935699
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.16133094806113854,
+     "x_hi": 0.5754978923602079
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9834326735714092,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.004953763663935699,
+     "right_phase": "liquid",
+     "x_right": 0.16133094806113854
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.5754978923602079,
+     "right_phase": "beta",
+     "x_right": 0.9834326735714092
+    }
+   ]
+  },
+  {
+   "temperature_K": 1200,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 0.7437495787936763
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9846263900243905,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "liquid",
+     "x_left": 0.7437495787936763,
+     "right_phase": "beta",
+     "x_right": 0.9846263900243905
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 828.9510092136327,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.005957011713044018
+    },
+    {
+     "phase": "liquid",
+     "x": 0.3294441274276952
+    },
+    {
+     "phase": "A2B3",
+     "x": 0.6
+    }
+   ]
+  },
+  {
+   "temperature_K": 994.5098885244676,
+   "class": "peritectic",
+   "name": "peritectic",
+   "phases": [
+    {
+     "phase": "liquid",
+     "x": 0.5708570754860569
+    },
+    {
+     "phase": "A2B3",
+     "x": 0.6
+    },
+    {
+     "phase": "beta",
+     "x": 0.9834992682888927
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

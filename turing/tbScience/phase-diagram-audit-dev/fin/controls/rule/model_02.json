@@ -1,0 +1,45 @@
+{
+ "system_id": "model_02",
+ "isotherms": [
+  {
+   "temperature_K": 599.74,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 656.46,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [
+  {
+   "temperature_K": 695.8424259339166,
+   "x": 0.7347209413040988,
+   "phase_above": "liquid",
+   "phase_below": "alpha",
+   "two_phase_side": "above"
+  }
+ ],
+ "critical_points": [
+  {
+   "temperature_K": 501.04653500408637,
+   "x": 0.4233898437055019,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

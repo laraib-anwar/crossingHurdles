@@ -1,0 +1,114 @@
+{
+ "system_id": "model_02",
+ "isotherms": [
+  {
+   "temperature_K": 697.14,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.6735
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.7080000000000001,
+     "x_hi": 0.7675000000000001
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7905,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.6735,
+     "right_phase": "liquid",
+     "x_right": 0.7080000000000001
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.7675000000000001,
+     "right_phase": "alpha",
+     "x_right": 0.7905
+    }
+   ]
+  },
+  {
+   "temperature_K": 708.4,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.524
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.665,
+     "x_hi": 0.8725
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.902,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.524,
+     "right_phase": "liquid",
+     "x_right": 0.665
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.8725,
+     "right_phase": "alpha",
+     "x_right": 0.902
+    }
+   ]
+  },
+  {
+   "temperature_K": 802.28,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.222
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.5605,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.222,
+     "right_phase": "liquid",
+     "x_right": 0.5605
+    }
+   ]
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [
+  {
+   "temperature_K": 695.8424259339166,
+   "x": 0.7345,
+   "phase_above": "liquid",
+   "phase_below": "alpha",
+   "two_phase_side": "above"
+  }
+ ],
+ "critical_points": [
+  {
+   "temperature_K": 501.04653500408637,
+   "x": 0.42350000000000004,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

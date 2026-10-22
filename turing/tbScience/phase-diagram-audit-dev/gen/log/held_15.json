@@ -1,0 +1,35 @@
+{
+ "system_id": "held_15",
+ "shipped": false,
+ "style": "intermediate",
+ "label": "intermediate solid solution forming peritectically",
+ "attempts": 14,
+ "secs": 28.51,
+ "window": [
+  301.0,
+  1349.5
+ ],
+ "isotherms": [
+  974.43,
+  1101.68,
+  1260.48
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "peritectic"
+  ],
+  "classes": [
+   "eutectic",
+   "peritectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 4,
+  "inv_T": [
+   498.31709563896015,
+   585.5355194883009
+  ]
+ }
+}

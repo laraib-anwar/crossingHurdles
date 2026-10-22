@@ -1,0 +1,38 @@
+{
+ "system_id": "model_04",
+ "shipped": true,
+ "style": "solid_gap",
+ "label": "solid miscibility gap with an upper consolute point",
+ "attempts": 1,
+ "secs": 18.26,
+ "window": [
+  1110.2,
+  1802.8
+ ],
+ "isotherms": [
+  1184.11,
+  1472.62,
+  1494.7,
+  1785.22
+ ],
+ "summary": {
+  "names": [],
+  "classes": [],
+  "con": [
+   [
+    "above",
+    "liquid",
+    "alpha"
+   ]
+  ],
+  "cri": [
+   [
+    "below",
+    "alpha"
+   ]
+  ],
+  "n_pure": 0,
+  "n_events": 2,
+  "inv_T": []
+ }
+}

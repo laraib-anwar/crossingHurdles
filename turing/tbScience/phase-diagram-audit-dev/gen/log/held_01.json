@@ -1,0 +1,38 @@
+{
+ "system_id": "held_01",
+ "shipped": false,
+ "style": "eutectic",
+ "label": "simple eutectic",
+ "attempts": 5,
+ "secs": 12.09,
+ "window": [
+  590.6,
+  909.0
+ ],
+ "isotherms": [
+  780.13,
+  807.89,
+  884.65
+ ],
+ "summary": {
+  "names": [
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "beta"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 4,
+  "inv_T": [
+   683.4908185172691
+  ]
+ }
+}

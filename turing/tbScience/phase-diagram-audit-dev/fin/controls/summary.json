@@ -1,0 +1,45 @@
+{
+ "grid": {
+  "fails": 8,
+  "total": 21,
+  "reasons": {
+   "isotherms[0].single_phase_regions[0].x_hi": 8
+  }
+ },
+ "scan": {
+  "fails": 20,
+  "total": 21,
+  "reasons": {
+   "invariants[0].temperature_K": 17,
+   "congruent_points[0].temperature_K": 3
+  }
+ },
+ "rule": {
+  "fails": 6,
+  "total": 21,
+  "reasons": {
+   "invariants[2]": 2,
+   "invariants[1]": 3,
+   "invariants[0]": 1
+  }
+ },
+ "spinodal": {
+  "fails": 0,
+  "total": 21,
+  "reasons": {}
+ },
+ "legacy": {
+  "fails": 20,
+  "total": 21,
+  "reasons": {
+   "isotherms[0]": 1,
+   "1": 8,
+   "congruent_points[0].temperature_K": 3,
+   "0": 4,
+   "3": 1,
+   "4": 1,
+   "2": 1,
+   "6": 1
+  }
+ }
+}

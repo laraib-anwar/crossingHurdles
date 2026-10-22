@@ -1,0 +1,41 @@
+{
+ "system_id": "held_22",
+ "shipped": false,
+ "style": "mixed",
+ "label": "mixed system with a compound",
+ "attempts": 7,
+ "secs": 32.36,
+ "window": [
+  926.8,
+  1613.3
+ ],
+ "isotherms": [
+  928.01,
+  1576.46,
+  1608.78
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "AB3"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 5,
+  "inv_T": [
+   1105.3902233820263,
+   1259.0122951773765
+  ]
+ }
+}

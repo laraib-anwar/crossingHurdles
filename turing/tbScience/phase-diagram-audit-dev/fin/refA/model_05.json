@@ -1,0 +1,216 @@
+{
+ "system_id": "model_05",
+ "isotherms": [
+  {
+   "temperature_K": 790.84,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.00536721089215981
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.3668613296614127,
+     "x_hi": 0.47487050095542
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9925378426804922,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.00536721089215981,
+     "right_phase": "liquid",
+     "x_right": 0.3668613296614127
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.47487050095542,
+     "right_phase": "beta",
+     "x_right": 0.9925378426804922
+    }
+   ]
+  },
+  {
+   "temperature_K": 865.69,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.005279281912668371
+    },
+    {
+     "phase": "gamma",
+     "x_lo": 0.01114150299825424,
+     "x_hi": 0.011714893854330711
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.29159722641356134,
+     "x_hi": 0.5436748398708164
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9915980836977496,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.005279281912668371,
+     "right_phase": "gamma",
+     "x_right": 0.01114150299825424
+    },
+    {
+     "left_phase": "gamma",
+     "x_left": 0.011714893854330711,
+     "right_phase": "liquid",
+     "x_right": 0.29159722641356134
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.5436748398708164,
+     "right_phase": "beta",
+     "x_right": 0.9915980836977496
+    }
+   ]
+  },
+  {
+   "temperature_K": 886.89,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0017156487481851045
+    },
+    {
+     "phase": "gamma",
+     "x_lo": 0.00353079757452495,
+     "x_hi": 0.0115653812383176
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.2733020127058651,
+     "x_hi": 0.56288087336372
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9914142325112584,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0017156487481851045,
+     "right_phase": "gamma",
+     "x_right": 0.00353079757452495
+    },
+    {
+     "left_phase": "gamma",
+     "x_left": 0.0115653812383176,
+     "right_phase": "liquid",
+     "x_right": 0.2733020127058651
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.56288087336372,
+     "right_phase": "beta",
+     "x_right": 0.9914142325112584
+    }
+   ]
+  },
+  {
+   "temperature_K": 895.52,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.00026156576954718976
+    },
+    {
+     "phase": "gamma",
+     "x_lo": 0.0005333075024168968,
+     "x_hi": 0.011483613570142324
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.2659325229722527,
+     "x_hi": 0.5706642441733718
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9913506596361682,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.00026156576954718976,
+     "right_phase": "gamma",
+     "x_right": 0.0005333075024168968
+    },
+    {
+     "left_phase": "gamma",
+     "x_left": 0.011483613570142324,
+     "right_phase": "liquid",
+     "x_right": 0.2659325229722527
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.5706642441733718,
+     "right_phase": "beta",
+     "x_right": 0.9913506596361682
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 736.3317529829252,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.004922848702824427
+    },
+    {
+     "phase": "liquid",
+     "x": 0.42373113582236405
+    },
+    {
+     "phase": "beta",
+     "x": 0.9934622332561633
+    }
+   ]
+  },
+  {
+   "temperature_K": 864.1122821574512,
+   "class": "eutectic",
+   "name": "metatectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.005543682324609324
+    },
+    {
+     "phase": "gamma",
+     "x": 0.01172308160339487
+    },
+    {
+     "phase": "liquid",
+     "x": 0.2929697390526971
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

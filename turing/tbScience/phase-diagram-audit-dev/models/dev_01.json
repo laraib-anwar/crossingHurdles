@@ -1,0 +1,8 @@
+{"system_id": "dev_01",
+ "solution_phases": [
+  {"name": "liquid", "end_members": {"A": {"h": 10000, "s": 10}, "B": {"h": 8000, "s": 10}}, "redlich_kister": [{"a": -2000, "b": 0}, {"a": 500, "b": 0}, {"a": 0, "b": 0}]},
+  {"name": "alpha", "end_members": {"A": {"h": 0, "s": 0}, "B": {"h": 3000, "s": 0}}, "redlich_kister": [{"a": 15000, "b": 0}, {"a": 0, "b": 0}, {"a": 0, "b": 0}]},
+  {"name": "beta", "end_members": {"A": {"h": 4000, "s": 0}, "B": {"h": 0, "s": 0}}, "redlich_kister": [{"a": 12000, "b": 0}, {"a": 0, "b": 0}, {"a": 0, "b": 0}]}],
+ "compounds": [],
+ "window_K": [500, 1100],
+ "isotherms_K": [600, 750, 950]}

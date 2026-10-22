@@ -1,0 +1,38 @@
+{
+ "system_id": "held_02",
+ "shipped": false,
+ "style": "peritectic",
+ "label": "peritectic between terminal solid solutions",
+ "attempts": 3,
+ "secs": 24.48,
+ "window": [
+  644.9,
+  1808.8
+ ],
+ "isotherms": [
+  783.71,
+  810.78,
+  986.24
+ ],
+ "summary": {
+  "names": [
+   "eutectoid",
+   "eutectic",
+   "peritectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic",
+   "peritectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 5,
+  "inv_T": [
+   744.2699892507178,
+   781.2073594991625,
+   813.5493182904248
+  ]
+ }
+}

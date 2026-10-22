@@ -1,0 +1,118 @@
+{
+ "system_id": "held_04",
+ "isotherms": [
+  {
+   "temperature_K": 1453.49,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.24100000000000002
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.28,
+     "x_hi": 0.40650000000000003
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.448,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.24100000000000002,
+     "right_phase": "liquid",
+     "x_right": 0.28
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.40650000000000003,
+     "right_phase": "alpha",
+     "x_right": 0.448
+    }
+   ]
+  },
+  {
+   "temperature_K": 1646.73,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.031
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.0775,
+     "x_hi": 0.789
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.8350000000000001,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.031,
+     "right_phase": "liquid",
+     "x_right": 0.0775
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.789,
+     "right_phase": "alpha",
+     "x_right": 0.8350000000000001
+    }
+   ]
+  },
+  {
+   "temperature_K": 1667.85,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.023
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.061000000000000006,
+     "x_hi": 0.8365
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.8715,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.023,
+     "right_phase": "liquid",
+     "x_right": 0.061000000000000006
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.8365,
+     "right_phase": "alpha",
+     "x_right": 0.8715
+    }
+   ]
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [
+  {
+   "temperature_K": 1441.6144787280696,
+   "x": 0.3405,
+   "phase_above": "liquid",
+   "phase_below": "alpha",
+   "two_phase_side": "above"
+  }
+ ],
+ "critical_points": []
+}

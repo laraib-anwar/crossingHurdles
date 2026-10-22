@@ -1,0 +1,42 @@
+{
+ "system_id": "held_12",
+ "shipped": false,
+ "style": "compounds",
+ "label": "two invariants close in temperature",
+ "attempts": 25,
+ "secs": 17.54,
+ "window": [
+  474.2,
+  1440.5
+ ],
+ "isotherms": [
+  559.49,
+  806.06,
+  1118.14,
+  1146.65
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "A2B3"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 5,
+  "inv_T": [
+   749.6083715746911,
+   755.7659282570617
+  ]
+ }
+}

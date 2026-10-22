@@ -1,0 +1,41 @@
+{
+ "system_id": "held_14",
+ "shipped": false,
+ "style": "intermediate",
+ "label": "intermediate solid solution melting congruently",
+ "attempts": 1,
+ "secs": 19.24,
+ "window": [
+  1273.7,
+  1817.3
+ ],
+ "isotherms": [
+  1438.36,
+  1454.54,
+  1493.53
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "gamma"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 5,
+  "inv_T": [
+   1373.920144693905,
+   1432.5270728510475
+  ]
+ }
+}

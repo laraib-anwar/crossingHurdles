@@ -1,0 +1,46 @@
+{
+ "system_id": "model_03",
+ "shipped": true,
+ "style": "compounds",
+ "label": "compounds: peritectic decomposition and eutectics",
+ "attempts": 2,
+ "secs": 38.88,
+ "window": [
+  561.2,
+  1513.7
+ ],
+ "isotherms": [
+  1250.44,
+  1294.4,
+  1367.79,
+  1381.7,
+  1425.68
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "peritectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "peritectic",
+   "eutectic"
+  ],
+  "con": [
+   [
+    "below",
+    "liquid",
+    "A4B"
+   ]
+  ],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 6,
+  "inv_T": [
+   717.4539866417973,
+   1033.2905969337585,
+   1292.1173420642758
+  ]
+ }
+}

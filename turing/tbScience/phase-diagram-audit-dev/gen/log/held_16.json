@@ -1,0 +1,38 @@
+{
+ "system_id": "held_16",
+ "shipped": false,
+ "style": "liquid_gap",
+ "label": "monotectic and liquid consolute point",
+ "attempts": 22,
+ "secs": 3.12,
+ "window": [
+  994.0,
+  1325.5
+ ],
+ "isotherms": [
+  1018.63,
+  1040.35,
+  1065.41,
+  1188.05
+ ],
+ "summary": {
+  "names": [
+   "monotectic"
+  ],
+  "classes": [
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [
+   [
+    "below",
+    "liquid"
+   ]
+  ],
+  "n_pure": 1,
+  "n_events": 3,
+  "inv_T": [
+   1029.7645506131785
+  ]
+ }
+}

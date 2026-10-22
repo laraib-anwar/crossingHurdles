@@ -1,0 +1,36 @@
+{
+ "system_id": "model_06",
+ "shipped": true,
+ "style": "liquid_gap",
+ "label": "liquid miscibility gap: monotectic",
+ "attempts": 25,
+ "secs": 10.85,
+ "window": [
+  620.2,
+  1164.5
+ ],
+ "isotherms": [
+  627.53,
+  649.0,
+  670.68,
+  731.32
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "monotectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 4,
+  "inv_T": [
+   683.5279932992311,
+   952.5908827978152
+  ]
+ }
+}

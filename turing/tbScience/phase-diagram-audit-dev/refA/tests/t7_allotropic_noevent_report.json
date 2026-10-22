@@ -1,0 +1,65 @@
+{
+ "system_id": "t7_allotropic_noevent",
+ "isotherms": [
+  {
+   "temperature_K": 750,
+   "single_phase_regions": [
+    {
+     "phase": "gamma",
+     "x_lo": 0.0,
+     "x_hi": 0.002562328477354575
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.026479648742917368,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "gamma",
+     "x_left": 0.002562328477354575,
+     "right_phase": "alpha",
+     "x_right": 0.026479648742917368
+    }
+   ]
+  },
+  {
+   "temperature_K": 850,
+   "single_phase_regions": [
+    {
+     "phase": "gamma",
+     "x_lo": 0.0,
+     "x_hi": 0.0012239311299162522
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.008282751369796336,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "gamma",
+     "x_left": 0.0012239311299162522,
+     "right_phase": "alpha",
+     "x_right": 0.008282751369796336
+    }
+   ]
+  },
+  {
+   "temperature_K": 950,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [],
+ "congruent_points": [],
+ "critical_points": []
+}

@@ -1,0 +1,68 @@
+{
+ "system_id": "held_10",
+ "isotherms": [
+  {
+   "temperature_K": 358.95,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 562.66,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 583.81,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 1092.0400369479541,
+   "class": "eutectic",
+   "name": "metatectic",
+   "phases": [
+    {
+     "phase": "liquid",
+     "x": 0.15969037370911798
+    },
+    {
+     "phase": "alpha",
+     "x": 0.3685347490769257
+    },
+    {
+     "phase": "liquid",
+     "x": 0.6970129489686016
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [
+  {
+   "temperature_K": 322.1381632634719,
+   "x": 0.5208253891638434,
+   "phase": "alpha",
+   "gap_side": "below"
+  }
+ ]
+}

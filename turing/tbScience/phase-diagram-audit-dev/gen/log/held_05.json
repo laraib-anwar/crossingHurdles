@@ -1,0 +1,38 @@
+{
+ "system_id": "held_05",
+ "shipped": false,
+ "style": "compound_never",
+ "label": "a compound that is never stable",
+ "attempts": 1,
+ "secs": 26.91,
+ "window": [
+  1153.2,
+  1951.4
+ ],
+ "isotherms": [
+  1410.47,
+  1462.59,
+  1658.82,
+  1669.78,
+  1718.22,
+  1737.75
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 2,
+  "n_events": 4,
+  "inv_T": [
+   1402.8943665224006,
+   1668.9128285343775
+  ]
+ }
+}

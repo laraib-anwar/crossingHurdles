@@ -1,0 +1,138 @@
+{
+ "system_id": "held_06",
+ "isotherms": [
+  {
+   "temperature_K": 744.96,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0004277890193234976
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9987134287916442,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0004277890193234976,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "beta",
+     "x_right": 0.9987134287916442
+    }
+   ]
+  },
+  {
+   "temperature_K": 776.82,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.0006730262999480038
+    },
+    {
+     "phase": "beta",
+     "x_lo": 0.9982955409251796,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.0006730262999480038,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "beta",
+     "x_right": 0.9982955409251796
+    }
+   ]
+  },
+  {
+   "temperature_K": 1846.66,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1857.06,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1862.16,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 796.6225733891248,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "A4B",
+     "x": 0.2
+    },
+    {
+     "phase": "liquid",
+     "x": 0.6214658886671176
+    },
+    {
+     "phase": "beta",
+     "x": 0.9979918671226357
+    }
+   ]
+  },
+  {
+   "temperature_K": 1141.0396381503767,
+   "class": "eutectic",
+   "name": "metatectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.022145853127053278
+    },
+    {
+     "phase": "A4B",
+     "x": 0.2
+    },
+    {
+     "phase": "liquid",
+     "x": 0.327323023067956
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": []
+}

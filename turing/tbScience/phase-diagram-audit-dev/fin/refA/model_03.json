@@ -1,0 +1,230 @@
+{
+ "system_id": "model_03",
+ "isotherms": [
+  {
+   "temperature_K": 1250.44,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.00021676443524028586
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.41366502629162183,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.00021676443524028586,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "liquid",
+     "x_right": 0.41366502629162183
+    }
+   ]
+  },
+  {
+   "temperature_K": 1294.4,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.00025707925117324617
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.0553287457367333,
+     "x_hi": 0.0581029024928061
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.384624120451027,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.00025707925117324617,
+     "right_phase": "liquid",
+     "x_right": 0.0553287457367333
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.0581029024928061,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "liquid",
+     "x_right": 0.384624120451027
+    }
+   ]
+  },
+  {
+   "temperature_K": 1367.79,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 0.09490853482059881
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.3244692979337466,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "liquid",
+     "x_left": 0.09490853482059881,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "liquid",
+     "x_right": 0.3244692979337466
+    }
+   ]
+  },
+  {
+   "temperature_K": 1381.7,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 0.10517023970187765
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.30998765475378154,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "liquid",
+     "x_left": 0.10517023970187765,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "liquid",
+     "x_right": 0.30998765475378154
+    }
+   ]
+  },
+  {
+   "temperature_K": 1425.68,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 0.1599367819527068
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.2423804656495472,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "liquid",
+     "x_left": 0.1599367819527068,
+     "right_phase": "A4B",
+     "x_right": 0.2
+    },
+    {
+     "left_phase": "A4B",
+     "x_left": 0.2,
+     "right_phase": "liquid",
+     "x_right": 0.2423804656495472
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 717.4539866417974,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "AB",
+     "x": 0.5
+    },
+    {
+     "phase": "liquid",
+     "x": 0.850465958149521
+    },
+    {
+     "phase": "beta",
+     "x": 0.9989187900131729
+    }
+   ]
+  },
+  {
+   "temperature_K": 1033.2905969337585,
+   "class": "peritectic",
+   "name": "peritectic",
+   "phases": [
+    {
+     "phase": "A4B",
+     "x": 0.2
+    },
+    {
+     "phase": "AB",
+     "x": 0.5
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5260152885449446
+    }
+   ]
+  },
+  {
+   "temperature_K": 1292.1173420642758,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.0002645588293061885
+    },
+    {
+     "phase": "liquid",
+     "x": 0.057254878475601255
+    },
+    {
+     "phase": "A4B",
+     "x": 0.2
+    }
+   ]
+  }
+ ],
+ "congruent_points": [
+  {
+   "temperature_K": 1433.9299294051777,
+   "x": 0.2,
+   "phase_above": "liquid",
+   "phase_below": "A4B",
+   "two_phase_side": "below"
+  }
+ ],
+ "critical_points": []
+}

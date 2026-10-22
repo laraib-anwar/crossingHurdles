@@ -1,0 +1,114 @@
+{
+ "system_id": "dev_07",
+ "isotherms": [
+  {
+   "temperature_K": 1000,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1300,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.24212006714435977
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.5258129847250135,
+     "x_hi": 0.5555966651900222
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.7550772841357093,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.24212006714435977,
+     "right_phase": "liquid",
+     "x_right": 0.5258129847250135
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.5555966651900222,
+     "right_phase": "alpha",
+     "x_right": 0.7550772841357093
+    }
+   ]
+  },
+  {
+   "temperature_K": 1600,
+   "single_phase_regions": [
+    {
+     "phase": "alpha",
+     "x_lo": 0.0,
+     "x_hi": 0.035177462226185105
+    },
+    {
+     "phase": "liquid",
+     "x_lo": 0.27542071893277986,
+     "x_hi": 0.8449933066510547
+    },
+    {
+     "phase": "alpha",
+     "x_lo": 0.9774701395359708,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": [
+    {
+     "left_phase": "alpha",
+     "x_left": 0.035177462226185105,
+     "right_phase": "liquid",
+     "x_right": 0.27542071893277986
+    },
+    {
+     "left_phase": "liquid",
+     "x_left": 0.8449933066510547,
+     "right_phase": "alpha",
+     "x_right": 0.9774701395359708
+    }
+   ]
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 1290.9336381111093,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.320478097547662
+    },
+    {
+     "phase": "liquid",
+     "x": 0.5377919142071423
+    },
+    {
+     "phase": "alpha",
+     "x": 0.6491175901592094
+    }
+   ]
+  }
+ ],
+ "congruent_points": [],
+ "critical_points": [
+  {
+   "temperature_K": 1191.2022999448393,
+   "x": 0.4811225829805567,
+   "phase": "alpha",
+   "gap_side": "above"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "system_id": "held_18",
+ "isotherms": [
+  {
+   "temperature_K": 1618.23,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1649.87,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  },
+  {
+   "temperature_K": 1689.75,
+   "single_phase_regions": [
+    {
+     "phase": "liquid",
+     "x_lo": 0.0,
+     "x_hi": 1.0
+    }
+   ],
+   "tie_lines": []
+  }
+ ],
+ "invariants": [
+  {
+   "temperature_K": 585.1,
+   "class": "eutectic",
+   "name": "eutectoid",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.0008721079422077425
+    },
+    {
+     "phase": "gamma",
+     "x": 0.3216498440724066
+    },
+    {
+     "phase": "AB3",
+     "x": 0.75
+    }
+   ]
+  },
+  {
+   "temperature_K": 634.8000000000001,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "alpha",
+     "x": 0.0012565176575598525
+    },
+    {
+     "phase": "liquid",
+     "x": 0.11970527172465739
+    },
+    {
+     "phase": "gamma",
+     "x": 0.31593763646067574
+    }
+   ]
+  },
+  {
+   "temperature_K": 698.7,
+   "class": "peritectic",
+   "name": "peritectic",
+   "phases": [
+    {
+     "phase": "liquid",
+     "x": 0.16712556457757805
+    },
+    {
+     "phase": "gamma",
+     "x": 0.3379685419401198
+    },
+    {
+     "phase": "AB3",
+     "x": 0.75
+    }
+   ]
+  },
+  {
+   "temperature_K": 1341.7,
+   "class": "eutectic",
+   "name": "eutectic",
+   "phases": [
+    {
+     "phase": "AB3",
+     "x": 0.75
+    },
+    {
+     "phase": "liquid",
+     "x": 0.8470033671616742
+    },
+    {
+     "phase": "beta",
+     "x": 0.9966955947990606
+    }
+   ]
+  }
+ ],
+ "congruent_points": [
+  {
+   "temperature_K": 1385.6000000000001,
+   "x": 0.75,
+   "phase_above": "liquid",
+   "phase_below": "AB3",
+   "two_phase_side": "below"
+  }
+ ],
+ "critical_points": []
+}

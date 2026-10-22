@@ -1,0 +1,34 @@
+{
+ "system_id": "held_13",
+ "shipped": false,
+ "style": "allotropy",
+ "label": "allotropic transition with two invariants",
+ "attempts": 1,
+ "secs": 21.32,
+ "window": [
+  819.8,
+  1569.6
+ ],
+ "isotherms": [
+  994.11,
+  1001.06
+ ],
+ "summary": {
+  "names": [
+   "eutectoid",
+   "eutectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 3,
+  "n_events": 5,
+  "inv_T": [
+   889.5987802091233,
+   991.1260765843832
+  ]
+ }
+}

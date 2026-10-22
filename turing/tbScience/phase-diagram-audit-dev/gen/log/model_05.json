@@ -1,0 +1,36 @@
+{
+ "system_id": "model_05",
+ "shipped": true,
+ "style": "allotropy",
+ "label": "allotropic transition of pure A inside the window",
+ "attempts": 2,
+ "secs": 38.57,
+ "window": [
+  562.9,
+  1475.8
+ ],
+ "isotherms": [
+  790.84,
+  865.69,
+  886.89,
+  895.52
+ ],
+ "summary": {
+  "names": [
+   "eutectic",
+   "metatectic"
+  ],
+  "classes": [
+   "eutectic",
+   "eutectic"
+  ],
+  "con": [],
+  "cri": [],
+  "n_pure": 3,
+  "n_events": 5,
+  "inv_T": [
+   736.3317529829252,
+   864.1122821574509
+  ]
+ }
+}
