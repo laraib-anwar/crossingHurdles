@@ -1,0 +1,16 @@
+{
+ "neuron_id": "held_10",
+ "shipped": false,
+ "style": "near_sym",
+ "label": "nearly symmetric subtrees: close time constants",
+ "attempts": 40,
+ "segments": 7,
+ "modes": 7,
+ "tau_min": 0.2931,
+ "ends": [
+  "sealed",
+  "sealed",
+  "sealed",
+  "sealed"
+ ]
+}

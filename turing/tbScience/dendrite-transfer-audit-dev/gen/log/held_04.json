@@ -1,0 +1,14 @@
+{
+ "neuron_id": "held_04",
+ "shipped": false,
+ "style": "bifurcation",
+ "label": "asymmetric bifurcation",
+ "attempts": 2,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 0.2903,
+ "ends": [
+  "sealed",
+  "killed"
+ ]
+}

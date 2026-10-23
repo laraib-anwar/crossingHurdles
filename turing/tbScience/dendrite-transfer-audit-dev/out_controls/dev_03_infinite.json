@@ -1,0 +1,124 @@
+{
+ "neuron_id": "dev_03",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 94.9873991481762
+  },
+  {
+   "site": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "R_MOhm": 211.2359577756732
+  },
+  {
+   "site": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "R_MOhm": 328.4570353023329
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "factor": 0.9989477830320284
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "factor": 0.9989477830320284
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 0.5679707120121922
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "frequency_Hz": 20,
+   "magnitude_MOhm": 33.7499375517353,
+   "phase_deg": -62.456807784225276
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "frequency_Hz": 20,
+   "magnitude_MOhm": 33.749937551735314,
+   "phase_deg": -62.45680778422526
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 2000,
+   "magnitude_MOhm": 3.5651900190954673,
+   "phase_deg": -67.49870246415313
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 7.445777650555041,
+   "coefficient_MOhm": 80.7556379011361
+  },
+  {
+   "tau_ms": 1.250166873305764,
+   "coefficient_MOhm": 0.0023679935413598056
+  },
+  {
+   "tau_ms": 0.83257547034971,
+   "coefficient_MOhm": 10.39207898404331
+  },
+  {
+   "tau_ms": 0.3163529310830533,
+   "coefficient_MOhm": 0.05236389286001214
+  },
+  {
+   "tau_ms": 0.31632182589163804,
+   "coefficient_MOhm": 0.11767222140237402
+  }
+ ]
+}

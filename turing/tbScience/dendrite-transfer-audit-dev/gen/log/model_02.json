@@ -1,0 +1,14 @@
+{
+ "neuron_id": "model_02",
+ "shipped": true,
+ "style": "bifurcation",
+ "label": "asymmetric bifurcation with a killed terminal",
+ "attempts": 40,
+ "segments": 3,
+ "modes": 2,
+ "tau_min": 1.364,
+ "ends": [
+  "killed",
+  "shunt"
+ ]
+}

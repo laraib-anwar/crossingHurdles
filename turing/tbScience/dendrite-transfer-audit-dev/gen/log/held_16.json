@@ -1,0 +1,17 @@
+{
+ "neuron_id": "held_16",
+ "shipped": false,
+ "style": "multi_trunk",
+ "label": "several trunks on the soma",
+ "attempts": 4,
+ "segments": 8,
+ "modes": 3,
+ "tau_min": 1.194,
+ "ends": [
+  "sealed",
+  "sealed",
+  "shunt",
+  "sealed",
+  "sealed"
+ ]
+}

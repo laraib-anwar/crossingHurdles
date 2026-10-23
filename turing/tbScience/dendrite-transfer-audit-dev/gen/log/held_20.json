@@ -1,0 +1,19 @@
+{
+ "neuron_id": "held_20",
+ "shipped": false,
+ "style": "nonuniform",
+ "label": "non-uniform tree with killed and shunted ends",
+ "attempts": 1,
+ "segments": 12,
+ "modes": 17,
+ "tau_min": 0.2375,
+ "ends": [
+  "sealed",
+  "shunt",
+  "shunt",
+  "shunt",
+  "shunt",
+  "killed",
+  "killed"
+ ]
+}

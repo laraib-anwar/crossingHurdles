@@ -1,0 +1,14 @@
+{
+ "neuron_id": "model_05",
+ "shipped": true,
+ "style": "near_sym",
+ "label": "nearly symmetric siblings: nearly hidden mode",
+ "attempts": 3,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 0.2956,
+ "ends": [
+  "sealed",
+  "sealed"
+ ]
+}

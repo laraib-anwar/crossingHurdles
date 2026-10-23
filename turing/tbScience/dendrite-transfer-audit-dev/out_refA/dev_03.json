@@ -1,0 +1,124 @@
+{
+ "neuron_id": "dev_03",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 94.98739914817592
+  },
+  {
+   "site": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "R_MOhm": 211.23595777567306
+  },
+  {
+   "site": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "R_MOhm": 328.4570353023326
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "factor": 0.22271175800753118
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "factor": 0.14322948347664968
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 0.2478901510594816
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "frequency_Hz": 20,
+   "magnitude_MOhm": 33.7499375517352,
+   "phase_deg": -62.45680778422531
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "frequency_Hz": 20,
+   "magnitude_MOhm": 33.74993755173521,
+   "phase_deg": -62.45680778422529
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 2000,
+   "magnitude_MOhm": 3.5651900190954677,
+   "phase_deg": -67.49870246415313
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 7.445777650555038,
+   "coefficient_MOhm": 80.75563790113597
+  },
+  {
+   "tau_ms": 1.2501668733057636,
+   "coefficient_MOhm": 0.0023679935413572772
+  },
+  {
+   "tau_ms": 0.83257547034971,
+   "coefficient_MOhm": 10.392078984043803
+  },
+  {
+   "tau_ms": 0.3163529310830533,
+   "coefficient_MOhm": 0.05236389284494439
+  },
+  {
+   "tau_ms": 0.31632182589163804,
+   "coefficient_MOhm": 0.11767222143582992
+  }
+ ]
+}

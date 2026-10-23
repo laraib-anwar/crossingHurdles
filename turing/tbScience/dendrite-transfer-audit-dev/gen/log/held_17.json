@@ -1,0 +1,14 @@
+{
+ "neuron_id": "held_17",
+ "shipped": false,
+ "style": "shunt_tree",
+ "label": "every terminal shunted",
+ "attempts": 2,
+ "segments": 6,
+ "modes": 2,
+ "tau_min": 2.74,
+ "ends": [
+  "shunt",
+  "shunt"
+ ]
+}

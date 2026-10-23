@@ -1,0 +1,13 @@
+{
+ "neuron_id": "model_01",
+ "shipped": true,
+ "style": "cable_sealed",
+ "label": "unbranched sealed cable (base case)",
+ "attempts": 2,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 1.339,
+ "ends": [
+  "sealed"
+ ]
+}

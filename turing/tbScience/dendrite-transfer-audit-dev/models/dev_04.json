@@ -1,0 +1,142 @@
+{
+ "neuron_id": "dev_04",
+ "soma": {
+  "d_um": 40,
+  "Rm_ohm_cm2": 5000,
+  "Cm_uF_cm2": 1.0,
+  "shunt_nS": 0
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 600,
+   "d_um": 0.5,
+   "Rm_ohm_cm2": 60000,
+   "Ri_ohm_cm": 250,
+   "Cm_uF_cm2": 2.0,
+   "end": {
+    "type": "killed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 2,
+   "parent": 0,
+   "L_um": 100,
+   "d_um": 6,
+   "Rm_ohm_cm2": 2000,
+   "Ri_ohm_cm": 70,
+   "Cm_uF_cm2": 0.6,
+   "end": null
+  },
+  {
+   "id": 3,
+   "parent": 2,
+   "L_um": 400,
+   "d_um": 1.0,
+   "Rm_ohm_cm2": 20000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 1.0,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 4,
+   "parent": 2,
+   "L_um": 50,
+   "d_um": 0.3,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 1.0,
+   "end": {
+    "type": "shunt",
+    "g_nS": 20
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 1,
+   "fraction": 0.5
+  },
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 3,
+   "fraction": 0.25
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.25
+   }
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   }
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.9
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.1
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 5
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 5
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 300
+  }
+ ],
+ "tau_min_ms": 0.1
+}

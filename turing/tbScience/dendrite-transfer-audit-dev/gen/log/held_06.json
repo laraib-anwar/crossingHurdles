@@ -1,0 +1,15 @@
+{
+ "neuron_id": "held_06",
+ "shipped": false,
+ "style": "nonuniform",
+ "label": "non-uniform membrane along the tree",
+ "attempts": 1,
+ "segments": 8,
+ "modes": 3,
+ "tau_min": 1.699,
+ "ends": [
+  "sealed",
+  "shunt",
+  "sealed"
+ ]
+}

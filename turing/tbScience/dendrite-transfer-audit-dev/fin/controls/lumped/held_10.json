@@ -1,0 +1,141 @@
+{
+ "neuron_id": "held_10",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 267.0876502777708
+  },
+  {
+   "site": {
+    "segment": 5,
+    "fraction": 0.25
+   },
+   "R_MOhm": 400.0354801521714
+  },
+  {
+   "site": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "R_MOhm": 303.0313524460978
+  },
+  {
+   "site": {
+    "segment": 3,
+    "fraction": 1.0
+   },
+   "R_MOhm": 318.80510345979053
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 1.0
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 1.0
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 20.0,
+   "magnitude_MOhm": 90.74193053543948,
+   "phase_deg": -71.54227098523633
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.65
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.25
+   },
+   "frequency_Hz": 5.0,
+   "magnitude_MOhm": 189.01477121155733,
+   "phase_deg": -36.83347540785694
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 200.0,
+   "magnitude_MOhm": 7.708302846358065,
+   "phase_deg": -88.08831891229053
+  },
+  {
+   "source": {
+    "segment": 6,
+    "fraction": 0.52
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 5.0,
+   "magnitude_MOhm": 179.86523395095475,
+   "phase_deg": -36.83347540785694
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 18.770061437687986,
+   "coefficient_MOhm": 227.88512623350888
+  },
+  {
+   "tau_ms": 2.5737132183268856,
+   "coefficient_MOhm": 0.02211267895081853
+  },
+  {
+   "tau_ms": 1.458919670951449,
+   "coefficient_MOhm": 27.706978348799314
+  },
+  {
+   "tau_ms": 1.2078283909362204,
+   "coefficient_MOhm": 0.02341815608097198
+  },
+  {
+   "tau_ms": 1.2063894337176264,
+   "coefficient_MOhm": 0.0157392676472551
+  },
+  {
+   "tau_ms": 0.3794031854011403,
+   "coefficient_MOhm": 6.556860115773113
+  },
+  {
+   "tau_ms": 0.35042385677683785,
+   "coefficient_MOhm": 0.072932170297902
+  }
+ ]
+}

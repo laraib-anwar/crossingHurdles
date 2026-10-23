@@ -1,0 +1,13 @@
+{
+ "neuron_id": "held_15",
+ "shipped": false,
+ "style": "thick_short",
+ "label": "thick short segments, compact tree",
+ "attempts": 21,
+ "segments": 5,
+ "modes": 2,
+ "tau_min": 0.1505,
+ "ends": [
+  "shunt"
+ ]
+}

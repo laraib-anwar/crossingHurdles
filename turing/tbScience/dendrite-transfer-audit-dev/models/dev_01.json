@@ -1,0 +1,7 @@
+{"neuron_id": "dev_01",
+ "soma": {"d_um": 8, "Rm_ohm_cm2": 60000, "Cm_uF_cm2": 1.0, "shunt_nS": 0},
+ "segments": [{"id": 1, "parent": 0, "L_um": 500, "d_um": 2, "Rm_ohm_cm2": 20000, "Ri_ohm_cm": 100, "Cm_uF_cm2": 1.0, "end": {"type": "sealed", "g_nS": null}}],
+ "input_resistance_sites": [{"segment": 0, "fraction": 0}, {"segment": 1, "fraction": 1}, {"segment": 1, "fraction": 0.4}],
+ "attenuation_pairs": [{"source": {"segment": 1, "fraction": 1}, "target": {"segment": 0, "fraction": 0}}, {"source": {"segment": 0, "fraction": 0}, "target": {"segment": 1, "fraction": 1}}],
+ "impedance_queries": [{"source": {"segment": 0, "fraction": 0}, "target": {"segment": 0, "fraction": 0}, "frequency_Hz": 50}, {"source": {"segment": 1, "fraction": 1}, "target": {"segment": 0, "fraction": 0}, "frequency_Hz": 200}],
+ "tau_min_ms": 0.1}

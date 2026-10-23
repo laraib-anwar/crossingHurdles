@@ -1,0 +1,13 @@
+{
+ "neuron_id": "held_14",
+ "shipped": false,
+ "style": "long_thin",
+ "label": "long thin cables, large electrotonic length",
+ "attempts": 1,
+ "segments": 3,
+ "modes": 4,
+ "tau_min": 0.6955,
+ "ends": [
+  "shunt"
+ ]
+}

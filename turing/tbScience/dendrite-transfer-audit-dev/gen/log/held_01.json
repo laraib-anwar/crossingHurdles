@@ -1,0 +1,13 @@
+{
+ "neuron_id": "held_01",
+ "shipped": false,
+ "style": "cable_killed",
+ "label": "unbranched cable with a killed end",
+ "attempts": 3,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 1.855,
+ "ends": [
+  "killed"
+ ]
+}

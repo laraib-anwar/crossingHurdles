@@ -1,0 +1,18 @@
+{
+ "neuron_id": "held_09",
+ "shipped": false,
+ "style": "dominant_soma",
+ "label": "dominant soma",
+ "attempts": 2,
+ "segments": 11,
+ "modes": 16,
+ "tau_min": 0.2082,
+ "ends": [
+  "sealed",
+  "shunt",
+  "shunt",
+  "killed",
+  "sealed",
+  "sealed"
+ ]
+}

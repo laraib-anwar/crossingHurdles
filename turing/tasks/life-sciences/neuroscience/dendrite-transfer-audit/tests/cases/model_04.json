@@ -1,0 +1,201 @@
+{
+ "neuron_id": "model_04",
+ "soma": {
+  "d_um": 32.19,
+  "Rm_ohm_cm2": 4090.0,
+  "Cm_uF_cm2": 1.954,
+  "shunt_nS": 12.29
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 132.6,
+   "d_um": 5.281,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": null
+  },
+  {
+   "id": 2,
+   "parent": 0,
+   "L_um": 472.1,
+   "d_um": 5.61,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": null
+  },
+  {
+   "id": 3,
+   "parent": 2,
+   "L_um": 461.6,
+   "d_um": 3.783,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": null
+  },
+  {
+   "id": 4,
+   "parent": 3,
+   "L_um": 492.1,
+   "d_um": 2.756,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": null
+  },
+  {
+   "id": 5,
+   "parent": 4,
+   "L_um": 282.0,
+   "d_um": 2.175,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": {
+    "type": "shunt",
+    "g_nS": 0.8903
+   }
+  },
+  {
+   "id": 6,
+   "parent": 1,
+   "L_um": 459.6,
+   "d_um": 2.685,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": {
+    "type": "killed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 7,
+   "parent": 4,
+   "L_um": 171.2,
+   "d_um": 1.649,
+   "Rm_ohm_cm2": 6812.0,
+   "Ri_ohm_cm": 199.5,
+   "Cm_uF_cm2": 0.9018,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 4,
+   "fraction": 0.5
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   }
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.08
+   }
+  },
+  {
+   "source": {
+    "segment": 5,
+    "fraction": 0.74
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 0.5
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 0.59
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 1.0
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 50.0
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 50.0
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 0.93
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1.0
+   },
+   "frequency_Hz": 2000.0
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 2000.0
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 1000.0
+  }
+ ],
+ "tau_min_ms": 0.6635
+}

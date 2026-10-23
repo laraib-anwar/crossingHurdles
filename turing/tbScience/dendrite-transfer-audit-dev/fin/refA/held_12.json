@@ -1,0 +1,175 @@
+{
+ "neuron_id": "held_12",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 35.117488781358446
+  },
+  {
+   "site": {
+    "segment": 8,
+    "fraction": 0.75
+   },
+   "R_MOhm": 74.7260654782304
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "factor": 0.8062640636851183
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 1.0
+   },
+   "factor": 0.3065200474835058
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 0.78
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 0.25
+   },
+   "factor": 0.15918995585196552
+  },
+  {
+   "source": {
+    "segment": 9,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 0.75
+   },
+   "factor": 0.09468374937193234
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 0.32
+   },
+   "factor": 0.054380536773851684
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 0.062547439150235
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 1.0
+   },
+   "factor": 0.03262781700395437
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 10.0,
+   "magnitude_MOhm": 10.280436968008274,
+   "phase_deg": -22.979491350882206
+  },
+  {
+   "source": {
+    "segment": 9,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.25
+   },
+   "frequency_Hz": 1.0,
+   "magnitude_MOhm": 10.968910401645804,
+   "phase_deg": -2.6093226758414025
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 50.0,
+   "magnitude_MOhm": 47.490001876539615,
+   "phase_deg": -20.18011185501198
+  },
+  {
+   "source": {
+    "segment": 8,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 8,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 100.0,
+   "magnitude_MOhm": 46.112559933575646,
+   "phase_deg": -39.53624613168684
+  },
+  {
+   "source": {
+    "segment": 8,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 500.0,
+   "magnitude_MOhm": 0.13274305324287458,
+   "phase_deg": 91.1625977071609
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 4.849944059324576,
+   "coefficient_MOhm": 21.476268990953113
+  },
+  {
+   "tau_ms": 1.8807618111834106,
+   "coefficient_MOhm": 0.40821269703640756
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "neuron_id": "held_03",
+ "shipped": false,
+ "style": "rall",
+ "label": "bifurcation close to the 3/2 rule",
+ "attempts": 1,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 0.3419,
+ "ends": [
+  "sealed",
+  "sealed"
+ ]
+}

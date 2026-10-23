@@ -1,0 +1,15 @@
+{
+ "neuron_id": "model_04",
+ "shipped": true,
+ "style": "dominant_soma",
+ "label": "dominant soma with shunt, few modes",
+ "attempts": 3,
+ "segments": 7,
+ "modes": 4,
+ "tau_min": 0.6635,
+ "ends": [
+  "shunt",
+  "killed",
+  "sealed"
+ ]
+}

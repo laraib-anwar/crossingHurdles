@@ -1,0 +1,5 @@
+diagnosis: mode_count@model_03, tau@model_01, attenuation@model_01, input_resistance@model_01, impedance_magnitude@model_01
+real 23.17
+user 0.04
+sys 0.03
+exit 0

@@ -1,0 +1,286 @@
+{
+ "neuron_id": "tree10",
+ "soma": {
+  "d_um": 25,
+  "Rm_ohm_cm2": 20000,
+  "Cm_uF_cm2": 1.0,
+  "shunt_nS": 2
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 90,
+   "d_um": 4.0,
+   "Rm_ohm_cm2": 20000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 1.0,
+   "end": null
+  },
+  {
+   "id": 2,
+   "parent": 1,
+   "L_um": 210,
+   "d_um": 2.2,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 1.0,
+   "end": null
+  },
+  {
+   "id": 3,
+   "parent": 1,
+   "L_um": 160,
+   "d_um": 2.6,
+   "Rm_ohm_cm2": 20000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 1.3,
+   "end": null
+  },
+  {
+   "id": 4,
+   "parent": 2,
+   "L_um": 380,
+   "d_um": 1.1,
+   "Rm_ohm_cm2": 45000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 0.8,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 5,
+   "parent": 2,
+   "L_um": 290,
+   "d_um": 1.4,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 100,
+   "Cm_uF_cm2": 1.0,
+   "end": {
+    "type": "killed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 6,
+   "parent": 3,
+   "L_um": 240,
+   "d_um": 1.7,
+   "Rm_ohm_cm2": 20000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 1.3,
+   "end": null
+  },
+  {
+   "id": 7,
+   "parent": 3,
+   "L_um": 330,
+   "d_um": 0.9,
+   "Rm_ohm_cm2": 25000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 1.0,
+   "end": {
+    "type": "shunt",
+    "g_nS": 4.0
+   }
+  },
+  {
+   "id": 8,
+   "parent": 6,
+   "L_um": 500,
+   "d_um": 0.8,
+   "Rm_ohm_cm2": 50000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 1.0,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 9,
+   "parent": 6,
+   "L_um": 420,
+   "d_um": 1.0,
+   "Rm_ohm_cm2": 35000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 1.5,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 10,
+   "parent": 1,
+   "L_um": 600,
+   "d_um": 0.6,
+   "Rm_ohm_cm2": 60000,
+   "Ri_ohm_cm": 70,
+   "Cm_uF_cm2": 2.0,
+   "end": {
+    "type": "sealed",
+    "g_nS": null
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 4,
+   "fraction": 1
+  },
+  {
+   "segment": 8,
+   "fraction": 1
+  },
+  {
+   "segment": 10,
+   "fraction": 1
+  },
+  {
+   "segment": 5,
+   "fraction": 0.5
+  },
+  {
+   "segment": 7,
+   "fraction": 0.3
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 8,
+    "fraction": 1
+   }
+  },
+  {
+   "source": {
+    "segment": 8,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   }
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 9,
+    "fraction": 1
+   }
+  },
+  {
+   "source": {
+    "segment": 9,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   }
+  },
+  {
+   "source": {
+    "segment": 10,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 5,
+    "fraction": 0.5
+   }
+  },
+  {
+   "source": {
+    "segment": 6,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 6,
+    "fraction": 1
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 1
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 8,
+    "fraction": 1
+   },
+   "frequency_Hz": 500
+  },
+  {
+   "source": {
+    "segment": 8,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 500
+  },
+  {
+   "source": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 10,
+    "fraction": 1
+   },
+   "frequency_Hz": 2000
+  },
+  {
+   "source": {
+    "segment": 10,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 4,
+    "fraction": 1
+   },
+   "frequency_Hz": 2000
+  },
+  {
+   "source": {
+    "segment": 7,
+    "fraction": 0.3
+   },
+   "target": {
+    "segment": 7,
+    "fraction": 0.3
+   },
+   "frequency_Hz": 50
+  }
+ ],
+ "tau_min_ms": 0.12
+}

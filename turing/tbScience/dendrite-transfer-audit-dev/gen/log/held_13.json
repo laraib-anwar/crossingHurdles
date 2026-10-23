@@ -1,0 +1,18 @@
+{
+ "neuron_id": "held_13",
+ "shipped": false,
+ "style": "high_freq",
+ "label": "high-frequency queries with phases beyond -90 degrees",
+ "attempts": 2,
+ "segments": 10,
+ "modes": 6,
+ "tau_min": 0.5016,
+ "ends": [
+  "sealed",
+  "sealed",
+  "sealed",
+  "sealed",
+  "sealed",
+  "shunt"
+ ]
+}

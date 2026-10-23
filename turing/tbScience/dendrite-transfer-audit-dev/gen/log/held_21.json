@@ -1,0 +1,16 @@
+{
+ "neuron_id": "held_21",
+ "shipped": false,
+ "style": "near_sym",
+ "label": "nearly symmetric bifurcation",
+ "attempts": 3,
+ "segments": 7,
+ "modes": 7,
+ "tau_min": 0.2598,
+ "ends": [
+  "sealed",
+  "sealed",
+  "sealed",
+  "sealed"
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "neuron_id": "held_11",
+ "shipped": false,
+ "style": "many_modes",
+ "label": "forty or more modes",
+ "attempts": 27,
+ "segments": 10,
+ "modes": 54,
+ "tau_min": 0.1403,
+ "ends": [
+  "killed",
+  "killed",
+  "sealed",
+  "sealed",
+  "sealed"
+ ]
+}

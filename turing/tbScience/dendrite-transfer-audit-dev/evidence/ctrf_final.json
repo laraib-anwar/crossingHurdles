@@ -1,0 +1,263 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1792731751165,
+      "stop": 1792731861775
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 12.803689984139055
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 2421.4266630006023,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 2757.068975974107,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 2308.48705599783,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 2531.6887779626995,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 4510.6407970015425,
+        "extra": {
+          "modes": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 3136.4739339624066,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 6591.543982998701,
+        "extra": {
+          "modes": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 3512.2619009925984,
+        "extra": {
+          "modes": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 3153.972726984648,
+        "extra": {
+          "modes": 16
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 2959.1534710489213,
+        "extra": {
+          "modes": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 4887.744787003612,
+        "extra": {
+          "modes": 54
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 2293.1590579974,
+        "extra": {
+          "modes": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 3134.2834579991177,
+        "extra": {
+          "modes": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 1888.690193038201,
+        "extra": {
+          "modes": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 2998.4877400274854,
+        "extra": {
+          "modes": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 4495.634499005973,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 2130.2935969724786,
+        "extra": {
+          "modes": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 3877.6378399925306,
+        "extra": {
+          "modes": 14
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 5629.091868002433,
+        "extra": {
+          "modes": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 5448.709821997909,
+        "extra": {
+          "modes": 17
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 2773.0323229625355,
+        "extra": {
+          "modes": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 4825.935968983686,
+        "extra": {
+          "modes": 16
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 1553.5211220267229,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 2153.669927996816,
+        "extra": {
+          "modes": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 4705.943404027494,
+        "extra": {
+          "modes": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 2242.376467998838,
+        "extra": {
+          "modes": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 2292.818594025448,
+        "extra": {
+          "modes": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 4813.369317998877,
+        "extra": {
+          "modes": 25
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 14040.517350978917,
+        "extra": {
+          "quantities": [
+            "attenuation",
+            "impedance_magnitude",
+            "input_resistance",
+            "mode_count",
+            "tau"
+          ]
+        }
+      }
+    ]
+  }
+}

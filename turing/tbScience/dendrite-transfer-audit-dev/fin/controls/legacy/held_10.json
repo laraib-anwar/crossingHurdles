@@ -1,0 +1,125 @@
+{
+ "neuron_id": "held_10",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 239.44715734387594
+  },
+  {
+   "site": {
+    "segment": 5,
+    "fraction": 0.25
+   },
+   "R_MOhm": 238.15927845076092
+  },
+  {
+   "site": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "R_MOhm": 230.30361306799145
+  },
+  {
+   "site": {
+    "segment": 3,
+    "fraction": 1.0
+   },
+   "R_MOhm": 232.49595510952412
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 1.0
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 1.0
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 20.0,
+   "magnitude_MOhm": 72.53809137721838,
+   "phase_deg": -71.54227098523631
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.65
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.25
+   },
+   "frequency_Hz": 5.0,
+   "magnitude_MOhm": 141.79739212939538,
+   "phase_deg": -36.83347540785693
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 200.0,
+   "magnitude_MOhm": 5.544832625899049,
+   "phase_deg": -88.08831891229053
+  },
+  {
+   "source": {
+    "segment": 6,
+    "fraction": 0.52
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 5.0,
+   "magnitude_MOhm": 127.97171300129818,
+   "phase_deg": -36.83347540785693
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 23.84163999999999,
+   "coefficient_MOhm": 211.48712367001792
+  },
+  {
+   "tau_ms": 1.250568310182619,
+   "coefficient_MOhm": 22.186317289699616
+  },
+  {
+   "tau_ms": 0.3254450320767247,
+   "coefficient_MOhm": 5.773716384158409
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "sealed": {
+  "fails": 23,
+  "total": 28,
+  "reasons": {
+   "input_resistance[0].R_MOhm": 10,
+   "4": 1,
+   "9": 2,
+   "11": 1,
+   "18": 1,
+   "55": 1,
+   "3": 2,
+   "15": 1,
+   "8": 1,
+   "19": 1,
+   "5": 1,
+   "26": 1
+  }
+ },
+ "infinite": {
+  "fails": 27,
+  "total": 28,
+  "reasons": {
+   "attenuation[0].factor": 25,
+   "attenuation[2].factor": 2
+  }
+ },
+ "lumped": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "impedance[0].magnitude_MOhm": 28
+  }
+ },
+ "somatic": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "4": 3,
+   "5": 3,
+   "crash": 2,
+   "12": 1,
+   "modes[0].tau_ms": 3,
+   "25": 1,
+   "modes[1].tau_ms": 2,
+   "3": 3,
+   "7": 2,
+   "22": 2,
+   "11": 1,
+   "24": 1,
+   "modes[2].tau_ms": 1,
+   "8": 1,
+   "2": 1,
+   "39": 1
+  }
+ },
+ "fd": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "modes[0].tau_ms": 28
+  }
+ },
+ "legacy": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "input_resistance[0].R_MOhm": 6,
+   "2": 5,
+   "3": 5,
+   "1": 5,
+   "5": 3,
+   "17": 2,
+   "6": 1,
+   "4": 1
+  }
+ }
+}

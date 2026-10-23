@@ -1,0 +1,137 @@
+{
+ "neuron_id": "cable_killed",
+ "soma": {
+  "d_um": 8,
+  "Rm_ohm_cm2": 60000,
+  "Cm_uF_cm2": 0.6,
+  "shunt_nS": 0
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 150,
+   "d_um": 1.5,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 0.8,
+   "end": null
+  },
+  {
+   "id": 2,
+   "parent": 1,
+   "L_um": 250,
+   "d_um": 1.5,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 0.8,
+   "end": null
+  },
+  {
+   "id": 3,
+   "parent": 2,
+   "L_um": 200,
+   "d_um": 1.5,
+   "Rm_ohm_cm2": 30000,
+   "Ri_ohm_cm": 150,
+   "Cm_uF_cm2": 0.8,
+   "end": {
+    "type": "killed",
+    "g_nS": null
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 2,
+   "fraction": 0.5
+  },
+  {
+   "segment": 3,
+   "fraction": 0.9
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   }
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   }
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.9
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 50
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.9
+   },
+   "frequency_Hz": 500
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.9
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 500
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 2000
+  }
+ ],
+ "tau_min_ms": 0.15
+}

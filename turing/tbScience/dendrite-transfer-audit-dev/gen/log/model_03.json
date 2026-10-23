@@ -1,0 +1,19 @@
+{
+ "neuron_id": "model_03",
+ "shipped": true,
+ "style": "nonuniform",
+ "label": "tree with non-uniform membrane and a shunted terminal",
+ "attempts": 1,
+ "segments": 11,
+ "modes": 7,
+ "tau_min": 0.574,
+ "ends": [
+  "sealed",
+  "killed",
+  "sealed",
+  "killed",
+  "shunt",
+  "shunt",
+  "shunt"
+ ]
+}

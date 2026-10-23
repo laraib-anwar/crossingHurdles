@@ -1,0 +1,156 @@
+{
+ "neuron_id": "rall_perturbed",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 370.99948549408316
+  },
+  {
+   "site": {
+    "segment": 1,
+    "fraction": 1
+   },
+   "R_MOhm": 366.27247710859206
+  },
+  {
+   "site": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "R_MOhm": 384.7216254813903
+  },
+  {
+   "site": {
+    "segment": 3,
+    "fraction": 1
+   },
+   "R_MOhm": 408.97160077027
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "factor": 0.9647306692950937
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 1
+   },
+   "factor": 0.9644744520646887
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 0.9303209340025915
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "factor": 0.9901044306709889
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 100,
+   "magnitude_MOhm": 31.077255283317665,
+   "phase_deg": -71.5556559687891
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "frequency_Hz": 300,
+   "magnitude_MOhm": 8.899559976159328,
+   "phase_deg": -120.23147038822279
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 1
+   },
+   "frequency_Hz": 300,
+   "magnitude_MOhm": 8.871896341049244,
+   "phase_deg": -120.73473402352533
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 1
+   },
+   "frequency_Hz": 1000,
+   "magnitude_MOhm": 1.4648788161074124,
+   "phase_deg": 164.94727256782286
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 1
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 1
+   },
+   "frequency_Hz": 1000,
+   "magnitude_MOhm": 1.464878816107412,
+   "phase_deg": 164.94727256782286
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 20.0,
+   "coefficient_MOhm": 363.36785752376113
+  },
+  {
+   "tau_ms": 0.21667249713744902,
+   "coefficient_MOhm": 0.018324904097674434
+  }
+ ]
+}

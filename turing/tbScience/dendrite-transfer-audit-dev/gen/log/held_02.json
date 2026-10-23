@@ -1,0 +1,13 @@
+{
+ "neuron_id": "held_02",
+ "shipped": false,
+ "style": "cable_shunt",
+ "label": "unbranched cable with a shunted end",
+ "attempts": 1,
+ "segments": 3,
+ "modes": 3,
+ "tau_min": 0.7478,
+ "ends": [
+  "shunt"
+ ]
+}

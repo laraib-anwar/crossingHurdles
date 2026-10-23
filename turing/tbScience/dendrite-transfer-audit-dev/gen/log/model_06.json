@@ -1,0 +1,16 @@
+{
+ "neuron_id": "model_06",
+ "shipped": true,
+ "style": "many_modes",
+ "label": "large tree, many modes",
+ "attempts": 175,
+ "segments": 10,
+ "modes": 25,
+ "tau_min": 0.1521,
+ "ends": [
+  "killed",
+  "shunt",
+  "shunt",
+  "killed"
+ ]
+}

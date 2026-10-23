@@ -1,0 +1,15 @@
+{
+ "neuron_id": "held_18",
+ "shipped": false,
+ "style": "killed_tree",
+ "label": "killed terminals in a tree",
+ "attempts": 1,
+ "segments": 8,
+ "modes": 14,
+ "tau_min": 0.1814,
+ "ends": [
+  "killed",
+  "killed",
+  "sealed"
+ ]
+}

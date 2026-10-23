@@ -1,0 +1,169 @@
+{
+ "neuron_id": "held_14",
+ "soma": {
+  "d_um": 16.68,
+  "Rm_ohm_cm2": 9091.0,
+  "Cm_uF_cm2": 1.0,
+  "shunt_nS": 3.381
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 192.2,
+   "d_um": 0.7566,
+   "Rm_ohm_cm2": 12500.0,
+   "Ri_ohm_cm": 224.1,
+   "Cm_uF_cm2": 1.222,
+   "end": null
+  },
+  {
+   "id": 2,
+   "parent": 1,
+   "L_um": 313.1,
+   "d_um": 0.7339,
+   "Rm_ohm_cm2": 12500.0,
+   "Ri_ohm_cm": 224.1,
+   "Cm_uF_cm2": 1.222,
+   "end": null
+  },
+  {
+   "id": 3,
+   "parent": 2,
+   "L_um": 218.7,
+   "d_um": 0.7119,
+   "Rm_ohm_cm2": 12500.0,
+   "Ri_ohm_cm": 224.1,
+   "Cm_uF_cm2": 1.222,
+   "end": {
+    "type": "shunt",
+    "g_nS": 0.5466
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 1,
+   "fraction": 1.0
+  },
+  {
+   "segment": 3,
+   "fraction": 0.5
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   }
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.25
+   }
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.25
+   }
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.5
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.25
+   },
+   "frequency_Hz": 50.0
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 1.0
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.25
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.57
+   },
+   "frequency_Hz": 2000.0
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 2.0
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "frequency_Hz": 10.0
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 2.0
+  }
+ ],
+ "tau_min_ms": 0.6955
+}

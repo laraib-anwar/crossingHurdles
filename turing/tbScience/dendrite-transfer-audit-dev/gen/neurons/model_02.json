@@ -1,0 +1,139 @@
+{
+ "neuron_id": "model_02",
+ "soma": {
+  "d_um": 29.19,
+  "Rm_ohm_cm2": 17720.0,
+  "Cm_uF_cm2": 1.169,
+  "shunt_nS": 7.785
+ },
+ "segments": [
+  {
+   "id": 1,
+   "parent": 0,
+   "L_um": 240.5,
+   "d_um": 2.694,
+   "Rm_ohm_cm2": 20860.0,
+   "Ri_ohm_cm": 190.9,
+   "Cm_uF_cm2": 1.139,
+   "end": null
+  },
+  {
+   "id": 2,
+   "parent": 1,
+   "L_um": 578.3,
+   "d_um": 0.8462,
+   "Rm_ohm_cm2": 20860.0,
+   "Ri_ohm_cm": 190.9,
+   "Cm_uF_cm2": 1.139,
+   "end": {
+    "type": "killed",
+    "g_nS": null
+   }
+  },
+  {
+   "id": 3,
+   "parent": 1,
+   "L_um": 107.5,
+   "d_um": 1.069,
+   "Rm_ohm_cm2": 20860.0,
+   "Ri_ohm_cm": 190.9,
+   "Cm_uF_cm2": 1.139,
+   "end": {
+    "type": "shunt",
+    "g_nS": 2.069
+   }
+  }
+ ],
+ "input_resistance_sites": [
+  {
+   "segment": 0,
+   "fraction": 0
+  },
+  {
+   "segment": 1,
+   "fraction": 0.75
+  },
+  {
+   "segment": 2,
+   "fraction": 0.5
+  }
+ ],
+ "attenuation_pairs": [
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   }
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   }
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   }
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.69
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.1
+   }
+  }
+ ],
+ "impedance_queries": [
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 10.0
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 1.0
+   },
+   "frequency_Hz": 5.0
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 10.0
+  }
+ ],
+ "tau_min_ms": 1.364
+}

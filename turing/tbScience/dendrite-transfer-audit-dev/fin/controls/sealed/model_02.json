@@ -1,0 +1,127 @@
+{
+ "neuron_id": "model_02",
+ "input_resistance": [
+  {
+   "site": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "R_MOhm": 92.20203214492913
+  },
+  {
+   "site": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "R_MOhm": 135.84186372481958
+  },
+  {
+   "site": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "R_MOhm": 745.6560120413129
+  }
+ ],
+ "attenuation": [
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "factor": 0.629776214032927
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "factor": 0.9278534610747049
+  },
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.75
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.5
+   },
+   "factor": 0.363641470129781
+  },
+  {
+   "source": {
+    "segment": 2,
+    "fraction": 0.69
+   },
+   "target": {
+    "segment": 3,
+    "fraction": 0.1
+   },
+   "factor": 0.0939835448574504
+  }
+ ],
+ "impedance": [
+  {
+   "source": {
+    "segment": 3,
+    "fraction": 0.5
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 0.75
+   },
+   "frequency_Hz": 10.0,
+   "magnitude_MOhm": 119.9171671512438,
+   "phase_deg": -20.713523306773705
+  },
+  {
+   "source": {
+    "segment": 1,
+    "fraction": 1.0
+   },
+   "target": {
+    "segment": 1,
+    "fraction": 1.0
+   },
+   "frequency_Hz": 5.0,
+   "magnitude_MOhm": 147.44528659451603,
+   "phase_deg": -9.651307925311936
+  },
+  {
+   "source": {
+    "segment": 0,
+    "fraction": 0
+   },
+   "target": {
+    "segment": 2,
+    "fraction": 0.5
+   },
+   "frequency_Hz": 10.0,
+   "magnitude_MOhm": 44.279886909619556,
+   "phase_deg": -51.6696937381034
+  }
+ ],
+ "modes": [
+  {
+   "tau_ms": 10.504799578863645,
+   "coefficient_MOhm": 19.994841100093804
+  },
+  {
+   "tau_ms": 5.091314878953261,
+   "coefficient_MOhm": 61.85770602230764
+  },
+  {
+   "tau_ms": 1.4797402484983737,
+   "coefficient_MOhm": 3.2016396255058925
+  }
+ ]
+}

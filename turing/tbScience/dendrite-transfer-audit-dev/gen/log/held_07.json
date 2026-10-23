@@ -1,0 +1,18 @@
+{
+ "neuron_id": "held_07",
+ "shipped": false,
+ "style": "mixed_ends",
+ "label": "sealed, killed and shunted terminals in one tree",
+ "attempts": 1,
+ "segments": 10,
+ "modes": 9,
+ "tau_min": 0.4091,
+ "ends": [
+  "killed",
+  "killed",
+  "sealed",
+  "shunt",
+  "killed",
+  "shunt"
+ ]
+}

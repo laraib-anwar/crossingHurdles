@@ -1,0 +1,18 @@
+{
+ "neuron_id": "held_08",
+ "shipped": false,
+ "style": "negligible_soma",
+ "label": "negligible soma",
+ "attempts": 1,
+ "segments": 10,
+ "modes": 2,
+ "tau_min": 1.345,
+ "ends": [
+  "killed",
+  "killed",
+  "killed",
+  "sealed",
+  "shunt",
+  "shunt"
+ ]
+}

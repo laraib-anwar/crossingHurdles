@@ -1,0 +1,17 @@
+{
+ "neuron_id": "held_05",
+ "shipped": false,
+ "style": "tree",
+ "label": "tree with four branch orders",
+ "attempts": 2,
+ "segments": 11,
+ "modes": 7,
+ "tau_min": 0.4145,
+ "ends": [
+  "sealed",
+  "killed",
+  "killed",
+  "shunt",
+  "killed"
+ ]
+}
