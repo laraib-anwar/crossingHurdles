@@ -1,0 +1,19 @@
+{
+ "system_id": "held_19",
+ "shipped": false,
+ "style": "far_epoch",
+ "label": "far epochs with multi-revolution transfers",
+ "attempts": 1,
+ "mu": 64319.6,
+ "objects": 4,
+ "counts": [
+  1,
+  1,
+  7
+ ],
+ "thetas": [
+  290.56,
+  112.49,
+  114.09
+ ]
+}

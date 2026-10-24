@@ -1,0 +1,83 @@
+{
+ "system_id": "held_19",
+ "mu_km3_s2": 64319.6,
+ "objects": [
+  {
+   "name": "obj1",
+   "t0_days": -1048.15,
+   "a_km": 64715.6,
+   "e": 0.793857,
+   "i_deg": 3.55179,
+   "Omega_deg": 185.132,
+   "omega_deg": 84.8956,
+   "M0_deg": 335.451
+  },
+  {
+   "name": "obj2",
+   "t0_days": -1056.0,
+   "a_km": 34914.7,
+   "e": 0.716386,
+   "i_deg": 26.7005,
+   "Omega_deg": 115.98,
+   "omega_deg": 101.225,
+   "M0_deg": 280.001
+  },
+  {
+   "name": "obj3",
+   "t0_days": -1042.67,
+   "a_km": 30907.2,
+   "e": 0.544441,
+   "i_deg": 41.4575,
+   "Omega_deg": 227.463,
+   "omega_deg": 26.671,
+   "M0_deg": 352.319
+  },
+  {
+   "name": "obj4",
+   "t0_days": -1047.2,
+   "a_km": 178699.0,
+   "e": 0.15377,
+   "i_deg": 12.077,
+   "Omega_deg": 185.648,
+   "omega_deg": 234.332,
+   "M0_deg": 57.4335
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "obj2",
+   "t_days": 1031.72
+  },
+  {
+   "object": "obj1",
+   "t_days": 775.401
+  },
+  {
+   "object": "obj4",
+   "t_days": -1138.16
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "obj3",
+   "t1_days": -1066.33,
+   "to": "obj2",
+   "t2_days": -1066.04,
+   "n_max": 1
+  },
+  {
+   "from": "obj4",
+   "t1_days": -1075.22,
+   "to": "obj1",
+   "t2_days": -1067.89,
+   "n_max": 1
+  },
+  {
+   "from": "obj4",
+   "t1_days": -1059.82,
+   "to": "obj3",
+   "t2_days": -1020.58,
+   "n_max": 3
+  }
+ ]
+}

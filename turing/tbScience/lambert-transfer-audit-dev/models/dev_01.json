@@ -1,0 +1,77 @@
+{
+ "system_id": "dev_01",
+ "mu_km3_s2": 398600.4418,
+ "objects": [
+  {
+   "name": "LEO",
+   "t0_days": 0.0,
+   "a_km": 7000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "GEO",
+   "t0_days": 0.0,
+   "a_km": 42164.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 99.87175705534972
+  },
+  {
+   "name": "HYP",
+   "t0_days": 1.0,
+   "a_km": -20000.0,
+   "e": 1.5,
+   "i_deg": 30.0,
+   "Omega_deg": 40.0,
+   "omega_deg": 50.0,
+   "M0_deg": 10.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "LEO",
+   "t_days": 0.0
+  },
+  {
+   "object": "GEO",
+   "t_days": 0.22196937738089156
+  },
+  {
+   "object": "HYP",
+   "t_days": 3.0
+  },
+  {
+   "object": "LEO",
+   "t_days": 1234.5678
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "LEO",
+   "t1_days": 0.0,
+   "to": "GEO",
+   "t2_days": 0.22196939957782932,
+   "n_max": 2
+  },
+  {
+   "from": "LEO",
+   "t1_days": 0.0,
+   "to": "GEO",
+   "t2_days": 0.9,
+   "n_max": 3
+  },
+  {
+   "from": "GEO",
+   "t1_days": 0.3,
+   "to": "HYP",
+   "t2_days": 4.0,
+   "n_max": 1
+  }
+ ]
+}

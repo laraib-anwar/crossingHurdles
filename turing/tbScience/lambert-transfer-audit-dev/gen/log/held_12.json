@@ -1,0 +1,25 @@
+{
+ "system_id": "held_12",
+ "shipped": false,
+ "style": "mixed",
+ "label": "heliocentric system",
+ "attempts": 13,
+ "mu": 132712000000.0,
+ "objects": 2,
+ "counts": [
+  5,
+  1,
+  1,
+  1,
+  7,
+  5
+ ],
+ "thetas": [
+  318.28,
+  78.44,
+  218.45,
+  54.96,
+  324.44,
+  61.56
+ ]
+}

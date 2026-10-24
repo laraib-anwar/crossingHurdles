@@ -1,0 +1,23 @@
+{
+ "system_id": "held_05",
+ "shipped": false,
+ "style": "many_revs",
+ "label": "nine solutions",
+ "attempts": 1,
+ "mu": 132712000000.0,
+ "objects": 5,
+ "counts": [
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "thetas": [
+  129.99,
+  338.88,
+  251.72,
+  174.63,
+  139.49
+ ]
+}

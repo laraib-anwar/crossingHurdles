@@ -1,0 +1,21 @@
+{
+ "system_id": "held_21",
+ "shipped": false,
+ "style": "long_flight",
+ "label": "long flights with multi-revolution best",
+ "attempts": 1,
+ "mu": 132712000000.0,
+ "objects": 2,
+ "counts": [
+  1,
+  7,
+  7,
+  7
+ ],
+ "thetas": [
+  122.19,
+  208.0,
+  234.48,
+  130.13
+ ]
+}

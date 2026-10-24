@@ -1,0 +1,21 @@
+{
+ "system_id": "held_17",
+ "shipped": false,
+ "style": "circular",
+ "label": "near-circular, five solutions",
+ "attempts": 3,
+ "mu": 9273110.0,
+ "objects": 4,
+ "counts": [
+  1,
+  1,
+  1,
+  9
+ ],
+ "thetas": [
+  82.76,
+  124.0,
+  61.34,
+  56.08
+ ]
+}

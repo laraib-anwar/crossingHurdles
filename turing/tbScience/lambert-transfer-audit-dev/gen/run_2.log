@@ -1,0 +1,7 @@
+{"system_id": "model_03", "shipped": true, "style": "mixed", "label": "transfer through more than 180 degrees", "attempts": 2, "mu": 126687000.0, "objects": 6, "counts": [1, 1, 5], "thetas": [126.92, 258.46, 252.38]}
+{"system_id": "held_01", "shipped": false, "style": "circular", "label": "zero-revolution queries only", "attempts": 96, "mu": 398600.0, "objects": 4, "counts": [1, 1], "thetas": [234.77, 158.12]}
+{"system_id": "held_05", "shipped": false, "style": "many_revs", "label": "nine solutions", "attempts": 1, "mu": 132712000000.0, "objects": 5, "counts": [9, 9, 9, 9, 9], "thetas": [129.99, 338.88, 251.72, 174.63, 139.49]}
+{"system_id": "held_09", "shipped": false, "style": "far_epoch", "label": "epochs thousands of periods away", "attempts": 1, "mu": 398600.0, "objects": 4, "counts": [5, 1, 3, 9, 1, 1], "thetas": [242.41, 35.47, 82.24, 241.77, 83.83, 86.01]}
+{"system_id": "held_13", "shipped": false, "style": "coplanar", "label": "coplanar orbits", "attempts": 3, "mu": 132712000000.0, "objects": 3, "counts": [1, 1, 1, 3, 1, 1], "thetas": [279.73, 337.43, 13.43, 312.92, 193.24, 226.57]}
+{"system_id": "held_17", "shipped": false, "style": "circular", "label": "near-circular, five solutions", "attempts": 3, "mu": 9273110.0, "objects": 4, "counts": [1, 1, 1, 9], "thetas": [82.76, 124.0, 61.34, 56.08]}
+{"system_id": "held_21", "shipped": false, "style": "long_flight", "label": "long flights with multi-revolution best", "attempts": 1, "mu": 132712000000.0, "objects": 2, "counts": [1, 7, 7, 7], "thetas": [122.19, 208.0, 234.48, 130.13]}

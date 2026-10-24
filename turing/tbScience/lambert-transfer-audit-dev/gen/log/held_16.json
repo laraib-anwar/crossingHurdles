@@ -1,0 +1,25 @@
+{
+ "system_id": "held_16",
+ "shipped": false,
+ "style": "many_revs",
+ "label": "seven solutions",
+ "attempts": 3,
+ "mu": 42828.4,
+ "objects": 5,
+ "counts": [
+  7,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "thetas": [
+  249.34,
+  171.48,
+  298.08,
+  152.75,
+  284.38,
+  282.67
+ ]
+}

@@ -1,0 +1,1 @@
+held_05 pass=True eph_r=1.7e-14 eph_v=2.6e-14 eph_time_rel_period=1.8e-14 theta_deg=6.3e-13 t_min=2.9e-15 v1=6.2e-15 v2=7.6e-15 a=1.1e-14 e=1.2e-14 dv=8.6e-15 integ_est=6.0e-16 dop853_err=1.6e-11 runtime=60.6s

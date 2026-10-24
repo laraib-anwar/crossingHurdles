@@ -1,0 +1,21 @@
+{
+ "system_id": "held_08",
+ "shipped": false,
+ "style": "eccentric",
+ "label": "highly eccentric orbits",
+ "attempts": 1,
+ "mu": 132712000000.0,
+ "objects": 4,
+ "counts": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  50.11,
+  250.04,
+  84.23,
+  195.41
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "system_id": "held_15",
+ "shipped": false,
+ "style": "hyperbolic",
+ "label": "hyperbolic object, long way",
+ "attempts": 8,
+ "mu": 1214200.0,
+ "objects": 2,
+ "counts": [
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  201.51,
+  315.61,
+  108.47
+ ]
+}

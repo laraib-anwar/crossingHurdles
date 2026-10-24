@@ -1,0 +1,88 @@
+{
+ "system_id": "t2_hyperbolic_object",
+ "mu_km3_s2": 132712440018.0,
+ "objects": [
+  {
+   "name": "Terra",
+   "t0_days": 0.0,
+   "a_km": 149598023.0,
+   "e": 0.0167086,
+   "i_deg": 5e-05,
+   "Omega_deg": 348.73936,
+   "omega_deg": 114.20783,
+   "M0_deg": 358.617
+  },
+  {
+   "name": "Visitor",
+   "t0_days": 37.25,
+   "a_km": -127230000.0,
+   "e": 1.20113,
+   "i_deg": 122.74,
+   "Omega_deg": 24.597,
+   "omega_deg": 241.81,
+   "M0_deg": 12.5
+  },
+  {
+   "name": "Rubra",
+   "t0_days": -11.5,
+   "a_km": 227939200.0,
+   "e": 0.0934,
+   "i_deg": 1.85,
+   "Omega_deg": 49.558,
+   "omega_deg": 286.502,
+   "M0_deg": 19.412
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "Visitor",
+   "t_days": 37.25
+  },
+  {
+   "object": "Visitor",
+   "t_days": -1500.75
+  },
+  {
+   "object": "Visitor",
+   "t_days": 1712.5
+  },
+  {
+   "object": "Terra",
+   "t_days": 413.125
+  },
+  {
+   "object": "Rubra",
+   "t_days": -2222.0
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "Terra",
+   "t1_days": 100.0,
+   "to": "Visitor",
+   "t2_days": 160.0,
+   "n_max": 1
+  },
+  {
+   "from": "Visitor",
+   "t1_days": 230.0,
+   "to": "Rubra",
+   "t2_days": 380.0,
+   "n_max": 0
+  },
+  {
+   "from": "Terra",
+   "t1_days": 227.5,
+   "to": "Rubra",
+   "t2_days": 250.423268,
+   "n_max": 0
+  },
+  {
+   "from": "Rubra",
+   "t1_days": 310.0,
+   "to": "Terra",
+   "t2_days": 332.198109,
+   "n_max": 0
+  }
+ ]
+}

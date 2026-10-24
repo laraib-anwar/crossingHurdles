@@ -1,0 +1,86 @@
+{
+ "system_id": "t7_angle_edges",
+ "mu_km3_s2": 10000.0,
+ "objects": [
+  {
+   "name": "Inner",
+   "t0_days": 0.0,
+   "a_km": 10000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "Outer",
+   "t0_days": 0.0,
+   "a_km": 15500.0,
+   "e": 0.08,
+   "i_deg": 0.3,
+   "Omega_deg": 75.0,
+   "omega_deg": 15.0,
+   "M0_deg": 180.0
+  },
+  {
+   "name": "Near",
+   "t0_days": 0.5,
+   "a_km": 10400.0,
+   "e": 0.012,
+   "i_deg": 0.3,
+   "Omega_deg": 33.0,
+   "omega_deg": 44.0,
+   "M0_deg": 55.0
+  },
+  {
+   "name": "Far",
+   "t0_days": 0.0,
+   "a_km": 160000.0,
+   "e": 0.6,
+   "i_deg": 5.0,
+   "Omega_deg": 300.0,
+   "omega_deg": 60.0,
+   "M0_deg": 10.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "Inner",
+   "t_days": 1.0
+  },
+  {
+   "object": "Far",
+   "t_days": 5999.0
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "Inner",
+   "t1_days": 1.0,
+   "to": "Outer",
+   "t2_days": 3.003,
+   "n_max": 4
+  },
+  {
+   "from": "Inner",
+   "t1_days": 2.0,
+   "to": "Outer",
+   "t2_days": 3.512,
+   "n_max": 4
+  },
+  {
+   "from": "Near",
+   "t1_days": 8.655,
+   "to": "Inner",
+   "t2_days": 9.4047,
+   "n_max": 0
+  },
+  {
+   "from": "Inner",
+   "t1_days": 10.0,
+   "to": "Far",
+   "t2_days": 1010.0,
+   "n_max": 4
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+model_06 pass=True eph_r=1.3e-15 eph_v=9.4e-16 eph_time_rel_period=1.8e-16 theta_deg=7.8e-14 t_min=8.0e-16 v1=9.3e-16 v2=8.4e-16 a=4.2e-15 e=1.4e-15 dv=1.5e-15 integ_est=1.5e-16 dop853_err=2.3e-13 runtime=1.4s

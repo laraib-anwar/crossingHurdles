@@ -1,0 +1,95 @@
+{
+ "system_id": "t6_distant_epochs",
+ "mu_km3_s2": 126686534.0,
+ "objects": [
+  {
+   "name": "Ecc",
+   "t0_days": -11500.0,
+   "a_km": 1000000.0,
+   "e": 0.95,
+   "i_deg": 3.0,
+   "Omega_deg": 12.0,
+   "omega_deg": 250.0,
+   "M0_deg": 359.9
+  },
+  {
+   "name": "Circ",
+   "t0_days": 6900.0,
+   "a_km": 671100.0,
+   "e": 0.0,
+   "i_deg": 0.47,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "Back",
+   "t0_days": 14000.0,
+   "a_km": 1070400.0,
+   "e": 0.0011,
+   "i_deg": 179.0,
+   "Omega_deg": 200.0,
+   "omega_deg": 10.0,
+   "M0_deg": 123.4
+  },
+  {
+   "name": "Flyby",
+   "t0_days": 300.0,
+   "a_km": -2000000.0,
+   "e": 3.5,
+   "i_deg": 90.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "Ecc",
+   "t_days": 0.0
+  },
+  {
+   "object": "Ecc",
+   "t_days": -11499.98
+  },
+  {
+   "object": "Circ",
+   "t_days": -100.0
+  },
+  {
+   "object": "Back",
+   "t_days": -150.0
+  },
+  {
+   "object": "Flyby",
+   "t_days": 280.0
+  },
+  {
+   "object": "Flyby",
+   "t_days": 330.0
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "Circ",
+   "t1_days": 100.0,
+   "to": "Ecc",
+   "t2_days": 103.939139,
+   "n_max": 4
+  },
+  {
+   "from": "Ecc",
+   "t1_days": 200.0,
+   "to": "Back",
+   "t2_days": 201.0,
+   "n_max": 2
+  },
+  {
+   "from": "Back",
+   "t1_days": 299.0,
+   "to": "Flyby",
+   "t2_days": 301.115925,
+   "n_max": 0
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "system_id": "refB_hyperbolic_long_way",
+ "mu_km3_s2": 132712440018.0,
+ "objects": [
+  {
+   "name": "visitor",
+   "t0_days": 1000.0,
+   "a_km": -300000000.0,
+   "e": 1.6,
+   "i_deg": 12.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "planet",
+   "t0_days": 1400.0,
+   "a_km": 150000000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 250.0
+  },
+  {
+   "name": "rock",
+   "t0_days": 0.0,
+   "a_km": 260000000.0,
+   "e": 0.18,
+   "i_deg": 7.5,
+   "Omega_deg": 40.0,
+   "omega_deg": 300.0,
+   "M0_deg": 15.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "visitor",
+   "t_days": 1000.0
+  },
+  {
+   "object": "planet",
+   "t_days": 1400.0
+  },
+  {
+   "object": "visitor",
+   "t_days": 1123.4
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "visitor",
+   "t1_days": 1000.0,
+   "to": "planet",
+   "t2_days": 1400.0,
+   "n_max": 1
+  },
+  {
+   "from": "planet",
+   "t1_days": 1400.0,
+   "to": "rock",
+   "t2_days": 2600.0,
+   "n_max": 2
+  },
+  {
+   "from": "visitor",
+   "t1_days": 1000.0,
+   "to": "planet",
+   "t2_days": 1060.0,
+   "n_max": 0
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "system_id": "held_06",
+ "shipped": false,
+ "style": "mixed",
+ "label": "n_max above 0 with an empty family",
+ "attempts": 1,
+ "mu": 100513000.0,
+ "objects": 6,
+ "counts": [
+  1,
+  1,
+  1,
+  3,
+  5
+ ],
+ "thetas": [
+  100.95,
+  114.68,
+  331.45,
+  254.35,
+  141.01
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "system_id": "held_02",
+ "shipped": false,
+ "style": "hyperbolic",
+ "label": "hyperbolic object and hyperbolic arc",
+ "attempts": 3,
+ "mu": 24046.3,
+ "objects": 5,
+ "counts": [
+  1,
+  1,
+  5,
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  226.48,
+  69.29,
+  64.13,
+  39.06,
+  31.59,
+  193.18
+ ]
+}

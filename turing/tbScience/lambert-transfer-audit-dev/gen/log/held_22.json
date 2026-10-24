@@ -1,0 +1,23 @@
+{
+ "system_id": "held_22",
+ "shipped": false,
+ "style": "mixed",
+ "label": "mixed system with a hyperbolic object",
+ "attempts": 25,
+ "mu": 132712000000.0,
+ "objects": 6,
+ "counts": [
+  3,
+  1,
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  109.25,
+  239.85,
+  136.52,
+  59.79,
+  253.19
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "system_id": "held_20",
+ "shipped": false,
+ "style": "short_flight",
+ "label": "short flights",
+ "attempts": 1,
+ "mu": 215729.0,
+ "objects": 3,
+ "counts": [
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  217.4,
+  231.49,
+  118.17
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "system_id": "held_01",
+ "shipped": false,
+ "style": "circular",
+ "label": "zero-revolution queries only",
+ "attempts": 96,
+ "mu": 398600.0,
+ "objects": 4,
+ "counts": [
+  1,
+  1
+ ],
+ "thetas": [
+  234.77,
+  158.12
+ ]
+}

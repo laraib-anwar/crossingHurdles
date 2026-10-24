@@ -1,0 +1,517 @@
+{
+ "defects": [
+  {
+   "description": "Multi-revolution solutions are created from a resonant-orbit estimate whenever the time of flight exceeds N + 1/2 Hohmann periods, instead of being solved; the number of solutions is wrong.",
+   "system": {
+    "system_id": "model_04",
+    "mu_km3_s2": 19173200.0,
+    "objects": [
+     {
+      "name": "obj1",
+      "t0_days": 2810.88,
+      "a_km": 585790.0,
+      "e": 0.769503,
+      "i_deg": 33.0022,
+      "Omega_deg": 25.3487,
+      "omega_deg": 119.829,
+      "M0_deg": 176.844
+     },
+     {
+      "name": "obj2",
+      "t0_days": 2802.52,
+      "a_km": 693362.0,
+      "e": 0.0197787,
+      "i_deg": 27.0593,
+      "Omega_deg": 269.93,
+      "omega_deg": 56.7255,
+      "M0_deg": 54.7589
+     },
+     {
+      "name": "obj3",
+      "t0_days": 2812.69,
+      "a_km": 239426.0,
+      "e": 0.0,
+      "i_deg": 58.3124,
+      "Omega_deg": 229.983,
+      "omega_deg": 153.932,
+      "M0_deg": 247.037
+     }
+    ],
+    "ephemeris_queries": [
+     {
+      "object": "obj3",
+      "t_days": 2765.19
+     },
+     {
+      "object": "obj2",
+      "t_days": 2681.11
+     },
+     {
+      "object": "obj3",
+      "t_days": 2778.27
+     },
+     {
+      "object": "obj2",
+      "t_days": 2609.31
+     },
+     {
+      "object": "obj1",
+      "t_days": 2821.35
+     },
+     {
+      "object": "obj1",
+      "t_days": 2643.27
+     },
+     {
+      "object": "obj2",
+      "t_days": 2848.02
+     },
+     {
+      "object": "obj2",
+      "t_days": 2522.73
+     }
+    ],
+    "transfer_queries": [
+     {
+      "from": "obj2",
+      "t1_days": 2810.47,
+      "to": "obj3",
+      "t2_days": 2852.22,
+      "n_max": 4
+     },
+     {
+      "from": "obj2",
+      "t1_days": 2809.16,
+      "to": "obj1",
+      "t2_days": 2845.56,
+      "n_max": 4
+     }
+    ]
+   },
+   "quantity": "solution_count",
+   "index": 1,
+   "legacy_value": 7,
+   "correct_value": 9
+  },
+  {
+   "description": "The minimum time of flight of the N-revolution family is set to N + 1/2 Hohmann periods between the two radii instead of the minimum over the family of transfer ellipses through both positions.",
+   "system": {
+    "system_id": "model_01",
+    "mu_km3_s2": 42828.4,
+    "objects": [
+     {
+      "name": "obj1",
+      "t0_days": 6718.98,
+      "a_km": 133813.0,
+      "e": 0.0,
+      "i_deg": 54.8585,
+      "Omega_deg": 131.396,
+      "omega_deg": 136.192,
+      "M0_deg": 156.338
+     },
+     {
+      "name": "obj2",
+      "t0_days": 6744.06,
+      "a_km": 15708.4,
+      "e": 0.0,
+      "i_deg": 47.8751,
+      "Omega_deg": 284.209,
+      "omega_deg": 64.3,
+      "M0_deg": 37.9227
+     },
+     {
+      "name": "obj3",
+      "t0_days": 6706.74,
+      "a_km": 44099.9,
+      "e": 0.0,
+      "i_deg": 58.217,
+      "Omega_deg": 112.041,
+      "omega_deg": 168.538,
+      "M0_deg": 231.488
+     },
+     {
+      "name": "obj4",
+      "t0_days": 6711.09,
+      "a_km": 57294.2,
+      "e": 0.0132768,
+      "i_deg": 32.538,
+      "Omega_deg": 162.799,
+      "omega_deg": 277.426,
+      "M0_deg": 115.256
+     },
+     {
+      "name": "obj5",
+      "t0_days": 6705.63,
+      "a_km": 37781.4,
+      "e": 0.0,
+      "i_deg": 44.2801,
+      "Omega_deg": 36.0272,
+      "omega_deg": 100.632,
+      "M0_deg": 306.016
+     },
+     {
+      "name": "obj6",
+      "t0_days": 6724.03,
+      "a_km": 91917.0,
+      "e": 0.00137235,
+      "i_deg": 55.2594,
+      "Omega_deg": 48.383,
+      "omega_deg": 331.759,
+      "M0_deg": 91.8816
+     }
+    ],
+    "ephemeris_queries": [
+     {
+      "object": "obj3",
+      "t_days": 6732.21
+     },
+     {
+      "object": "obj6",
+      "t_days": 6506.4
+     },
+     {
+      "object": "obj6",
+      "t_days": 6934.2
+     },
+     {
+      "object": "obj6",
+      "t_days": 6485.12
+     },
+     {
+      "object": "obj1",
+      "t_days": 6438.33
+     },
+     {
+      "object": "obj3",
+      "t_days": 6735.79
+     },
+     {
+      "object": "obj2",
+      "t_days": 6759.96
+     }
+    ],
+    "transfer_queries": [
+     {
+      "from": "obj6",
+      "t1_days": 6711.24,
+      "to": "obj4",
+      "t2_days": 6725.46,
+      "n_max": 2
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6714.14,
+      "to": "obj6",
+      "t2_days": 6717.57,
+      "n_max": 0
+     },
+     {
+      "from": "obj5",
+      "t1_days": 6719.37,
+      "to": "obj1",
+      "t2_days": 6723.29,
+      "n_max": 4
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6715.11,
+      "to": "obj5",
+      "t2_days": 6716.01,
+      "n_max": 3
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6718.84,
+      "to": "obj6",
+      "t2_days": 6732.85,
+      "n_max": 0
+     }
+    ]
+   },
+   "quantity": "t_min",
+   "index": 0,
+   "legacy_value": 10.755522459083691,
+   "correct_value": 10.257129621334196
+  },
+  {
+   "description": "The transfer angle is always taken the short way between the position vectors, so a prograde transfer through more than 180 degrees is reported with the wrong angle and solved on the wrong (retrograde) plane.",
+   "system": {
+    "system_id": "model_01",
+    "mu_km3_s2": 42828.4,
+    "objects": [
+     {
+      "name": "obj1",
+      "t0_days": 6718.98,
+      "a_km": 133813.0,
+      "e": 0.0,
+      "i_deg": 54.8585,
+      "Omega_deg": 131.396,
+      "omega_deg": 136.192,
+      "M0_deg": 156.338
+     },
+     {
+      "name": "obj2",
+      "t0_days": 6744.06,
+      "a_km": 15708.4,
+      "e": 0.0,
+      "i_deg": 47.8751,
+      "Omega_deg": 284.209,
+      "omega_deg": 64.3,
+      "M0_deg": 37.9227
+     },
+     {
+      "name": "obj3",
+      "t0_days": 6706.74,
+      "a_km": 44099.9,
+      "e": 0.0,
+      "i_deg": 58.217,
+      "Omega_deg": 112.041,
+      "omega_deg": 168.538,
+      "M0_deg": 231.488
+     },
+     {
+      "name": "obj4",
+      "t0_days": 6711.09,
+      "a_km": 57294.2,
+      "e": 0.0132768,
+      "i_deg": 32.538,
+      "Omega_deg": 162.799,
+      "omega_deg": 277.426,
+      "M0_deg": 115.256
+     },
+     {
+      "name": "obj5",
+      "t0_days": 6705.63,
+      "a_km": 37781.4,
+      "e": 0.0,
+      "i_deg": 44.2801,
+      "Omega_deg": 36.0272,
+      "omega_deg": 100.632,
+      "M0_deg": 306.016
+     },
+     {
+      "name": "obj6",
+      "t0_days": 6724.03,
+      "a_km": 91917.0,
+      "e": 0.00137235,
+      "i_deg": 55.2594,
+      "Omega_deg": 48.383,
+      "omega_deg": 331.759,
+      "M0_deg": 91.8816
+     }
+    ],
+    "ephemeris_queries": [
+     {
+      "object": "obj3",
+      "t_days": 6732.21
+     },
+     {
+      "object": "obj6",
+      "t_days": 6506.4
+     },
+     {
+      "object": "obj6",
+      "t_days": 6934.2
+     },
+     {
+      "object": "obj6",
+      "t_days": 6485.12
+     },
+     {
+      "object": "obj1",
+      "t_days": 6438.33
+     },
+     {
+      "object": "obj3",
+      "t_days": 6735.79
+     },
+     {
+      "object": "obj2",
+      "t_days": 6759.96
+     }
+    ],
+    "transfer_queries": [
+     {
+      "from": "obj6",
+      "t1_days": 6711.24,
+      "to": "obj4",
+      "t2_days": 6725.46,
+      "n_max": 2
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6714.14,
+      "to": "obj6",
+      "t2_days": 6717.57,
+      "n_max": 0
+     },
+     {
+      "from": "obj5",
+      "t1_days": 6719.37,
+      "to": "obj1",
+      "t2_days": 6723.29,
+      "n_max": 4
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6715.11,
+      "to": "obj5",
+      "t2_days": 6716.01,
+      "n_max": 3
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6718.84,
+      "to": "obj6",
+      "t2_days": 6732.85,
+      "n_max": 0
+     }
+    ]
+   },
+   "quantity": "theta",
+   "index": 1,
+   "legacy_value": 51.40780527804076,
+   "correct_value": 308.59219472195923
+  },
+  {
+   "description": "The multi-revolution solutions are not real transfer arcs (they do not reach the arrival position) and the zero-revolution arc is the short-way one, so the minimum impulsive cost is wrong.",
+   "system": {
+    "system_id": "model_01",
+    "mu_km3_s2": 42828.4,
+    "objects": [
+     {
+      "name": "obj1",
+      "t0_days": 6718.98,
+      "a_km": 133813.0,
+      "e": 0.0,
+      "i_deg": 54.8585,
+      "Omega_deg": 131.396,
+      "omega_deg": 136.192,
+      "M0_deg": 156.338
+     },
+     {
+      "name": "obj2",
+      "t0_days": 6744.06,
+      "a_km": 15708.4,
+      "e": 0.0,
+      "i_deg": 47.8751,
+      "Omega_deg": 284.209,
+      "omega_deg": 64.3,
+      "M0_deg": 37.9227
+     },
+     {
+      "name": "obj3",
+      "t0_days": 6706.74,
+      "a_km": 44099.9,
+      "e": 0.0,
+      "i_deg": 58.217,
+      "Omega_deg": 112.041,
+      "omega_deg": 168.538,
+      "M0_deg": 231.488
+     },
+     {
+      "name": "obj4",
+      "t0_days": 6711.09,
+      "a_km": 57294.2,
+      "e": 0.0132768,
+      "i_deg": 32.538,
+      "Omega_deg": 162.799,
+      "omega_deg": 277.426,
+      "M0_deg": 115.256
+     },
+     {
+      "name": "obj5",
+      "t0_days": 6705.63,
+      "a_km": 37781.4,
+      "e": 0.0,
+      "i_deg": 44.2801,
+      "Omega_deg": 36.0272,
+      "omega_deg": 100.632,
+      "M0_deg": 306.016
+     },
+     {
+      "name": "obj6",
+      "t0_days": 6724.03,
+      "a_km": 91917.0,
+      "e": 0.00137235,
+      "i_deg": 55.2594,
+      "Omega_deg": 48.383,
+      "omega_deg": 331.759,
+      "M0_deg": 91.8816
+     }
+    ],
+    "ephemeris_queries": [
+     {
+      "object": "obj3",
+      "t_days": 6732.21
+     },
+     {
+      "object": "obj6",
+      "t_days": 6506.4
+     },
+     {
+      "object": "obj6",
+      "t_days": 6934.2
+     },
+     {
+      "object": "obj6",
+      "t_days": 6485.12
+     },
+     {
+      "object": "obj1",
+      "t_days": 6438.33
+     },
+     {
+      "object": "obj3",
+      "t_days": 6735.79
+     },
+     {
+      "object": "obj2",
+      "t_days": 6759.96
+     }
+    ],
+    "transfer_queries": [
+     {
+      "from": "obj6",
+      "t1_days": 6711.24,
+      "to": "obj4",
+      "t2_days": 6725.46,
+      "n_max": 2
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6714.14,
+      "to": "obj6",
+      "t2_days": 6717.57,
+      "n_max": 0
+     },
+     {
+      "from": "obj5",
+      "t1_days": 6719.37,
+      "to": "obj1",
+      "t2_days": 6723.29,
+      "n_max": 4
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6715.11,
+      "to": "obj5",
+      "t2_days": 6716.01,
+      "n_max": 3
+     },
+     {
+      "from": "obj3",
+      "t1_days": 6718.84,
+      "to": "obj6",
+      "t2_days": 6732.85,
+      "n_max": 0
+     }
+    ]
+   },
+   "quantity": "best_dv",
+   "index": 0,
+   "legacy_value": 1.842306636024631,
+   "correct_value": 1.7708849831469335
+  }
+ ]
+}

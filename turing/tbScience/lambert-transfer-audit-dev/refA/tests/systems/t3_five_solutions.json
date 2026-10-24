@@ -1,0 +1,77 @@
+{
+ "system_id": "t3_five_solutions",
+ "mu_km3_s2": 398600.4418,
+ "objects": [
+  {
+   "name": "Tug",
+   "t0_days": 2.375,
+   "a_km": 26560.0,
+   "e": 0.0102,
+   "i_deg": 55.0,
+   "Omega_deg": 121.4,
+   "omega_deg": 33.7,
+   "M0_deg": 201.9
+  },
+  {
+   "name": "Depot",
+   "t0_days": -4.5,
+   "a_km": 41250.5,
+   "e": 0.25,
+   "i_deg": 61.2,
+   "Omega_deg": 118.0,
+   "omega_deg": 270.0,
+   "M0_deg": 14.25
+  },
+  {
+   "name": "Molniya",
+   "t0_days": 0.0,
+   "a_km": 26554.0,
+   "e": 0.7222,
+   "i_deg": 63.4,
+   "Omega_deg": 300.0,
+   "omega_deg": 270.0,
+   "M0_deg": 0.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "Tug",
+   "t_days": 3.0
+  },
+  {
+   "object": "Depot",
+   "t_days": 7.75
+  },
+  {
+   "object": "Molniya",
+   "t_days": 0.3
+  },
+  {
+   "object": "Molniya",
+   "t_days": 995.0
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "Tug",
+   "t1_days": 3.0,
+   "to": "Depot",
+   "t2_days": 4.108856,
+   "n_max": 3
+  },
+  {
+   "from": "Depot",
+   "t1_days": 10.0,
+   "to": "Molniya",
+   "t2_days": 10.920883,
+   "n_max": 4
+  },
+  {
+   "from": "Molniya",
+   "t1_days": 20.25,
+   "to": "Tug",
+   "t2_days": 21.550233,
+   "n_max": 2
+  }
+ ]
+}

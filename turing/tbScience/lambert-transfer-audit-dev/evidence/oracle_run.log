@@ -1,0 +1,5 @@
+diagnosis: solution_count@model_04, t_min@model_01, theta@model_01, best_dv@model_01
+real 5.97
+user 0.03
+sys 0.02
+exit 0

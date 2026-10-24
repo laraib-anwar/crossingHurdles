@@ -1,0 +1,134 @@
+{
+ "system_id": "held_16",
+ "mu_km3_s2": 42828.4,
+ "objects": [
+  {
+   "name": "obj1",
+   "t0_days": 5803.28,
+   "a_km": 20568.3,
+   "e": 0.461302,
+   "i_deg": 44.8741,
+   "Omega_deg": 170.561,
+   "omega_deg": 141.504,
+   "M0_deg": 223.582
+  },
+  {
+   "name": "obj2",
+   "t0_days": 5812.89,
+   "a_km": 111094.0,
+   "e": 0.437884,
+   "i_deg": 31.0039,
+   "Omega_deg": 219.547,
+   "omega_deg": 233.319,
+   "M0_deg": 124.039
+  },
+  {
+   "name": "obj3",
+   "t0_days": 5814.53,
+   "a_km": 72984.5,
+   "e": 0.0166611,
+   "i_deg": 9.60741,
+   "Omega_deg": 116.358,
+   "omega_deg": 332.251,
+   "M0_deg": 123.704
+  },
+  {
+   "name": "obj4",
+   "t0_days": 5829.11,
+   "a_km": 10439.1,
+   "e": 0.00564377,
+   "i_deg": 29.1816,
+   "Omega_deg": 92.2397,
+   "omega_deg": 34.9563,
+   "M0_deg": 148.921
+  },
+  {
+   "name": "obj5",
+   "t0_days": 5817.42,
+   "a_km": 65336.5,
+   "e": 0.164001,
+   "i_deg": 42.965,
+   "Omega_deg": 340.773,
+   "omega_deg": 136.611,
+   "M0_deg": 69.622
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "obj1",
+   "t_days": 5802.83
+  },
+  {
+   "object": "obj3",
+   "t_days": 5843.14
+  },
+  {
+   "object": "obj2",
+   "t_days": 5692.42
+  },
+  {
+   "object": "obj5",
+   "t_days": 5654.08
+  },
+  {
+   "object": "obj4",
+   "t_days": 5826.53
+  },
+  {
+   "object": "obj1",
+   "t_days": 5823.2
+  },
+  {
+   "object": "obj5",
+   "t_days": 5755.69
+  },
+  {
+   "object": "obj5",
+   "t_days": 5967.9
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "obj5",
+   "t1_days": 5803.99,
+   "to": "obj2",
+   "t2_days": 5853.94,
+   "n_max": 4
+  },
+  {
+   "from": "obj2",
+   "t1_days": 5830.09,
+   "to": "obj1",
+   "t2_days": 5882.81,
+   "n_max": 4
+  },
+  {
+   "from": "obj2",
+   "t1_days": 5811.28,
+   "to": "obj5",
+   "t2_days": 5869.58,
+   "n_max": 4
+  },
+  {
+   "from": "obj3",
+   "t1_days": 5810.01,
+   "to": "obj4",
+   "t2_days": 5842.83,
+   "n_max": 4
+  },
+  {
+   "from": "obj4",
+   "t1_days": 5826.79,
+   "to": "obj1",
+   "t2_days": 5831.21,
+   "n_max": 4
+  },
+  {
+   "from": "obj5",
+   "t1_days": 5825.34,
+   "to": "obj4",
+   "t2_days": 5846.69,
+   "n_max": 4
+  }
+ ]
+}

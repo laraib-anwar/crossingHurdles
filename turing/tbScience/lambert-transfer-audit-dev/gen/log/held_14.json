@@ -1,0 +1,25 @@
+{
+ "system_id": "held_14",
+ "shipped": false,
+ "style": "mixed",
+ "label": "counts 1, 3 and 5 in one system",
+ "attempts": 26,
+ "mu": 7986890.0,
+ "objects": 6,
+ "counts": [
+  3,
+  1,
+  1,
+  3,
+  5,
+  3
+ ],
+ "thetas": [
+  153.53,
+  81.26,
+  224.6,
+  336.88,
+  259.65,
+  94.4
+ ]
+}

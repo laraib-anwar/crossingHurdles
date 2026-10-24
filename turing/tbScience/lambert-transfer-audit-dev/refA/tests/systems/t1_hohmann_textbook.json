@@ -1,0 +1,76 @@
+{
+ "system_id": "t1_hohmann_textbook",
+ "mu_km3_s2": 398600.4418,
+ "objects": [
+  {
+   "name": "LEO",
+   "t0_days": 0.0,
+   "a_km": 7000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "GEO",
+   "t0_days": 0.0,
+   "a_km": 42164.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 99.87175705534972
+  },
+  {
+   "name": "V75a",
+   "t0_days": 0.0,
+   "a_km": 15945.34,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "V75b",
+   "t0_days": 0.0,
+   "a_km": 15945.340124637758,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 318.0770324544995
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "LEO",
+   "t_days": 0.0
+  },
+  {
+   "object": "GEO",
+   "t_days": 0.22196937738089156
+  },
+  {
+   "object": "V75b",
+   "t_days": 0.05277777777777778
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "LEO",
+   "t1_days": 0.0,
+   "to": "GEO",
+   "t2_days": 0.22196938738089156,
+   "n_max": 0
+  },
+  {
+   "from": "V75a",
+   "t1_days": 0.0,
+   "to": "V75b",
+   "t2_days": 0.05277777777777778,
+   "n_max": 0
+  }
+ ]
+}

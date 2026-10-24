@@ -1,0 +1,69 @@
+{
+ "shortway": {
+  "fails": 24,
+  "total": 28,
+  "reasons": {
+   "transfers[0].theta_deg": 12,
+   "transfers[1].theta_deg": 8,
+   "transfers[3].theta_deg": 1,
+   "transfers[2].theta_deg": 3
+  }
+ },
+ "zero_rev": {
+  "fails": 22,
+  "total": 28,
+  "reasons": {
+   "transfers[2]": 4,
+   "transfers[1]": 6,
+   "transfers[0]": 9,
+   "transfers[3]": 3
+  }
+ },
+ "one_branch": {
+  "fails": 22,
+  "total": 28,
+  "reasons": {
+   "transfers[2]": 4,
+   "transfers[1]": 6,
+   "transfers[0]": 9,
+   "transfers[3]": 3
+  }
+ },
+ "fixedpoint": {
+  "fails": 8,
+  "total": 28,
+  "reasons": {
+   "transfers[0].theta_deg": 3,
+   "ephemeris[4].r_km": 1,
+   "ephemeris[1].r_km": 1,
+   "transfers[1].theta_deg": 1,
+   "ephemeris[0].r_km": 1,
+   "ephemeris[5].r_km": 1
+  }
+ },
+ "tmin_hohmann": {
+  "fails": 27,
+  "total": 28,
+  "reasons": {
+   "transfers[0].t_min_days[0]": 22,
+   "transfers[1].t_min_days[0]": 4,
+   "transfers[2].t_min_days[0]": 1
+  }
+ },
+ "legacy": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "transfers[0].theta_deg": 5,
+   "transfers[2]": 2,
+   "transfers[0].t_min_days[0]": 7,
+   "transfers[1]": 4,
+   "ephemeris[4].r_km": 1,
+   "transfers[0]": 2,
+   "transfers[3]": 3,
+   "transfers[4]": 2,
+   "ephemeris[0].r_km": 1,
+   "transfers[1].theta_deg": 1
+  }
+ }
+}

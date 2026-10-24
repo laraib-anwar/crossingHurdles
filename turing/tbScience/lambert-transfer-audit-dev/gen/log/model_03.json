@@ -1,0 +1,19 @@
+{
+ "system_id": "model_03",
+ "shipped": true,
+ "style": "mixed",
+ "label": "transfer through more than 180 degrees",
+ "attempts": 2,
+ "mu": 126687000.0,
+ "objects": 6,
+ "counts": [
+  1,
+  1,
+  5
+ ],
+ "thetas": [
+  126.92,
+  258.46,
+  252.38
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "system_id": "model_01",
+ "shipped": true,
+ "style": "circular",
+ "label": "near-circular orbits, a multi-revolution family (base case)",
+ "attempts": 1,
+ "mu": 42828.4,
+ "objects": 6,
+ "counts": [
+  3,
+  1,
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  155.79,
+  308.59,
+  302.77,
+  121.91,
+  288.96
+ ]
+}

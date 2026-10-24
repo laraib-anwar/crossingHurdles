@@ -1,0 +1,69 @@
+{
+ "system_id": "t8_small_angle_fast",
+ "mu_km3_s2": 200000000000.0,
+ "objects": [
+  {
+   "name": "FarA",
+   "t0_days": 0.0,
+   "a_km": 100000000.0,
+   "e": 0.0,
+   "i_deg": 0.3,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 10.0
+  },
+  {
+   "name": "FarB",
+   "t0_days": 0.0,
+   "a_km": 102000000.0,
+   "e": 0.01,
+   "i_deg": 0.2,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 10.4
+  },
+  {
+   "name": "Wide",
+   "t0_days": 0.0,
+   "a_km": 400000000.0,
+   "e": 0.4,
+   "i_deg": 7.0,
+   "Omega_deg": 100.0,
+   "omega_deg": 200.0,
+   "M0_deg": 300.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "FarA",
+   "t_days": -19999.5
+  },
+  {
+   "object": "Wide",
+   "t_days": 19999.5
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "FarA",
+   "t1_days": 0.5,
+   "to": "FarB",
+   "t2_days": 0.684,
+   "n_max": 2
+  },
+  {
+   "from": "FarA",
+   "t1_days": 0.6,
+   "to": "FarB",
+   "t2_days": 0.7845,
+   "n_max": 4
+  },
+  {
+   "from": "FarA",
+   "t1_days": 2.0,
+   "to": "Wide",
+   "t2_days": 1342.744313,
+   "n_max": 3
+  }
+ ]
+}

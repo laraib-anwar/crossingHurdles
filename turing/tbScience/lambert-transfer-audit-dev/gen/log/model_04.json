@@ -1,0 +1,17 @@
+{
+ "system_id": "model_04",
+ "shipped": true,
+ "style": "many_revs",
+ "label": "seven or more solutions in one query",
+ "attempts": 1,
+ "mu": 19173200.0,
+ "objects": 3,
+ "counts": [
+  9,
+  9
+ ],
+ "thetas": [
+  73.81,
+  37.38
+ ]
+}

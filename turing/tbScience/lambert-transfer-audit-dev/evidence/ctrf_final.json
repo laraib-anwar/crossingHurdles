@@ -1,0 +1,262 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1792826748248,
+      "stop": 1792826766022
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 919.6841339580715
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 429.08735491801053,
+        "extra": {
+          "solutions": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 355.4513260605745,
+        "extra": {
+          "solutions": 10
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 348.72104995884,
+        "extra": {
+          "solutions": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 453.38452502619475,
+        "extra": {
+          "solutions": 16
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 348.67691207909957,
+        "extra": {
+          "solutions": 45
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 344.03977199690416,
+        "extra": {
+          "solutions": 11
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 348.5170499770902,
+        "extra": {
+          "solutions": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 351.0817789938301,
+        "extra": {
+          "solutions": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 355.23672198178247,
+        "extra": {
+          "solutions": 20
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 353.601964074187,
+        "extra": {
+          "solutions": 8
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 356.01104504894465,
+        "extra": {
+          "solutions": 12
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 1024.2865899926983,
+        "extra": {
+          "solutions": 20
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 777.4617840768769,
+        "extra": {
+          "solutions": 8
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 627.0830459543504,
+        "extra": {
+          "solutions": 16
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 457.7233930467628,
+        "extra": {
+          "solutions": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 351.9712310517207,
+        "extra": {
+          "solutions": 52
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 350.42379808146507,
+        "extra": {
+          "solutions": 12
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 370.75337197165936,
+        "extra": {
+          "solutions": 14
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 351.0426690336317,
+        "extra": {
+          "solutions": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 411.601955012884,
+        "extra": {
+          "solutions": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 406.20324097108096,
+        "extra": {
+          "solutions": 22
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 352.3647930123843,
+        "extra": {
+          "solutions": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 348.19402103312314,
+        "extra": {
+          "solutions": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 347.7356960065663,
+        "extra": {
+          "solutions": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 351.90527891973034,
+        "extra": {
+          "solutions": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 354.926154948771,
+        "extra": {
+          "solutions": 18
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 355.4780179983936,
+        "extra": {
+          "solutions": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 346.1560749565251,
+        "extra": {
+          "solutions": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 5142.438374983612,
+        "extra": {
+          "quantities": [
+            "best_dv",
+            "solution_count",
+            "t_min",
+            "theta"
+          ]
+        }
+      }
+    ]
+  }
+}

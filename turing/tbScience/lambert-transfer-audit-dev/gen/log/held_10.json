@@ -1,0 +1,25 @@
+{
+ "system_id": "held_10",
+ "shipped": false,
+ "style": "mixed",
+ "label": "long way and multi-revolution best",
+ "attempts": 1,
+ "mu": 42828.4,
+ "objects": 5,
+ "counts": [
+  1,
+  1,
+  3,
+  1,
+  1,
+  1
+ ],
+ "thetas": [
+  217.28,
+  192.33,
+  135.91,
+  83.42,
+  49.75,
+  288.04
+ ]
+}

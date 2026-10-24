@@ -1,0 +1,52 @@
+{
+ "system_id": "refB_hohmann_like",
+ "mu_km3_s2": 398600.0,
+ "objects": [
+  {
+   "name": "inner",
+   "t0_days": 0.0,
+   "a_km": 20000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 0.0
+  },
+  {
+   "name": "outer",
+   "t0_days": 0.26993991947239715,
+   "a_km": 40000.0,
+   "e": 0.0,
+   "i_deg": 0.0,
+   "Omega_deg": 0.0,
+   "omega_deg": 0.0,
+   "M0_deg": 170.0
+  }
+ ],
+ "ephemeris_queries": [
+  {
+   "object": "inner",
+   "t_days": 0.0
+  },
+  {
+   "object": "outer",
+   "t_days": 0.26993991947239715
+  }
+ ],
+ "transfer_queries": [
+  {
+   "from": "inner",
+   "t1_days": 0.0,
+   "to": "outer",
+   "t2_days": 0.26993991947239715,
+   "n_max": 1
+  },
+  {
+   "from": "inner",
+   "t1_days": 0.25,
+   "to": "outer",
+   "t2_days": 2.9,
+   "n_max": 3
+  }
+ ]
+}

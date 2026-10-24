@@ -1,0 +1,17 @@
+{
+ "system_id": "model_02",
+ "shipped": true,
+ "style": "hyperbolic",
+ "label": "a hyperbolic object",
+ "attempts": 1,
+ "mu": 126687000.0,
+ "objects": 3,
+ "counts": [
+  1,
+  1
+ ],
+ "thetas": [
+  37.68,
+  300.4
+ ]
+}
