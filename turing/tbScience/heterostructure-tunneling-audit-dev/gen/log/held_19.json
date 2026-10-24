@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_19",
+ "shipped": false,
+ "style": "rtd",
+ "label": "RTD, several maxima",
+ "attempts": 54,
+ "layers": 5,
+ "bound": 0,
+ "maxima": 3,
+ "minT": 0.0011867771358631083
+}

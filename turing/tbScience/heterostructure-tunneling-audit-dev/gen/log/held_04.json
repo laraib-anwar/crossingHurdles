@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_04",
+ "shipped": false,
+ "style": "double_well",
+ "label": "double well, several pairs",
+ "attempts": 1,
+ "layers": 5,
+ "bound": 4,
+ "maxima": 1,
+ "minT": 0.6602407477829929
+}

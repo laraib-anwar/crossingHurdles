@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_15",
+ "shipped": false,
+ "style": "contrast",
+ "label": "lead contrast with a bound state",
+ "attempts": 1,
+ "layers": 3,
+ "bound": 2,
+ "maxima": 7,
+ "minT": 0.009249812720978851
+}

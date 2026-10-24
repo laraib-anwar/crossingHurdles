@@ -1,0 +1,2 @@
+model_05 pass=True bound_dE=0.0e+00 T_rel=1.4e-14 max_dE=8.1e-13 max_T_rel=9.7e-15 cons=1.0e-14 self=(0.0e+00,1.7e-14,1.4e-14,2.2e-14) fail=0 warn=0 runtime=0.9s
+exit=0

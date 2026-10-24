@@ -1,0 +1,52 @@
+{
+ "structure_id": "model_05",
+ "left_lead": {
+  "mass": 0.07069,
+  "v_eV": 0.0
+ },
+ "right_lead": {
+  "mass": 0.07069,
+  "v_eV": 0.0
+ },
+ "layers": [
+  {
+   "thickness_nm": 4.59,
+   "mass": 0.07069,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 18.25,
+   "mass": 0.1051,
+   "vl_eV": 0.9683,
+   "vr_eV": 0.9683
+  },
+  {
+   "thickness_nm": 7.964,
+   "mass": 0.07069,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 19.29,
+   "mass": 0.1051,
+   "vl_eV": 0.9683,
+   "vr_eV": 0.9683
+  },
+  {
+   "thickness_nm": 4.587,
+   "mass": 0.07069,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  }
+ ],
+ "transmission_energies_eV": [
+  0.6751,
+  0.9925,
+  1.369
+ ],
+ "window_eV": [
+  0.9911,
+  1.226
+ ]
+}

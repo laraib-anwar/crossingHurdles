@@ -1,0 +1,52 @@
+{
+ "structure_id": "t2_sym_double_well",
+ "left_lead": {
+  "mass": 0.0919,
+  "v_eV": 0.28
+ },
+ "right_lead": {
+  "mass": 0.0919,
+  "v_eV": 0.28
+ },
+ "layers": [
+  {
+   "thickness_nm": 5.0,
+   "mass": 0.0919,
+   "vl_eV": 0.28,
+   "vr_eV": 0.28
+  },
+  {
+   "thickness_nm": 6.5,
+   "mass": 0.0665,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 13.0,
+   "mass": 0.0919,
+   "vl_eV": 0.28,
+   "vr_eV": 0.28
+  },
+  {
+   "thickness_nm": 6.5,
+   "mass": 0.0665,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 5.0,
+   "mass": 0.0919,
+   "vl_eV": 0.28,
+   "vr_eV": 0.28
+  }
+ ],
+ "transmission_energies_eV": [
+  0.2815,
+  0.3,
+  0.45
+ ],
+ "window_eV": [
+  0.29,
+  0.52
+ ]
+}

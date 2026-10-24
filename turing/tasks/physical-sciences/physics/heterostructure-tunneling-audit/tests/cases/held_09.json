@@ -1,0 +1,100 @@
+{
+ "structure_id": "held_09",
+ "left_lead": {
+  "mass": 0.1085,
+  "v_eV": 0.5963
+ },
+ "right_lead": {
+  "mass": 0.1085,
+  "v_eV": 0.5963
+ },
+ "layers": [
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  },
+  {
+   "thickness_nm": 4.12,
+   "mass": 0.07252,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 3.874,
+   "mass": 0.1085,
+   "vl_eV": 0.5963,
+   "vr_eV": 0.5963
+  }
+ ],
+ "transmission_energies_eV": [
+  0.6215,
+  0.7828,
+  1.014
+ ],
+ "window_eV": [
+  0.7181,
+  1.105
+ ]
+}

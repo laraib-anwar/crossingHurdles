@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_18",
+ "shipped": false,
+ "style": "graded",
+ "label": "graded barriers, several maxima",
+ "attempts": 3,
+ "layers": 3,
+ "bound": 9,
+ "maxima": 3,
+ "minT": 0.728877647240118
+}

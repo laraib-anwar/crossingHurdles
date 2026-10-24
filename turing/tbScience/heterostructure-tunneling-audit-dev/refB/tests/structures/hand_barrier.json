@@ -1,0 +1,37 @@
+{
+ "structure_id": "hand_barrier",
+ "left_lead": {
+  "mass": 0.067,
+  "v_eV": 0.0
+ },
+ "right_lead": {
+  "mass": 0.08,
+  "v_eV": -0.05
+ },
+ "layers": [
+  {
+   "thickness_nm": 3.0,
+   "mass": 0.092,
+   "vl_eV": 0.32,
+   "vr_eV": 0.32
+  },
+  {
+   "thickness_nm": 2.5,
+   "mass": 0.092,
+   "vl_eV": 0.32,
+   "vr_eV": 0.32
+  }
+ ],
+ "transmission_energies_eV": [
+  0.02,
+  0.1,
+  0.2,
+  0.3,
+  0.33,
+  0.5
+ ],
+ "window_eV": [
+  0.4,
+  1.3
+ ]
+}

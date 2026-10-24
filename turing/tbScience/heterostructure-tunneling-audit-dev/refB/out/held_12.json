@@ -1,0 +1,69 @@
+{
+ "structure_id": "held_12",
+ "pass": true,
+ "failures": [],
+ "warnings": [],
+ "worst": {
+  "bound_dE_eV": 0.0,
+  "T_rel": 1.8473593837717067e-15,
+  "max_dE_eV": 0.0,
+  "max_T_rel": 0.0,
+  "cons": 5.551115123125783e-15,
+  "self_bound_dE_eV": 0.0,
+  "self_T_rel": 7.993605777301127e-15,
+  "self_max_dE_eV": 0.0,
+  "self_max_T_rel": 0.0
+ },
+ "runtime_s": 0.10112690925598145,
+ "method": "Ref B: Taylor-series integration, Prufer node count, variational dT/dE",
+ "config": {
+  "kh": 1.0,
+  "precision": "double"
+ },
+ "detail": {
+  "bound": [],
+  "transmission": [
+   {
+    "i": 0,
+    "E": 0.007054,
+    "T_own": 0.0001320509105874035,
+    "dlnT_dE": 169.33876912308875,
+    "cons": 0.0,
+    "T_rep": 0.00013205091058740326,
+    "rel": 1.8473593837717067e-15
+   },
+   {
+    "i": 1,
+    "E": 0.1124,
+    "T_own": 0.014082585573201958,
+    "dlnT_dE": 13.726192211367083,
+    "cons": 2.220446049250313e-16,
+    "T_rep": 0.014082585573201958,
+    "rel": 0.0
+   },
+   {
+    "i": 2,
+    "E": 0.3178,
+    "T_own": 0.09369711182900423,
+    "dlnT_dE": 8.411799382506068,
+    "cons": 6.661338147750939e-16,
+    "T_rep": 0.09369711182900406,
+    "rel": 1.777359519871802e-15
+   },
+   {
+    "i": 3,
+    "E": 0.6508,
+    "T_own": 0.6933791963088237,
+    "dlnT_dE": 3.703657092220399,
+    "cons": -6.661338147750939e-16,
+    "T_rep": 0.6933791963088249,
+    "rel": 1.7612950223902341e-15
+   }
+  ],
+  "maxima": [],
+  "own_bound_eV": [],
+  "count_at_Etop": 0,
+  "own_maxima": [],
+  "scan_points": 2713
+ }
+}

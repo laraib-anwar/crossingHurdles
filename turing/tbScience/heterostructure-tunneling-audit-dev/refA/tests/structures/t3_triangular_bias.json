@@ -1,0 +1,40 @@
+{
+ "structure_id": "t3_triangular_bias",
+ "left_lead": {
+  "mass": 0.5,
+  "v_eV": 1.95
+ },
+ "right_lead": {
+  "mass": 0.4,
+  "v_eV": 1.9
+ },
+ "layers": [
+  {
+   "thickness_nm": 24.0,
+   "mass": 0.35,
+   "vl_eV": 0.0,
+   "vr_eV": 1.2
+  },
+  {
+   "thickness_nm": 12.0,
+   "mass": 0.35,
+   "vl_eV": 1.2,
+   "vr_eV": 1.8
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.4,
+   "vl_eV": 1.8,
+   "vr_eV": 1.8
+  }
+ ],
+ "transmission_energies_eV": [
+  1.96,
+  1.98,
+  2.1
+ ],
+ "window_eV": [
+  1.97,
+  2.4
+ ]
+}

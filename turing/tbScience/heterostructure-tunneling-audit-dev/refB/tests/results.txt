@@ -1,0 +1,43 @@
+== 1. hand (closed-form) reports ==
+  [ok] referee on hand report: hand_barrier pass=True bound_dE=0.0e+00 T_rel=1.9e-15 max_dE=4.2e-15 max_T_rel=1.6e-15 cons=4.4e-15 self=(0.0e+00,5.3e-15,2.2e-16,8.9e-16) fail=0 warn=0 runtime=0.1s
+        own solver vs hand: counts_equal=True bound_dE=0.0e+00 T_rel=1.8e-15 max_dE=4.2e-15 max_T_rel=1.6e-15
+  [ok] referee on hand report: hand_well pass=True bound_dE=4.4e-15 T_rel=5.2e-15 max_dE=3.4e-15 max_T_rel=3.6e-15 cons=1.1e-14 self=(4.5e-15,8.9e-15,1.4e-15,8.9e-16) fail=0 warn=0 runtime=0.3s
+        own solver vs hand: counts_equal=True bound_dE=4.4e-15 T_rel=5.1e-15 max_dE=3.4e-15 max_T_rel=3.6e-15
+  [ok] referee on hand report: hand_well_edge pass=True bound_dE=1.4e-15 T_rel=5.2e-15 max_dE=5.6e-16 max_T_rel=8.9e-16 cons=9.0e-15 self=(1.4e-15,2.0e-14,3.3e-16,1.8e-15) fail=0 warn=0 runtime=0.6s
+        own solver vs hand: counts_equal=True bound_dE=1.4e-15 T_rel=5.2e-15 max_dE=5.6e-16 max_T_rel=8.9e-16
+  [ok] referee on hand report: hand_triangle pass=True bound_dE=1.7e-16 T_rel=4.5e-14 max_dE=4.8e-14 max_T_rel=8.7e-14 cons=6.0e-15 self=(1.1e-16,7.1e-15,4.4e-16,8.0e-15) fail=0 warn=0 runtime=0.5s
+        own solver vs hand: counts_equal=True bound_dE=1.7e-16 T_rel=4.5e-14 max_dE=4.8e-14 max_T_rel=8.7e-14
+== 2. own solver reports must pass; 3. double vs long double ==
+  [ok] hand_barrier pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=4.4e-15 self=(0.0e+00,5.3e-15,2.2e-16,8.9e-16) fail=0 warn=0 runtime=0.1s
+        double vs long: counts_equal=True bound_dE=0.0e+00 T_rel=1.8e-15 max_dE=4.4e-16 max_T_rel=1.3e-15
+  [ok] hand_well pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=2.2e-16 max_T_rel=8.9e-16 cons=1.1e-14 self=(4.5e-15,8.9e-15,1.0e-15,8.9e-16) fail=0 warn=0 runtime=0.2s
+        double vs long: counts_equal=True bound_dE=4.4e-15 T_rel=4.7e-15 max_dE=6.7e-16 max_T_rel=3.3e-15
+  [ok] hand_well_edge pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=9.0e-15 self=(1.4e-15,2.0e-14,3.3e-16,1.8e-15) fail=0 warn=0 runtime=0.2s
+        double vs long: counts_equal=True bound_dE=3.1e-15 T_rel=6.1e-15 max_dE=1.1e-16 max_T_rel=4.4e-16
+  [ok] hand_triangle pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=6.0e-15 self=(1.1e-16,7.1e-15,4.4e-16,8.0e-15) fail=0 warn=0 runtime=0.5s
+        double vs long: counts_equal=True bound_dE=1.7e-15 T_rel=6.7e-15 max_dE=2.2e-16 max_T_rel=3.3e-15
+  [ok] stress_doublewell pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=1.2e-14 self=(5.6e-17,9.8e-15,1.8e-14,5.3e-15) fail=0 warn=0 runtime=0.3s
+        double vs long: counts_equal=True bound_dE=1.1e-16 T_rel=2.9e-15 max_dE=3.6e-14 max_T_rel=2.7e-15
+  [ok] stress_thickbarrier pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=7.5e-15 self=(0.0e+00,2.8e-14,4.4e-16,8.0e-15) fail=0 warn=0 runtime=0.1s
+        double vs long: counts_equal=True bound_dE=0.0e+00 T_rel=4.4e-15 max_dE=2.4e-15 max_T_rel=3.1e-15
+  [ok] stress_superlattice pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=2.1e-14 self=(0.0e+00,3.9e-14,2.2e-16,2.6e-14) fail=0 warn=0 runtime=0.6s
+        double vs long: counts_equal=True bound_dE=0.0e+00 T_rel=1.3e-14 max_dE=2.2e-16 max_T_rel=9.3e-15
+  [ok] stress_manylevels pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=6.2e-14 self=(4.4e-15,3.3e-14,4.4e-16,6.6e-14) fail=0 warn=0 runtime=1.1s
+        double vs long: counts_equal=True bound_dE=4.3e-15 T_rel=2.4e-14 max_dE=6.7e-16 max_T_rel=2.9e-14
+  [ok] stress_graded150 pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=2.7e-15 max_T_rel=1.2e-14 cons=9.8e-14 self=(5.6e-16,8.6e-14,2.7e-15,2.0e-13) fail=0 warn=0 runtime=18.3s
+        double vs long: counts_equal=True bound_dE=4.9e-15 T_rel=3.9e-14 max_dE=2.7e-15 max_T_rel=6.8e-14
+  [ok] stress_nobound pass=True bound_dE=0.0e+00 T_rel=0.0e+00 max_dE=0.0e+00 max_T_rel=0.0e+00 cons=8.9e-16 self=(0.0e+00,1.0e-15,0.0e+00,0.0e+00) fail=0 warn=0 runtime=0.0s
+        double vs long: counts_equal=True bound_dE=0.0e+00 T_rel=7.8e-16 max_dE=0.0e+00 max_T_rel=0.0e+00
+== 4. negative and tolerance-edge tests ==
+  hand_barrier: ok:spurious bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  hand_well: ok:bound E +3e-9->FAIL; ok:bound E -3e-9->FAIL; ok:bound E +0.9e-9->PASS; ok:drop last bound state->FAIL; ok:drop first bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  hand_well_edge: ok:bound E +3e-9->FAIL; ok:bound E -3e-9->FAIL; ok:bound E +0.9e-9->PASS; ok:drop last bound state->FAIL; ok:drop first bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  hand_triangle: ok:bound E +3e-9->FAIL; ok:bound E -3e-9->FAIL; ok:bound E +0.9e-9->PASS; ok:drop last bound state->FAIL; ok:drop first bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  stress_doublewell: ok:bound E +3e-9->FAIL; ok:bound E -3e-9->FAIL; ok:bound E +0.9e-9->PASS; ok:drop last bound state->FAIL; ok:drop first bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  stress_manylevels: ok:bound E +3e-9->FAIL; ok:bound E -3e-9->FAIL; ok:bound E +0.9e-9->PASS; ok:drop last bound state->FAIL; ok:drop first bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  stress_superlattice: ok:spurious bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+  stress_thickbarrier: ok:spurious bound state->FAIL; ok:T x(1+3e-9)->FAIL; ok:T x(1-3e-9)->FAIL; ok:T x(1+0.9e-9)->PASS; ok:max E +3e-8->FAIL; ok:max E -3e-8->FAIL; ok:max E +0.9e-8->PASS; ok:max T x(1+3e-9)->FAIL; ok:drop a maximum->FAIL; ok:extra maximum->FAIL; ok:extra key->FAIL; ok:query energy altered by 1 ulp->FAIL; ok:wrong structure_id->FAIL; ok:duplicate key->FAIL; ok:NaN number->FAIL
+== 5. CLI exit codes ==
+  [ok] exit 0 (want 0): hand_well pass=True bound_dE=4.4e-15 T_rel=5.2e-15 max_dE=3.4e-15 max_T_rel=3.6e-15 cons=1.1e-14 self=(4.5e-15,8.9e-15,1.4e-15,8.9e-16) fail=0 warn=0 runtime=0.3s
+  [ok] exit 1 (want 1): hand_well pass=False bound_dE=6.9e-18 T_rel=5.2e-15 max_dE=3.4e-15 max_T_rel=3.6e-15 cons=1.1e-14 self=(4.5e-15,8.9e-15,1.4e-15,8.9e-16) fail=1 warn=0 runtime=0.4s
+== done: 0 unexpected results, 147s ==

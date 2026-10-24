@@ -1,0 +1,53 @@
+{
+ "structure_id": "stress_doublewell",
+ "left_lead": {
+  "mass": 0.092,
+  "v_eV": 0.35
+ },
+ "right_lead": {
+  "mass": 0.092,
+  "v_eV": 0.35
+ },
+ "layers": [
+  {
+   "thickness_nm": 8.0,
+   "mass": 0.092,
+   "vl_eV": 0.35,
+   "vr_eV": 0.35
+  },
+  {
+   "thickness_nm": 6.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 13.0,
+   "mass": 0.092,
+   "vl_eV": 0.35,
+   "vr_eV": 0.35
+  },
+  {
+   "thickness_nm": 6.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 8.0,
+   "mass": 0.092,
+   "vl_eV": 0.35,
+   "vr_eV": 0.35
+  }
+ ],
+ "transmission_energies_eV": [
+  0.36,
+  0.38,
+  0.45,
+  0.6
+ ],
+ "window_eV": [
+  0.37,
+  0.61
+ ]
+}

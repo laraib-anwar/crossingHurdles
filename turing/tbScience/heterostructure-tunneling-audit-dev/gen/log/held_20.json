@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_20",
+ "shipped": false,
+ "style": "confined",
+ "label": "confined wells with maxima above",
+ "attempts": 4,
+ "layers": 7,
+ "bound": 10,
+ "maxima": 4,
+ "minT": 0.0026858408545321188
+}

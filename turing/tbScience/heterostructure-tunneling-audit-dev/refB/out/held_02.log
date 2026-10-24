@@ -1,0 +1,2 @@
+held_02 pass=True bound_dE=3.9e-15 T_rel=9.8e-15 max_dE=1.1e-11 max_T_rel=4.4e-15 cons=1.5e-14 self=(3.9e-15,1.9e-14,2.8e-16,6.2e-15) fail=0 warn=0 runtime=1.6s
+exit=0

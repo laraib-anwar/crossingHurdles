@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_01",
+ "shipped": false,
+ "style": "confined",
+ "label": "single confined well",
+ "attempts": 1,
+ "layers": 5,
+ "bound": 6,
+ "maxima": 1,
+ "minT": 0.39470225842867174
+}

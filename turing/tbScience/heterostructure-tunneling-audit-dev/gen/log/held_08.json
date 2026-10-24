@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_08",
+ "shipped": false,
+ "style": "rtd",
+ "label": "RTD with a well below the leads",
+ "attempts": 5,
+ "layers": 5,
+ "bound": 1,
+ "maxima": 1,
+ "minT": 4.656159704220824e-05
+}

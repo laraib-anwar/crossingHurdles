@@ -1,0 +1,271 @@
+{
+ "defects": [
+  {
+   "description": "Bound states come from finite differences on a box that ends 10 nm into each contact with hard walls, with one effective mass everywhere: levels near the contact band edge are pushed up or lost and the number of bound states is wrong.",
+   "structure": {
+    "structure_id": "model_03",
+    "left_lead": {
+     "mass": 0.1152,
+     "v_eV": 0.9124
+    },
+    "right_lead": {
+     "mass": 0.1152,
+     "v_eV": 0.9124
+    },
+    "layers": [
+     {
+      "thickness_nm": 6.216,
+      "mass": 0.1152,
+      "vl_eV": 0.9124,
+      "vr_eV": 0.9124
+     },
+     {
+      "thickness_nm": 9.356,
+      "mass": 0.0649,
+      "vl_eV": 0.0,
+      "vr_eV": 0.0
+     },
+     {
+      "thickness_nm": 3.6,
+      "mass": 0.1152,
+      "vl_eV": 0.9124,
+      "vr_eV": 0.9124
+     },
+     {
+      "thickness_nm": 9.448,
+      "mass": 0.0649,
+      "vl_eV": 0.0,
+      "vr_eV": 0.0
+     },
+     {
+      "thickness_nm": 5.418,
+      "mass": 0.1152,
+      "vl_eV": 0.9124,
+      "vr_eV": 0.9124
+     }
+    ],
+    "transmission_energies_eV": [
+     0.9234,
+     1.059,
+     1.319,
+     1.349,
+     1.362,
+     1.363,
+     1.405
+    ],
+    "window_eV": [
+     1.002,
+     1.272
+    ]
+   },
+   "quantity": "bound_count",
+   "index": null,
+   "legacy_value": 10,
+   "correct_value": 8
+  },
+  {
+   "description": "The transmission is |t|^2 without the ratio of the contact velocities k_R m_L / (k_L m_R), graded and biased layers are replaced by five flat steps, and one mass is used throughout.",
+   "structure": {
+    "structure_id": "model_01",
+    "left_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "right_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "layers": [
+     {
+      "thickness_nm": 1.697,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     },
+     {
+      "thickness_nm": 10.34,
+      "mass": 0.06223,
+      "vl_eV": -0.07788,
+      "vr_eV": -0.07788
+     },
+     {
+      "thickness_nm": 5.688,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     }
+    ],
+    "transmission_energies_eV": [
+     0.5386,
+     0.6654,
+     0.6711,
+     0.746,
+     0.8267,
+     0.8275,
+     0.8792
+    ],
+    "window_eV": [
+     0.5279,
+     1.107
+    ]
+   },
+   "quantity": "transmission",
+   "index": 0,
+   "legacy_value": 0.7456429611528063,
+   "correct_value": 0.47399926339475046
+  },
+  {
+   "description": "The effective mass of the left contact is used in every layer (no BenDaniel-Duke boundary condition) and the Laplacian is a three-point difference on a 0.1 nm grid, so the bound-state energies are wrong.",
+   "structure": {
+    "structure_id": "model_01",
+    "left_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "right_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "layers": [
+     {
+      "thickness_nm": 1.697,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     },
+     {
+      "thickness_nm": 10.34,
+      "mass": 0.06223,
+      "vl_eV": -0.07788,
+      "vr_eV": -0.07788
+     },
+     {
+      "thickness_nm": 5.688,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     }
+    ],
+    "transmission_energies_eV": [
+     0.5386,
+     0.6654,
+     0.6711,
+     0.746,
+     0.8267,
+     0.8275,
+     0.8792
+    ],
+    "window_eV": [
+     0.5279,
+     1.107
+    ]
+   },
+   "quantity": "bound_energy",
+   "index": 0,
+   "legacy_value": -0.047958808783988616,
+   "correct_value": -0.04132369186547774
+  },
+  {
+   "description": "The transmission maxima are read off a 1 meV scan of the window with the approximate transmission, so maxima are lost, added or shifted.",
+   "structure": {
+    "structure_id": "model_01",
+    "left_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "right_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "layers": [
+     {
+      "thickness_nm": 1.697,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     },
+     {
+      "thickness_nm": 10.34,
+      "mass": 0.06223,
+      "vl_eV": -0.07788,
+      "vr_eV": -0.07788
+     },
+     {
+      "thickness_nm": 5.688,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     }
+    ],
+    "transmission_energies_eV": [
+     0.5386,
+     0.6654,
+     0.6711,
+     0.746,
+     0.8267,
+     0.8275,
+     0.8792
+    ],
+    "window_eV": [
+     0.5279,
+     1.107
+    ]
+   },
+   "quantity": "maxima_count",
+   "index": null,
+   "legacy_value": 2,
+   "correct_value": 1
+  },
+  {
+   "description": "Maxima are reported at the 1 meV grid points of the approximate transmission instead of the exact stationary points of T(E).",
+   "structure": {
+    "structure_id": "model_01",
+    "left_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "right_lead": {
+     "mass": 0.08309,
+     "v_eV": 0.4427
+    },
+    "layers": [
+     {
+      "thickness_nm": 1.697,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     },
+     {
+      "thickness_nm": 10.34,
+      "mass": 0.06223,
+      "vl_eV": -0.07788,
+      "vr_eV": -0.07788
+     },
+     {
+      "thickness_nm": 5.688,
+      "mass": 0.08309,
+      "vl_eV": 0.4427,
+      "vr_eV": 0.4427
+     }
+    ],
+    "transmission_energies_eV": [
+     0.5386,
+     0.6654,
+     0.6711,
+     0.746,
+     0.8267,
+     0.8275,
+     0.8792
+    ],
+    "window_eV": [
+     0.5279,
+     1.107
+    ]
+   },
+   "quantity": "maximum_energy",
+   "index": 0,
+   "legacy_value": 0.5989000000000001,
+   "correct_value": 0.8263976293785616
+  }
+ ]
+}

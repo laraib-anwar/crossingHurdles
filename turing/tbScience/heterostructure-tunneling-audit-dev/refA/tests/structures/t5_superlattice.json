@@ -1,0 +1,95 @@
+{
+ "structure_id": "t5_superlattice",
+ "left_lead": {
+  "mass": 0.07,
+  "v_eV": 0.15
+ },
+ "right_lead": {
+  "mass": 0.07,
+  "v_eV": 0.15
+ },
+ "layers": [
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.09,
+   "vl_eV": 0.3,
+   "vr_eV": 0.3
+  },
+  {
+   "thickness_nm": 4.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  }
+ ],
+ "transmission_energies_eV": [
+  0.16,
+  0.25,
+  0.4,
+  0.7
+ ],
+ "window_eV": [
+  0.31,
+  0.75
+ ]
+}

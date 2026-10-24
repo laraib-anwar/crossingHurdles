@@ -1,0 +1,5 @@
+diagnosis: bound_count@model_03, transmission@model_01, bound_energy@model_01, maxima_count@model_01, maximum_energy@model_01
+real 15.78
+user 0.04
+sys 0.03
+exit 0

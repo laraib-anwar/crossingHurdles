@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_22",
+ "shipped": false,
+ "style": "double_well",
+ "label": "double well, close pair and maxima",
+ "attempts": 5,
+ "layers": 5,
+ "bound": 8,
+ "maxima": 2,
+ "minT": 0.0037316660462897553
+}

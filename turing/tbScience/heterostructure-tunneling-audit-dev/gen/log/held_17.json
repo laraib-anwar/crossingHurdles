@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_17",
+ "shipped": false,
+ "style": "graded",
+ "label": "graded barriers around a well",
+ "attempts": 3,
+ "layers": 3,
+ "bound": 10,
+ "maxima": 2,
+ "minT": 0.9858035175833876
+}

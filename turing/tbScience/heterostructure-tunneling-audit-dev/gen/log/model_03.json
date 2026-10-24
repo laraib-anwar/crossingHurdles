@@ -1,0 +1,11 @@
+{
+ "structure_id": "model_03",
+ "shipped": true,
+ "style": "double_well",
+ "label": "double well with closely spaced levels",
+ "attempts": 8,
+ "layers": 5,
+ "bound": 8,
+ "maxima": 3,
+ "minT": 0.001379789701348243
+}

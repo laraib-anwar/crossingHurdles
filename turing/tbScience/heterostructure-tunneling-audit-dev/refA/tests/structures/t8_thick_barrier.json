@@ -1,0 +1,35 @@
+{
+ "structure_id": "t8_thick_barrier",
+ "left_lead": {
+  "mass": 0.067,
+  "v_eV": 0.0
+ },
+ "right_lead": {
+  "mass": 0.067,
+  "v_eV": 0.0
+ },
+ "layers": [
+  {
+   "thickness_nm": 3.5,
+   "mass": 0.5,
+   "vl_eV": 1.6,
+   "vr_eV": 1.6
+  },
+  {
+   "thickness_nm": 3.5,
+   "mass": 0.5,
+   "vl_eV": 1.6,
+   "vr_eV": 1.6
+  }
+ ],
+ "transmission_energies_eV": [
+  0.15,
+  0.4,
+  0.8,
+  1.2
+ ],
+ "window_eV": [
+  1.62,
+  2.4
+ ]
+}

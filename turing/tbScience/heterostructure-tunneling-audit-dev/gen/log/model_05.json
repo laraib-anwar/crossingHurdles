@@ -1,0 +1,11 @@
+{
+ "structure_id": "model_05",
+ "shipped": true,
+ "style": "thick",
+ "label": "thick double barrier, tiny transmission",
+ "attempts": 6,
+ "layers": 5,
+ "bound": 0,
+ "maxima": 7,
+ "minT": 9.324229346307216e-30
+}

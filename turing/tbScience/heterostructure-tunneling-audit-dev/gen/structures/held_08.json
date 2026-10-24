@@ -1,0 +1,51 @@
+{
+ "structure_id": "held_08",
+ "left_lead": {
+  "mass": 0.07077,
+  "v_eV": 0.0
+ },
+ "right_lead": {
+  "mass": 0.07077,
+  "v_eV": -0.1478
+ },
+ "layers": [
+  {
+   "thickness_nm": 5.911,
+   "mass": 0.07077,
+   "vl_eV": 0.0,
+   "vr_eV": -0.03075
+  },
+  {
+   "thickness_nm": 2.85,
+   "mass": 0.1481,
+   "vl_eV": 0.5959,
+   "vr_eV": 0.5811
+  },
+  {
+   "thickness_nm": 7.593,
+   "mass": 0.04017,
+   "vl_eV": -0.2389,
+   "vr_eV": -0.2784
+  },
+  {
+   "thickness_nm": 2.717,
+   "mass": 0.1481,
+   "vl_eV": 0.5416,
+   "vr_eV": 0.5275
+  },
+  {
+   "thickness_nm": 9.347,
+   "mass": 0.07077,
+   "vl_eV": -0.09921,
+   "vr_eV": -0.1478
+  }
+ ],
+ "transmission_energies_eV": [
+  0.338,
+  0.8319
+ ],
+ "window_eV": [
+  0.7383,
+  0.956
+ ]
+}

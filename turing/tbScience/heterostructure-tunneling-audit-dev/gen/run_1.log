@@ -1,0 +1,7 @@
+{"structure_id": "model_02", "shipped": true, "style": "rtd", "label": "resonant-tunnelling diode under bias", "attempts": 1, "layers": 5, "bound": 0, "maxima": 1, "minT": 2.5328791321599618e-06}
+{"structure_id": "model_06", "shipped": true, "style": "contrast", "label": "different lead masses and band edges", "attempts": 1, "layers": 3, "bound": 2, "maxima": 7, "minT": 9.487769840612046e-26}
+{"structure_id": "held_04", "shipped": false, "style": "double_well", "label": "double well, several pairs", "attempts": 1, "layers": 5, "bound": 4, "maxima": 1, "minT": 0.6602407477829929}
+{"structure_id": "held_08", "shipped": false, "style": "rtd", "label": "RTD with a well below the leads", "attempts": 5, "layers": 5, "bound": 1, "maxima": 1, "minT": 4.656159704220824e-05}
+{"structure_id": "held_12", "shipped": false, "style": "barrier_only", "label": "no bound state, window with no maximum", "attempts": 15, "layers": 3, "bound": 0, "maxima": 0, "minT": 0.00013205091058740326}
+{"structure_id": "held_16", "shipped": false, "style": "contrast", "label": "lead contrast", "attempts": 1, "layers": 3, "bound": 1, "maxima": 2, "minT": 2.230779300065925e-09}
+{"structure_id": "held_20", "shipped": false, "style": "confined", "label": "confined wells with maxima above", "attempts": 4, "layers": 7, "bound": 10, "maxima": 4, "minT": 0.0026858408545321188}

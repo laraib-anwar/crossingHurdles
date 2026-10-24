@@ -1,0 +1,40 @@
+{
+ "structure_id": "t9_large_airy",
+ "left_lead": {
+  "mass": 0.9,
+  "v_eV": 1.96
+ },
+ "right_lead": {
+  "mass": 1.0,
+  "v_eV": 1.97
+ },
+ "layers": [
+  {
+   "thickness_nm": 10.0,
+   "mass": 1.0,
+   "vl_eV": 1.9,
+   "vr_eV": 1.91
+  },
+  {
+   "thickness_nm": 10.0,
+   "mass": 1.0,
+   "vl_eV": -0.95,
+   "vr_eV": -0.94
+  },
+  {
+   "thickness_nm": 15.0,
+   "mass": 0.95,
+   "vl_eV": 1.92,
+   "vr_eV": 1.905
+  }
+ ],
+ "transmission_energies_eV": [
+  1.975,
+  2.2,
+  2.6
+ ],
+ "window_eV": [
+  1.99,
+  2.5
+ ]
+}

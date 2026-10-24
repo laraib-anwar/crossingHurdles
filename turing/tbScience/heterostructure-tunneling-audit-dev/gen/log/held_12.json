@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_12",
+ "shipped": false,
+ "style": "barrier_only",
+ "label": "no bound state, window with no maximum",
+ "attempts": 15,
+ "layers": 3,
+ "bound": 0,
+ "maxima": 0,
+ "minT": 0.00013205091058740326
+}

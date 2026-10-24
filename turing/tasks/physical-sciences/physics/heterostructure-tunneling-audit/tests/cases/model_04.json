@@ -1,0 +1,36 @@
+{
+ "structure_id": "model_04",
+ "left_lead": {
+  "mass": 0.1375,
+  "v_eV": 1.08
+ },
+ "right_lead": {
+  "mass": 0.1375,
+  "v_eV": 0.982
+ },
+ "layers": [
+  {
+   "thickness_nm": 16.83,
+   "mass": 0.07461,
+   "vl_eV": -0.135,
+   "vr_eV": 0.9213
+  },
+  {
+   "thickness_nm": 9.858,
+   "mass": 0.1375,
+   "vl_eV": 0.982,
+   "vr_eV": 0.982
+  }
+ ],
+ "transmission_energies_eV": [
+  1.157,
+  1.224,
+  1.436,
+  1.55,
+  1.551
+ ],
+ "window_eV": [
+  1.166,
+  1.462
+ ]
+}

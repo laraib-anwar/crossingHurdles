@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_10",
+ "shipped": false,
+ "style": "superlattice",
+ "label": "superlattice, eight or more maxima",
+ "attempts": 3,
+ "layers": 11,
+ "bound": 0,
+ "maxima": 9,
+ "minT": 6.965463725212303e-15
+}

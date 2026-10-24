@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_07",
+ "shipped": false,
+ "style": "rtd",
+ "label": "biased RTD, tunnelling queries",
+ "attempts": 2,
+ "layers": 5,
+ "bound": 0,
+ "maxima": 2,
+ "minT": 4.831648415776536e-08
+}

@@ -1,0 +1,291 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1792864265220,
+      "stop": 1792864313762
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 14.23512096516788
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 1987.5417070579715,
+        "extra": {
+          "bound_states": 6,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 1147.8011130238883,
+        "extra": {
+          "bound_states": 8,
+          "maxima": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 946.800675126724,
+        "extra": {
+          "bound_states": 6,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 948.6255130032077,
+        "extra": {
+          "bound_states": 4,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 1456.901938014198,
+        "extra": {
+          "bound_states": 8,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 1243.974392011296,
+        "extra": {
+          "bound_states": 3,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 3178.803070972208,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 2764.4823580631055,
+        "extra": {
+          "bound_states": 1,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 1505.329658917617,
+        "extra": {
+          "bound_states": 12,
+          "maxima": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 1098.1802610331215,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 941.2103279610164,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 1182.8098720288835,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 0
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 889.92909505032,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 8
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 794.5644509745762,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 941.2085440126248,
+        "extra": {
+          "bound_states": 2,
+          "maxima": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 889.9437020299956,
+        "extra": {
+          "bound_states": 1,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 1767.6562490523793,
+        "extra": {
+          "bound_states": 10,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 1297.8388159535825,
+        "extra": {
+          "bound_states": 9,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 2624.7931809630245,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 1716.9996990123764,
+        "extra": {
+          "bound_states": 10,
+          "maxima": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 1400.925459980499,
+        "extra": {
+          "bound_states": 12,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 1051.3099549571052,
+        "extra": {
+          "bound_states": 8,
+          "maxima": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 1005.5801690323278,
+        "extra": {
+          "bound_states": 4,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 2699.274169979617,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 1148.4983240370639,
+        "extra": {
+          "bound_states": 8,
+          "maxima": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 1246.206113952212,
+        "extra": {
+          "bound_states": 6,
+          "maxima": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 1166.096224973444,
+        "extra": {
+          "bound_states": 0,
+          "maxima": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 943.2905960129574,
+        "extra": {
+          "bound_states": 2,
+          "maxima": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 8499.104787013493,
+        "extra": {
+          "quantities": [
+            "bound_count",
+            "bound_energy",
+            "maxima_count",
+            "maximum_energy",
+            "transmission"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "structure_id": "model_06",
+ "shipped": true,
+ "style": "contrast",
+ "label": "different lead masses and band edges",
+ "attempts": 1,
+ "layers": 3,
+ "bound": 2,
+ "maxima": 7,
+ "minT": 9.487769840612046e-26
+}

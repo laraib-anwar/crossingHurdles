@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_06",
+ "shipped": false,
+ "style": "triangular",
+ "label": "shallow triangular well",
+ "attempts": 6,
+ "layers": 2,
+ "bound": 3,
+ "maxima": 1,
+ "minT": 0.8881524898401421
+}

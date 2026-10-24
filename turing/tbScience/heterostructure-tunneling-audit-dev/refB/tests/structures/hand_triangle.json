@@ -1,0 +1,35 @@
+{
+ "structure_id": "hand_triangle",
+ "left_lead": {
+  "mass": 0.092,
+  "v_eV": 0.9
+ },
+ "right_lead": {
+  "mass": 0.067,
+  "v_eV": 0.4
+ },
+ "layers": [
+  {
+   "thickness_nm": 18.0,
+   "mass": 0.067,
+   "vl_eV": 0.0,
+   "vr_eV": 0.36
+  },
+  {
+   "thickness_nm": 6.0,
+   "mass": 0.092,
+   "vl_eV": 0.66,
+   "vr_eV": 0.78
+  }
+ ],
+ "transmission_energies_eV": [
+  0.91,
+  1.0,
+  1.2,
+  1.5
+ ],
+ "window_eV": [
+  0.95,
+  1.65
+ ]
+}

@@ -1,0 +1,7 @@
+{"structure_id": "model_01", "shipped": true, "style": "confined", "label": "quantum wells confined by the lead band edge (base case)", "attempts": 3, "layers": 3, "bound": 4, "maxima": 1, "minT": 0.47399926339475046}
+{"structure_id": "model_05", "shipped": true, "style": "thick", "label": "thick double barrier, tiny transmission", "attempts": 6, "layers": 5, "bound": 0, "maxima": 7, "minT": 9.324229346307216e-30}
+{"structure_id": "held_03", "shipped": false, "style": "double_well", "label": "double well, close pair", "attempts": 5, "layers": 5, "bound": 4, "maxima": 1, "minT": 0.1766910386486828}
+{"structure_id": "held_07", "shipped": false, "style": "rtd", "label": "biased RTD, tunnelling queries", "attempts": 2, "layers": 5, "bound": 0, "maxima": 2, "minT": 4.831648415776536e-08}
+{"structure_id": "held_11", "shipped": false, "style": "barrier_only", "label": "barriers only: no bound state", "attempts": 1, "layers": 3, "bound": 0, "maxima": 3, "minT": 2.3482064377838096e-05}
+{"structure_id": "held_15", "shipped": false, "style": "contrast", "label": "lead contrast with a bound state", "attempts": 1, "layers": 3, "bound": 2, "maxima": 7, "minT": 0.009249812720978851}
+{"structure_id": "held_19", "shipped": false, "style": "rtd", "label": "RTD, several maxima", "attempts": 54, "layers": 5, "bound": 0, "maxima": 3, "minT": 0.0011867771358631083}

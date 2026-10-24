@@ -1,0 +1,40 @@
+{
+ "structure_id": "held_15",
+ "left_lead": {
+  "mass": 0.0689,
+  "v_eV": 0.04795
+ },
+ "right_lead": {
+  "mass": 0.2857,
+  "v_eV": 0.07719
+ },
+ "layers": [
+  {
+   "thickness_nm": 7.471,
+   "mass": 0.7611,
+   "vl_eV": 0.4407,
+   "vr_eV": 0.4407
+  },
+  {
+   "thickness_nm": 9.842,
+   "mass": 0.03888,
+   "vl_eV": -0.2904,
+   "vr_eV": -0.2904
+  },
+  {
+   "thickness_nm": 5.647,
+   "mass": 0.7499,
+   "vl_eV": 0.6658,
+   "vr_eV": 0.6658
+  }
+ ],
+ "transmission_energies_eV": [
+  0.9509,
+  1.045,
+  1.072
+ ],
+ "window_eV": [
+  0.864,
+  1.288
+ ]
+}

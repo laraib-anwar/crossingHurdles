@@ -1,0 +1,58 @@
+{
+ "structure_id": "stress_manylevels",
+ "left_lead": {
+  "mass": 0.15,
+  "v_eV": 0.8
+ },
+ "right_lead": {
+  "mass": 0.17,
+  "v_eV": 0.85
+ },
+ "layers": [
+  {
+   "thickness_nm": 1.5,
+   "mass": 0.15,
+   "vl_eV": 0.8,
+   "vr_eV": 0.8
+  },
+  {
+   "thickness_nm": 14.0,
+   "mass": 0.15,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 14.0,
+   "mass": 0.15,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 14.0,
+   "mass": 0.15,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 14.0,
+   "mass": 0.15,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 2.0,
+   "mass": 0.17,
+   "vl_eV": 0.85,
+   "vr_eV": 0.85
+  }
+ ],
+ "transmission_energies_eV": [
+  0.86,
+  0.9,
+  1.1
+ ],
+ "window_eV": [
+  0.87,
+  1.3
+ ]
+}

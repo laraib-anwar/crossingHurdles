@@ -1,0 +1,11 @@
+{
+ "structure_id": "model_01",
+ "shipped": true,
+ "style": "confined",
+ "label": "quantum wells confined by the lead band edge (base case)",
+ "attempts": 3,
+ "layers": 3,
+ "bound": 4,
+ "maxima": 1,
+ "minT": 0.47399926339475046
+}

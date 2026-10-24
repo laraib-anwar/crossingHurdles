@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_13",
+ "shipped": false,
+ "style": "thick",
+ "label": "thick barriers, transmission below 1e-22",
+ "attempts": 7,
+ "layers": 5,
+ "bound": 0,
+ "maxima": 8,
+ "minT": 2.043181789250419e-26
+}

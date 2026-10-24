@@ -1,0 +1,39 @@
+{
+ "structure_id": "held_17",
+ "left_lead": {
+  "mass": 0.08392,
+  "v_eV": 0.9959
+ },
+ "right_lead": {
+  "mass": 0.08392,
+  "v_eV": 0.9959
+ },
+ "layers": [
+  {
+   "thickness_nm": 12.61,
+   "mass": 0.08392,
+   "vl_eV": 0.9959,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 7.461,
+   "mass": 0.06037,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 8.304,
+   "mass": 0.08392,
+   "vl_eV": 0.0,
+   "vr_eV": 0.9959
+  }
+ ],
+ "transmission_energies_eV": [
+  1.399,
+  1.47
+ ],
+ "window_eV": [
+  1.171,
+  1.742
+ ]
+}

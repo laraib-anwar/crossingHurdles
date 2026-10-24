@@ -1,0 +1,59 @@
+{
+ "structure_id": "stress_graded150",
+ "left_lead": {
+  "mass": 0.9,
+  "v_eV": 1.2
+ },
+ "right_lead": {
+  "mass": 0.6,
+  "v_eV": -0.9
+ },
+ "layers": [
+  {
+   "thickness_nm": 30.0,
+   "mass": 1.0,
+   "vl_eV": 1.2,
+   "vr_eV": 0.6
+  },
+  {
+   "thickness_nm": 30.0,
+   "mass": 0.8,
+   "vl_eV": 0.5,
+   "vr_eV": -0.4
+  },
+  {
+   "thickness_nm": 20.0,
+   "mass": 0.067,
+   "vl_eV": -1.0,
+   "vr_eV": -1.0
+  },
+  {
+   "thickness_nm": 30.0,
+   "mass": 1.0,
+   "vl_eV": 1.9,
+   "vr_eV": 0.9
+  },
+  {
+   "thickness_nm": 25.0,
+   "mass": 0.5,
+   "vl_eV": 0.2,
+   "vr_eV": -0.7
+  },
+  {
+   "thickness_nm": 15.0,
+   "mass": 0.6,
+   "vl_eV": -0.9,
+   "vr_eV": -0.9
+  }
+ ],
+ "transmission_energies_eV": [
+  1.7,
+  1.85,
+  2.0,
+  2.5
+ ],
+ "window_eV": [
+  1.95,
+  2.95
+ ]
+}

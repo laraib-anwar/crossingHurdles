@@ -1,0 +1,41 @@
+{
+ "structure_id": "t1_single_well",
+ "left_lead": {
+  "mass": 0.0919,
+  "v_eV": 0.32
+ },
+ "right_lead": {
+  "mass": 0.0919,
+  "v_eV": 0.32
+ },
+ "layers": [
+  {
+   "thickness_nm": 6.0,
+   "mass": 0.0919,
+   "vl_eV": 0.32,
+   "vr_eV": 0.32
+  },
+  {
+   "thickness_nm": 9.4,
+   "mass": 0.0665,
+   "vl_eV": 0.0,
+   "vr_eV": 0.0
+  },
+  {
+   "thickness_nm": 6.0,
+   "mass": 0.0919,
+   "vl_eV": 0.32,
+   "vr_eV": 0.32
+  }
+ ],
+ "transmission_energies_eV": [
+  0.33,
+  0.41,
+  0.5,
+  0.75
+ ],
+ "window_eV": [
+  0.34,
+  0.9
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_21",
+ "shipped": false,
+ "style": "superlattice",
+ "label": "superlattice with bound miniband",
+ "attempts": 1,
+ "layers": 13,
+ "bound": 12,
+ "maxima": 3,
+ "minT": 7.1688970842401805e-06
+}

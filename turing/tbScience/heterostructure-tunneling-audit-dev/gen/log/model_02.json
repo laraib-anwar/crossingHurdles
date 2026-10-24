@@ -1,0 +1,11 @@
+{
+ "structure_id": "model_02",
+ "shipped": true,
+ "style": "rtd",
+ "label": "resonant-tunnelling diode under bias",
+ "attempts": 1,
+ "layers": 5,
+ "bound": 0,
+ "maxima": 1,
+ "minT": 2.5328791321599618e-06
+}

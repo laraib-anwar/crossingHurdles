@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_05",
+ "shipped": false,
+ "style": "triangular",
+ "label": "triangular well, eight or more levels",
+ "attempts": 11,
+ "layers": 2,
+ "bound": 8,
+ "maxima": 2,
+ "minT": 0.4790063308599865
+}

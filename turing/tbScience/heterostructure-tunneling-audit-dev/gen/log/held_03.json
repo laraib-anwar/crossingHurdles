@@ -1,0 +1,11 @@
+{
+ "structure_id": "held_03",
+ "shipped": false,
+ "style": "double_well_tight",
+ "label": "double well, pair split by less than 2e-5 eV",
+ "attempts": 20,
+ "layers": 5,
+ "bound": 6,
+ "maxima": 2,
+ "minT": 0.27683475696379073
+}
