@@ -2,6 +2,27 @@
 
 Working notes for Laraib's Elektra tasks. The full project guidelines (proposal + annotator flow) are in `taskbot_guidelines.md` in this folder.
 
+## NEW WORKFLOW (announced 2026-10-28): read this first
+
+Zaheer (@channel): Elektra is moving to an "open-source style approach on existing private repository tasks". The IDE approach pauses once the current batch is done. The new guide is the Google Doc "Private Repository Tasking (Git approach)" (tabs: Context, Annotator Workflow). The Context tab is transcribed in `private_repo_git_approach.md`.
+
+What changes:
+- **Review and fix instead of authoring.** Tasks already exist in private repos and are assigned to you on GitHub. Your job is to judge whether each one is fair and reliable for coding agents: a clear instruction, a well-scoped change, tests that capture the intended behavior, a complete package. Fix the instruction and tests where needed, then run the quality checks.
+- **No /init and no feature hunting.** The pipeline starts at /scope: /scope, /verify-spec, /gen-tests, /review, /benchmarking (Luna and Sol), /analyse, /submit.
+- **solution/solution.patch is the golden truth.** The instruction must cover every part of the patch, and the tests (P2P + F2P) must cover it completely. Tests must not be overly broad or unrelated, and must separate a correct fix from a wrong one.
+- **Two Dockerfiles may exist.** Only environment/Dockerfile is task-specific and checked; ignore the root one.
+- So the repo picks below (swagger-client, OpenHands) are probably moot. Tasks get assigned directly.
+
+To do: react ✅ to the announcement, post your preferred onboarding time (IST) in the thread, read the Annotator Workflow tab and save it here, attend the onboarding.
+
+Ask at onboarding:
+1. Do we still author any new tasks, or only review and fix the assigned private-repo tasks?
+2. Is hint.md still required (gate H1), or only "if needed" as the new table says?
+3. May we edit environment/Dockerfile now? The old rule said never.
+4. Patch file names differ: the sample layout has solution/solution.patch and tests/test.patch, but the table has solution/patch.diff. Which is right?
+5. What's the difference between /benchmarking and /analyse, and do we run both?
+6. Do the 2026-10-09 rework rules (QC-only /rework) still apply?
+
 ## What the project is
 
 Write original SWE benchmark tasks from curated open-source repos, DeepSWE-style (Datacurve, arXiv:2607.07946). Each task is a new feature that was never merged upstream. A task is accepted only if a frontier agent can't solve it in one turn but reaches a patch that passes the verifier over several turns with recorded hints.
@@ -25,6 +46,7 @@ Write original SWE benchmark tasks from curated open-source repos, DeepSWE-style
 - 2026-10-05: DOMPurify/enigma-bbs rows (56-57) are now removed from the Repos tab. Pick only from repos still listed there. Suggested picks: OpenHands/software-agent-sdk (Python, row 70, free col E) and swagger-api/swagger-client (JS, row 58, free col D, only 1 annotator). Backups: oceanbase/powercontext (Python, row 71), release-plz/release-plz (Rust, row 74). Avoid C#/Kotlin rows (verifier languages are python/node/typescript/go/rust).
 - 2026-10-05: re-picked. Repos tab: swagger-api/swagger-client (row 58) and OpenHands/software-agent-sdk (row 70). My Details rows are now 157 (OpenHands, F157 says "choose another repo") and 174 (swagger-client, F174 says "Pls add another repo"). Those F comments were Deccan's replies to the old DOMPurify/enigma-bbs picks; I cleared F157 and F174 on 2026-10-05. Asked Deccan to re-review. Assignment is confirmed when F gets the repo link and the row turns green.
 - 2026-10-06: raised the re-pick on Issues sheet row 64 (still no allocation, no invite) and pinged @Zaheer in #int-experts-elektra-deccan at 10:52 PM ("trying to get a task since 10 days"). He replied in the thread.
+- 2026-10-28: new workflow announced (see the top of this file). Allocation and invite status since 10-09 isn't recorded here; check with Laraib.
 - 2026-10-08: Zaheer listed the GitHub IDs that have tasks at draft/scope with no progress and asked them to report status, or lose access. laraib-anwar is not on the list because I have no task yet.
 - 2026-10-04: Gmail search for Deep-SWE-Tasks-Annotation finds only Slack digests, no GitHub invite. Org page github.com/Deep-SWE-Tasks-Annotation shows no repos and "must be a member", so I am not an org member yet (invite not received or not accepted). Note: Prathamesh logged "repo issue, req another repo" on enigma-bbs (Details row 129).
 
