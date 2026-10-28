@@ -1,0 +1,144 @@
+{
+ "frame_id": "t3_portal",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 0.0,
+   "y": 4.15,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 7.35,
+   "y": 4.15,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 7.35,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 205000000000.0,
+   "A": 0.00912,
+   "I": 0.000171,
+   "rho": 7850.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 205000000000.0,
+   "A": 0.00703,
+   "I": 0.000233,
+   "rho": 7850.0
+  },
+  {
+   "id": 3,
+   "i": 4,
+   "j": 3,
+   "E": 205000000000.0,
+   "A": 0.00912,
+   "I": 0.000171,
+   "rho": 7850.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 2,
+   "Fx": 42700.0,
+   "Fy": 0.0,
+   "Mz": 0.0
+  },
+  {
+   "node": 3,
+   "Fx": 0.0,
+   "Fy": -15200.0,
+   "Mz": 6100.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -18300.0
+  },
+  {
+   "member": 1,
+   "wx": 3150.0,
+   "wy": 0.0
+  }
+ ],
+ "static_query_nodes": [
+  2,
+  3
+ ],
+ "n_modes": 10,
+ "f_max_Hz": 120.0,
+ "harmonic_queries": [
+  {
+   "load_node": 2,
+   "load_dof": "ux",
+   "amplitude": 5000.0,
+   "f_Hz": 3.37,
+   "response_node": 3,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 3,
+   "load_dof": "ux",
+   "amplitude": 5000.0,
+   "f_Hz": 3.37,
+   "response_node": 2,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 2,
+   "load_dof": "rz",
+   "amplitude": 2000.0,
+   "f_Hz": 41.3,
+   "response_node": 3,
+   "response_dof": "uy"
+  },
+  {
+   "load_node": 3,
+   "load_dof": "uy",
+   "amplitude": 2000.0,
+   "f_Hz": 41.3,
+   "response_node": 2,
+   "response_dof": "rz"
+  }
+ ]
+}

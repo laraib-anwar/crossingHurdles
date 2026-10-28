@@ -1,0 +1,7 @@
+{"frame_id": "model_03", "shipped": true, "style": "fixed_member", "label": "member between two fixed nodes: member-local modes", "attempts": 1, "nodes": 6, "members": 4, "n_modes": 7, "f1": 14.551233709689178, "count_below": 7}
+{"frame_id": "held_01", "shipped": false, "style": "cantilever", "label": "cantilever beam", "attempts": 2, "nodes": 4, "members": 3, "n_modes": 12, "f1": 4.859171038006868, "count_below": 9}
+{"frame_id": "held_05", "shipped": false, "style": "portal_mass", "label": "frame with lumped masses", "attempts": 1, "nodes": 12, "members": 14, "n_modes": 9, "f1": 0.5747667936844025, "count_below": 4}
+{"frame_id": "held_09", "shipped": false, "style": "near_sym", "label": "close pair of frequencies", "attempts": 69, "nodes": 4, "members": 3, "n_modes": 6, "f1": 34.40126032350762, "count_below": 4}
+{"frame_id": "held_13", "shipped": false, "style": "arch", "label": "polygonal arch", "attempts": 1, "nodes": 8, "members": 7, "n_modes": 11, "f1": 2.4029817783604788, "count_below": 9}
+{"frame_id": "held_17", "shipped": false, "style": "portal", "label": "harmonic load below the first mode", "attempts": 15, "nodes": 8, "members": 7, "n_modes": 5, "f1": 4.208526114912349, "count_below": 4}
+{"frame_id": "held_21", "shipped": false, "style": "portal_mass", "label": "masses and a close pair", "attempts": 10, "nodes": 6, "members": 5, "n_modes": 8, "f1": 1.4380611995404455, "count_below": 6}

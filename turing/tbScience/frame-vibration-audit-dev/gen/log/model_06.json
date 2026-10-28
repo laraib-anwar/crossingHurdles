@@ -1,0 +1,12 @@
+{
+ "frame_id": "model_06",
+ "shipped": true,
+ "style": "truss_like",
+ "label": "triangulated frame with rigid joints",
+ "attempts": 1,
+ "nodes": 6,
+ "members": 9,
+ "n_modes": 5,
+ "f1": 91.41937563277482,
+ "count_below": 5
+}

@@ -1,0 +1,12 @@
+{
+ "frame_id": "model_03",
+ "shipped": true,
+ "style": "fixed_member",
+ "label": "member between two fixed nodes: member-local modes",
+ "attempts": 1,
+ "nodes": 6,
+ "members": 4,
+ "n_modes": 7,
+ "f1": 14.551233709689178,
+ "count_below": 7
+}

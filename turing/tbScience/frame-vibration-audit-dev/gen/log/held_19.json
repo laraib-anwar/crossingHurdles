@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_19",
+ "shipped": false,
+ "style": "ss_beam",
+ "label": "simply supported beam",
+ "attempts": 74,
+ "nodes": 3,
+ "members": 2,
+ "n_modes": 5,
+ "f1": 19.271705108822175,
+ "count_below": 4
+}

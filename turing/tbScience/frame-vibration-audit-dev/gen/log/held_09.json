@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_09",
+ "shipped": false,
+ "style": "near_sym",
+ "label": "close pair of frequencies",
+ "attempts": 69,
+ "nodes": 4,
+ "members": 3,
+ "n_modes": 6,
+ "f1": 34.40126032350762,
+ "count_below": 4
+}

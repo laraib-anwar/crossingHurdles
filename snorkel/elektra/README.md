@@ -146,6 +146,13 @@ On any failure: rework, push, rerun the failing command, then continue in order.
 
 Log it in the Elektra Issues sheet, then wait for the platform team to give the next command.
 
+## Taskbot behaviour learned on PR #2 (2026-10-28)
+
+- Every push to the task branch automatically queues `/rehash`, and `/rehash` then auto-runs `/scope`. Don't comment `/scope` right after a push: it gets refused ("one job runs per task at a time") while the rehash holds the task.
+- A `/scope` judge reads the files statically (no PHP or Docker), so it can misread a test runner. Our first Verifiable failure claimed PHPUnit only ran the first of three positional test files. A local run showed all 42 results. Fixed by passing the verify/ directory instead.
+- `/scope` verdicts vary between runs on the same content ("Difficult" passed once, then failed). The failing reason was that the instruction named helpers and pointed at the stubs, so remove implementation pointers rather than just re-running.
+- Local verifier run: `docker build -t r065-verifier tasks/<slug>/tests`, then `docker run --rm --network none -v <dir with fix.patch>:/sol:ro -v <logs>:/logs/verifier r065-verifier bash -c 'cd /app && patch -p1 -s < /sol/fix.patch && bash /tests/test.sh'`. Leave out the patch step for the base run. The reward is in <logs>/reward.json.
+
 ## Lessons from the Elektra Issues sheet (read 2026-10-04)
 
 - The sheet is only for reporting a taskbot failure. Columns: Date, Name, CH Email, PR, Issue Summary, Error SS, Status (Pending/Picked/Resolved), Deccan Response. Leave Status at Pending; Deccan sets it.

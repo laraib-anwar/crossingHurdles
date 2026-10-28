@@ -1,0 +1,155 @@
+{
+ "frame_id": "t5_closepair",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 9.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 3,
+   "x": 18.00003,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 4,
+   "x": 0.0,
+   "y": 1.6,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 5,
+   "x": 9.0,
+   "y": 1.6,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 6,
+   "x": 18.00003,
+   "y": 1.6,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 4,
+   "E": 31000000000.0,
+   "A": 0.05,
+   "I": 0.005,
+   "rho": 2450.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 5,
+   "E": 31000000000.0,
+   "A": 0.05,
+   "I": 0.005,
+   "rho": 2450.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 6,
+   "E": 31000000000.0,
+   "A": 0.05,
+   "I": 0.005,
+   "rho": 2450.0
+  },
+  {
+   "id": 4,
+   "i": 4,
+   "j": 5,
+   "E": 205000000000.0,
+   "A": 0.0012,
+   "I": 4e-07,
+   "rho": 7850.0
+  },
+  {
+   "id": 5,
+   "i": 5,
+   "j": 6,
+   "E": 205000000000.0,
+   "A": 0.0012,
+   "I": 4e-07,
+   "rho": 7850.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 4,
+   "Fx": 8800.0,
+   "Fy": 0.0,
+   "Mz": 0.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 4,
+   "wx": 0.0,
+   "wy": -260.0
+  },
+  {
+   "member": 5,
+   "wx": 0.0,
+   "wy": -260.0
+  }
+ ],
+ "static_query_nodes": [
+  4,
+  5,
+  6
+ ],
+ "n_modes": 8,
+ "f_max_Hz": 30.0,
+ "harmonic_queries": [
+  {
+   "load_node": 5,
+   "load_dof": "uy",
+   "amplitude": 1500.0,
+   "f_Hz": 7.31,
+   "response_node": 4,
+   "response_dof": "rz"
+  }
+ ]
+}

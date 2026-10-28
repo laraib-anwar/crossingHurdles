@@ -1,0 +1,166 @@
+{
+ "frame_id": "tb_ssbeam",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": false
+   }
+  },
+  {
+   "id": 2,
+   "x": 2.2,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 5.5,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 8.8,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 5,
+   "x": 11.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": true,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 70000000000.0,
+   "A": 0.0085,
+   "I": 0.00024,
+   "rho": 2700.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 70000000000.0,
+   "A": 0.0085,
+   "I": 0.00024,
+   "rho": 2700.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 4,
+   "E": 70000000000.0,
+   "A": 0.0085,
+   "I": 0.00024,
+   "rho": 2700.0
+  },
+  {
+   "id": 4,
+   "i": 4,
+   "j": 5,
+   "E": 70000000000.0,
+   "A": 0.0085,
+   "I": 0.00024,
+   "rho": 2700.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 2,
+   "Fx": 0.0,
+   "Fy": -2250.0,
+   "Mz": 0.0
+  },
+  {
+   "node": 5,
+   "Fx": 1500.0,
+   "Fy": 0.0,
+   "Mz": 0.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 1,
+   "wx": 0.0,
+   "wy": -600.0
+  },
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -600.0
+  },
+  {
+   "member": 3,
+   "wx": 0.0,
+   "wy": -600.0
+  },
+  {
+   "member": 4,
+   "wx": 0.0,
+   "wy": -600.0
+  }
+ ],
+ "static_query_nodes": [
+  3,
+  2
+ ],
+ "n_modes": 5,
+ "f_max_Hz": 150.0,
+ "harmonic_queries": [
+  {
+   "load_node": 3,
+   "load_dof": "uy",
+   "amplitude": 90000.0,
+   "f_Hz": 31.0,
+   "response_node": 3,
+   "response_dof": "uy"
+  },
+  {
+   "load_node": 5,
+   "load_dof": "ux",
+   "amplitude": 50000.0,
+   "f_Hz": 70.0,
+   "response_node": 5,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 3,
+   "load_dof": "uy",
+   "amplitude": 40000.0,
+   "f_Hz": 130.0,
+   "response_node": 3,
+   "response_dof": "uy"
+  }
+ ]
+}

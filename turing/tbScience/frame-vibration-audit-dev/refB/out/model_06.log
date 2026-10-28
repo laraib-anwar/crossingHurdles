@@ -1,0 +1,9 @@
+statics done 0.1s split dev {'linear_axial_n8': '9.1e-20', 'linear_axial_n32': '9.1e-20', 'cubic_axial_n8': '1.1e-18'}
+design f_T=315.5 Hz base counts [4, 4, 4, 4, 4, 4, 4, 4, 4]
+level 0 dof 168 N_below 5 t 0.1s
+level 1 dof 348 N_below 5 t 0.1s
+level 2 dof 708 N_below 5 t 0.2s
+level 3 dof 1428 N_below 5 t 0.2s
+level 4 dof 2868 N_below 5 t 0.3s
+model_06 pass=True freq=5.97e-16 static=4.16e-16 harmonic=1.51e-16 count=5/5 t=1.1s
+exit=0

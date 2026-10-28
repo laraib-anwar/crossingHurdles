@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_02",
+ "shipped": false,
+ "style": "ss_beam",
+ "label": "simply supported beam with distributed load",
+ "attempts": 2,
+ "nodes": 5,
+ "members": 4,
+ "n_modes": 4,
+ "f1": 17.261612912682665,
+ "count_below": 4
+}

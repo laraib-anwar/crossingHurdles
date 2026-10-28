@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_01",
+ "shipped": false,
+ "style": "cantilever",
+ "label": "cantilever beam",
+ "attempts": 2,
+ "nodes": 4,
+ "members": 3,
+ "n_modes": 12,
+ "f1": 4.859171038006868,
+ "count_below": 9
+}

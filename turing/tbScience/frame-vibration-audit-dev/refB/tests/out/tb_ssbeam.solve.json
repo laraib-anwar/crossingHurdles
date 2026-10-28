@@ -1,0 +1,234 @@
+{
+ "frame_id": "tb_ssbeam",
+ "warnings": [],
+ "f_unc": [
+  5e-16,
+  5e-16,
+  5e-16,
+  5e-16,
+  1.5373489282748316e-15
+ ],
+ "U_unc": [
+  1.921807758780071e-17,
+  1.3609075567632919e-18,
+  1.4591148278581465e-18
+ ],
+ "static_unc_over_S": 1.0145322161388195e-19,
+ "diagnostics": {
+  "static": {
+   "split_max_dev_over_S": {
+    "linear_axial_n8": 6.340826350867622e-21,
+    "linear_axial_n32": 1.0145322161388195e-19,
+    "cubic_axial_n8": 1.3171225564603705e-20
+   },
+   "last_refinement_correction": 6.504274644460742e-20,
+   "stiffness_eig_min_over_max": 0.00042603800888643505
+  },
+  "design": {
+   "omega_T_Hz": 277.91871839603976,
+   "base_counts": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "lambda_T": [
+    3.1429673265515317,
+    4.714450989827297,
+    4.714450989827298,
+    3.1429673265515303
+   ],
+   "alpha_T": [
+    0.754489516382195,
+    1.1317342745732923,
+    1.1317342745732926,
+    0.7544895163821946
+   ]
+  },
+  "levels": [
+   {
+    "level": 0,
+    "dof": 80,
+    "counts_sum": 16,
+    "time_s": 0.06,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 2.1853238852332828e-10,
+    "complete_check": [
+     6,
+     6
+    ]
+   },
+   {
+    "level": 1,
+    "dof": 160,
+    "counts_sum": 32,
+    "time_s": 0.08,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 3.4934628185865573e-12,
+    "complete_check": [
+     6,
+     6
+    ]
+   },
+   {
+    "level": 2,
+    "dof": 320,
+    "counts_sum": 64,
+    "time_s": 0.13,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 1.4489453609418685e-11,
+    "complete_check": [
+     6,
+     6
+    ]
+   },
+   {
+    "level": 3,
+    "dof": 640,
+    "counts_sum": 128,
+    "time_s": 0.23,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 2.9264714435067404e-10,
+    "complete_check": [
+     6,
+     6
+    ]
+   },
+   {
+    "level": 4,
+    "dof": 1280,
+    "counts_sum": 256,
+    "time_s": 0.22,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 1.1570206723949181e-09,
+    "complete_check": [
+     6,
+     6
+    ]
+   }
+  ],
+  "frequencies": [
+   {
+    "i": 0,
+    "f_Hz": 11.107026361842664,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 8.890363019382923e-17,
+    "observed_orders": [
+     4.001,
+     4.0,
+     4.0
+    ]
+   },
+   {
+    "i": 1,
+    "f_Hz": 44.428105447370655,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 7.856983695294034e-15,
+    "observed_orders": [
+     3.998,
+     3.999,
+     4.0
+    ]
+   },
+   {
+    "i": 2,
+    "f_Hz": 99.96323725658397,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 6.83898393936859e-14,
+    "observed_orders": [
+     3.977,
+     3.994,
+     3.999
+    ]
+   },
+   {
+    "i": 3,
+    "f_Hz": 115.7216084584808,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 1.612808450250656e-19,
+    "observed_orders": [
+     5.999,
+     6.0,
+     5.991
+    ]
+   },
+   {
+    "i": 4,
+    "f_Hz": 177.71242178948262,
+    "unc_rel": 1.5373489282748316e-15,
+    "unc_rel_diagonal": 8.234764854531012e-13,
+    "observed_orders": [
+     3.954,
+     3.989,
+     3.997
+    ]
+   },
+   {
+    "i": 5,
+    "f_Hz": 277.6756590460666,
+    "unc_rel": 2.1124392482187866e-15,
+    "unc_rel_diagonal": 3.307308165048903e-12,
+    "observed_orders": [
+     3.959,
+     3.99,
+     3.997
+    ]
+   }
+  ],
+  "pairs": [],
+  "harmonic": [
+   {
+    "q": 0,
+    "U": -0.01921733456686184,
+    "unc_abs": 1.921807758780071e-17,
+    "observed_orders": [
+     4.002,
+     4.0,
+     4.0
+    ]
+   },
+   {
+    "q": 1,
+    "U": 0.0013609075567632917,
+    "unc_abs": 1.3609075567632919e-18,
+    "observed_orders": [
+     6.001,
+     6.154,
+     NaN
+    ]
+   },
+   {
+    "q": 2,
+    "U": -0.0014576716133042796,
+    "unc_abs": 1.4591148278581465e-18,
+    "observed_orders": [
+     3.981,
+     3.995,
+     3.999
+    ]
+   }
+  ],
+  "count": {
+   "N_finest": 4,
+   "inertia_orderings": {
+    "mmd": 4,
+    "rcm": 4
+   },
+   "N_by_level": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "crossings": [],
+   "separations": {
+    "above_rel_f": 0.18474947923742946,
+    "below_rel_f": 0.22852261024758183,
+    "finest_fe_above_rel_f": 0.1847494853107863,
+    "finest_fe_err_est_rel_lam": 1.0264694537848612e-08
+   }
+  },
+  "runtime_s": 0.92
+ }
+}

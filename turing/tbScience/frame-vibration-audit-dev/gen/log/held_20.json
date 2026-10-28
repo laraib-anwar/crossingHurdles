@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_20",
+ "shipped": false,
+ "style": "cantilever",
+ "label": "cantilever with distributed load",
+ "attempts": 4,
+ "nodes": 3,
+ "members": 2,
+ "n_modes": 11,
+ "f1": 7.4568785608006065,
+ "count_below": 4
+}

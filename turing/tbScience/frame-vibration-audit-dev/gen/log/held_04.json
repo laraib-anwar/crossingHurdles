@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_04",
+ "shipped": false,
+ "style": "portal",
+ "label": "multi-bay multi-storey frame",
+ "attempts": 3,
+ "nodes": 9,
+ "members": 10,
+ "n_modes": 9,
+ "f1": 6.368209951498851,
+ "count_below": 1
+}

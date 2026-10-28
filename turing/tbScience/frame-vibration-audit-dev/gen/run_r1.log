@@ -1,0 +1,2 @@
+{"frame_id": "held_19", "shipped": false, "style": "ss_beam", "label": "simply supported beam", "attempts": 74, "nodes": 3, "members": 2, "n_modes": 5, "f1": 19.271705108822175, "count_below": 4}
+{"frame_id": "held_20", "shipped": false, "style": "cantilever", "label": "cantilever with distributed load", "attempts": 4, "nodes": 3, "members": 2, "n_modes": 11, "f1": 7.4568785608006065, "count_below": 4}

@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_10",
+ "shipped": false,
+ "style": "near_sym",
+ "label": "close pair and distributed loads",
+ "attempts": 9,
+ "nodes": 4,
+ "members": 3,
+ "n_modes": 8,
+ "f1": 20.902006046948614,
+ "count_below": 8
+}

@@ -1,0 +1,120 @@
+ok   tb_cantilever solve runs tb_cantilever solved max_f_unc=6.0e-14 warnings=0 t=0.5s
+ok   cantilever roots match beta L = 1.875104, 4.694091, 7.854757 [1.8751040687119611, 4.694091132974175, 7.854757438237613]
+ok   cantilever frequencies vs closed form (bending + axial) <= 1e-11 worst 1.57e-16
+ok   cantilever count_below = 4 
+ok   cantilever statics vs closed form <= 1e-12 of scale worst 1.69e-16
+ok   cantilever harmonic tip receptances vs closed form <= 1e-11 worst 5.09e-16
+ok   tb_cantilever original -> pass 
+ok   tb_cantilever freq3_shift_+3e-09 -> FAIL 
+ok   tb_cantilever freq3_shift_-3e-09 -> FAIL 
+ok   tb_cantilever freq3_shift_+3e-10 -> pass 
+ok   tb_cantilever dropped_freq1 -> FAIL 
+ok   tb_cantilever count+1 -> FAIL 
+ok   tb_cantilever count-1 -> FAIL 
+ok   tb_cantilever static0_uy_shift_+3e-09_of_scale -> FAIL 
+ok   tb_cantilever static0_uy_shift_+3e-10_of_scale -> pass 
+ok   tb_cantilever static0_rz_shift_+3e-09_of_scale -> FAIL 
+ok   tb_cantilever static0_rz_shift_+3e-10_of_scale -> pass 
+ok   tb_cantilever harmonic0_ux_shift_+3e-09_rel -> FAIL 
+ok   tb_cantilever harmonic0_ux_shift_+3e-10_rel -> pass 
+ok   tb_cantilever harmonic2_rz_shift_+3e-09_rel -> FAIL 
+ok   tb_cantilever harmonic2_rz_shift_+3e-10_rel -> pass 
+ok   tb_cantilever section4_extra_key -> FAIL 
+ok   tb_cantilever frequencies_reversed -> FAIL 
+ok   tb_ssbeam solve runs tb_ssbeam solved max_f_unc=1.5e-15 warnings=0 t=0.9s
+ok   ss beam frequencies (beta L = n pi, axial fixed-free) <= 1e-11 worst 8.56e-17
+ok   ss beam count_below = 4 
+ok   ss beam statics vs closed form <= 1e-12 of scale worst 9.46e-17
+ok   ss beam harmonic (midspan, axial) vs closed form <= 1e-11 worst 9.68e-17
+ok   tb_ssbeam original -> pass 
+ok   tb_ssbeam freq2_shift_+3e-09 -> FAIL 
+ok   tb_ssbeam freq2_shift_-3e-09 -> FAIL 
+ok   tb_ssbeam freq2_shift_+3e-10 -> pass 
+ok   tb_ssbeam dropped_freq1 -> FAIL 
+ok   tb_ssbeam count+1 -> FAIL 
+ok   tb_ssbeam count-1 -> FAIL 
+ok   tb_ssbeam static0_uy_shift_+3e-09_of_scale -> FAIL 
+ok   tb_ssbeam static0_uy_shift_+3e-10_of_scale -> pass 
+ok   tb_ssbeam static1_rz_shift_+3e-09_rel -> FAIL 
+ok   tb_ssbeam static1_rz_shift_+3e-10_rel -> pass 
+ok   tb_ssbeam harmonic0_uy_shift_+3e-09_rel -> FAIL 
+ok   tb_ssbeam harmonic0_uy_shift_+3e-10_rel -> pass 
+ok   tb_ssbeam section4_extra_key -> FAIL 
+ok   tb_ssbeam frequencies_reversed -> FAIL 
+ok   tb_fixedmember solve runs tb_fixedmember solved max_f_unc=2.1e-12 warnings=0 t=1.0s
+ok   clamped-clamped roots match beta L = 4.730041, 7.853205, 10.995608 [4.730040744862704, 7.853204624095838, 10.995607838001671]
+ok   tie member clamped-clamped mode 1 (6.672769356 Hz) present <= 1e-11 closest 4.36e-17
+ok   tie member clamped-clamped mode 2 (18.393745678 Hz) present <= 1e-11 closest 1.60e-18
+ok   tie member clamped-clamped mode 3 (36.059095979 Hz) present <= 1e-11 closest 6.99e-16
+ok   tb_fixedmember original -> pass 
+ok   tb_fixedmember freq4_shift_+3e-09 -> FAIL 
+ok   tb_fixedmember freq4_shift_-3e-09 -> FAIL 
+ok   tb_fixedmember freq4_shift_+3e-10 -> pass 
+ok   tb_fixedmember dropped_freq1 -> FAIL 
+ok   tb_fixedmember count+1 -> FAIL 
+ok   tb_fixedmember count-1 -> FAIL 
+ok   tb_fixedmember static0_ux_shift_+3e-09_of_scale -> FAIL 
+ok   tb_fixedmember static0_ux_shift_+3e-10_of_scale -> pass 
+ok   tb_fixedmember static0_rz_shift_+3e-09_rel -> FAIL 
+ok   tb_fixedmember static0_rz_shift_+3e-10_rel -> pass 
+ok   tb_fixedmember harmonic0_ux_shift_+3e-09_rel -> FAIL 
+ok   tb_fixedmember harmonic0_ux_shift_+3e-10_rel -> pass 
+ok   tb_fixedmember harmonic1_rz_shift_+3e-09_of_scale -> FAIL 
+ok   tb_fixedmember harmonic1_rz_shift_+3e-10_of_scale -> pass 
+ok   tb_fixedmember section4_extra_key -> FAIL 
+ok   tb_fixedmember frequencies_reversed -> FAIL 
+ok   tb_stress16 solve runs tb_stress16 solved max_f_unc=5.0e-16 warnings=1 t=5.3s
+ok   stress16 solve runtime 5.8 s < 180 s 
+ok   stress16 referee uncertainty <= 1e-11 5.0e-16
+ok   stress16 count_below 99 equals finest-mesh inertia count levels [98, 99, 99, 99, 99]
+ok   tb_stress16 original -> pass 
+ok   tb_stress16 freq6_shift_+3e-09 -> FAIL 
+ok   tb_stress16 freq6_shift_-3e-09 -> FAIL 
+ok   tb_stress16 freq6_shift_+3e-10 -> pass 
+ok   tb_stress16 dropped_freq1 -> FAIL 
+ok   tb_stress16 count+1 -> FAIL 
+ok   tb_stress16 count-1 -> FAIL 
+ok   tb_stress16 static1_ux_shift_+3e-09_rel -> FAIL 
+ok   tb_stress16 static1_ux_shift_+3e-10_rel -> pass 
+ok   tb_stress16 static0_rz_shift_+3e-09_rel -> FAIL 
+ok   tb_stress16 static0_rz_shift_+3e-10_rel -> pass 
+ok   tb_stress16 harmonic0_ux_shift_+3e-09_of_scale -> FAIL 
+ok   tb_stress16 harmonic0_ux_shift_+3e-10_of_scale -> pass 
+ok   tb_stress16 section4_extra_key -> FAIL 
+ok   tb_stress16 frequencies_reversed -> FAIL 
+ok   model_02 original -> pass 
+ok   model_02 freq5_shift_+3e-09 -> FAIL 
+ok   model_02 freq5_shift_-3e-09 -> FAIL 
+ok   model_02 freq5_shift_+3e-10 -> pass 
+ok   model_02 dropped_freq1 -> FAIL 
+ok   model_02 count+1 -> FAIL 
+ok   model_02 count-1 -> FAIL 
+ok   model_02 static1_uy_shift_+3e-09_rel -> FAIL 
+ok   model_02 static1_uy_shift_+3e-10_rel -> pass 
+ok   model_02 static0_rz_shift_+3e-09_rel -> FAIL 
+ok   model_02 static0_rz_shift_+3e-10_rel -> pass 
+ok   model_02 harmonic0_uy_shift_+3e-09_of_scale -> FAIL 
+ok   model_02 harmonic0_uy_shift_+3e-10_of_scale -> pass 
+ok   model_02 harmonic1_rz_shift_+3e-09_of_scale -> FAIL 
+ok   model_02 harmonic1_rz_shift_+3e-10_of_scale -> pass 
+ok   model_02 section4_extra_key -> FAIL 
+ok   model_02 frequencies_reversed -> FAIL 
+ok   held_07 original -> pass 
+ok   held_07 freq5_shift_+3e-09 -> FAIL 
+ok   held_07 freq5_shift_-3e-09 -> FAIL 
+ok   held_07 freq5_shift_+3e-10 -> pass 
+ok   held_07 dropped_freq1 -> FAIL 
+ok   held_07 count+1 -> FAIL 
+ok   held_07 count-1 -> FAIL 
+ok   held_07 static1_uy_shift_+3e-09_of_scale -> FAIL 
+ok   held_07 static1_uy_shift_+3e-10_of_scale -> pass 
+ok   held_07 static0_rz_shift_+3e-09_rel -> FAIL 
+ok   held_07 static0_rz_shift_+3e-10_rel -> pass 
+ok   held_07 harmonic3_ux_shift_+3e-09_rel -> FAIL 
+ok   held_07 harmonic3_ux_shift_+3e-10_rel -> pass 
+ok   held_07 harmonic1_rz_shift_+3e-09_of_scale -> FAIL 
+ok   held_07 harmonic1_rz_shift_+3e-10_of_scale -> pass 
+ok   held_07 section4_extra_key -> FAIL 
+ok   held_07 frequencies_reversed -> FAIL 
+118 checks, 0 failed
+/Users/adnananwar/.venvs/tbs/bin/python tests/run_tests.py --pair   --pair    218.01s user 49.31s system 127% cpu 3:29.48 total

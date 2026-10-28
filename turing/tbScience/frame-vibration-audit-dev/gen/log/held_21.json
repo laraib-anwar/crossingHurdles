@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_21",
+ "shipped": false,
+ "style": "portal_mass",
+ "label": "masses and a close pair",
+ "attempts": 10,
+ "nodes": 6,
+ "members": 5,
+ "n_modes": 8,
+ "f1": 1.4380611995404455,
+ "count_below": 6
+}

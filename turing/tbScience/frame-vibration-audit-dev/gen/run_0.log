@@ -1,0 +1,7 @@
+{"frame_id": "model_01", "shipped": true, "style": "portal", "label": "single-storey portal frame (base case)", "attempts": 1, "nodes": 8, "members": 9, "n_modes": 4, "f1": 4.49793912087021, "count_below": 3}
+{"frame_id": "model_05", "shipped": true, "style": "portal_mass", "label": "frame with lumped masses, harmonic load above the first mode", "attempts": 2, "nodes": 12, "members": 14, "n_modes": 3, "f1": 20.260775239129217, "count_below": 1}
+{"frame_id": "held_03", "shipped": false, "style": "portal", "label": "two-bay or two-storey portal frame", "attempts": 1, "nodes": 6, "members": 6, "n_modes": 3, "f1": 13.308689845472776, "count_below": 1}
+{"frame_id": "held_07", "shipped": false, "style": "fixed_member", "label": "member-local modes within the count", "attempts": 2, "nodes": 6, "members": 4, "n_modes": 11, "f1": 38.759481257339644, "count_below": 5}
+{"frame_id": "held_11", "shipped": false, "style": "stocky", "label": "stocky members", "attempts": 1, "nodes": 4, "members": 3, "n_modes": 9, "f1": 46.37668973268084, "count_below": 3}
+{"frame_id": "held_15", "shipped": false, "style": "truss_like", "label": "triangulated frame", "attempts": 2, "nodes": 8, "members": 13, "n_modes": 10, "f1": 18.797466038044895, "count_below": 4}
+{"frame_id": "held_19", "shipped": false, "style": "ss_beam", "label": "simply supported beam", "attempts": 35, "nodes": 4, "members": 3, "n_modes": 3, "f1": 57.527677655768976, "count_below": 1}

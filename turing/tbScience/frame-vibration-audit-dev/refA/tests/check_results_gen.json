@@ -1,0 +1,814 @@
+{
+ "held_01": {
+  "exit_code": 0,
+  "runtime_s": 2.0,
+  "certified": true,
+  "count_below": 9,
+  "count_below_by_det_roots": 9,
+  "hp60_freq_max_rel": 4.2880786771657205e-16,
+  "hp60_harmonic_max_rel": 1.1626110677605856e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.149068234774854e-16,
+   "uy": 5.583413520755355e-16,
+   "rz": 6.1331396432741e-16
+  },
+  "det_roots_vs_pfe_max_rel": 2.9753977059954195e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 3.3013261428386864e-16,
+   "uy": 1.054092483370523e-14,
+   "rz": 1.2102109779185005e-14
+  },
+  "harmonic_vs_pfe_max_rel": 1.4450325682054038e-15,
+  "guarantees": {
+   "max_lambda": 8.451035013934824,
+   "max_alpha": 4.478072915039909,
+   "min_rel_gap_first_nmodes_plus1": 0.04778958954610357,
+   "fmax_min_rel_distance": 0.01632840099417554,
+   "harmonic_min_rel_distance": 0.4661293709620784
+  },
+  "warnings": []
+ },
+ "held_02": {
+  "exit_code": 0,
+  "runtime_s": 1.65,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 3.318856124228184e-16,
+  "hp60_harmonic_max_rel": 0.0,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 0.0,
+   "uy": 0.0,
+   "rz": 1.0242565081999153e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.8191672047105385e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 0.0,
+   "uy": 0.0,
+   "rz": 2.9264543244110432e-15
+  },
+  "harmonic_vs_pfe_max_rel": 0.0,
+  "guarantees": {
+   "max_lambda": 4.906575412794015,
+   "max_alpha": 1.633040239970466,
+   "min_rel_gap_first_nmodes_plus1": 0.016419818326360636,
+   "fmax_min_rel_distance": 0.086349224278784,
+   "harmonic_min_rel_distance": 0.4147733187361009
+  },
+  "warnings": []
+ },
+ "held_03": {
+  "exit_code": 0,
+  "runtime_s": 1.69,
+  "certified": true,
+  "count_below": 1,
+  "count_below_by_det_roots": 1,
+  "hp60_freq_max_rel": 4.138609593823933e-16,
+  "hp60_harmonic_max_rel": 5.299585094111736e-14,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 6.008535779525558e-17,
+   "uy": 1.9304142359864266e-16,
+   "rz": 1.2504039844215138e-16
+  },
+  "det_roots_vs_pfe_max_rel": 5.895284260759581e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 2.9780684989351085e-15,
+   "uy": 2.544319031967894e-15,
+   "rz": 3.5347717478389965e-15
+  },
+  "harmonic_vs_pfe_max_rel": 1.5598575759613826e-14,
+  "guarantees": {
+   "max_lambda": 3.556232750230671,
+   "max_alpha": 0.423626419268854,
+   "min_rel_gap_first_nmodes_plus1": 0.1902438789676888,
+   "fmax_min_rel_distance": 0.25403730105654554,
+   "harmonic_min_rel_distance": 0.11045260335124296
+  },
+  "warnings": []
+ },
+ "held_04": {
+  "exit_code": 0,
+  "runtime_s": 2.17,
+  "certified": true,
+  "count_below": 1,
+  "count_below_by_det_roots": 1,
+  "hp60_freq_max_rel": 3.9074259261921206e-16,
+  "hp60_harmonic_max_rel": 1.0687718151787209e-14,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.5941866382355096e-15,
+   "uy": 2.406881000070194e-16,
+   "rz": 1.0105979013068935e-15
+  },
+  "det_roots_vs_pfe_max_rel": 3.4083846855992306e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.06824064802362e-14,
+   "uy": 1.3036332676843158e-15,
+   "rz": 9.54744295898342e-16
+  },
+  "harmonic_vs_pfe_max_rel": 2.5758801995374448e-14,
+  "guarantees": {
+   "max_lambda": 6.32549454992878,
+   "max_alpha": 1.0567285005747775,
+   "min_rel_gap_first_nmodes_plus1": 0.02929542391152573,
+   "fmax_min_rel_distance": 0.40711200526031677,
+   "harmonic_min_rel_distance": 0.034237438521452446
+  },
+  "warnings": []
+ },
+ "held_05": {
+  "exit_code": 0,
+  "runtime_s": 2.46,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 5.245567995605288e-16,
+  "hp60_harmonic_max_rel": 8.4431240207795e-16,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 5.992176349379145e-15,
+   "uy": 8.284697062147532e-16,
+   "rz": 1.328576136934847e-15
+  },
+  "det_roots_vs_pfe_max_rel": 3.5127456499139953e-13,
+  "static_vs_classical_stiffness": {
+   "ux": 1.308583405198638e-14,
+   "uy": 3.5777048560899806e-15,
+   "rz": 2.51994000387167e-15
+  },
+  "harmonic_vs_pfe_max_rel": 1.505824844438561e-13,
+  "guarantees": {
+   "max_lambda": 4.004438609815753,
+   "max_alpha": 0.3419415443432727,
+   "min_rel_gap_first_nmodes_plus1": 0.012734805022075468,
+   "fmax_min_rel_distance": 0.11567692666569607,
+   "harmonic_min_rel_distance": 0.13749418777601707
+  },
+  "warnings": []
+ },
+ "held_06": {
+  "exit_code": 0,
+  "runtime_s": 1.85,
+  "certified": true,
+  "count_below": 6,
+  "count_below_by_det_roots": 6,
+  "hp60_freq_max_rel": 3.7518473029595576e-16,
+  "hp60_harmonic_max_rel": 3.0425808152011154e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 6.994296050851938e-16,
+   "uy": 3.8582656964867727e-16,
+   "rz": 3.19545848853995e-16
+  },
+  "det_roots_vs_pfe_max_rel": 8.060219158778636e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 7.162236802927317e-15,
+   "uy": 8.064946525387639e-16,
+   "rz": 2.350104108953627e-15
+  },
+  "harmonic_vs_pfe_max_rel": 2.0085626315763243e-15,
+  "guarantees": {
+   "max_lambda": 4.391945376893033,
+   "max_alpha": 0.4292773346987868,
+   "min_rel_gap_first_nmodes_plus1": 0.03506984681248526,
+   "fmax_min_rel_distance": 0.0691805219322642,
+   "harmonic_min_rel_distance": 0.37246900708924624
+  },
+  "warnings": []
+ },
+ "held_07": {
+  "exit_code": 0,
+  "runtime_s": 2.05,
+  "certified": true,
+  "count_below": 5,
+  "count_below_by_det_roots": 5,
+  "hp60_freq_max_rel": 4.642934460622839e-16,
+  "hp60_harmonic_max_rel": 3.657896930036159e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 2.8326667545024746e-16,
+   "uy": 1.2982652616587093e-16,
+   "rz": 2.2940170907974453e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.5416114485542494e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 8.746589331945787e-16,
+   "uy": 9.595295843516784e-18,
+   "rz": 7.215164585890245e-16
+  },
+  "harmonic_vs_pfe_max_rel": 1.2713305191903968e-14,
+  "guarantees": {
+   "max_lambda": 10.90696993868035,
+   "max_alpha": 5.627521354326818,
+   "min_rel_gap_first_nmodes_plus1": 0.009022489136048861,
+   "fmax_min_rel_distance": 0.000389333805436598,
+   "harmonic_min_rel_distance": 0.03559906094429299
+  },
+  "warnings": []
+ },
+ "held_08": {
+  "exit_code": 0,
+  "runtime_s": 1.83,
+  "certified": true,
+  "count_below": 7,
+  "count_below_by_det_roots": 7,
+  "hp60_freq_max_rel": 4.825395255028124e-16,
+  "hp60_harmonic_max_rel": 7.192901959151853e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.8008636798388126e-16,
+   "uy": 3.1739662255496825e-17,
+   "rz": 7.87972644583954e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.2529534621517087e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 4.821701534424707e-15,
+   "uy": 2.786291288656817e-16,
+   "rz": 3.675272194282844e-15
+  },
+  "harmonic_vs_pfe_max_rel": 1.4001067353080603e-14,
+  "guarantees": {
+   "max_lambda": 12.073977604849595,
+   "max_alpha": 1.8804598746750678,
+   "min_rel_gap_first_nmodes_plus1": 0.09503800953082253,
+   "fmax_min_rel_distance": 0.09183042872805869,
+   "harmonic_min_rel_distance": 0.12665707123672676
+  },
+  "warnings": []
+ },
+ "held_09": {
+  "exit_code": 0,
+  "runtime_s": 1.52,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 5.405068726998456e-16,
+  "hp60_harmonic_max_rel": 1.0334686441043581e-14,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.6453868212481082e-16,
+   "uy": 8.055647213485161e-17,
+   "rz": 3.7314342867065973e-16
+  },
+  "det_roots_vs_pfe_max_rel": 2.7755575615628914e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.5768999150256643e-15,
+   "uy": 1.8934820508804295e-16,
+   "rz": 1.4420272203233028e-15
+  },
+  "harmonic_vs_pfe_max_rel": 3.674914261017239e-14,
+  "guarantees": {
+   "max_lambda": 7.162753522834867,
+   "max_alpha": 2.250093969999263,
+   "min_rel_gap_first_nmodes_plus1": 0.008972077160728231,
+   "fmax_min_rel_distance": 0.00707740518451927,
+   "harmonic_min_rel_distance": 0.05759462338583954
+  },
+  "warnings": []
+ },
+ "held_10": {
+  "exit_code": 0,
+  "runtime_s": 1.5,
+  "certified": true,
+  "count_below": 8,
+  "count_below_by_det_roots": 8,
+  "hp60_freq_max_rel": 6.192052607113318e-16,
+  "hp60_harmonic_max_rel": 1.032359419062574e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 4.8204283835648e-17,
+   "uy": 1.4829902641800483e-16,
+   "rz": 2.448029622044791e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.141931159689193e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 3.090679517408014e-15,
+   "uy": 2.2976248580805645e-15,
+   "rz": 3.7204373906765696e-15
+  },
+  "harmonic_vs_pfe_max_rel": 4.137197688094618e-15,
+  "guarantees": {
+   "max_lambda": 7.713444201176872,
+   "max_alpha": 2.313081214947309,
+   "min_rel_gap_first_nmodes_plus1": 0.007786080483418667,
+   "fmax_min_rel_distance": 0.11786692311781022,
+   "harmonic_min_rel_distance": 0.19498982180729174
+  },
+  "warnings": []
+ },
+ "held_11": {
+  "exit_code": 0,
+  "runtime_s": 1.19,
+  "certified": true,
+  "count_below": 3,
+  "count_below_by_det_roots": 3,
+  "hp60_freq_max_rel": 2.2866233696695424e-16,
+  "hp60_harmonic_max_rel": 1.7686322395724109e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.2136843543389697e-16,
+   "uy": 9.229832367324775e-17,
+   "rz": 3.3922874589964564e-17
+  },
+  "det_roots_vs_pfe_max_rel": 3.397282455352979e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.2929341343346567e-16,
+   "uy": 3.112194909368844e-16,
+   "rz": 2.5123704642837077e-16
+  },
+  "harmonic_vs_pfe_max_rel": 8.385745157353241e-15,
+  "guarantees": {
+   "max_lambda": 4.954168920958318,
+   "max_alpha": 4.273534607369037,
+   "min_rel_gap_first_nmodes_plus1": 0.020224420139147048,
+   "fmax_min_rel_distance": 0.3225940222965632,
+   "harmonic_min_rel_distance": 0.02805699732363076
+  },
+  "warnings": []
+ },
+ "held_12": {
+  "exit_code": 0,
+  "runtime_s": 1.26,
+  "certified": true,
+  "count_below": 8,
+  "count_below_by_det_roots": 8,
+  "hp60_freq_max_rel": 5.569537495584495e-16,
+  "hp60_harmonic_max_rel": 1.2402546331093344e-17,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 4.8449491748906725e-17,
+   "uy": 1.6392464480232113e-16,
+   "rz": 7.0897223999731e-17
+  },
+  "det_roots_vs_pfe_max_rel": 3.530509218307998e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 2.2294468885415224e-16,
+   "uy": 1.2268401587797808e-14,
+   "rz": 1.285694989590353e-14
+  },
+  "harmonic_vs_pfe_max_rel": 4.2609709721700117e-16,
+  "guarantees": {
+   "max_lambda": 6.558659416066237,
+   "max_alpha": 0.8389415617602942,
+   "min_rel_gap_first_nmodes_plus1": 0.09605031092952454,
+   "fmax_min_rel_distance": 0.12192698885347997,
+   "harmonic_min_rel_distance": 0.13778087004470607
+  },
+  "warnings": []
+ },
+ "held_13": {
+  "exit_code": 0,
+  "runtime_s": 1.2,
+  "certified": true,
+  "count_below": 9,
+  "count_below_by_det_roots": 9,
+  "hp60_freq_max_rel": 6.435821431152698e-16,
+  "hp60_harmonic_max_rel": 3.598658799415361e-16,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.7516221213667217e-15,
+   "uy": 1.0251826385914302e-15,
+   "rz": 8.348338676437875e-16
+  },
+  "det_roots_vs_pfe_max_rel": 4.063416270128073e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 5.756664791945393e-14,
+   "uy": 3.1818346547799734e-14,
+   "rz": 4.02024165976552e-14
+  },
+  "harmonic_vs_pfe_max_rel": 1.876224041249474e-13,
+  "guarantees": {
+   "max_lambda": 5.000224404842674,
+   "max_alpha": 0.3831728163216738,
+   "min_rel_gap_first_nmodes_plus1": 0.02758974327999031,
+   "fmax_min_rel_distance": 0.026125989059800014,
+   "harmonic_min_rel_distance": 0.30648662632096557
+  },
+  "warnings": []
+ },
+ "held_14": {
+  "exit_code": 0,
+  "runtime_s": 1.17,
+  "certified": true,
+  "count_below": 10,
+  "count_below_by_det_roots": 10,
+  "hp60_freq_max_rel": 3.325297166944209e-16,
+  "hp60_harmonic_max_rel": 1.5330344644940609e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.2261661476346886e-16,
+   "uy": 8.516530129332745e-17,
+   "rz": 2.5243903678116006e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.9968028886505635e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 7.68779793145336e-16,
+   "uy": 4.1457584047465355e-16,
+   "rz": 6.708626255166192e-16
+  },
+  "harmonic_vs_pfe_max_rel": 4.811019147254794e-15,
+  "guarantees": {
+   "max_lambda": 4.194560581955691,
+   "max_alpha": 1.8606621162211174,
+   "min_rel_gap_first_nmodes_plus1": 0.05855596849512801,
+   "fmax_min_rel_distance": 0.08811201366268662,
+   "harmonic_min_rel_distance": 0.19634666895234254
+  },
+  "warnings": []
+ },
+ "held_15": {
+  "exit_code": 0,
+  "runtime_s": 1.44,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 4.547834002560107e-16,
+  "hp60_harmonic_max_rel": 1.813998912606774e-14,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 2.1167640248968994e-16,
+   "uy": 2.9063667686331976e-16,
+   "rz": 2.536069462834054e-16
+  },
+  "det_roots_vs_pfe_max_rel": 4.7628567756419216e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.0843096444054929e-15,
+   "uy": 1.463543115575595e-15,
+   "rz": 1.533042563671092e-15
+  },
+  "harmonic_vs_pfe_max_rel": 3.0751583851957024e-14,
+  "guarantees": {
+   "max_lambda": 5.99115773058491,
+   "max_alpha": 0.9087702730093444,
+   "min_rel_gap_first_nmodes_plus1": 0.04804535041587665,
+   "fmax_min_rel_distance": 0.011480970947263192,
+   "harmonic_min_rel_distance": 0.3258110762639057
+  },
+  "warnings": []
+ },
+ "held_16": {
+  "exit_code": 0,
+  "runtime_s": 1.0,
+  "certified": true,
+  "count_below": 5,
+  "count_below_by_det_roots": 5,
+  "hp60_freq_max_rel": 5.522398791439112e-16,
+  "hp60_harmonic_max_rel": 5.47289857408927e-16,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.1505518429005256e-16,
+   "uy": 1.959001509920453e-16,
+   "rz": 2.1882079140488103e-16
+  },
+  "det_roots_vs_pfe_max_rel": 4.318767565791859e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 4.48058602869855e-16,
+   "uy": 2.9298711042467714e-16,
+   "rz": 3.608121872802886e-16
+  },
+  "harmonic_vs_pfe_max_rel": 3.4254683642655826e-15,
+  "guarantees": {
+   "max_lambda": 4.3121518809681225,
+   "max_alpha": 0.3962781685120275,
+   "min_rel_gap_first_nmodes_plus1": 0.04681206192529275,
+   "fmax_min_rel_distance": 0.00013365365495476844,
+   "harmonic_min_rel_distance": 0.07719018365207864
+  },
+  "warnings": []
+ },
+ "held_17": {
+  "exit_code": 0,
+  "runtime_s": 1.31,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 6.807081130565512e-16,
+  "hp60_harmonic_max_rel": 3.0825791187482705e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 2.925362854231077e-14,
+   "uy": 2.750524493857278e-14,
+   "rz": 1.448567082029539e-14
+  },
+  "det_roots_vs_pfe_max_rel": 6.45039577307216e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 4.1229461410553596e-14,
+   "uy": 3.913477652856596e-14,
+   "rz": 1.3370407332879909e-14
+  },
+  "harmonic_vs_pfe_max_rel": 1.250378988158821e-14,
+  "guarantees": {
+   "max_lambda": 6.394309011480194,
+   "max_alpha": 0.3811456561509608,
+   "min_rel_gap_first_nmodes_plus1": 0.10187099041812697,
+   "fmax_min_rel_distance": 0.1752230870096637,
+   "harmonic_min_rel_distance": 0.16981086046425498
+  },
+  "warnings": []
+ },
+ "held_18": {
+  "exit_code": 0,
+  "runtime_s": 1.28,
+  "certified": true,
+  "count_below": 6,
+  "count_below_by_det_roots": 6,
+  "hp60_freq_max_rel": 2.2526631596630095e-16,
+  "hp60_harmonic_max_rel": 4.385865088579746e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.343832598777595e-16,
+   "uy": 4.579901059834136e-16,
+   "rz": 1.9152375346266517e-16
+  },
+  "det_roots_vs_pfe_max_rel": 8.104628079763643e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 4.758127528237699e-15,
+   "uy": 3.2221774767824138e-15,
+   "rz": 4.178729588002795e-15
+  },
+  "harmonic_vs_pfe_max_rel": 2.687701655862091e-13,
+  "guarantees": {
+   "max_lambda": 4.380274464209901,
+   "max_alpha": 1.1419957433803822,
+   "min_rel_gap_first_nmodes_plus1": 0.03915551537270834,
+   "fmax_min_rel_distance": 0.04196263489034502,
+   "harmonic_min_rel_distance": 0.039104078457105285
+  },
+  "warnings": []
+ },
+ "held_19": {
+  "exit_code": 0,
+  "runtime_s": 0.88,
+  "certified": true,
+  "count_below": 1,
+  "count_below_by_det_roots": 1,
+  "hp60_freq_max_rel": 4.072678870596597e-16,
+  "hp60_harmonic_max_rel": 0.0,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 9.188793345791161e-15,
+   "uy": 2.264917377305474e-18,
+   "rz": 2.630705788686702e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.175237850427948e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.0896238781018784e-14,
+   "uy": 1.2301163654913501e-15,
+   "rz": 1.8992933911660618e-15
+  },
+  "harmonic_vs_pfe_max_rel": 0.0,
+  "guarantees": {
+   "max_lambda": 2.216480290363531,
+   "max_alpha": 0.6229639323164147,
+   "min_rel_gap_first_nmodes_plus1": 0.17014925981556117,
+   "fmax_min_rel_distance": 0.021039737836139993,
+   "harmonic_min_rel_distance": 0.24288965539892482
+  },
+  "warnings": []
+ },
+ "held_20": {
+  "exit_code": 0,
+  "runtime_s": 1.17,
+  "certified": true,
+  "count_below": 1,
+  "count_below_by_det_roots": 1,
+  "hp60_freq_max_rel": 3.113640459276909e-16,
+  "hp60_harmonic_max_rel": 0.0,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.8006622344700865e-17,
+   "uy": 1.9898564804950155e-16,
+   "rz": 2.6668089852337196e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.419486915845482e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.122993335752286e-16,
+   "uy": 2.582374651068086e-14,
+   "rz": 2.916818353393643e-14
+  },
+  "harmonic_vs_pfe_max_rel": 0.0,
+  "guarantees": {
+   "max_lambda": 5.278898973193425,
+   "max_alpha": 0.9422429326480577,
+   "min_rel_gap_first_nmodes_plus1": 0.13675971666016085,
+   "fmax_min_rel_distance": 0.5655695439930359,
+   "harmonic_min_rel_distance": 0.5877500554953344
+  },
+  "warnings": []
+ },
+ "held_21": {
+  "exit_code": 0,
+  "runtime_s": 1.22,
+  "certified": true,
+  "count_below": 6,
+  "count_below_by_det_roots": 6,
+  "hp60_freq_max_rel": 2.2668947971814107e-16,
+  "hp60_harmonic_max_rel": 7.849932666750146e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.3332796723250189e-16,
+   "uy": 4.184035151266437e-15,
+   "rz": 2.045088096355776e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.441691376337985e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 7.693792604261533e-15,
+   "uy": 7.949464973308043e-15,
+   "rz": 7.931494073044534e-15
+  },
+  "harmonic_vs_pfe_max_rel": 1.421443918129704e-14,
+  "guarantees": {
+   "max_lambda": 6.502772984441623,
+   "max_alpha": 0.5420262961747654,
+   "min_rel_gap_first_nmodes_plus1": 0.005679380420812841,
+   "fmax_min_rel_distance": 0.21466499694280117,
+   "harmonic_min_rel_distance": 0.01309411996504073
+  },
+  "warnings": []
+ },
+ "held_22": {
+  "exit_code": 0,
+  "runtime_s": 1.22,
+  "certified": true,
+  "count_below": 4,
+  "count_below_by_det_roots": 4,
+  "hp60_freq_max_rel": 4.565279086381965e-16,
+  "hp60_harmonic_max_rel": 2.3373198721977534e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.8139855893424217e-16,
+   "uy": 6.247685924680109e-16,
+   "rz": 1.110322757663371e-16
+  },
+  "det_roots_vs_pfe_max_rel": 8.926193117986259e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 3.1303233192035485e-14,
+   "uy": 1.0435966268460981e-14,
+   "rz": 7.777330208363374e-15
+  },
+  "harmonic_vs_pfe_max_rel": 7.656317510771901e-15,
+  "guarantees": {
+   "max_lambda": 3.9576614945253112,
+   "max_alpha": 0.24718787473771014,
+   "min_rel_gap_first_nmodes_plus1": 0.09198669232678292,
+   "fmax_min_rel_distance": 0.003542824113202947,
+   "harmonic_min_rel_distance": 0.17365134003917104
+  },
+  "warnings": []
+ },
+ "model_01": {
+  "exit_code": 0,
+  "runtime_s": 1.13,
+  "certified": true,
+  "count_below": 3,
+  "count_below_by_det_roots": 3,
+  "hp60_freq_max_rel": 4.356823206267278e-16,
+  "hp60_harmonic_max_rel": 2.1959841836655407e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 5.448937879645927e-16,
+   "uy": 8.327976958523305e-16,
+   "rz": 7.042406069781356e-16
+  },
+  "det_roots_vs_pfe_max_rel": 1.9118040484045196e-13,
+  "static_vs_classical_stiffness": {
+   "ux": 4.8299773484831347e-14,
+   "uy": 1.8284362148638374e-13,
+   "rz": 6.299402541317391e-14
+  },
+  "harmonic_vs_pfe_max_rel": 1.5706893566668753e-14,
+  "guarantees": {
+   "max_lambda": 3.912954095353685,
+   "max_alpha": 0.2798829157727532,
+   "min_rel_gap_first_nmodes_plus1": 0.08740170160499128,
+   "fmax_min_rel_distance": 0.05725430178144608,
+   "harmonic_min_rel_distance": 0.06790364339893551
+  },
+  "warnings": []
+ },
+ "model_02": {
+  "exit_code": 0,
+  "runtime_s": 1.06,
+  "certified": true,
+  "count_below": 9,
+  "count_below_by_det_roots": 9,
+  "hp60_freq_max_rel": 3.7592485025558784e-16,
+  "hp60_harmonic_max_rel": 4.751719682411695e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.3253107378582775e-17,
+   "uy": 2.787794174496497e-16,
+   "rz": 6.601995640472439e-17
+  },
+  "det_roots_vs_pfe_max_rel": 3.652633751016765e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 2.3863865265655316e-16,
+   "uy": 8.45933678240387e-17,
+   "rz": 6.985917996827825e-16
+  },
+  "harmonic_vs_pfe_max_rel": 3.855668638826609e-15,
+  "guarantees": {
+   "max_lambda": 11.89478856937557,
+   "max_alpha": 3.7844721851294163,
+   "min_rel_gap_first_nmodes_plus1": 0.021212458267443335,
+   "fmax_min_rel_distance": 0.13422132489568228,
+   "harmonic_min_rel_distance": 0.1715481971623538
+  },
+  "warnings": []
+ },
+ "model_03": {
+  "exit_code": 0,
+  "runtime_s": 1.22,
+  "certified": true,
+  "count_below": 7,
+  "count_below_by_det_roots": 7,
+  "hp60_freq_max_rel": 5.072500960658673e-16,
+  "hp60_harmonic_max_rel": 1.2404313460101942e-15,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 8.911812124628748e-16,
+   "uy": 7.433364279054351e-17,
+   "rz": 3.9624748898522727e-16
+  },
+  "det_roots_vs_pfe_max_rel": 4.1522341120980855e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 2.6198942053089756e-15,
+   "uy": 1.5430105726939958e-16,
+   "rz": 9.25793351875845e-16
+  },
+  "harmonic_vs_pfe_max_rel": 1.4005410688308434e-13,
+  "guarantees": {
+   "max_lambda": 10.10978482530081,
+   "max_alpha": 1.5116761070038174,
+   "min_rel_gap_first_nmodes_plus1": 0.1775400818749131,
+   "fmax_min_rel_distance": 0.11519065872886247,
+   "harmonic_min_rel_distance": 0.0365765350421664
+  },
+  "warnings": []
+ },
+ "model_04": {
+  "exit_code": 0,
+  "runtime_s": 1.09,
+  "certified": true,
+  "count_below": 6,
+  "count_below_by_det_roots": 6,
+  "hp60_freq_max_rel": 3.07364039798455e-16,
+  "hp60_harmonic_max_rel": 6.518174317970443e-16,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.8092296241627276e-16,
+   "uy": 1.297406700505595e-16,
+   "rz": 3.0397744189933077e-16
+  },
+  "det_roots_vs_pfe_max_rel": 3.597122599785507e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 5.609282217714489e-16,
+   "uy": 1.5085965054211625e-16,
+   "rz": 4.0286106744782914e-16
+  },
+  "harmonic_vs_pfe_max_rel": 9.77827152310895e-16,
+  "guarantees": {
+   "max_lambda": 9.692732397927719,
+   "max_alpha": 5.831184475896146,
+   "min_rel_gap_first_nmodes_plus1": 0.009809119071692685,
+   "fmax_min_rel_distance": 0.1272429330375553,
+   "harmonic_min_rel_distance": 0.35206020537118643
+  },
+  "warnings": []
+ },
+ "model_05": {
+  "exit_code": 0,
+  "runtime_s": 1.13,
+  "certified": true,
+  "count_below": 1,
+  "count_below_by_det_roots": 1,
+  "hp60_freq_max_rel": 1.8462952605435521e-16,
+  "hp60_harmonic_max_rel": 0.0,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 3.258878285580489e-16,
+   "uy": 4.1933456539345184e-16,
+   "rz": 4.342667006230177e-16
+  },
+  "det_roots_vs_pfe_max_rel": 2.2315482794965646e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 1.6375608578361904e-15,
+   "uy": 3.028610004224631e-16,
+   "rz": 2.8897569038069737e-15
+  },
+  "harmonic_vs_pfe_max_rel": 0.0,
+  "guarantees": {
+   "max_lambda": 2.4102402363732827,
+   "max_alpha": 0.39321308137696653,
+   "min_rel_gap_first_nmodes_plus1": 0.20964016083447046,
+   "fmax_min_rel_distance": 0.05092864722085466,
+   "harmonic_min_rel_distance": 0.31735116094170335
+  },
+  "warnings": []
+ },
+ "model_06": {
+  "exit_code": 0,
+  "runtime_s": 0.99,
+  "certified": true,
+  "count_below": 5,
+  "count_below_by_det_roots": 5,
+  "hp60_freq_max_rel": 4.230082007589905e-16,
+  "hp60_harmonic_max_rel": 1.790996523618441e-16,
+  "hp60_static_rel_to_kind_max": {
+   "ux": 1.5097657003338629e-16,
+   "uy": 2.4497492097182084e-16,
+   "rz": 2.0793571075923254e-16
+  },
+  "det_roots_vs_pfe_max_rel": 4.374278717023117e-14,
+  "static_vs_classical_stiffness": {
+   "ux": 7.109820087123995e-16,
+   "uy": 5.582474839401534e-16,
+   "rz": 2.8351430905075205e-16
+  },
+  "harmonic_vs_pfe_max_rel": 7.828140366954738e-16,
+  "guarantees": {
+   "max_lambda": 4.902524169473068,
+   "max_alpha": 1.1602284581555922,
+   "min_rel_gap_first_nmodes_plus1": 0.05778993483519157,
+   "fmax_min_rel_distance": 0.019133910124291997,
+   "harmonic_min_rel_distance": 0.30942429257451076
+  },
+  "warnings": []
+ }
+}

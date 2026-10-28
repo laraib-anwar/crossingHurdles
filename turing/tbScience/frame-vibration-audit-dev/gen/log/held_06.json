@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_06",
+ "shipped": false,
+ "style": "portal_mass",
+ "label": "larger frame with lumped masses",
+ "attempts": 2,
+ "nodes": 9,
+ "members": 10,
+ "n_modes": 9,
+ "f1": 1.0400089118947005,
+ "count_below": 6
+}

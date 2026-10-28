@@ -1,0 +1,137 @@
+{
+ "frame_id": "tb_fixedmember",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 0.0,
+   "y": 4.2,
+   "mass_kg": 3500.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 7.5,
+   "y": 4.35,
+   "mass_kg": 2750.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 7.5,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 210000000000.0,
+   "A": 0.0091,
+   "I": 8.4e-05,
+   "rho": 7850.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 210000000000.0,
+   "A": 0.0116,
+   "I": 0.00023,
+   "rho": 7850.0
+  },
+  {
+   "id": 3,
+   "i": 4,
+   "j": 3,
+   "E": 210000000000.0,
+   "A": 0.0091,
+   "I": 8.4e-05,
+   "rho": 7850.0
+  },
+  {
+   "id": 4,
+   "i": 1,
+   "j": 4,
+   "E": 20000000000.0,
+   "A": 0.003,
+   "I": 2.5e-06,
+   "rho": 1500.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 2,
+   "Fx": 48000.0,
+   "Fy": -23000.0,
+   "Mz": 0.0
+  },
+  {
+   "node": 3,
+   "Fx": 0.0,
+   "Fy": -31000.0,
+   "Mz": -7600.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -18500.0
+  },
+  {
+   "member": 4,
+   "wx": 0.0,
+   "wy": -2100.0
+  }
+ ],
+ "static_query_nodes": [
+  2,
+  3
+ ],
+ "n_modes": 9,
+ "f_max_Hz": 30.0,
+ "harmonic_queries": [
+  {
+   "load_node": 2,
+   "load_dof": "ux",
+   "amplitude": 40000.0,
+   "f_Hz": 2.9,
+   "response_node": 3,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 3,
+   "load_dof": "uy",
+   "amplitude": 26000.0,
+   "f_Hz": 11.4,
+   "response_node": 2,
+   "response_dof": "rz"
+  }
+ ]
+}

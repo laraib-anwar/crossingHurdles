@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_16",
+ "shipped": false,
+ "style": "truss_like",
+ "label": "larger triangulated frame",
+ "attempts": 6,
+ "nodes": 8,
+ "members": 13,
+ "n_modes": 6,
+ "f1": 25.46079252050755,
+ "count_below": 6
+}

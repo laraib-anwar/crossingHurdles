@@ -1,0 +1,62 @@
+{
+ "no_j0": {
+  "fails": 21,
+  "total": 28,
+  "reasons": {
+   "crash": 12,
+   "frequencies_Hz[5]": 3,
+   "frequencies_Hz[6]": 2,
+   "count_below": 4
+  }
+ },
+ "fe1_consistent": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "held_01": 1,
+   "frequencies_Hz[0]": 9,
+   "count_below": 12,
+   "held_07": 1,
+   "held_08": 1,
+   "held_10": 1,
+   "held_20": 1,
+   "model_03": 1,
+   "model_04": 1
+  }
+ },
+ "fe4_consistent": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "count_below": 1,
+   "frequencies_Hz[0]": 27
+  }
+ },
+ "lumped_loads": {
+  "fails": 27,
+  "total": 28,
+  "reasons": {
+   "static[0].uy": 5,
+   "static[0].ux": 21,
+   "static[2].uy": 1
+  }
+ },
+ "no_axial": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "count_below": 19,
+   "static[0].ux": 9
+  }
+ },
+ "legacy": {
+  "fails": 28,
+  "total": 28,
+  "reasons": {
+   "count_below": 21,
+   "static[0].uy": 1,
+   "static[0].ux": 5,
+   "frequencies_Hz[0]": 1
+  }
+ }
+}

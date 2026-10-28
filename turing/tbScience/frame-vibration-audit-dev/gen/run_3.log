@@ -1,0 +1,7 @@
+{"frame_id": "model_04", "shipped": true, "style": "near_sym", "label": "nearly symmetric frame with close frequencies", "attempts": 8, "nodes": 4, "members": 3, "n_modes": 11, "f1": 47.67726917853085, "count_below": 6}
+{"frame_id": "held_02", "shipped": false, "style": "ss_beam", "label": "simply supported beam with distributed load", "attempts": 5, "nodes": 5, "members": 4, "n_modes": 8, "f1": 14.73825334866113, "count_below": 4}
+{"frame_id": "held_06", "shipped": false, "style": "portal_mass", "label": "larger frame with lumped masses", "attempts": 2, "nodes": 9, "members": 10, "n_modes": 9, "f1": 1.0400089118947005, "count_below": 6}
+{"frame_id": "held_10", "shipped": false, "style": "near_sym", "label": "close pair and distributed loads", "attempts": 9, "nodes": 4, "members": 3, "n_modes": 8, "f1": 20.902006046948614, "count_below": 8}
+{"frame_id": "held_14", "shipped": false, "style": "arch", "label": "loaded polygonal arch", "attempts": 1, "nodes": 7, "members": 6, "n_modes": 10, "f1": 41.48275292778987, "count_below": 10}
+{"frame_id": "held_18", "shipped": false, "style": "portal", "label": "harmonic load above the first mode", "attempts": 2, "nodes": 9, "members": 10, "n_modes": 9, "f1": 15.662531152957852, "count_below": 6}
+{"frame_id": "held_22", "shipped": false, "style": "portal", "label": "large frame", "attempts": 29, "nodes": 12, "members": 15, "n_modes": 4, "f1": 2.8746096459358554, "count_below": 4}

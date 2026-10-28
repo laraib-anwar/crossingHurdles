@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_17",
+ "shipped": false,
+ "style": "portal",
+ "label": "harmonic load below the first mode",
+ "attempts": 15,
+ "nodes": 8,
+ "members": 7,
+ "n_modes": 5,
+ "f1": 4.208526114912349,
+ "count_below": 4
+}

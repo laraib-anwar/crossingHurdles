@@ -1,0 +1,129 @@
+{
+ "frame_id": "model_04",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 5.0949,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 3,
+   "x": 0.0,
+   "y": 3.8375,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 5.0949,
+   "y": 3.8375,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 3,
+   "E": 200000000000.0,
+   "A": 0.048273,
+   "I": 0.005,
+   "rho": 7800.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 4,
+   "E": 200000000000.0,
+   "A": 0.041293,
+   "I": 0.0042254,
+   "rho": 7800.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 4,
+   "E": 200000000000.0,
+   "A": 0.05,
+   "I": 0.005,
+   "rho": 7800.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 3,
+   "Fx": -74734.0,
+   "Fy": 1073.2,
+   "Mz": 26408.0
+  },
+  {
+   "node": 3,
+   "Fx": -19156.0,
+   "Fy": -23996.0,
+   "Mz": -27942.0
+  },
+  {
+   "node": 3,
+   "Fx": 66607.0,
+   "Fy": 38267.0,
+   "Mz": -38440.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 3,
+   "wx": 0.0,
+   "wy": -10391.0
+  }
+ ],
+ "static_query_nodes": [
+  3,
+  4
+ ],
+ "n_modes": 11,
+ "f_max_Hz": 382.14,
+ "harmonic_queries": [
+  {
+   "load_node": 4,
+   "load_dof": "rz",
+   "amplitude": 49231.0,
+   "f_Hz": 74.119,
+   "response_node": 4,
+   "response_dof": "rz"
+  },
+  {
+   "load_node": 3,
+   "load_dof": "ux",
+   "amplitude": 26487.0,
+   "f_Hz": 30.892,
+   "response_node": 4,
+   "response_dof": "uy"
+  }
+ ]
+}

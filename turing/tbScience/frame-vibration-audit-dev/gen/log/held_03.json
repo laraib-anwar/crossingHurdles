@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_03",
+ "shipped": false,
+ "style": "portal",
+ "label": "two-bay or two-storey portal frame",
+ "attempts": 1,
+ "nodes": 6,
+ "members": 6,
+ "n_modes": 3,
+ "f1": 13.308689845472776,
+ "count_below": 1
+}

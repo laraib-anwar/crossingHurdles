@@ -1,0 +1,243 @@
+{
+ "frame_id": "tb_cantilever",
+ "warnings": [],
+ "f_unc": [
+  5e-16,
+  5e-16,
+  5e-16,
+  5.529846407141624e-15,
+  5e-16,
+  5.995187908338067e-14
+ ],
+ "U_unc": [
+  2.5490616139050244e-17,
+  3.477245948043238e-19,
+  6.456910762116076e-18
+ ],
+ "static_unc_over_S": 8.330272034803114e-20,
+ "diagnostics": {
+  "static": {
+   "split_max_dev_over_S": {
+    "linear_axial_n8": 6.244706730909941e-20,
+    "linear_axial_n32": 8.330272034803114e-20,
+    "cubic_axial_n8": 6.244706730909941e-20
+   },
+   "last_refinement_correction": 3.8360297692553736e-20,
+   "stiffness_eig_min_over_max": 1.7875495770209297e-05
+  },
+  "design": {
+   "omega_T_Hz": 225.10453718233467,
+   "base_counts": [
+    4,
+    4,
+    4
+   ],
+   "lambda_T": [
+    5.587878094372043,
+    5.227369830219009,
+    6.4891487547546305
+   ],
+   "alpha_T": [
+    0.8477171939298089,
+    0.7930257620633696,
+    0.9844457735959071
+   ]
+  },
+  "levels": [
+   {
+    "level": 0,
+    "dof": 60,
+    "counts_sum": 12,
+    "time_s": 0.03,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 6.816413710765444e-10,
+    "complete_check": [
+     7,
+     7
+    ]
+   },
+   {
+    "level": 1,
+    "dof": 120,
+    "counts_sum": 24,
+    "time_s": 0.06,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 8.938715845122122e-11,
+    "complete_check": [
+     7,
+     7
+    ]
+   },
+   {
+    "level": 2,
+    "dof": 240,
+    "counts_sum": 48,
+    "time_s": 0.06,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 2.6020997690922034e-10,
+    "complete_check": [
+     7,
+     7
+    ]
+   },
+   {
+    "level": 3,
+    "dof": 480,
+    "counts_sum": 96,
+    "time_s": 0.09,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 4.630647558695166e-09,
+    "complete_check": [
+     7,
+     7
+    ]
+   },
+   {
+    "level": 4,
+    "dof": 960,
+    "counts_sum": 192,
+    "time_s": 0.17,
+    "N_below": 4,
+    "ritz_vs_double_maxrel": 1.586484753835049e-08,
+    "complete_check": [
+     7,
+     7
+    ]
+   }
+  ],
+  "frequencies": [
+   {
+    "i": 0,
+    "f_Hz": 2.643151621933813,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 4.528546818321168e-19,
+    "observed_orders": [
+     3.997,
+     3.999,
+     4.0
+    ]
+   },
+   {
+    "i": 1,
+    "f_Hz": 16.564348465551433,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 3.226043915434123e-15,
+    "observed_orders": [
+     3.969,
+     3.992,
+     3.998
+    ]
+   },
+   {
+    "i": 2,
+    "f_Hz": 46.38065534212953,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 2.010271508756005e-13,
+    "observed_orders": [
+     3.961,
+     3.99,
+     3.998
+    ]
+   },
+   {
+    "i": 3,
+    "f_Hz": 90.88757331957639,
+    "unc_rel": 5.529846407141624e-15,
+    "unc_rel_diagonal": 7.723309879523601e-13,
+    "observed_orders": [
+     3.922,
+     3.981,
+     3.995
+    ]
+   },
+   {
+    "i": 4,
+    "f_Hz": 134.69255606861591,
+    "unc_rel": 5e-16,
+    "unc_rel_diagonal": 3.9682887806840747e-19,
+    "observed_orders": [
+     6.0,
+     6.0,
+     5.996
+    ]
+   },
+   {
+    "i": 5,
+    "f_Hz": 150.24367098738495,
+    "unc_rel": 5.995187908338067e-14,
+    "unc_rel_diagonal": 2.6268551914294933e-12,
+    "observed_orders": [
+     3.88,
+     3.972,
+     3.993
+    ]
+   },
+   {
+    "i": 6,
+    "f_Hz": 224.4380287493152,
+    "unc_rel": 2.1414414355838844e-13,
+    "unc_rel_diagonal": 6.909440037595795e-11,
+    "observed_orders": [
+     3.872,
+     3.968,
+     3.992
+    ]
+   }
+  ],
+  "pairs": [],
+  "harmonic": [
+   {
+    "q": 0,
+    "U": -0.025490109052717563,
+    "unc_abs": 2.5490616139050244e-17,
+    "observed_orders": [
+     4.001,
+     4.0,
+     4.0
+    ]
+   },
+   {
+    "q": 1,
+    "U": -0.0003464591231319068,
+    "unc_abs": 3.477245948043238e-19,
+    "observed_orders": [
+     3.991,
+     3.998,
+     3.999
+    ]
+   },
+   {
+    "q": 2,
+    "U": 0.006456910776654693,
+    "unc_abs": 6.456910762116076e-18,
+    "observed_orders": [
+     3.992,
+     3.998,
+     3.999
+    ]
+   }
+  ],
+  "count": {
+   "N_finest": 4,
+   "inertia_orderings": {
+    "mmd": 4,
+    "rcm": 4
+   },
+   "N_by_level": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "crossings": [],
+   "separations": {
+    "above_rel_f": 0.3469255606944743,
+    "below_rel_f": 0.09112426677226906,
+    "finest_fe_above_rel_f": 0.34692556069442443,
+    "finest_fe_err_est_rel_lam": -6.619757543670167e-14
+   }
+  },
+  "runtime_s": 0.54
+ }
+}

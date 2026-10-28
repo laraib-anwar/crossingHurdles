@@ -1,0 +1,175 @@
+{
+ "frame_id": "held_07",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 0.0,
+   "y": 3.2235,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 7.0351,
+   "y": 3.2235,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 7.0351,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 5,
+   "x": 10.715,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 6,
+   "x": 15.898,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 30000000000.0,
+   "A": 0.044978,
+   "I": 0.0041185,
+   "rho": 2400.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 30000000000.0,
+   "A": 0.041009,
+   "I": 0.0045419,
+   "rho": 2400.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 4,
+   "E": 30000000000.0,
+   "A": 0.040855,
+   "I": 0.005,
+   "rho": 2400.0
+  },
+  {
+   "id": 4,
+   "i": 5,
+   "j": 6,
+   "E": 30000000000.0,
+   "A": 0.041185,
+   "I": 0.005,
+   "rho": 2400.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 3,
+   "Fx": 48243.0,
+   "Fy": -70188.0,
+   "Mz": 38926.0
+  },
+  {
+   "node": 3,
+   "Fx": -39635.0,
+   "Fy": -191320.0,
+   "Mz": -23639.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 1,
+   "wx": -3352.0,
+   "wy": -14453.0
+  },
+  {
+   "member": 3,
+   "wx": 0.0,
+   "wy": -5297.5
+  }
+ ],
+ "static_query_nodes": [
+  2,
+  3
+ ],
+ "n_modes": 11,
+ "f_max_Hz": 221.28,
+ "harmonic_queries": [
+  {
+   "load_node": 3,
+   "load_dof": "uy",
+   "amplitude": 22336.0,
+   "f_Hz": 115.42,
+   "response_node": 2,
+   "response_dof": "uy"
+  },
+  {
+   "load_node": 2,
+   "load_dof": "rz",
+   "amplitude": 22569.0,
+   "f_Hz": 122.84,
+   "response_node": 3,
+   "response_dof": "rz"
+  },
+  {
+   "load_node": 2,
+   "load_dof": "uy",
+   "amplitude": 99205.0,
+   "f_Hz": 57.217,
+   "response_node": 3,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 2,
+   "load_dof": "ux",
+   "amplitude": 58633.0,
+   "f_Hz": 31.68,
+   "response_node": 2,
+   "response_dof": "ux"
+  }
+ ]
+}

@@ -1,0 +1,262 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1793202828072,
+      "stop": 1793202874895
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 6.044641000698903
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 2083.8142709999374,
+        "extra": {
+          "count_below": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 1280.1528400013922,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 960.6204929987143,
+        "extra": {
+          "count_below": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 1570.6616859997666,
+        "extra": {
+          "count_below": 1
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 2395.9082179999314,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 1921.759904999817,
+        "extra": {
+          "count_below": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 1218.0453149994719,
+        "extra": {
+          "count_below": 5
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 962.1614349998708,
+        "extra": {
+          "count_below": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 1074.6930900004372,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 965.4646749995663,
+        "extra": {
+          "count_below": 8
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 1196.3745949997246,
+        "extra": {
+          "count_below": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 1781.957723999767,
+        "extra": {
+          "count_below": 8
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 1571.6466530002435,
+        "extra": {
+          "count_below": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 1373.4066979986892,
+        "extra": {
+          "count_below": 10
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 2089.74049400058,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 1220.6014379999033,
+        "extra": {
+          "count_below": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 1168.6864280009104,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 1431.8562470007237,
+        "extra": {
+          "count_below": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 1066.0253900005046,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 958.0183800007944,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 1100.5615640006,
+        "extra": {
+          "count_below": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 1465.8055889995012,
+        "extra": {
+          "count_below": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 1421.8522780001877,
+        "extra": {
+          "count_below": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 1292.7887420000843,
+        "extra": {
+          "count_below": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 912.4103849999301,
+        "extra": {
+          "count_below": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 1172.2071900003357,
+        "extra": {
+          "count_below": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 1112.6679519993559,
+        "extra": {
+          "count_below": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 1218.965974000639,
+        "extra": {
+          "count_below": 5
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 9328.05294299942,
+        "extra": {
+          "quantities": [
+            "count_below",
+            "frequency",
+            "harmonic",
+            "static"
+          ]
+        }
+      }
+    ]
+  }
+}

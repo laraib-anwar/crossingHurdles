@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_07",
+ "shipped": false,
+ "style": "fixed_member",
+ "label": "member-local modes within the count",
+ "attempts": 2,
+ "nodes": 6,
+ "members": 4,
+ "n_modes": 11,
+ "f1": 38.759481257339644,
+ "count_below": 5
+}

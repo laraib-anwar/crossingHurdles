@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_05",
+ "shipped": false,
+ "style": "portal_mass",
+ "label": "frame with lumped masses",
+ "attempts": 1,
+ "nodes": 12,
+ "members": 14,
+ "n_modes": 9,
+ "f1": 0.5747667936844025,
+ "count_below": 4
+}

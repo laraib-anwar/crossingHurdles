@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_14",
+ "shipped": false,
+ "style": "arch",
+ "label": "loaded polygonal arch",
+ "attempts": 1,
+ "nodes": 7,
+ "members": 6,
+ "n_modes": 10,
+ "f1": 41.48275292778987,
+ "count_below": 10
+}

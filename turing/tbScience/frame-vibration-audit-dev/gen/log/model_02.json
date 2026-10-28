@@ -1,0 +1,12 @@
+{
+ "frame_id": "model_02",
+ "shipped": true,
+ "style": "cantilever",
+ "label": "multi-member cantilever",
+ "attempts": 3,
+ "nodes": 5,
+ "members": 4,
+ "n_modes": 11,
+ "f1": 4.114466746121133,
+ "count_below": 9
+}

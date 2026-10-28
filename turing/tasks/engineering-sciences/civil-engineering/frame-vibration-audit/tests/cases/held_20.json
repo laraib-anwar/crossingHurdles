@@ -1,0 +1,100 @@
+{
+ "frame_id": "held_20",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 3.0395,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 5.8789,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 30000000000.0,
+   "A": 0.0067403,
+   "I": 0.00010476,
+   "rho": 2400.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 30000000000.0,
+   "A": 0.0060973,
+   "I": 9.1412e-05,
+   "rho": 2400.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 3,
+   "Fx": -20096.0,
+   "Fy": 12374.0,
+   "Mz": 11229.0
+  },
+  {
+   "node": 3,
+   "Fx": 82415.0,
+   "Fy": -113470.0,
+   "Mz": 6802.4
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 1,
+   "wx": 0.0,
+   "wy": -7200.6
+  },
+  {
+   "member": 2,
+   "wx": 230.52,
+   "wy": -6009.3
+  }
+ ],
+ "static_query_nodes": [
+  2,
+  3
+ ],
+ "n_modes": 11,
+ "f_max_Hz": 209.79,
+ "harmonic_queries": [
+  {
+   "load_node": 2,
+   "load_dof": "ux",
+   "amplitude": 60850.0,
+   "f_Hz": 24.177,
+   "response_node": 2,
+   "response_dof": "ux"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "frame_id": "model_04",
+ "shipped": true,
+ "style": "near_sym",
+ "label": "nearly symmetric frame with close frequencies",
+ "attempts": 8,
+ "nodes": 4,
+ "members": 3,
+ "n_modes": 11,
+ "f1": 47.67726917853085,
+ "count_below": 6
+}

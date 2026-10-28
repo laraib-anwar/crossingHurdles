@@ -1,0 +1,12 @@
+{
+ "frame_id": "model_05",
+ "shipped": true,
+ "style": "portal_mass",
+ "label": "frame with lumped masses, harmonic load above the first mode",
+ "attempts": 2,
+ "nodes": 9,
+ "members": 10,
+ "n_modes": 3,
+ "f1": 7.849520230415703,
+ "count_below": 2
+}

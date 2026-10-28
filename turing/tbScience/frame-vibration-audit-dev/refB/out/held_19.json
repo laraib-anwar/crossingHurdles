@@ -1,0 +1,377 @@
+{
+ "frame_id": "held_19",
+ "pass": true,
+ "failures": [],
+ "refusals": [],
+ "warnings": [],
+ "checks": {
+  "frequencies": [
+   {
+    "i": 0,
+    "report": 19.271705108822175,
+    "reference": 19.271705108822168,
+    "rel_res": 3.456538023042664e-16,
+    "tol": 1e-09,
+    "ok": true
+   },
+   {
+    "i": 1,
+    "report": 77.20792856728704,
+    "reference": 77.20792856728704,
+    "rel_res": 4.74528464789734e-17,
+    "tol": 1e-09,
+    "ok": true
+   },
+   {
+    "i": 2,
+    "report": 96.54623638801196,
+    "reference": 96.54623638801196,
+    "rel_res": 3.873857701894215e-17,
+    "tol": 1e-09,
+    "ok": true
+   },
+   {
+    "i": 3,
+    "report": 173.7235598624081,
+    "reference": 173.72355986240808,
+    "rel_res": 8.603540867372247e-17,
+    "tol": 1e-09,
+    "ok": true
+   },
+   {
+    "i": 4,
+    "report": 301.3031948613325,
+    "reference": 301.3031948613326,
+    "rel_res": 3.68105224410572e-16,
+    "tol": 1e-09,
+    "ok": true
+   }
+  ],
+  "static": [
+   {
+    "q": 0,
+    "dof": "ux",
+    "report": 0.0008309330941819425,
+    "reference": 0.0008309330941819425,
+    "res_over_scale": 9.076000187636161e-18,
+    "scale": 0.0033889249957345644,
+    "tol": 1e-09,
+    "ok": true,
+    "res_over_scale_per_quantity_grouping": 3.701607760303862e-17
+   },
+   {
+    "q": 0,
+    "dof": "uy",
+    "report": 0.0033889249957345627,
+    "reference": 0.0033889249957345644,
+    "res_over_scale": 5.081935251362816e-16,
+    "scale": 0.0033889249957345644,
+    "tol": 1e-09,
+    "ok": true,
+    "res_over_scale_per_quantity_grouping": 5.081935251362816e-16
+   },
+   {
+    "q": 0,
+    "dof": "rz",
+    "report": 0.00028034960660402227,
+    "reference": 0.0002803496066040222,
+    "res_over_scale": 1.001557792689269e-16,
+    "scale": 0.0002849004083330215,
+    "tol": 1e-09,
+    "ok": true,
+    "res_over_scale_per_quantity_grouping": 1.0178156750878727e-16
+   }
+  ],
+  "harmonic": [
+   {
+    "q": 0,
+    "dof": "rz",
+    "report": 0.0002849004083330217,
+    "reference": 0.0002849004083330215,
+    "res_over_scale": 6.40885496657753e-16,
+    "scale": 0.0002849004083330215,
+    "tol": 1e-09,
+    "ok": true,
+    "res_over_scale_per_quantity_grouping": 6.40885496657753e-16
+   },
+   {
+    "q": 1,
+    "dof": "uy",
+    "report": 0.0013072031758918292,
+    "reference": 0.001307203175891829,
+    "res_over_scale": 6.66718912234615e-17,
+    "scale": 0.0033889249957345644,
+    "tol": 1e-09,
+    "ok": true,
+    "res_over_scale_per_quantity_grouping": 1.7284691687344986e-16
+   }
+  ],
+  "count": {
+   "report": 4,
+   "reference": 4,
+   "ok": true
+  },
+  "per_quantity_grouping_failures": []
+ },
+ "reference": {
+  "frame_id": "held_19",
+  "static": [
+   {
+    "node": 2,
+    "ux": 0.0008309330941819425,
+    "uy": 0.0033889249957345644,
+    "rz": 0.0002803496066040222
+   }
+  ],
+  "frequencies_Hz": [
+   19.271705108822168,
+   77.20792856728704,
+   96.54623638801196,
+   173.72355986240808,
+   301.3031948613326
+  ],
+  "count_below": 4,
+  "harmonic": [
+   {
+    "load_node": 2,
+    "load_dof": "rz",
+    "amplitude": 26689.0,
+    "f_Hz": 123.37,
+    "response_node": 3,
+    "response_dof": "rz",
+    "U": 0.0002849004083330215
+   },
+   {
+    "load_node": 3,
+    "load_dof": "rz",
+    "amplitude": 68373.0,
+    "f_Hz": 150.33,
+    "response_node": 2,
+    "response_dof": "uy",
+    "U": 0.001307203175891829
+   }
+  ]
+ },
+ "referee": {
+  "f_unc_rel": [
+   5e-16,
+   5e-16,
+   5e-16,
+   8.148270769708503e-15,
+   5e-16
+  ],
+  "f_next_Hz": 308.6698128233693,
+  "U_unc_abs": [
+   6.2929254025074176e-18,
+   1.5312238103989614e-16
+  ],
+  "static_unc_over_S": 8.591738559724421e-19,
+  "diagnostics": {
+   "static": {
+    "split_max_dev_over_S": {
+     "linear_axial_n8": 9.441703850536852e-20,
+     "linear_axial_n32": 1.8883407701073704e-19,
+     "cubic_axial_n8": 8.591738559724421e-19
+    },
+    "last_refinement_correction": 3.8976813705127256e-20,
+    "stiffness_eig_min_over_max": 0.007000515170855894
+   },
+   "design": {
+    "omega_T_Hz": 309.88766097857115,
+    "base_counts": [
+     4,
+     4
+    ],
+    "lambda_T": [
+     6.135433136001963,
+     6.453396786611812
+    ],
+    "alpha_T": [
+     2.3420928328566584,
+     2.5512554687480624
+    ]
+   },
+   "levels": [
+    {
+     "level": 0,
+     "dof": 40,
+     "counts_sum": 8,
+     "time_s": 0.06,
+     "N_below": 4,
+     "ritz_vs_double_maxrel": 3.489582225305573e-11,
+     "complete_check": [
+      6,
+      6
+     ]
+    },
+    {
+     "level": 1,
+     "dof": 80,
+     "counts_sum": 16,
+     "time_s": 0.06,
+     "N_below": 4,
+     "ritz_vs_double_maxrel": 8.743382396836525e-11,
+     "complete_check": [
+      6,
+      6
+     ]
+    },
+    {
+     "level": 2,
+     "dof": 160,
+     "counts_sum": 32,
+     "time_s": 0.08,
+     "N_below": 4,
+     "ritz_vs_double_maxrel": 4.7006153531443126e-12,
+     "complete_check": [
+      6,
+      6
+     ]
+    },
+    {
+     "level": 3,
+     "dof": 320,
+     "counts_sum": 64,
+     "time_s": 0.12,
+     "N_below": 4,
+     "ritz_vs_double_maxrel": 3.51825968069219e-11,
+     "complete_check": [
+      6,
+      6
+     ]
+    },
+    {
+     "level": 4,
+     "dof": 640,
+     "counts_sum": 128,
+     "time_s": 0.18,
+     "N_below": 4,
+     "ritz_vs_double_maxrel": 4.92221657275199e-10,
+     "complete_check": [
+      6,
+      6
+     ]
+    }
+   ],
+   "frequencies": [
+    {
+     "i": 0,
+     "f_Hz": 19.271705108822168,
+     "unc_rel": 5e-16,
+     "unc_rel_diagonal": 1.3742561730286075e-15,
+     "observed_orders": [
+      3.995,
+      3.999,
+      4.0
+     ]
+    },
+    {
+     "i": 1,
+     "f_Hz": 77.20792856728704,
+     "unc_rel": 5e-16,
+     "unc_rel_diagonal": 3.304881107261735e-13,
+     "observed_orders": [
+      3.979,
+      3.995,
+      3.999
+     ]
+    },
+    {
+     "i": 2,
+     "f_Hz": 96.54623638801196,
+     "unc_rel": 5e-16,
+     "unc_rel_diagonal": 7.723599775823753e-19,
+     "observed_orders": [
+      6.0,
+      6.0,
+      6.001
+     ]
+    },
+    {
+     "i": 3,
+     "f_Hz": 173.72355986240808,
+     "unc_rel": 8.148270769708503e-15,
+     "unc_rel_diagonal": 9.03418298110829e-12,
+     "observed_orders": [
+      3.958,
+      3.989,
+      3.997
+     ]
+    },
+    {
+     "i": 4,
+     "f_Hz": 301.3031948613326,
+     "unc_rel": 5e-16,
+     "unc_rel_diagonal": 1.0433387453252551e-14,
+     "observed_orders": [
+      5.982,
+      5.995,
+      5.999
+     ]
+    },
+    {
+     "i": 5,
+     "f_Hz": 308.6698128233693,
+     "unc_rel": 1.8460345700511868e-13,
+     "unc_rel_diagonal": 7.904273214059096e-11,
+     "observed_orders": [
+      3.92,
+      3.979,
+      3.995
+     ]
+    }
+   ],
+   "pairs": [],
+   "harmonic": [
+    {
+     "q": 0,
+     "U": 0.0002849004083330215,
+     "unc_abs": 6.2929254025074176e-18,
+     "observed_orders": [
+      3.98,
+      3.997,
+      3.999
+     ]
+    },
+    {
+     "q": 1,
+     "U": 0.001307203175891829,
+     "unc_abs": 1.5312238103989614e-16,
+     "observed_orders": [
+      3.945,
+      3.988,
+      3.997
+     ]
+    }
+   ],
+   "count": {
+    "N_finest": 4,
+    "inertia_orderings": {
+     "mmd": 4,
+     "rcm": 4
+    },
+    "N_by_level": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "crossings": [],
+    "separations": {
+     "above_rel_f": 0.004143154243326797,
+     "below_rel_f": 0.4210372596506545,
+     "finest_fe_above_rel_f": 0.004143154243148008,
+     "finest_fe_err_est_rel_lam": -1.9688430680727666e-13
+    }
+   },
+   "runtime_s": 0.65
+  }
+ },
+ "worst_residual": {
+  "frequency": 3.68105224410572e-16,
+  "static": 5.081935251362816e-16,
+  "harmonic": 6.40885496657753e-16
+ },
+ "runtime_s": 0.66
+}

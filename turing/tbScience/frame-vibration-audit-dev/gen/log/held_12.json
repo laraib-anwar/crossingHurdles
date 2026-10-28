@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_12",
+ "shipped": false,
+ "style": "slender",
+ "label": "slender beam, many modes below f_max",
+ "attempts": 5,
+ "nodes": 6,
+ "members": 5,
+ "n_modes": 11,
+ "f1": 3.2233891053206816,
+ "count_below": 8
+}

@@ -1,0 +1,159 @@
+{
+ "frame_id": "held_12",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": false
+   }
+  },
+  {
+   "id": 2,
+   "x": 2.0903,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 4.1806,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 6.2709,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 5,
+   "x": 8.3611,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 6,
+   "x": 10.451,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": true,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 210000000000.0,
+   "A": 0.0016137,
+   "I": 3.4947e-06,
+   "rho": 7850.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 210000000000.0,
+   "A": 0.0017773,
+   "I": 2.9538e-06,
+   "rho": 7850.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 4,
+   "E": 210000000000.0,
+   "A": 0.0017826,
+   "I": 3.0416e-06,
+   "rho": 7850.0
+  },
+  {
+   "id": 4,
+   "i": 4,
+   "j": 5,
+   "E": 210000000000.0,
+   "A": 0.0014322,
+   "I": 3.5181e-06,
+   "rho": 7850.0
+  },
+  {
+   "id": 5,
+   "i": 5,
+   "j": 6,
+   "E": 210000000000.0,
+   "A": 0.001419,
+   "I": 2.7735e-06,
+   "rho": 7850.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 1,
+   "Fx": -71509.0,
+   "Fy": -133700.0,
+   "Mz": 36392.0
+  },
+  {
+   "node": 3,
+   "Fx": -19710.0,
+   "Fy": -101260.0,
+   "Mz": 42746.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 1,
+   "wx": 0.0,
+   "wy": -13939.0
+  },
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -21457.0
+  }
+ ],
+ "static_query_nodes": [
+  2
+ ],
+ "n_modes": 11,
+ "f_max_Hz": 187.44,
+ "harmonic_queries": [
+  {
+   "load_node": 6,
+   "load_dof": "rz",
+   "amplitude": 9008.2,
+   "f_Hz": 33.458,
+   "response_node": 2,
+   "response_dof": "uy"
+  }
+ ]
+}

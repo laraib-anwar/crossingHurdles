@@ -1,0 +1,12 @@
+{
+ "frame_id": "held_15",
+ "shipped": false,
+ "style": "truss_like",
+ "label": "triangulated frame",
+ "attempts": 2,
+ "nodes": 8,
+ "members": 13,
+ "n_modes": 10,
+ "f1": 18.797466038044895,
+ "count_below": 4
+}

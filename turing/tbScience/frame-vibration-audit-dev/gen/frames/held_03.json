@@ -1,0 +1,209 @@
+{
+ "frame_id": "held_03",
+ "nodes": [
+  {
+   "id": 1,
+   "x": -0.17973,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 4.002,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 3,
+   "x": 0.12918,
+   "y": 3.1925,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 4.2017,
+   "y": 3.0126,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 5,
+   "x": 0.095888,
+   "y": 6.2225,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 6,
+   "x": 4.4981,
+   "y": 6.3723,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 3,
+   "E": 70000000000.0,
+   "A": 0.0059677,
+   "I": 8.1462e-05,
+   "rho": 2700.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 4,
+   "E": 70000000000.0,
+   "A": 0.0068177,
+   "I": 9.7676e-05,
+   "rho": 2700.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 5,
+   "E": 70000000000.0,
+   "A": 0.0066445,
+   "I": 0.00011167,
+   "rho": 2700.0
+  },
+  {
+   "id": 4,
+   "i": 4,
+   "j": 6,
+   "E": 70000000000.0,
+   "A": 0.0060909,
+   "I": 0.00010472,
+   "rho": 2700.0
+  },
+  {
+   "id": 5,
+   "i": 3,
+   "j": 4,
+   "E": 70000000000.0,
+   "A": 0.0073525,
+   "I": 0.00011742,
+   "rho": 2700.0
+  },
+  {
+   "id": 6,
+   "i": 5,
+   "j": 6,
+   "E": 70000000000.0,
+   "A": 0.0070406,
+   "I": 0.00017084,
+   "rho": 2700.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 5,
+   "Fx": 10167.0,
+   "Fy": -30919.0,
+   "Mz": -43409.0
+  },
+  {
+   "node": 6,
+   "Fx": 52566.0,
+   "Fy": -69622.0,
+   "Mz": -44845.0
+  },
+  {
+   "node": 4,
+   "Fx": 43082.0,
+   "Fy": -12380.0,
+   "Mz": 23253.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -6750.3
+  },
+  {
+   "member": 3,
+   "wx": -3140.9,
+   "wy": -17300.0
+  },
+  {
+   "member": 5,
+   "wx": 3775.9,
+   "wy": -21364.0
+  },
+  {
+   "member": 6,
+   "wx": 630.63,
+   "wy": -8321.4
+  }
+ ],
+ "static_query_nodes": [
+  4,
+  5
+ ],
+ "n_modes": 3,
+ "f_max_Hz": 34.653,
+ "harmonic_queries": [
+  {
+   "load_node": 4,
+   "load_dof": "rz",
+   "amplitude": 32838.0,
+   "f_Hz": 65.888,
+   "response_node": 4,
+   "response_dof": "ux"
+  },
+  {
+   "load_node": 6,
+   "load_dof": "rz",
+   "amplitude": 87777.0,
+   "f_Hz": 48.256,
+   "response_node": 4,
+   "response_dof": "rz"
+  },
+  {
+   "load_node": 5,
+   "load_dof": "ux",
+   "amplitude": 48623.0,
+   "f_Hz": 63.518,
+   "response_node": 4,
+   "response_dof": "uy"
+  },
+  {
+   "load_node": 6,
+   "load_dof": "ux",
+   "amplitude": 12612.0,
+   "f_Hz": 32.72,
+   "response_node": 4,
+   "response_dof": "ux"
+  }
+ ]
+}

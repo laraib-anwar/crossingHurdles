@@ -1,0 +1,151 @@
+{
+ "frame_id": "model_03",
+ "nodes": [
+  {
+   "id": 1,
+   "x": 0.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 2,
+   "x": 0.0,
+   "y": 3.9842,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 3,
+   "x": 7.8898,
+   "y": 3.9842,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": false,
+    "uy": false,
+    "rz": false
+   }
+  },
+  {
+   "id": 4,
+   "x": 7.8898,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 5,
+   "x": 12.846,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  },
+  {
+   "id": 6,
+   "x": 21.0,
+   "y": 0.0,
+   "mass_kg": 0.0,
+   "support": {
+    "ux": true,
+    "uy": true,
+    "rz": true
+   }
+  }
+ ],
+ "members": [
+  {
+   "id": 1,
+   "i": 1,
+   "j": 2,
+   "E": 210000000000.0,
+   "A": 0.0070267,
+   "I": 0.00011082,
+   "rho": 7850.0
+  },
+  {
+   "id": 2,
+   "i": 2,
+   "j": 3,
+   "E": 210000000000.0,
+   "A": 0.0068673,
+   "I": 0.00011329,
+   "rho": 7850.0
+  },
+  {
+   "id": 3,
+   "i": 3,
+   "j": 4,
+   "E": 210000000000.0,
+   "A": 0.0068124,
+   "I": 8.5861e-05,
+   "rho": 7850.0
+  },
+  {
+   "id": 4,
+   "i": 5,
+   "j": 6,
+   "E": 210000000000.0,
+   "A": 0.0064783,
+   "I": 9.4222e-05,
+   "rho": 7850.0
+  }
+ ],
+ "nodal_loads": [
+  {
+   "node": 2,
+   "Fx": 757.47,
+   "Fy": 41057.0,
+   "Mz": 17319.0
+  },
+  {
+   "node": 3,
+   "Fx": 13945.0,
+   "Fy": -13174.0,
+   "Mz": 39790.0
+  }
+ ],
+ "member_loads": [
+  {
+   "member": 2,
+   "wx": 0.0,
+   "wy": -8423.3
+  },
+  {
+   "member": 4,
+   "wx": 0.0,
+   "wy": -5327.3
+  }
+ ],
+ "static_query_nodes": [
+  2,
+  3
+ ],
+ "n_modes": 7,
+ "f_max_Hz": 152.61,
+ "harmonic_queries": [
+  {
+   "load_node": 2,
+   "load_dof": "uy",
+   "amplitude": 10824.0,
+   "f_Hz": 14.019,
+   "response_node": 2,
+   "response_dof": "ux"
+  }
+ ]
+}

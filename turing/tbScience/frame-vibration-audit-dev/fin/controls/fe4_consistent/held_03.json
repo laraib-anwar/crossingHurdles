@@ -1,0 +1,61 @@
+{
+ "frame_id": "held_03",
+ "static": [
+  {
+   "node": 4,
+   "ux": 0.04201294721960099,
+   "uy": -0.004431717269798539,
+   "rz": -0.008783615252789105
+  },
+  {
+   "node": 5,
+   "ux": 0.08387993111306288,
+   "uy": -0.003996060621610183,
+   "rz": -0.009324434049725962
+  }
+ ],
+ "frequencies_Hz": [
+  13.30881737656454,
+  43.4605179750261,
+  77.96500629261836
+ ],
+ "count_below": 1,
+ "harmonic": [
+  {
+   "load_node": 4,
+   "load_dof": "rz",
+   "amplitude": 32838.0,
+   "f_Hz": 65.888,
+   "response_node": 4,
+   "response_dof": "ux",
+   "U": 5.3514914648420265e-05
+  },
+  {
+   "load_node": 6,
+   "load_dof": "rz",
+   "amplitude": 87777.0,
+   "f_Hz": 48.256,
+   "response_node": 4,
+   "response_dof": "rz",
+   "U": -0.0016870671859433848
+  },
+  {
+   "load_node": 5,
+   "load_dof": "ux",
+   "amplitude": 48623.0,
+   "f_Hz": 63.518,
+   "response_node": 4,
+   "response_dof": "uy",
+   "U": 2.1025037044219745e-06
+  },
+  {
+   "load_node": 6,
+   "load_dof": "ux",
+   "amplitude": 12612.0,
+   "f_Hz": 32.72,
+   "response_node": 4,
+   "response_dof": "ux",
+   "U": -0.0023941769476630782
+  }
+ ]
+}
