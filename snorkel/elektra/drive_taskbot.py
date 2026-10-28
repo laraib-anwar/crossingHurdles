@@ -129,13 +129,57 @@ def run_stage(st, attach=False):
             start = time.time()
 
 
+def table_result(body, st):
+    """Result cell of this stage's row in the 'Pipeline verdicts' table, if present."""
+    m = re.search(r"^\| `/%s` \| [^|]*\| ([^|]*)\|" % re.escape(st), body, re.M)
+    return m.group(1).strip() if m else None
+
+
+def wait_after_push(old_artifact):
+    """Wait until the push's /rehash, and any stages the bot chains after it, have settled."""
+    start = time.time()
+    idle = 0
+    kicked = False
+    body = ""
+    while time.time() - start < 3600:
+        time.sleep(30)
+        body, _ = status_of(comments())
+        moved = f"artifact `{old_artifact}`" not in body
+        if moved and not busy(body):
+            idle += 1
+            if idle >= 3:
+                art = re.search(r"artifact `(\w+)`", body)
+                log(f"push settled on artifact {art.group(1) if art else '?'}")
+                return body
+        else:
+            idle = 0
+        if not moved and not busy(body) and time.time() - start > 300 and not kicked:
+            log("the push's rehash looks stuck; kicking it with /scope")
+            post("scope")
+            kicked = True
+    return body
+
+
 def main():
     args = sys.argv[1:]
     attach = False
+    settled = None
     if args and args[0] == "--attach":
         attach = True
         args = args[1:]
+    if args and args[0] == "--after-push":
+        settled = wait_after_push(args[1])
+        args = args[2:]
     for i, st in enumerate(args):
+        if settled is not None:
+            res = table_result(settled, st)
+            if res and "Succeeded" in res:
+                log(f"/{st} already passed on this artifact ({res}); skipping")
+                continue
+            if res and "Failed" in res:
+                print(f"===== /{st}: failed on this artifact\n{settled}\n", flush=True)
+                sys.exit(1)
+            settled = None
         res, body = run_stage(st, attach=attach and i == 0)
         print(f"===== /{st}: {res}\n{body}\n", flush=True)
         if res != "done":
