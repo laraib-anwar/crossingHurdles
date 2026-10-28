@@ -2,6 +2,26 @@
 
 Working notes for Laraib's Elektra tasks. The full project guidelines (proposal + annotator flow) are in `taskbot_guidelines.md` in this folder.
 
+## NEXT-TASK PLAYBOOK (learned on PR #2, 2026-10-28): follow this in order
+
+Goal: fix everything locally and push **once**. Each push re-runs /scope and /verify-spec (about 12 min). The rehash after a push hung 3 times on 10-28, and the judges re-sample new complaints each run, so every extra round costs 15-30 minutes.
+
+1. **Access.** Accept the GitHub repo invite (email from deepswe-taskbot-private[bot]; it expires in 7 days). Find your PR: `gh pr list -R deccan-taskbot-private/<repo> --json number,title,headRefName,assignees`.
+2. **Clone only your branch**, outside the laraib repo:
+   `git -c credential.helper= -c credential.helper='!gh auth git-credential' clone --single-branch -b task/<slug> https://github.com/deccan-taskbot-private/<repo>.git ~/elektra/<short>`
+   then `git config --local credential.helper '' && git config --local --add credential.helper '!gh auth git-credential'`. The keychain token only covers crossingHurdles.
+3. **Read everything:** instruction.md, task.toml, tests/config.json, solution/fix.patch, both Dockerfiles. Unpack the tests with `python3 testpatch.py extract tasks/<slug>/tests/test.patch ~/elektra/<short>-tests`. Check `diff -rq environment/app tests/app` (it must be empty).
+4. **Pre-flight fixes, all before the first push:**
+   - environment/Dockerfile's final stage installs `tmux asciinema`. /review's contract check fails without them.
+   - The test runner in test.legacy.sh / test.sh is obvious to a reader that doesn't execute it (pass a directory, not several positional files). The /scope judge doesn't run code.
+   - instruction.md: no em dashes and no heavy markup. No helper/function names, no stub or file paths (/scope "Difficult" fails on those). Describe behaviour, not the fix.
+   - **Sweep every claim in instruction.md** (each default, threshold, casing rule, field list, response-envelope key, "must keep working" sentence, worked example). Each one needs a test where a wrong implementation would get a *different* value (add a control row); otherwise delete the claim. /verify-spec flagged a new uncovered claim on each of 3 runs.
+   - fix.patch hygiene: no leftover aliases or "keep this" comments, no trailing whitespace, no unrelated hunks. Update task.toml lines_added/removed/changed (`git diff --numstat`).
+   - To change tests: edit the extracted files, run `python3 testpatch.py pack <test.patch> <dir>`, then add new ids to tests/config.json (F2P = fails at base; P2P = passes both ways; never in both).
+5. **Verify locally:** `./verify_local.sh ~/elektra/<short>/tasks/<slug> [mutant.patch ...]`. Base must show F2P 0/N with every P2P passing. The solution must show reward 1. Each mutant (a solution with one rule broken) must fail its matching test.
+6. **Push once**, then drive the stages: `python3 drive_taskbot.py --after-push <old artifact> scope verify-spec review benchmark analyze` (set REPO/PR at the top first). It waits out the auto-chain, re-kicks hangs and skips stages already passed.
+7. **Read /analyze, then post /submit.** Don't start on deadline day: /benchmark alone can take hours.
+
 ## NEW WORKFLOW (announced 2026-10-28): read this first
 
 Zaheer (@channel): Elektra is moving to an "open-source style approach on existing private repository tasks". The IDE approach pauses once the current batch is done. The new guide is the Google Doc "Private Repository Tasking (Git approach)" (tabs: Context, Annotator Workflow). The Context tab is transcribed in `private_repo_git_approach.md`.
