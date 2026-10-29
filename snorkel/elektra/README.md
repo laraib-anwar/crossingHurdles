@@ -151,7 +151,7 @@ On any failure: rework, push, rerun the failing command, then continue in order.
 - Annotators never run `/rework`. Only QC uses it, to reopen a task.
 - Once QC reopens the task, make the requested fixes and rerun the gates from the beginning in the normal order.
 - If QC hasn't asked for rework, leave the submitted task alone.
-- Zaheer (2026-10-29): submitted tasks that need updates are reopened when Deccan triggers /rework. Keep checking your assigned PR's comments and status, and resume only after the task is reopened, following the instructions given there. Never trigger /rework or /rerun yourself. As of 09:15Z on 10-29, PR #2 is still PUBLISHED with no /rework.
+- Zaheer (2026-10-29): submitted tasks that need updates are reopened when Deccan triggers /rework. Keep checking your assigned PR's comments and status, and resume only after the task is reopened, following the instructions given there. Never trigger /rework or /rerun yourself. As of 09:15Z on 10-29, PR #2 is still PUBLISHED with no /rework. At 19:48 IST Deccan triggered /rework on the tasks that need updates; PR #2 was not one of them (checked 14:37Z, last update 03:29Z), so no action. Zaheer also said a 0/5 benchmark can be submitted if the analysis honestly explains the failures.
 
 ## Repo rules (Deccan, 2026-10-05 to 10-07)
 
