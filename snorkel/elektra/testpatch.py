@@ -61,9 +61,11 @@ def pack(patch, src):
             path, m, old = p
             new = open(os.path.join(src, path)).read()
             if new != old:
-                idx = re.search(r"index 0000000\.\.([0-9a-f]+)", sec).group(1)
                 lines = new[:-1].split("\n") if new.endswith("\n") else new.split("\n")
-                head = sec[:m.end()].replace("index 0000000.." + idx, "index 0000000.." + blob(new)[:len(idx)])
+                head = sec[:m.end()]
+                idx = re.search(r"index 0000000\.\.([0-9a-f]+)", head)
+                if idx:  # some sections carry no index line (patch applies them fine without one)
+                    head = head.replace(idx.group(0), "index 0000000.." + blob(new)[:len(idx.group(1))])
                 head = head.replace(m.group(0), "@@ -0,0 +1,%d @@\n" % len(lines))
                 body = "\n".join("+" + l for l in lines) + ("\n" if new.endswith("\n") else "\n\\ No newline at end of file\n")
                 sec = head + body
