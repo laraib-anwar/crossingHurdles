@@ -1,0 +1,5 @@
+loose_rtol     fails 13/28 {'concentrations[5]': 4, 'concentrations[6]': 1, 'concentrations[7]': 1, 'steady_state.trough': 6, 'steady_state.time_in_window': 4, 'steady_state.cmin': 3, 'concentrations[2]': 3, 'cmax': 6, 'concentrations[0]': 1, 'concentrations[1]': 2, 'concentrations[3]': 1, 'concentrations[4]': 1, 'steady_state.cmax': 1}
+grid_001       fails 28/28 {'steady_state.time_in_window': 28, 'cmax': 8, 't_cmax': 8, 'steady_state.cmax': 8, 'steady_state.cmin': 9}
+grid_01        fails 28/28 {'steady_state.time_in_window': 28, 'cmax': 15, 't_cmax': 15, 'steady_state.cmax': 14, 'steady_state.cmin': 12}
+ss_iterate20   fails 13/28 {'n_cycles_to_steady': 7, 'steady_state.cmax': 13, 'steady_state.cmin': 13, 'steady_state.trough': 13, 'steady_state.time_in_window': 11}
+nc_formula     fails 12/28 {'n_cycles_to_steady': 12}

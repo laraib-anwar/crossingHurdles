@@ -1,0 +1,2 @@
+nc_single      fails 2/28 {'n_cycles_to_steady': 2}
+legacy         fails 28/28 {'auc': 28, 'steady_state.time_in_window': 28, 'concentrations[0]': 24, 'concentrations[1]': 25, 'concentrations[2]': 25, 'cmax': 26, 't_cmax': 22, 'steady_state.cmax': 27, 'steady_state.cmin': 25, 'steady_state.trough': 26, 'n_cycles_to_steady': 13, 'concentrations[3]': 18, 'concentrations[4]': 14, 'concentrations[5]': 12, 'concentrations[6]': 8, 'concentrations[7]': 8, 'concentrations[8]': 6, 'concentrations[9]': 2}

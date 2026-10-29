@@ -1,0 +1,488 @@
+{
+ "defects": [
+  {
+   "description": "The number of cycles to steady state is ln(100)/(k_term period) from the terminal rate constant of the linearised model, which ignores loading doses, the actual trough sequence and saturable elimination.",
+   "regimen": {
+    "regimen_id": "model_03",
+    "model": {
+     "V1": 29.17,
+     "CL": 2.3,
+     "Vmax": 0.0,
+     "Km": 8.716,
+     "peripheral": [
+      {
+       "Q": 1.567,
+       "V": 59.18
+      },
+      {
+       "Q": 1.055,
+       "V": 54.4
+      }
+     ]
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.3429,
+      "ka": 1.142,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.22
+     }
+    ],
+    "loading_doses": [],
+    "maintenance": {
+     "start": 0.0,
+     "period": 24.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_infusion",
+       "amount": 32.91,
+       "duration": 2.2,
+       "formulation": null
+      },
+      {
+       "offset": 12.0,
+       "route": "iv_infusion",
+       "amount": 152.0,
+       "duration": 2.15,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 132.0,
+    "query_times": [
+     9.65,
+     42.95,
+     110.3
+    ],
+    "window": {
+     "low": 2.819,
+     "high": 5.939
+    }
+   },
+   "quantity": "n_cycles_to_steady",
+   "index": null,
+   "legacy_value": 20,
+   "correct_value": 19
+  },
+  {
+   "description": "Infusions are placed as boluses at their start, absorption lag and transit compartments are dropped and saturable elimination is replaced by the first-order rate CL + Vmax/Km, so the concentration-time course is wrong whenever a regimen has any of these features.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "concentration",
+   "index": 0,
+   "legacy_value": 64.58298456955423,
+   "correct_value": 58.542077894816494
+  },
+  {
+   "description": "The steady-state trough is the end of the 20th cycle of the simplified linear model; with slow accumulation or saturable elimination it has not converged to the periodic solution.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "ss_trough",
+   "index": null,
+   "legacy_value": 27.14339514669988,
+   "correct_value": 31.88470386294946
+  },
+  {
+   "description": "The peak is the largest value on a 0.1 h grid of the simplified model: it misses the true maximum between grid points and the shape change from infusions, lag and saturable elimination.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "cmax",
+   "index": null,
+   "legacy_value": 67.15827768608115,
+   "correct_value": 67.66896015059145
+  },
+  {
+   "description": "Time in the window is a count of 0.1 h grid points inside the window on the simplified curve, not the measure of the exact crossing intervals.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "time_in_window",
+   "index": null,
+   "legacy_value": 0.0,
+   "correct_value": 1.482486771222805
+  },
+  {
+   "description": "The AUC is a linear trapezoid on a 0.1 h grid of a curve with exponential segments and dose discontinuities, and the curve itself is the simplified superposition model.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "auc",
+   "index": null,
+   "legacy_value": 1600.8955682140695,
+   "correct_value": 1575.2045422147733
+  },
+  {
+   "description": "The time of the peak is a grid point of a 0.1 h grid, not the time at which dC/dt vanishes or the infusion ends.",
+   "regimen": {
+    "regimen_id": "model_02",
+    "model": {
+     "V1": 26.13,
+     "CL": 6.879,
+     "Vmax": 0.0,
+     "Km": 4.829,
+     "peripheral": [
+      {
+       "Q": 1.013,
+       "V": 158.7
+      }
+     ]
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.482,
+      "ka": 0.8945,
+      "tlag": 1.2,
+      "n_transit": 0,
+      "ktr": 2.834
+     }
+    ],
+    "loading_doses": [],
+    "maintenance": {
+     "start": 0.0,
+     "period": 168.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "oral",
+       "amount": 426.6,
+       "duration": null,
+       "formulation": 1
+      }
+     ]
+    },
+    "horizon": 360.0,
+    "query_times": [
+     37.65,
+     78.0,
+     93.95,
+     199.15,
+     215.15,
+     222.1,
+     244.0,
+     249.25,
+     284.35,
+     295.3
+    ],
+    "window": {
+     "low": 1.78,
+     "high": 2.999
+    }
+   },
+   "quantity": "t_cmax",
+   "index": null,
+   "legacy_value": 337.8,
+   "correct_value": 339.03349688006756
+  },
+  {
+   "description": "Steady state is approximated by the 20th maintenance cycle of the simplified linear model instead of the periodic solution of the full model.",
+   "regimen": {
+    "regimen_id": "model_01",
+    "model": {
+     "V1": 30.62,
+     "CL": 0.4863,
+     "Vmax": 0.0,
+     "Km": 15.91,
+     "peripheral": []
+    },
+    "formulations": [
+     {
+      "id": 1,
+      "F": 0.6375,
+      "ka": 2.124,
+      "tlag": 0.0,
+      "n_transit": 0,
+      "ktr": 1.555
+     }
+    ],
+    "loading_doses": [
+     {
+      "time": 1.5,
+      "route": "iv_infusion",
+      "amount": 2006.0,
+      "duration": 1.0,
+      "formulation": null
+     }
+    ],
+    "maintenance": {
+     "start": 3.0,
+     "period": 6.0,
+     "doses": [
+      {
+       "offset": 0.0,
+       "route": "iv_bolus",
+       "amount": 97.61,
+       "duration": null,
+       "formulation": null
+      }
+     ]
+    },
+    "horizon": 28.0,
+    "query_times": [
+     2.4,
+     22.9,
+     25.35
+    ],
+    "window": {
+     "low": 33.16,
+     "high": 33.95
+    }
+   },
+   "quantity": "ss_cmax",
+   "index": null,
+   "legacy_value": 29.857151840948934,
+   "correct_value": 35.072489623890014
+  }
+ ]
+}

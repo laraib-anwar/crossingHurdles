@@ -1,0 +1,330 @@
+{
+ "regimen_id": "held_22",
+ "method": "Taylor series order 30, longdouble, fixed step min(theta/rho, 2 theta) per event interval; reported run theta=0.25, comparison run theta=0.5",
+ "error_estimates_half_step": {
+  "concentrations_absdiff_over_cmax": [
+   1.85921747929359e-19,
+   6.197391597645301e-20,
+   0.0,
+   6.197391597645301e-20,
+   6.197391597645301e-20,
+   0.0
+  ],
+  "concentrations_max_over_cmax": 1.85921747929359e-19,
+  "auc_rel": 1.0112771127584569e-19,
+  "cmax_over_cmax": 6.197391597645301e-20,
+  "t_cmax_h": 0.0,
+  "ss_cmax_over_cmax": 6.197391597645301e-20,
+  "ss_cmin_over_cmax": 3.0986957988226503e-20,
+  "ss_trough_over_cmax": 6.197391597645301e-20,
+  "time_in_window_h": 0.0,
+  "n_cycles_equal": true,
+  "troughs_direct_max_absdiff_over_trough": 2.593729998871356e-19,
+  "max_rel_value_diff": 1.85921747929359e-19,
+  "max_time_diff_h": 0.0
+ },
+ "fine_run": {
+  "theta": 0.25,
+  "K": 30,
+  "hmax": 0.3696086261980831,
+  "rho_max_rate": 1.3527822798487303,
+  "rho_lin_1norm": 2.7055645596974607,
+  "lam_mm": 0.032561340841740775,
+  "n_states": 4,
+  "newton": [
+   {
+    "iter": 0,
+    "residual_rel": 1.0,
+    "step_rel": 1.0755656640907825,
+    "lambda": 1.0
+   },
+   {
+    "iter": 1,
+    "residual_rel": 0.001188088287079591,
+    "step_rel": 0.0012414702921617463,
+    "lambda": 1.0
+   },
+   {
+    "iter": 2,
+    "residual_rel": 2.794221895853537e-10,
+    "step_rel": 2.920253164960266e-10,
+    "lambda": 1.0
+   },
+   {
+    "iter": 3,
+    "residual_rel": 6.878579954950556e-20,
+    "step_rel": 7.825770222626578e-20,
+    "lambda": 1.0
+   }
+  ],
+  "fixed_point_residual_rel": 0.0,
+  "period_map_spectral_radius": 0.0702566720132899,
+  "cycle_map_vs_actual_rel": 0.0,
+  "cycle_map_check_cycle": 7,
+  "m_direct": 7,
+  "last_direct_trough_vs_ss_rel": 3.572942635471061e-08,
+  "guarantees": {
+   "G1_min_sep_query_horizon_to_bolus_h": 1.5,
+   "G1_ok": true,
+   "G2_cmax": 13.99559353838408,
+   "G2_max_kind": {
+    "kind": "bnd",
+    "t": 54.0,
+    "event_kinds": [
+     "bolus"
+    ]
+   },
+   "G2_second_local_max_ratio": 0.9998486735584029,
+   "G2_max_other_post_bolus_ratio": 0.9998486735584029,
+   "G2_n_local_max": 10,
+   "G2_ok": true,
+   "G3_window_vs_ss_extrema_min_rel": 0.04837188392252985,
+   "G3_min_abs_dCdt_at_crossing_over_ss_cmax": 0.03600416155744866,
+   "G3_min_abs_dCdt_at_crossing_over_cmax": 0.036004601749100154,
+   "G3_bolus_prepost_vs_window_min_rel": 0.01755944379964568,
+   "G3_n_crossings": 4,
+   "G3_ok": true,
+   "G4_min_margin_rel_m1_60": 0.005109592070981676,
+   "G4_argmin_m": 2,
+   "G4_cycles_explicit": 7,
+   "G4_all_m_ge_60_inside": true,
+   "G4_ok": true,
+   "G5_ss_cmin": 5.835624804341271,
+   "G5_ok": true
+  },
+  "tail": {
+   "B_sup_norm_powers": 1.0,
+   "J_halving": 1,
+   "stop_threshold_rel": 1e-07,
+   "bound_at_m_direct_rel": 4.052507855637278e-08,
+   "nonlinear_extension_cycles": 0,
+   "linear_tail_cycles": 0,
+   "linear_tail_last_violation_cycle": null,
+   "verified_all_later_cycles_inside": true
+  },
+  "ss_crossings": [
+   {
+    "t": 1.6633867683360812,
+    "level": "low",
+    "dCdt_poly": 3.423641266956578,
+    "dCdt_rhs": 3.423641266956578
+   },
+   {
+    "t": 5.208134225816394,
+    "level": "high",
+    "dCdt_poly": 0.5039057715917983,
+    "dCdt_rhs": 0.5039057715917983
+   },
+   {
+    "t": 6.811986940335227,
+    "level": "high",
+    "dCdt_poly": -2.872460993768166,
+    "dCdt_rhs": -2.872460993768166
+   },
+   {
+    "t": 10.153093355719319,
+    "level": "low",
+    "dCdt_poly": -1.3055703945679344,
+    "dCdt_rhs": -1.3055703945679344
+   }
+  ],
+  "local_maxima_top": [
+   {
+    "t": 54.0,
+    "C": 13.99559353838408,
+    "type": "post_bolus"
+   },
+   {
+    "t": 42.0,
+    "C": 13.993475635015876,
+    "type": "post_bolus"
+   },
+   {
+    "t": 30.0,
+    "C": 13.966557804641125,
+    "type": "post_bolus"
+   },
+   {
+    "t": 18.0,
+    "C": 13.657687686405689,
+    "type": "post_bolus"
+   },
+   {
+    "t": 6.65,
+    "C": 11.11232812208808,
+    "type": "kink"
+   },
+   {
+    "t": 58.58096482134751,
+    "C": 7.247604966764191,
+    "type": "smooth"
+   }
+  ],
+  "trough_window_vs_fixed_point_rel": 0.0,
+  "taylor_steps": 721,
+  "taylor_rejected_steps": 60,
+  "seconds": 0.9324491024017334
+ },
+ "coarse_run": {
+  "theta": 0.5,
+  "K": 30,
+  "hmax": 0.7392172523961662,
+  "rho_max_rate": 1.3527822798487303,
+  "rho_lin_1norm": 2.7055645596974607,
+  "lam_mm": 0.032561340841740775,
+  "n_states": 4,
+  "newton": [
+   {
+    "iter": 0,
+    "residual_rel": 1.0,
+    "step_rel": 1.0755656640907825,
+    "lambda": 1.0
+   },
+   {
+    "iter": 1,
+    "residual_rel": 0.0011880882870795911,
+    "step_rel": 0.0012414702921617466,
+    "lambda": 1.0
+   },
+   {
+    "iter": 2,
+    "residual_rel": 2.794221894477821e-10,
+    "step_rel": 2.9202531635327404e-10,
+    "lambda": 1.0
+   },
+   {
+    "iter": 3,
+    "residual_rel": 1.3757159909901111e-19,
+    "step_rel": 1.3525797380792065e-19,
+    "lambda": 1.0
+   }
+  ],
+  "fixed_point_residual_rel": 0.0,
+  "period_map_spectral_radius": 0.0702566720132899,
+  "cycle_map_vs_actual_rel": 0.0,
+  "cycle_map_check_cycle": 7,
+  "m_direct": 7,
+  "last_direct_trough_vs_ss_rel": 3.572942635432155e-08,
+  "guarantees": {
+   "G1_min_sep_query_horizon_to_bolus_h": 1.5,
+   "G1_ok": true,
+   "G2_cmax": 13.99559353838408,
+   "G2_max_kind": {
+    "kind": "bnd",
+    "t": 54.0,
+    "event_kinds": [
+     "bolus"
+    ]
+   },
+   "G2_second_local_max_ratio": 0.9998486735584029,
+   "G2_max_other_post_bolus_ratio": 0.9998486735584029,
+   "G2_n_local_max": 10,
+   "G2_ok": true,
+   "G3_window_vs_ss_extrema_min_rel": 0.04837188392252985,
+   "G3_min_abs_dCdt_at_crossing_over_ss_cmax": 0.03600416155744866,
+   "G3_min_abs_dCdt_at_crossing_over_cmax": 0.036004601749100154,
+   "G3_bolus_prepost_vs_window_min_rel": 0.01755944379964568,
+   "G3_n_crossings": 4,
+   "G3_ok": true,
+   "G4_min_margin_rel_m1_60": 0.005109592070981676,
+   "G4_argmin_m": 2,
+   "G4_cycles_explicit": 7,
+   "G4_all_m_ge_60_inside": true,
+   "G4_ok": true,
+   "G5_ss_cmin": 5.835624804341271,
+   "G5_ok": true
+  },
+  "tail": {
+   "B_sup_norm_powers": 1.0,
+   "J_halving": 1,
+   "stop_threshold_rel": 1e-07,
+   "bound_at_m_direct_rel": 4.052507855604659e-08,
+   "nonlinear_extension_cycles": 0,
+   "linear_tail_cycles": 0,
+   "linear_tail_last_violation_cycle": null,
+   "verified_all_later_cycles_inside": true
+  },
+  "ss_crossings": [
+   {
+    "t": 1.6633867683360812,
+    "level": "low",
+    "dCdt_poly": 3.423641266956578,
+    "dCdt_rhs": 3.423641266956578
+   },
+   {
+    "t": 5.208134225816394,
+    "level": "high",
+    "dCdt_poly": 0.5039057715917983,
+    "dCdt_rhs": 0.5039057715917983
+   },
+   {
+    "t": 6.811986940335227,
+    "level": "high",
+    "dCdt_poly": -2.872460993768166,
+    "dCdt_rhs": -2.872460993768166
+   },
+   {
+    "t": 10.153093355719319,
+    "level": "low",
+    "dCdt_poly": -1.3055703945679344,
+    "dCdt_rhs": -1.3055703945679344
+   }
+  ],
+  "local_maxima_top": [
+   {
+    "t": 54.0,
+    "C": 13.99559353838408,
+    "type": "post_bolus"
+   },
+   {
+    "t": 42.0,
+    "C": 13.993475635015876,
+    "type": "post_bolus"
+   },
+   {
+    "t": 30.0,
+    "C": 13.966557804641125,
+    "type": "post_bolus"
+   },
+   {
+    "t": 18.0,
+    "C": 13.657687686405689,
+    "type": "post_bolus"
+   },
+   {
+    "t": 6.65,
+    "C": 11.11232812208808,
+    "type": "kink"
+   },
+   {
+    "t": 58.58096482134751,
+    "C": 7.247604966764191,
+    "type": "smooth"
+   }
+  ],
+  "trough_window_vs_fixed_point_rel": 0.0,
+  "taylor_steps": 403,
+  "taylor_rejected_steps": 59,
+  "seconds": 0.6724088191986084
+ },
+ "domain_violations": [],
+ "troughs_fine_direct": [
+  5.621650101253203,
+  6.587086985315702,
+  6.679905521895416,
+  6.687514035113291,
+  6.688095815356675,
+  6.68813874015313,
+  6.688141844952964
+ ],
+ "trough_condition_dev_over_trough_direct": [
+  0.1494601264868352,
+  0.005109592070981676,
+  -0.008768482798708056,
+  -0.009906095176317584,
+  -0.009993082001071575,
+  -0.00999950004601088,
+  -0.009999964270573645
+ ],
+ "total_seconds": 1.609860897064209
+}

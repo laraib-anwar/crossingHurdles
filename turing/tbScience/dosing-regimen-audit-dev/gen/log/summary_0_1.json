@@ -1,0 +1,24 @@
+{
+ "model_01": {
+  "attempt": 0,
+  "seconds": 0.2,
+  "n_cycles": 49,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 2,
+  "t_cmax": 3.0
+ },
+ "model_02": {
+  "attempt": 0,
+  "seconds": 3.4,
+  "n_cycles": 5,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 339.0334968800672
+ }
+}

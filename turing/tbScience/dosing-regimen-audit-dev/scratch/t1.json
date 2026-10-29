@@ -1,0 +1,7 @@
+{"regimen_id": "t1",
+ "model": {"V1": 20.0, "CL": 3.5, "Vmax": 40.0, "Km": 4.0, "peripheral": [{"Q": 10.0, "V": 60.0}]},
+ "formulations": [{"id": 1, "F": 0.8, "ka": 1.2, "tlag": 0.5, "n_transit": 3, "ktr": 4.0}],
+ "loading_doses": [{"time": 0.0, "route": "iv_infusion", "amount": 600.0, "duration": 2.0, "formulation": null}],
+ "maintenance": {"start": 12.0, "period": 12.0, "doses": [{"offset": 0.0, "route": "oral", "amount": 400.0, "duration": null, "formulation": 1},
+   {"offset": 6.0, "route": "iv_bolus", "amount": 100.0, "duration": null, "formulation": null}]},
+ "horizon": 120.0, "query_times": [1.0, 13.3, 50.0, 119.9], "window": {"low": 5.0, "high": 15.0}}

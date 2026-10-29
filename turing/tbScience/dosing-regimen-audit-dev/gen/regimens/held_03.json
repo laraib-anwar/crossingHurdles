@@ -1,0 +1,70 @@
+{
+ "regimen_id": "held_03",
+ "model": {
+  "V1": 66.07,
+  "CL": 1.592,
+  "Vmax": 102.8,
+  "Km": 16.2,
+  "peripheral": [
+   {
+    "Q": 0.8054,
+    "V": 49.57
+   },
+   {
+    "Q": 1.748,
+    "V": 81.39
+   }
+  ]
+ },
+ "formulations": [
+  {
+   "id": 1,
+   "F": 0.5475,
+   "ka": 0.8378,
+   "tlag": 0.0,
+   "n_transit": 0,
+   "ktr": 2.424
+  }
+ ],
+ "loading_doses": [
+  {
+   "time": 0.0,
+   "route": "oral",
+   "amount": 99.51,
+   "duration": null,
+   "formulation": 1
+  }
+ ],
+ "maintenance": {
+  "start": 3.0,
+  "period": 12.0,
+  "doses": [
+   {
+    "offset": 0.0,
+    "route": "iv_infusion",
+    "amount": 1327.0,
+    "duration": 4.0,
+    "formulation": null
+   },
+   {
+    "offset": 6.0,
+    "route": "oral",
+    "amount": 54.37,
+    "duration": null,
+    "formulation": 1
+   }
+  ]
+ },
+ "horizon": 67.0,
+ "query_times": [
+  35.15,
+  35.8,
+  36.65,
+  56.05,
+  61.45
+ ],
+ "window": {
+  "low": 25.32,
+  "high": 31.53
+ }
+}

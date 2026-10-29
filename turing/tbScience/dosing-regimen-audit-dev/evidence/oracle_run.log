@@ -1,0 +1,5 @@
+diagnosis: n_cycles_to_steady@model_03, concentration@model_01, ss_trough@model_01, cmax@model_01, time_in_window@model_01, auc@model_01, t_cmax@model_02, ss_cmax@model_01
+real 30.34
+user 0.03
+sys 0.02
+exit 0

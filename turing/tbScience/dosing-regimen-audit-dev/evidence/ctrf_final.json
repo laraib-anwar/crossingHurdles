@@ -1,0 +1,266 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "tests": 30,
+      "start": 1793211689348,
+      "stop": 1793211797454
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::test_saved_base_case",
+        "status": "passed",
+        "duration": 4.359504999229102
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_01]",
+        "status": "passed",
+        "duration": 5793.637648001095,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_02]",
+        "status": "passed",
+        "duration": 9789.214010999785,
+        "extra": {
+          "n_cycles_to_steady": 38
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_03]",
+        "status": "passed",
+        "duration": 5017.813873002524,
+        "extra": {
+          "n_cycles_to_steady": 44
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_04]",
+        "status": "passed",
+        "duration": 1260.58082399868,
+        "extra": {
+          "n_cycles_to_steady": 10
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_05]",
+        "status": "passed",
+        "duration": 1890.606557000865,
+        "extra": {
+          "n_cycles_to_steady": 7
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_06]",
+        "status": "passed",
+        "duration": 5255.091580000226,
+        "extra": {
+          "n_cycles_to_steady": 19
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_07]",
+        "status": "passed",
+        "duration": 3646.125209999809,
+        "extra": {
+          "n_cycles_to_steady": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_08]",
+        "status": "passed",
+        "duration": 5416.771534999498,
+        "extra": {
+          "n_cycles_to_steady": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_09]",
+        "status": "passed",
+        "duration": 2936.313759000768,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_10]",
+        "status": "passed",
+        "duration": 1321.3235690000147,
+        "extra": {
+          "n_cycles_to_steady": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_11]",
+        "status": "passed",
+        "duration": 2082.3097659995256,
+        "extra": {
+          "n_cycles_to_steady": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_12]",
+        "status": "passed",
+        "duration": 3202.270112999031,
+        "extra": {
+          "n_cycles_to_steady": 4
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_13]",
+        "status": "passed",
+        "duration": 1516.155069000888,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_14]",
+        "status": "passed",
+        "duration": 2698.2517369997367,
+        "extra": {
+          "n_cycles_to_steady": 18
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_15]",
+        "status": "passed",
+        "duration": 10595.834294001179,
+        "extra": {
+          "n_cycles_to_steady": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_16]",
+        "status": "passed",
+        "duration": 1729.1348420021677,
+        "extra": {
+          "n_cycles_to_steady": 5
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_17]",
+        "status": "passed",
+        "duration": 4313.62701800208,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_18]",
+        "status": "passed",
+        "duration": 1563.4449110002606,
+        "extra": {
+          "n_cycles_to_steady": 9
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_19]",
+        "status": "passed",
+        "duration": 2130.848569999216,
+        "extra": {
+          "n_cycles_to_steady": 6
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_20]",
+        "status": "passed",
+        "duration": 1890.5181970021658,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_21]",
+        "status": "passed",
+        "duration": 2574.042706997716,
+        "extra": {
+          "n_cycles_to_steady": 22
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[held_22]",
+        "status": "passed",
+        "duration": 2019.8860359996615,
+        "extra": {
+          "n_cycles_to_steady": 3
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_01]",
+        "status": "passed",
+        "duration": 1269.2358000003878,
+        "extra": {
+          "n_cycles_to_steady": 49
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_02]",
+        "status": "passed",
+        "duration": 4203.830950998963,
+        "extra": {
+          "n_cycles_to_steady": 5
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_03]",
+        "status": "passed",
+        "duration": 1875.152025000716,
+        "extra": {
+          "n_cycles_to_steady": 19
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_04]",
+        "status": "passed",
+        "duration": 1794.678414998998,
+        "extra": {
+          "n_cycles_to_steady": 5
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_05]",
+        "status": "passed",
+        "duration": 9829.55681400199,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_fresh_case[model_06]",
+        "status": "passed",
+        "duration": 1870.4402740004298,
+        "extra": {
+          "n_cycles_to_steady": 2
+        }
+      },
+      {
+        "name": "test_outputs.py::test_diagnosis",
+        "status": "passed",
+        "duration": 9508.659686000101,
+        "extra": {
+          "quantities": [
+            "auc",
+            "cmax",
+            "concentration",
+            "n_cycles_to_steady",
+            "ss_cmax",
+            "ss_trough",
+            "t_cmax",
+            "time_in_window"
+          ]
+        }
+      }
+    ]
+  }
+}

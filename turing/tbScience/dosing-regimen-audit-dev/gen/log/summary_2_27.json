@@ -1,0 +1,288 @@
+{
+ "model_03": {
+  "attempt": 0,
+  "seconds": 1.0,
+  "n_cycles": 19,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 6,
+  "dim": 4,
+  "t_cmax": 110.15
+ },
+ "model_04": {
+  "attempt": 1,
+  "seconds": 2.3,
+  "n_cycles": 5,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 4,
+  "dim": 7,
+  "t_cmax": 14.870741980949202
+ },
+ "model_05": {
+  "attempt": 0,
+  "seconds": 22.2,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 6,
+  "dim": 3,
+  "t_cmax": 33.961744882106466
+ },
+ "model_06": {
+  "attempt": 0,
+  "seconds": 8.4,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 96.0
+ },
+ "held_01": {
+  "attempt": 1,
+  "seconds": 1.5,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 2,
+  "t_cmax": 336.0
+ },
+ "held_02": {
+  "attempt": 0,
+  "seconds": 3.9,
+  "n_cycles": 38,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 4,
+  "dim": 13,
+  "t_cmax": 44.19907918474859
+ },
+ "held_03": {
+  "attempt": 0,
+  "seconds": 2.0,
+  "n_cycles": 44,
+  "cmax_kind": [
+   "end"
+  ],
+  "crossings": 4,
+  "dim": 4,
+  "t_cmax": 67.0
+ },
+ "held_04": {
+  "attempt": 2,
+  "seconds": 0.5,
+  "n_cycles": 10,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 6,
+  "dim": 2,
+  "t_cmax": 58.25
+ },
+ "held_05": {
+  "attempt": 3,
+  "seconds": 2.1,
+  "n_cycles": 7,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 50.25
+ },
+ "held_06": {
+  "attempt": 1,
+  "seconds": 4.0,
+  "n_cycles": 19,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 4,
+  "dim": 7,
+  "t_cmax": 106.10127169670267
+ },
+ "held_07": {
+  "attempt": 1,
+  "seconds": 6.1,
+  "n_cycles": 4,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 6,
+  "dim": 8,
+  "t_cmax": 228.7143830439624
+ },
+ "held_08": {
+  "attempt": 0,
+  "seconds": 6.5,
+  "n_cycles": 9,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 4,
+  "t_cmax": 6.5
+ },
+ "held_09": {
+  "attempt": 0,
+  "seconds": 5.0,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 6,
+  "dim": 3,
+  "t_cmax": 0.7
+ },
+ "held_10": {
+  "attempt": 1,
+  "seconds": 1.2,
+  "n_cycles": 6,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 2,
+  "t_cmax": 102.0
+ },
+ "held_11": {
+  "attempt": 0,
+  "seconds": 3.5,
+  "n_cycles": 3,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 4,
+  "dim": 4,
+  "t_cmax": 99.65278905866747
+ },
+ "held_12": {
+  "attempt": 0,
+  "seconds": 5.5,
+  "n_cycles": 4,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 9,
+  "t_cmax": 80.0
+ },
+ "held_13": {
+  "attempt": 0,
+  "seconds": 1.2,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 2,
+  "t_cmax": 51.0
+ },
+ "held_14": {
+  "attempt": 1,
+  "seconds": 2.7,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 8.5
+ },
+ "held_15": {
+  "attempt": 1,
+  "seconds": 20.6,
+  "n_cycles": 3,
+  "cmax_kind": [
+   "interior"
+  ],
+  "crossings": 6,
+  "dim": 3,
+  "t_cmax": 312.92635059029527
+ },
+ "held_16": {
+  "attempt": 5,
+  "seconds": 1.8,
+  "n_cycles": 5,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 4,
+  "t_cmax": 38.15
+ },
+ "held_17": {
+  "attempt": 1,
+  "seconds": 6.6,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 5,
+  "t_cmax": 3.4
+ },
+ "held_18": {
+  "attempt": 0,
+  "seconds": 0.8,
+  "n_cycles": 9,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 6,
+  "dim": 3,
+  "t_cmax": 54.0
+ },
+ "held_19": {
+  "attempt": 1,
+  "seconds": 2.1,
+  "n_cycles": 6,
+  "cmax_kind": [
+   "end"
+  ],
+  "crossings": 4,
+  "dim": 12,
+  "t_cmax": 29.0
+ },
+ "held_20": {
+  "attempt": 0,
+  "seconds": 3.5,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 12,
+  "dim": 2,
+  "t_cmax": 28.75
+ },
+ "held_21": {
+  "attempt": 2,
+  "seconds": 1.9,
+  "n_cycles": 2,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 29.55
+ },
+ "held_22": {
+  "attempt": 0,
+  "seconds": 2.1,
+  "n_cycles": 3,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 9,
+  "t_cmax": 54.0
+ }
+}

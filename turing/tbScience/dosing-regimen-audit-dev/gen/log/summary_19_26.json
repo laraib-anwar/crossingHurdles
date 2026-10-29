@@ -1,0 +1,24 @@
+{
+ "held_14": {
+  "attempt": 0,
+  "seconds": 5.9,
+  "n_cycles": 18,
+  "cmax_kind": [
+   "kink"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 1.05
+ },
+ "held_21": {
+  "attempt": 36,
+  "seconds": 2.6,
+  "n_cycles": 22,
+  "cmax_kind": [
+   "jump"
+  ],
+  "crossings": 4,
+  "dim": 3,
+  "t_cmax": 2.75
+ }
+}
